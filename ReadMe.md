@@ -1,7 +1,3 @@
-This `README.md` is designed to be the "Grand Map" for your project. It’s structured to satisfy both a Lead Scientist and a Senior Developer, emphasizing the **Med-Data Lakehouse** architecture and your **Local-First AI** strategy.
-
----
-
 # 🧬 BioNexus: Local-First Multi-Omics Intelligence
 
 **BioNexus** is a production-grade, local-only pharmaceutical discovery platform. It automates the ingestion, refinement, and synthesis of global biological data to identify links between **Organs, Genes, Diseases, and Medicines**.
