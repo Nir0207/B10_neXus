@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.processed_manifest.json
+*.egg-info/
+.env
+# Keep Dockerfile.test out of the runtime image build context
+# (it is only used by docker-compose test service)

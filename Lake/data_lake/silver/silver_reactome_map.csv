@@ -1,0 +1,139 @@
+uniprot_id,reactome_id,pathway_name
+P38398,R-HSA-1221632,Meiotic synapsis
+P38398,R-HSA-3108214,SUMOylation of DNA damage response and repair proteins
+P38398,R-HSA-5685938,HDR through Single Strand Annealing (SSA)
+P38398,R-HSA-5685942,HDR through Homologous Recombination (HRR)
+P38398,R-HSA-5689901,Metalloprotease DUBs
+P38398,R-HSA-5693554,Resolution of D-loop Structures through Synthesis-Dependent Strand Annealing (SDSA)
+P38398,R-HSA-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
+P38398,R-HSA-5693568,Resolution of D-loop Structures through Holliday Junction Intermediates
+P38398,R-HSA-5693571,Nonhomologous End-Joining (NHEJ)
+P38398,R-HSA-5693579,Homologous DNA Pairing and Strand Exchange
+P38398,R-HSA-5693607,Processing of DNA double-strand break ends
+P38398,R-HSA-5693616,Presynaptic phase of homologous DNA pairing and strand exchange
+P38398,R-HSA-6796648,TP53 Regulates Transcription of DNA Repair Genes
+P38398,R-HSA-6804756,Regulation of TP53 Activity through Phosphorylation
+P38398,R-HSA-69473,G2/M DNA damage checkpoint
+P38398,R-HSA-8951664,Neddylation
+P38398,R-HSA-8953750,Transcriptional Regulation by E2F6
+P38398,R-HSA-912446,Meiotic recombination
+P38398,R-HSA-9663199,Defective DNA double strand break response due to BRCA1 loss of function
+P38398,R-HSA-9699150,Defective DNA double strand break response due to BARD1 loss of function
+P38398,R-HSA-9701192,Defective homologous recombination repair (HRR) due to BRCA1 loss of function
+P38398,R-HSA-9704331,Defective HDR through Homologous Recombination Repair (HRR) due to PALB2 loss of BRCA1 binding function
+P38398,R-HSA-9704646,Defective HDR through Homologous Recombination Repair (HRR) due to PALB2 loss of BRCA2/RAD51/RAD51C binding function
+P38398,R-HSA-9709570,Impaired BRCA2 binding to RAD51
+P38398,R-HSA-9709603,Impaired BRCA2 binding to PALB2
+P38398,R-HSA-9755511,KEAP1-NFE2L2 pathway
+P38398,R-HSA-9825895,"Regulation of MITF-M-dependent genes involved in DNA replication, damage repair and senescence"
+P48754,R-MMU-3108214,SUMOylation of DNA damage response and repair proteins
+P48754,R-MMU-5685938,HDR through Single Strand Annealing (SSA)
+P48754,R-MMU-5685942,HDR through Homologous Recombination (HRR)
+P48754,R-MMU-5689901,Metalloprotease DUBs
+P48754,R-MMU-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
+P48754,R-MMU-5693568,Resolution of D-loop Structures through Holliday Junction Intermediates
+P48754,R-MMU-5693571,Nonhomologous End-Joining (NHEJ)
+P48754,R-MMU-5693579,Homologous DNA Pairing and Strand Exchange
+P48754,R-MMU-5693607,Processing of DNA double-strand break ends
+P48754,R-MMU-5693616,Presynaptic phase of homologous DNA pairing and strand exchange
+P48754,R-MMU-6804756,Regulation of TP53 Activity through Phosphorylation
+P48754,R-MMU-69473,G2/M DNA damage checkpoint
+O54952,R-RNO-3108214,SUMOylation of DNA damage response and repair proteins
+O54952,R-RNO-5685938,HDR through Single Strand Annealing (SSA)
+O54952,R-RNO-5685942,HDR through Homologous Recombination (HRR)
+O54952,R-RNO-5689901,Metalloprotease DUBs
+O54952,R-RNO-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
+O54952,R-RNO-5693568,Resolution of D-loop Structures through Holliday Junction Intermediates
+O54952,R-RNO-5693571,Nonhomologous End-Joining (NHEJ)
+O54952,R-RNO-5693579,Homologous DNA Pairing and Strand Exchange
+O54952,R-RNO-5693607,Processing of DNA double-strand break ends
+O54952,R-RNO-5693616,Presynaptic phase of homologous DNA pairing and strand exchange
+O54952,R-RNO-6804756,Regulation of TP53 Activity through Phosphorylation
+O54952,R-RNO-69473,G2/M DNA damage checkpoint
+P00533,R-HSA-1227986,Signaling by ERBB2
+P00533,R-HSA-1236382,Constitutive Signaling by Ligand-Responsive EGFR Cancer Variants
+P00533,R-HSA-1236394,Signaling by ERBB4
+P00533,R-HSA-1250196,SHC1 events in ERBB2 signaling
+P00533,R-HSA-1251932,PLCG1 events in ERBB2 signaling
+P00533,R-HSA-1257604,PIP3 activates AKT signaling
+P00533,R-HSA-177929,Signaling by EGFR
+P00533,R-HSA-179812,GRB2 events in EGFR signaling
+P00533,R-HSA-180292,GAB1 signalosome
+P00533,R-HSA-180336,SHC1 events in EGFR signaling
+P00533,R-HSA-182971,EGFR downregulation
+P00533,R-HSA-1963640,GRB2 events in ERBB2 signaling
+P00533,R-HSA-1963642,PI3K events in ERBB2 signaling
+P00533,R-HSA-212718,EGFR interacts with phospholipase C-gamma
+P00533,R-HSA-2179392,EGFR Transactivation by Gastrin
+P00533,R-HSA-2219530,Constitutive Signaling by Aberrant PI3K in Cancer
+P00533,R-HSA-445144,Signal transduction by L1
+P00533,R-HSA-5637810,Constitutive Signaling by EGFRvIII
+P00533,R-HSA-5638303,Inhibition of Signaling by Overexpressed EGFR
+P00533,R-HSA-5673001,RAF/MAP kinase cascade
+P00533,R-HSA-6785631,ERBB2 Regulates Cell Motility
+P00533,R-HSA-6811558,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling"
+P00533,R-HSA-8847993,ERBB2 Activates PTK6 Signaling
+P00533,R-HSA-8856825,Cargo recognition for clathrin-mediated endocytosis
+P00533,R-HSA-8856828,Clathrin-mediated endocytosis
+P00533,R-HSA-8857538,PTK6 promotes HIF1A stabilization
+P00533,R-HSA-8863795,Downregulation of ERBB2 signaling
+P00533,R-HSA-8866910,TFAP2 (AP-2) family regulates transcription of growth factors and their receptors
+P00533,R-HSA-9009391,Extra-nuclear estrogen signaling
+P00533,R-HSA-9013507,NOTCH3 Activation and Transmission of Signal to the Nucleus
+P00533,R-HSA-9609690,HCMV Early Events
+P00533,R-HSA-9634638,Estrogen-dependent nuclear events downstream of ESR-membrane signaling
+P00533,R-HSA-9664565,Signaling by ERBB2 KD Mutants
+P00533,R-HSA-9665348,Signaling by ERBB2 ECD mutants
+P00533,R-HSA-9665686,Signaling by ERBB2 TMD/JMD mutants
+P00533,R-HSA-9820960,Respiratory syncytial virus (RSV) attachment and entry
+P00533,R-HSA-9927432,Developmental Lineage of Mammary Gland Myoepithelial Cells
+P04412,R-DME-1227986,Signaling by ERBB2
+P04412,R-DME-1236394,Signaling by ERBB4
+P04412,R-DME-1250196,SHC1 events in ERBB2 signaling
+P04412,R-DME-1250342,PI3K events in ERBB4 signaling
+P04412,R-DME-1250347,SHC1 events in ERBB4 signaling
+P04412,R-DME-1251985,Nuclear signaling by ERBB4
+P04412,R-DME-1253288,Downregulation of ERBB4 signaling
+P04412,R-DME-1257604,PIP3 activates AKT signaling
+P04412,R-DME-1358803,Downregulation of ERBB2:ERBB3 signaling
+P04412,R-DME-177929,Signaling by EGFR
+P04412,R-DME-179812,GRB2 events in EGFR signaling
+P04412,R-DME-180292,GAB1 signalosome
+P04412,R-DME-180336,SHC1 events in EGFR signaling
+P04412,R-DME-182971,EGFR downregulation
+P04412,R-DME-1963640,GRB2 events in ERBB2 signaling
+P04412,R-DME-1963642,PI3K events in ERBB2 signaling
+P04412,R-DME-212718,EGFR interacts with phospholipase C-gamma
+P04412,R-DME-2179392,EGFR Transactivation by Gastrin
+P04412,R-DME-416572,Sema4D induced cell migration and growth-cone collapse
+P04412,R-DME-5673001,RAF/MAP kinase cascade
+P04412,R-DME-6785631,ERBB2 Regulates Cell Motility
+P04412,R-DME-6811558,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling"
+P04412,R-DME-8856825,Cargo recognition for clathrin-mediated endocytosis
+P04412,R-DME-8856828,Clathrin-mediated endocytosis
+P04412,R-DME-8863795,Downregulation of ERBB2 signaling
+P04412,R-DME-9018519,Estrogen-dependent gene expression
+P04412,R-DME-9652282,Drug-mediated inhibition of ERBB2 signaling
+Q01279,R-MMU-1227986,Signaling by ERBB2
+Q01279,R-MMU-1236394,Signaling by ERBB4
+Q01279,R-MMU-1250196,SHC1 events in ERBB2 signaling
+Q01279,R-MMU-1257604,PIP3 activates AKT signaling
+Q01279,R-MMU-177929,Signaling by EGFR
+Q01279,R-MMU-179812,GRB2 events in EGFR signaling
+Q01279,R-MMU-180292,GAB1 signalosome
+Q01279,R-MMU-180336,SHC1 events in EGFR signaling
+Q01279,R-MMU-182971,EGFR downregulation
+Q01279,R-MMU-1963642,PI3K events in ERBB2 signaling
+Q01279,R-MMU-212718,EGFR interacts with phospholipase C-gamma
+Q01279,R-MMU-2179392,EGFR Transactivation by Gastrin
+Q01279,R-MMU-445144,Signal transduction by L1
+Q01279,R-MMU-5673001,RAF/MAP kinase cascade
+Q01279,R-MMU-6785631,ERBB2 Regulates Cell Motility
+Q01279,R-MMU-6811558,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling"
+Q01279,R-MMU-8847993,ERBB2 Activates PTK6 Signaling
+Q01279,R-MMU-8856825,Cargo recognition for clathrin-mediated endocytosis
+Q01279,R-MMU-8856828,Clathrin-mediated endocytosis
+Q01279,R-MMU-8857538,PTK6 promotes HIF1A stabilization
+Q01279,R-MMU-8863795,Downregulation of ERBB2 signaling
+Q01279,R-MMU-9009391,Extra-nuclear estrogen signaling
+Q01279,R-MMU-9013507,NOTCH3 Activation and Transmission of Signal to the Nucleus

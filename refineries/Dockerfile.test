@@ -1,0 +1,27 @@
+# Test image — includes full source tree + dev dependencies (pytest, mocks)
+FROM python:3.12-slim
+
+LABEL org.opencontainers.image.title="BioNexus Refinery Test Runner"
+
+RUN useradd --create-home --uid 1001 refinery
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy everything including tests/
+COPY . .
+
+RUN mkdir -p /data_lake/raw/uniprot /data_lake/raw/ncbi /data_lake/silver \
+    && chown -R refinery:refinery /data_lake /app
+
+USER refinery
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    RAW_ROOT_DIR=/data_lake/raw \
+    SILVER_DIR=/data_lake/silver \
+    MANIFEST_PATH=/tmp/.processed_manifest.json
+
+ENTRYPOINT ["python"]
+CMD ["-m", "pytest", "tests/", "-v", "--tb=short"]
