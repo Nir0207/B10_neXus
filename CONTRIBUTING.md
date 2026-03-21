@@ -61,5 +61,3 @@ Before submitting a PR, ensure:
 * **Ollama:** Ensure your local Ollama instance is running `BioMistral` or `Phi-4` before testing the Intelligence layer.
 
 ---
-
-### **Would you like me to generate the first "Refinery" script template now so you can test this workflow in VS Code?**
