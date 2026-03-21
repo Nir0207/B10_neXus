@@ -1,7 +1,3 @@
-Here is a comprehensive `CONTRIBUTING.md` specifically designed for your "Hybrid AI" workflow. This ensures that whether you are using **GitHub Copilot** (for speed) or **Antigravity** (for architecture), your Git history stays clean and your biological data remains de-identified.
-
----
-
 # 🤝 Contributing to BioNexus
 
 Welcome to the **BioNexus** development team. Because this project uses a hybrid AI workflow (GitHub Copilot + Antigravity), we follow a strict "Architect-first" contribution model to ensure data integrity and budget efficiency.
