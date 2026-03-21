@@ -18,7 +18,7 @@ from unittest.mock import patch
 import polars as pl
 import pytest
 
-from tests.stubs import NCBI_STUB
+from stubs import NCBI_STUB
 from refine_ncbi import _extract_study, refine_ncbi
 
 

@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: bionexus_postgres
+    env_file: ../.env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-bionexus}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bionexus_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-bionexus_db}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init_postgres.sql:/docker-entrypoint-initdb.d/init_postgres.sql
+    networks:
+      - bionexus-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-bionexus}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  neo4j:
+    image: neo4j:5.23.0-community
+    container_name: bionexus_neo4j
+    env_file: ../.env
+    environment:
+      NEO4J_AUTH: ${NEO4J_USER:-neo4j}/${NEO4J_PASSWORD:-bionexus_pass}
+      NEO4J_apoc_export_file_enabled: "true"
+      NEO4J_apoc_import_file_enabled: "true"
+      NEO4J_apoc_import_file_use__neo4j__config: "true"
+      NEO4J_server_config_strict__validation_enabled: "false"
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*
+    ports:
+      - "7475:7474" # HTTP
+      - "7688:7687" # Bolt
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - bionexus-net
+    healthcheck:
+      test: ["CMD", "neo4j-admin", "database", "check", "system"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  postgres_data:
+  neo4j_data:
+
+networks:
+  bionexus-net:
+    name: bionexus-net
+    driver: bridge

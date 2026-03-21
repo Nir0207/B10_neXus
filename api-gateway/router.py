@@ -2,13 +2,17 @@ from __future__ import annotations
 
 from typing import Any
 
-import asyncpg
 from fastapi import APIRouter, Depends, HTTPException, Path, status
 from neo4j import AsyncSession
 
 from auth import get_current_user
 from database import get_postgres_connection, get_neo4j_session
 from schemas import GeneResponse, GraphNode, GraphRelationship, GraphResponse, User
+
+try:
+    import asyncpg
+except ImportError:  # pragma: no cover - environment-dependent fallback
+    asyncpg = None  # type: ignore[assignment]
 
 router = APIRouter(prefix="/api/v1")
 
@@ -57,7 +61,7 @@ async def get_gene(
         description="Primary key (UniProt ID).",
     ),
     current_user: User = Depends(get_current_user),
-    pg_conn: asyncpg.Connection | None = Depends(get_postgres_connection),
+    pg_conn: Any | None = Depends(get_postgres_connection),
 ) -> GeneResponse:
     del current_user
     if pg_conn is None:
@@ -67,7 +71,7 @@ async def get_gene(
         )
 
     try:
-        row: asyncpg.Record | None = await pg_conn.fetchrow(
+        row: Any | None = await pg_conn.fetchrow(
             "SELECT uniprot_id, gene_symbol, name, description, data_source FROM genes WHERE uniprot_id = $1",
             id
         )
