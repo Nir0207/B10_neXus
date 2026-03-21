@@ -13,6 +13,7 @@ const PRIMARY_NAV: readonly NavigationItem[] = [
   { href: "/explorer", label: "Explorer" },
   { href: "/pathways", label: "Pathways" },
   { href: "/clinical-trials", label: "Clinical Trials" },
+  { href: "/historical-trends", label: "Historical Trends" },
 ];
 
 function isActivePath(currentPathname: string, href: string): boolean {
@@ -32,7 +33,7 @@ export default function AppShell({
   const router = useRouter();
   const { isAuthenticated, isReady, logout, session } = useAuth();
 
-  if (pathname === "/login") {
+  if (pathname === "/login" || pathname === "/register") {
     return (
       <div className="min-h-screen bg-background flex flex-col">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

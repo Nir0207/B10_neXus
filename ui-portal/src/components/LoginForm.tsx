@@ -1,11 +1,22 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/AuthProvider";
 
 const DEFAULT_USERNAME = "admin";
 const DEFAULT_PASSWORD = "password";
+const DEFAULT_NEXT_PATH = "/explorer";
+
+function resolveNextPath(): string {
+  if (typeof window === "undefined") {
+    return DEFAULT_NEXT_PATH;
+  }
+
+  const url = new URL(window.location.href);
+  return url.searchParams.get("next") || DEFAULT_NEXT_PATH;
+}
 
 export default function LoginForm(): React.JSX.Element {
   const router = useRouter();
@@ -14,16 +25,7 @@ export default function LoginForm(): React.JSX.Element {
   const [username, setUsername] = useState<string>(DEFAULT_USERNAME);
   const [password, setPassword] = useState<string>(DEFAULT_PASSWORD);
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const [nextPath, setNextPath] = useState<string>("/explorer");
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const url = new URL(window.location.href);
-    setNextPath(url.searchParams.get("next") || "/explorer");
-  }, []);
+  const [nextPath] = useState<string>(resolveNextPath);
 
   useEffect(() => {
     if (isReady && isAuthenticated) {
@@ -133,6 +135,13 @@ export default function LoginForm(): React.JSX.Element {
           <div className="mt-6 rounded-2xl border border-outline-variant/15 bg-background/60 p-4 text-xs text-on-surface-variant">
             <p className="uppercase tracking-[0.24em] text-primary mb-2">Default Dev Credentials</p>
             <p>`admin` / `password`</p>
+          </div>
+
+          <div className="mt-5 text-center text-sm text-on-surface-variant">
+            Need an account?{" "}
+            <Link className="font-semibold text-primary hover:opacity-80" href="/register">
+              Create one
+            </Link>
           </div>
         </section>
       </div>

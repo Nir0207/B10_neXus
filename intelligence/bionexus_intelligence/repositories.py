@@ -2,13 +2,21 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
+import re
 from typing import Any, Iterable
 
 import psycopg
 from psycopg.rows import dict_row
 
 from .deidentify import deidentify_text
-from .models import GeneRecord, OpenTargetsEvidence, PathwayRecord, StudyPathwayContext, StudySnippet
+from .models import (
+    DiseaseTrendSnapshot,
+    GeneRecord,
+    OpenTargetsEvidence,
+    PathwayRecord,
+    StudyPathwayContext,
+    StudySnippet,
+)
 
 _CREATE_STUDIES_TABLE = """
 CREATE TABLE IF NOT EXISTS silver.ncbi_studies (
@@ -42,6 +50,7 @@ SET accession = EXCLUDED.accession,
     platform = EXCLUDED.platform,
     data_source = EXCLUDED.data_source;
 """
+_NON_ALNUM_PATTERN = re.compile(r"[^a-z0-9]+")
 
 
 class PostgresStudyRepository:
@@ -214,6 +223,48 @@ class PostgresStudyRepository:
         ]
 
         return StudyPathwayContext(study=study, related_pathways=pathways)
+
+    def fetch_disease_trend_snapshot(self, disease_query: str) -> DiseaseTrendSnapshot | None:
+        normalized = _NON_ALNUM_PATTERN.sub("-", disease_query.strip().lower()).strip("-")
+        lowered = disease_query.strip().lower()
+        if not normalized and not lowered:
+            return None
+
+        query = """
+        SELECT
+            disease_id,
+            disease_name,
+            clinical_summary,
+            frequency_timeline,
+            gene_distribution,
+            organ_affinity,
+            therapeutic_landscape
+        FROM disease_intelligence
+        WHERE LOWER(disease_id) = %s
+           OR LOWER(disease_name) = %s
+           OR REPLACE(LOWER(disease_name), ' ', '-') = %s
+        LIMIT 1;
+        """
+        try:
+            with psycopg.connect(self._dsn, row_factory=dict_row) as conn:
+                with conn.cursor() as cur:
+                    cur.execute(query, (normalized, lowered, normalized))
+                    row = cur.fetchone()
+        except psycopg.Error:
+            return None
+
+        if row is None:
+            return None
+
+        return DiseaseTrendSnapshot(
+            disease_id=str(row["disease_id"]),
+            disease_name=str(row["disease_name"]),
+            clinical_summary=str(row["clinical_summary"]),
+            frequency_timeline=list(row["frequency_timeline"] or []),
+            gene_distribution=list(row["gene_distribution"] or []),
+            organ_affinity=list(row["organ_affinity"] or []),
+            therapeutic_landscape=list(row["therapeutic_landscape"] or []),
+        )
 
     def _iter_seed_rows(self, csv_path: Path) -> Iterable[dict[str, Any]]:
         with csv_path.open("r", encoding="utf-8", newline="") as handle:

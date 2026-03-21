@@ -2,16 +2,24 @@ from __future__ import annotations
 
 from contextlib import asynccontextmanager
 import os
+from typing import Any
 
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordRequestForm
 
 from audit import AuditLogMiddleware
-from auth import authenticate_user, create_access_token
-from database import close_db, init_db
+from auth import (
+    DuplicateUserError,
+    ReservedUsernameError,
+    UserStoreUnavailableError,
+    authenticate_user,
+    create_access_token,
+    register_user,
+)
+from database import close_db, get_postgres_connection, init_db
 from router import router as api_router
-from schemas import Token
+from schemas import Token, UserRegistrationRequest
 from settings import get_cors_origins
 
 LOG_FILE = os.path.join(os.path.dirname(__file__), "logs", "audit.log")
@@ -44,16 +52,56 @@ app.add_middleware(
 app.add_middleware(AuditLogMiddleware, log_file_path=LOG_FILE)
 app.include_router(api_router)
 
+
 @app.post("/token", response_model=Token)
-async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()) -> Token:
-    if not authenticate_user(form_data.username, form_data.password):
+async def login_for_access_token(
+    form_data: OAuth2PasswordRequestForm = Depends(),
+    pg_conn: Any | None = Depends(get_postgres_connection),
+) -> Token:
+    try:
+        user = await authenticate_user(form_data.username, form_data.password, pg_conn)
+    except UserStoreUnavailableError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="User database unavailable",
+        ) from exc
+
+    if user is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    access_token: str = create_access_token(data={"sub": form_data.username})
-    return {"access_token": access_token, "token_type": "bearer"}
+    access_token: str = create_access_token(data={"sub": user.username})
+    return {"access_token": access_token, "token_type": "bearer", "username": user.username}
+
+
+@app.post("/register", response_model=Token, status_code=status.HTTP_201_CREATED)
+async def register_for_access_token(
+    payload: UserRegistrationRequest,
+    pg_conn: Any | None = Depends(get_postgres_connection),
+) -> Token:
+    try:
+        user = await register_user(payload, pg_conn)
+    except UserStoreUnavailableError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="User database unavailable",
+        ) from exc
+    except DuplicateUserError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=str(exc),
+        ) from exc
+    except ReservedUsernameError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+
+    access_token: str = create_access_token(data={"sub": user.username})
+    return {"access_token": access_token, "token_type": "bearer", "username": user.username}
+
 
 @app.get("/")
 async def health_check() -> dict[str, str]:

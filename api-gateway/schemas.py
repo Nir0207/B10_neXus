@@ -1,12 +1,15 @@
 from __future__ import annotations
 
+from datetime import datetime
 from typing import Any
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
 class Token(BaseModel):
     access_token: str
     token_type: str
+    username: str
 
 
 class TokenData(BaseModel):
@@ -22,6 +25,13 @@ class User(BaseModel):
 
 class UserInDB(User):
     hashed_password: str
+
+
+class UserRegistrationRequest(BaseModel):
+    username: str = Field(..., min_length=3, max_length=32, pattern=r"^[A-Za-z0-9_.-]+$")
+    email: str = Field(..., min_length=5, max_length=255, pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+    password: str = Field(..., min_length=8, max_length=128)
+    full_name: str | None = Field(default=None, max_length=120)
 
 
 class GeneResponse(BaseModel):
@@ -78,6 +88,7 @@ class IntelligenceQueryRequest(BaseModel):
     disease: str | None = Field(default=None, max_length=128)
     medicine: str | None = Field(default=None, max_length=128)
     study_id: str | None = Field(default=None, max_length=32)
+    history: list[dict[str, str]] = Field(default_factory=list, max_length=12)
 
 
 class IntelligenceQueryResponse(BaseModel):
@@ -85,3 +96,71 @@ class IntelligenceQueryResponse(BaseModel):
     mode: str
     resolved_entity: str | None = None
     sources: list[str] = Field(default_factory=list)
+    visual_payload: VisualPayload | None = None
+
+
+class VisualPayload(BaseModel):
+    chart_type: Literal["line", "bar", "radar"]
+    title: str
+    disease_id: str
+    disease_name: str
+    x_key: str
+    y_key: str
+    datasets: list[dict[str, Any]] = Field(default_factory=list)
+    clinical_summary: str
+
+
+class FrequencyTimelinePoint(BaseModel):
+    year: int
+    study_count: int
+
+
+class GeneDistributionPoint(BaseModel):
+    uniprot_id: str = Field(..., description="Primary Key: UniProt ID for cross-database mapping")
+    gene_symbol: str
+    association_score: float
+    association_source: str | None = None
+
+
+class OrganAffinityPoint(BaseModel):
+    organ: str
+    value: int
+
+
+class TherapeuticLandscapePoint(BaseModel):
+    chembl_id: str
+    molecule_name: str
+    uniprot_id: str = Field(..., description="Primary Key: UniProt ID for cross-database mapping")
+    gene_symbol: str
+    bioactivity_status: str
+    evidence_source: str | None = None
+    affinity: float | None = None
+
+
+class TrendAnalyticsResponse(BaseModel):
+    disease_id: str
+    disease_name: str
+    clinical_summary: str
+    frequency_timeline: list[FrequencyTimelinePoint] = Field(default_factory=list)
+    gene_distribution: list[GeneDistributionPoint] = Field(default_factory=list)
+    organ_affinity: list[OrganAffinityPoint] = Field(default_factory=list)
+    therapeutic_landscape: list[TherapeuticLandscapePoint] = Field(default_factory=list)
+    updated_at: datetime | None = None
+
+
+class ExportChartRequest(BaseModel):
+    chart_type: Literal["line", "bar", "radar"]
+    title: str = Field(..., min_length=1, max_length=200)
+    datasets: list[dict[str, Any]] = Field(default_factory=list)
+    clinical_summary: str = Field(default="", max_length=4000)
+    disease_id: str | None = Field(default=None, max_length=128)
+    disease_name: str | None = Field(default=None, max_length=256)
+    x_key: str = Field(..., min_length=1, max_length=64)
+    y_key: str = Field(..., min_length=1, max_length=64)
+    report_id: str | None = Field(default=None, max_length=64)
+    model_name: str = Field(default="BioMistral-7B-Instruct", max_length=128)
+
+
+class ExportHtmlResponse(BaseModel):
+    filename: str
+    html: str

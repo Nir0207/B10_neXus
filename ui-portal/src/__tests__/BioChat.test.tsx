@@ -21,6 +21,7 @@ describe('BioChat', () => {
     render(<BioChat organType="liver" />);
     expect(screen.getByText('Bio-Chat Assistant')).toBeTruthy();
     expect(screen.getByPlaceholderText('Ask Bio-Chat...')).toBeTruthy();
+    expect(screen.getByText('What is CYP3A4?')).toBeTruthy();
   });
 
   it('sends a query and clears input upon form submission', async () => {
@@ -50,7 +51,44 @@ describe('BioChat', () => {
     await waitFor(() => {
       expect(input.value).toBe('');
     });
-    expect(mockedIntelligenceService.query).toHaveBeenCalled();
+    expect(mockedIntelligenceService.query).toHaveBeenCalledWith(
+      expect.objectContaining({
+        prompt: 'What is CYP3A4?',
+        history: expect.arrayContaining([
+          expect.objectContaining({ role: 'assistant' }),
+          expect.objectContaining({ role: 'user', text: 'What is CYP3A4?' }),
+        ]),
+      }),
+      expect.any(Object),
+    );
     expect(await screen.findByText('EGFR has pathway-linked leads.')).toBeTruthy();
+  });
+
+  it('renders an inline chart when the intelligence service returns a visual payload', async () => {
+    mockedIntelligenceService.query.mockResolvedValue({
+      mode: 'visual_report',
+      reply: 'Visual summary',
+      resolved_entity: 'alzheimers-disease',
+      sources: ['Source: Discovery Graph'],
+      visual_payload: {
+        chart_type: 'bar',
+        title: "Alzheimer's disease Gene Distribution",
+        disease_id: 'alzheimers-disease',
+        disease_name: "Alzheimer's disease",
+        x_key: 'gene_symbol',
+        y_key: 'association_score',
+        datasets: [{ gene_symbol: 'APP', association_score: 0.91 }],
+        clinical_summary: 'Visual summary',
+      },
+    });
+
+    render(<BioChat organType="brain" />);
+
+    const input = screen.getByPlaceholderText('Ask Bio-Chat...');
+    fireEvent.change(input, { target: { value: "Analyze the rise of Alzheimer's genes" } });
+    fireEvent.click(screen.getByRole('button', { name: /send/i }));
+
+    expect(await screen.findByText("Alzheimer's disease Gene Distribution")).toBeTruthy();
+    expect(await screen.findByText('Visual summary')).toBeTruthy();
   });
 });

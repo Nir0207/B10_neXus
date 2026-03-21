@@ -6,7 +6,8 @@ Execution order
 1. refine_uniprot  – raw UniProt JSON → Silver CSVs
 2. refine_ncbi     – raw NCBI GEO JSON → Silver CSV
 3. load_postgres   – upsert Silver CSVs into Postgres
-4. load_neo4j      – merge Silver CSVs into Neo4j
+4. trend_engine    – build disease intelligence aggregates in Postgres
+5. load_neo4j      – merge Silver CSVs into Neo4j
 
 Each step is idempotent by default (--force re-processes all files).
 DB steps can be skipped with --skip-postgres / --skip-neo4j for local
@@ -44,7 +45,7 @@ def main() -> None:
     skip_processed = not args.force
 
     # ── Step 1: Refine UniProt ────────────────────────────────────────────────
-    logger.info("=== Step 1/4  Refine UniProt JSON ===")
+    logger.info("=== Step 1/5  Refine UniProt JSON ===")
     from refine_uniprot import refine_uniprot
 
     proteins_df, gene_map_df, reactome_df = refine_uniprot(
@@ -58,7 +59,7 @@ def main() -> None:
     )
 
     # ── Step 2: Refine NCBI ───────────────────────────────────────────────────
-    logger.info("=== Step 2/4  Refine NCBI GEO JSON ===")
+    logger.info("=== Step 2/5  Refine NCBI GEO JSON ===")
     from refine_ncbi import refine_ncbi
 
     studies_df = refine_ncbi(skip_processed=skip_processed)
@@ -66,7 +67,7 @@ def main() -> None:
 
     # ── Step 3: Load Postgres ─────────────────────────────────────────────────
     if not args.skip_postgres:
-        logger.info("=== Step 3/4  Load Postgres ===")
+        logger.info("=== Step 3/5  Load Postgres ===")
         try:
             from load_postgres import run as pg_run
 
@@ -74,12 +75,22 @@ def main() -> None:
         except Exception as exc:
             logger.error("Postgres load failed: %s", exc)
             sys.exit(1)
-    else:
-        logger.info("Skipping Postgres load (--skip-postgres).")
 
-    # ── Step 4: Load Neo4j ────────────────────────────────────────────────────
+        logger.info("=== Step 4/5  Build disease intelligence ===")
+        try:
+            from trend_engine import run as trend_run
+
+            trend_rows = trend_run()
+            logger.info("disease_intelligence=%d", trend_rows)
+        except Exception as exc:
+            logger.error("Trend engine failed: %s", exc)
+            sys.exit(1)
+    else:
+        logger.info("Skipping Postgres load and trend engine (--skip-postgres).")
+
+    # ── Step 5/5: Load Neo4j ─────────────────────────────────────────────────
     if not args.skip_neo4j:
-        logger.info("=== Step 4/4  Load Neo4j ===")
+        logger.info("=== Step 5/5  Load Neo4j ===")
         try:
             from load_neo4j import run as neo4j_run
 

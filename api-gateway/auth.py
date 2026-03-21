@@ -13,7 +13,7 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from pydantic import ValidationError
 
-from schemas import TokenData, User
+from schemas import TokenData, User, UserInDB, UserRegistrationRequest
 
 ALGORITHM: str = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
@@ -32,6 +32,26 @@ _ADMIN_PASSWORD_HASH_ENV: str = os.getenv("GATEWAY_ADMIN_PASSWORD_HASH", "")
 
 class JWTError(Exception):
     """Raised when token parsing or validation fails."""
+
+
+class UserStoreUnavailableError(Exception):
+    """Raised when the persistent user store cannot be queried."""
+
+
+class DuplicateUserError(Exception):
+    """Raised when the username or email is already registered."""
+
+
+class ReservedUsernameError(Exception):
+    """Raised when a reserved username is used during registration."""
+
+
+def normalize_username(username: str) -> str:
+    return username.strip().lower()
+
+
+def normalize_email(email: str) -> str:
+    return email.strip().lower()
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
@@ -71,10 +91,88 @@ ADMIN_PASSWORD_HASH = _ADMIN_PASSWORD_HASH_ENV or get_password_hash(
 )
 
 
-def authenticate_user(username: str, password: str) -> bool:
-    if username != ADMIN_USERNAME:
-        return False
-    return verify_password(password, ADMIN_PASSWORD_HASH)
+async def get_user_by_username(username: str, pg_conn: Any | None) -> UserInDB | None:
+    if pg_conn is None:
+        raise UserStoreUnavailableError("User database unavailable")
+
+    row: Any | None = await pg_conn.fetchrow(
+        """
+        SELECT username, email, full_name, hashed_password
+        FROM app_users
+        WHERE username = $1
+        """,
+        normalize_username(username),
+    )
+    if row is None:
+        return None
+
+    return UserInDB(**dict(row))
+
+
+async def authenticate_user(username: str, password: str, pg_conn: Any | None) -> User | None:
+    normalized_username = normalize_username(username)
+    admin_username = normalize_username(ADMIN_USERNAME)
+
+    if normalized_username == admin_username and verify_password(password, ADMIN_PASSWORD_HASH):
+        return User(username=admin_username, email=f"{admin_username}@bionexus.com")
+
+    if pg_conn is None:
+        if normalized_username == admin_username:
+            return None
+        raise UserStoreUnavailableError("User database unavailable")
+
+    user_in_db = await get_user_by_username(normalized_username, pg_conn)
+    if user_in_db is not None and verify_password(password, user_in_db.hashed_password):
+        return User(
+            username=user_in_db.username,
+            email=user_in_db.email,
+            full_name=user_in_db.full_name,
+        )
+
+    return None
+
+
+async def register_user(payload: UserRegistrationRequest, pg_conn: Any | None) -> User:
+    if pg_conn is None:
+        raise UserStoreUnavailableError("User database unavailable")
+
+    username = normalize_username(payload.username)
+    email = normalize_email(payload.email)
+    full_name = payload.full_name.strip() if payload.full_name and payload.full_name.strip() else None
+
+    if username == normalize_username(ADMIN_USERNAME):
+        raise ReservedUsernameError("That username is reserved")
+
+    existing_user: Any | None = await pg_conn.fetchrow(
+        """
+        SELECT username, email
+        FROM app_users
+        WHERE username = $1 OR LOWER(email) = LOWER($2)
+        """,
+        username,
+        email,
+    )
+    if existing_user is not None:
+        existing_user_dict = dict(existing_user)
+        if existing_user_dict.get("username") == username:
+            raise DuplicateUserError("Username already exists")
+        raise DuplicateUserError("Email already exists")
+
+    created_user: Any | None = await pg_conn.fetchrow(
+        """
+        INSERT INTO app_users (username, email, full_name, hashed_password)
+        VALUES ($1, $2, $3, $4)
+        RETURNING username, email, full_name
+        """,
+        username,
+        email,
+        full_name,
+        get_password_hash(payload.password),
+    )
+    if created_user is None:
+        raise UserStoreUnavailableError("Failed to create user")
+
+    return User(**dict(created_user))
 
 
 def create_access_token(data: dict[str, Any], expires_delta: timedelta | None = None) -> str:

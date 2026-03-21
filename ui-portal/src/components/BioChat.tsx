@@ -1,17 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import ChatBubble, { type ChatBubbleMessage } from "@/components/ChatBubble";
 import { summarizeTriplets } from "@/lib/discovery";
 import { getOrganOption } from "@/lib/organs";
 import type { TripletData } from "@/services/bioService";
 import { intelligenceService } from "@/services/intelligenceService";
-
-interface ChatMessage {
-  id: string;
-  role: "assistant" | "user";
-  text: string;
-  sources?: string[];
-}
 
 interface Props {
   data?: TripletData;
@@ -21,8 +15,9 @@ interface Props {
 export default function BioChat({ data, organType }: Props): React.JSX.Element {
   const [input, setInput] = useState("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatBubbleMessage[]>([]);
   const [statusText, setStatusText] = useState<string>("Ready");
+  const activeRequestRef = useRef<AbortController | null>(null);
 
   const organ = getOrganOption(organType);
   const summary = useMemo(() => summarizeTriplets(data), [data]);
@@ -33,6 +28,17 @@ export default function BioChat({ data, organType }: Props): React.JSX.Element {
     typeof currentGene?.properties?.uniprot_id === "string"
       ? currentGene.properties.uniprot_id
       : undefined;
+  const promptSuggestions = useMemo(() => {
+    const activeTarget = currentGene?.label ?? organ.primaryTarget;
+    return [
+      `What is ${activeTarget}?`,
+      `What leads do we have for ${activeTarget}?`,
+      currentDisease && currentMedicine
+        ? `What should we test next for ${currentDisease} and ${currentMedicine}?`
+        : `What is the focus of the ${organ.label} organ atlas?`,
+      currentDisease ? `Show historical trends for ${currentDisease.label}` : `Show trends for Lung cancer`,
+    ];
+  }, [currentDisease, currentGene?.label, currentMedicine, organ.label, organ.primaryTarget]);
 
   useEffect(() => {
     setMessages([
@@ -48,23 +54,36 @@ export default function BioChat({ data, organType }: Props): React.JSX.Element {
     setStatusText("Ready");
   }, [currentDisease, currentGene, currentMedicine, organ.label, organ.primaryTarget, organType]);
 
-  const handleSend = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const prompt = input.trim();
+  useEffect(() => {
+    return () => {
+      activeRequestRef.current?.abort();
+    };
+  }, []);
+
+  const submitPrompt = async (rawPrompt: string) => {
+    const prompt = rawPrompt.trim();
     if (!prompt || isSubmitting) {
       return;
     }
 
-    const userMessage: ChatMessage = {
+    const userMessage: ChatBubbleMessage = {
       id: `user-${Date.now()}`,
       role: "user",
       text: prompt,
     };
 
+    const nextHistory = [...messages.slice(-5), userMessage].map((message) => ({
+      role: message.role,
+      text: message.text,
+    }));
+
     setMessages((current) => [...current, userMessage]);
     setInput("");
     setIsSubmitting(true);
     setStatusText("Querying");
+    activeRequestRef.current?.abort();
+    const controller = new AbortController();
+    activeRequestRef.current = controller;
 
     try {
       const reply = await intelligenceService.query({
@@ -74,7 +93,8 @@ export default function BioChat({ data, organType }: Props): React.JSX.Element {
         uniprot_id: currentUniprotId,
         disease: currentDisease?.label,
         medicine: currentMedicine?.label,
-      });
+        history: nextHistory,
+      }, controller.signal);
 
       setMessages((current) => [
         ...current,
@@ -83,10 +103,14 @@ export default function BioChat({ data, organType }: Props): React.JSX.Element {
           role: "assistant",
           text: reply.reply,
           sources: reply.sources,
+          visualPayload: reply.visual_payload ?? undefined,
         },
       ]);
       setStatusText("Live");
     } catch (error) {
+      if (controller.signal.aborted) {
+        return;
+      }
       setMessages((current) => [
         ...current,
         {
@@ -100,8 +124,16 @@ export default function BioChat({ data, organType }: Props): React.JSX.Element {
       ]);
       setStatusText("Degraded");
     } finally {
+      if (activeRequestRef.current === controller) {
+        activeRequestRef.current = null;
+      }
       setIsSubmitting(false);
     }
+  };
+
+  const handleSend = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await submitPrompt(input);
   };
 
   return (
@@ -124,31 +156,23 @@ export default function BioChat({ data, organType }: Props): React.JSX.Element {
       </div>
 
       <div className="flex-1 overflow-y-auto no-scrollbar p-6 space-y-4">
+        <div className="flex flex-wrap gap-2">
+          {promptSuggestions.map((suggestion) => (
+            <button
+              key={suggestion}
+              type="button"
+              disabled={isSubmitting}
+              onClick={() => {
+                void submitPrompt(suggestion);
+              }}
+              className="rounded-full border border-outline-variant/15 bg-surface-container px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant transition-colors hover:border-primary/40 hover:text-primary"
+            >
+              {suggestion}
+            </button>
+          ))}
+        </div>
         {messages.map((message) => (
-          <div
-            className={`p-3 rounded-md border ${
-              message.role === "assistant"
-                ? "bg-surface-container-lowest border-outline-variant/10"
-                : "bg-primary/10 border-primary/20"
-            }`}
-            key={message.id}
-          >
-            <p className="text-[11px] leading-relaxed text-on-surface-variant whitespace-pre-wrap">
-              {message.text}
-            </p>
-            {message.sources?.length ? (
-              <div className="mt-2 flex flex-wrap gap-1">
-                {message.sources.map((source) => (
-                  <span
-                    className="text-[9px] text-tertiary font-mono bg-tertiary/10 px-1.5 py-0.5 rounded"
-                    key={source}
-                  >
-                    {source}
-                  </span>
-                ))}
-              </div>
-            ) : null}
-          </div>
+          <ChatBubble key={message.id} message={message} />
         ))}
       </div>
 

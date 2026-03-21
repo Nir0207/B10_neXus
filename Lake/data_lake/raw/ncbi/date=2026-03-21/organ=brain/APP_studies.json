@@ -1,0 +1,1121 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200290101",
+      "200304157",
+      "200291921",
+      "200300348",
+      "200271806",
+      "200310560",
+      "200171312",
+      "200322374",
+      "200321756",
+      "200321558"
+    ],
+    "200290101": {
+      "uid": "200290101",
+      "accession": "GSE290101",
+      "gds": "",
+      "title": "Signaling cascades shape functional subpopulations of cortical astrocytes in male wild-type mice and APP/PS1dE9 Alzheimer\u2019s disease model",
+      "summary": "Astrocytes are key partners for neurons and can impact diseases such as Alzheimer's disease (AD), as they exhibit multiple reactive changes. Recent single cell/nucleus genomics analyses evidence astrocyte subpopulations coexisting in normal and AD brains. However, the signaling cascades controlling them, their functional characteristics and roles in AD are still unknown. Here, thanks to astrocyte-specific reporters for STAT3 and NF-kB signaling pathways, two regulators of astrocyte reactivity, we report the presence of three astrocyte subpopulations defined by their signaling activity, in the prefrontal cortex of male APP/PS1dE9 mice. These subpopulations are not triggered by amyloid deposition and are also observed in wild-type mice. They show distinct morphologies, molecular signatures and functional profiles. While NF-kB+ astrocytes have larger territories and higher lysosomal activity, STAT3+ astrocytes display enhanced hemichannel activity. The specific inhibition of these subpopulations reduces amyloid plaque size and impacts anxiety, social preference and social memory in AD but not wild-type mice. Our results show how innate signaling shapes astrocyte subpopulations in the mouse cortex, with distinct functions in health and disease.",
+      "gpl": "24247",
+      "gse": "290101",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/19",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8806174",
+          "title": "AD3-STAT"
+        },
+        {
+          "accession": "GSM8806194",
+          "title": "WT4-NFKB"
+        },
+        {
+          "accession": "GSM8806171",
+          "title": "AD1-NFKB"
+        },
+        {
+          "accession": "GSM8806177",
+          "title": "AD4-DOUBLE"
+        },
+        {
+          "accession": "GSM8806173",
+          "title": "AD2-STAT"
+        },
+        {
+          "accession": "GSM8806170",
+          "title": "AD1-STAT"
+        },
+        {
+          "accession": "GSM8806202",
+          "title": "WT5-DOUBLE"
+        },
+        {
+          "accession": "GSM8806182",
+          "title": "WT2-DOUBLE"
+        },
+        {
+          "accession": "GSM8806179",
+          "title": "WT1-STAT"
+        },
+        {
+          "accession": "GSM8806176",
+          "title": "AD4-NFKB"
+        },
+        {
+          "accession": "GSM8806175",
+          "title": "AD4-STAT"
+        },
+        {
+          "accession": "GSM8806178",
+          "title": "AD5-STAT"
+        },
+        {
+          "accession": "GSM8806184",
+          "title": "WT4-STAT"
+        },
+        {
+          "accession": "GSM8806181",
+          "title": "WT2-NFKB"
+        },
+        {
+          "accession": "GSM8806201",
+          "title": "WT5-STAT"
+        },
+        {
+          "accession": "GSM8806200",
+          "title": "WT4-DOUBLE"
+        },
+        {
+          "accession": "GSM8806180",
+          "title": "WT2-STAT"
+        },
+        {
+          "accession": "GSM8806172",
+          "title": "AD1-DOUBLE"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 18,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE290nnn/GSE290101/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1226206"
+    },
+    "200304157": {
+      "uid": "200304157",
+      "accession": "GSE304157",
+      "gds": "",
+      "title": "Discovery of a druggable site regulating DNA Binding of the AP1 transcription factor, deltaFOSb",
+      "summary": "\u0394FOSB, a member of the AP1 family of transcription factors, mediates long-term neuroadaptations underlying drug addiction, seizure-related cognitive decline, dyskinesias, and several other chronic conditions. AP1 transcription factors are notoriously difficult to modulate pharmacologically due to the absence of well-defined binding pockets. Here, we identify a novel allosteric site on \u0394FOSB, located outside the DNA-binding cleft, that accommodates small molecules and regulates DNA binding and release. We show that sulfonic acid-containing compounds bind to this site via an induced-fit mechanism, reorienting side chains critical for DNA binding, thereby likely hindering the \u0394FOSB bZIP \u03b1-helix from binding in the major groove of DNA. In vivo, direct administration of lead compound JPC0661 into the brain reduces \u0394FOSB occupancy at genomic AP1 consensus sites by approximately 60% as determined by CUT&RUN-sequencing. These findings demonstrate that DNA binding and release by AP1 transcription factors can be controlled via small molecules docking into a novel allosteric binding site.",
+      "gpl": "21103",
+      "gse": "304157",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/13",
+      "suppfile": "BW, TXT",
+      "samples": [
+        {
+          "accession": "GSM9144529",
+          "title": "Sample 53, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144512",
+          "title": "Sample 41, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144549",
+          "title": "Sample 64, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144532",
+          "title": "Sample 55, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144546",
+          "title": "Sample 63, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144520",
+          "title": "Sample 46, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144523",
+          "title": "Sample 48, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144543",
+          "title": "Sample 61, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144526",
+          "title": "Sample 52, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144527",
+          "title": "Sample 52, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144547",
+          "title": "Sample 63, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144550",
+          "title": "Sample 65, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144524",
+          "title": "Sample 51, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144544",
+          "title": "Sample 62, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144518",
+          "title": "Sample 45, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144538",
+          "title": "Sample 59, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144521",
+          "title": "Sample 46, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144515",
+          "title": "Sample 42, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144541",
+          "title": "Sample 60, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144535",
+          "title": "Sample 56, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144519",
+          "title": "Sample 45, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144539",
+          "title": "Sample 59, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144522",
+          "title": "Sample 48, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144542",
+          "title": "Sample 61, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144545",
+          "title": "Sample 62, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144536",
+          "title": "Sample 58, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144530",
+          "title": "Sample 54, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144513",
+          "title": "Sample 41, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144533",
+          "title": "Sample 55, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144516",
+          "title": "Sample 43, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144537",
+          "title": "Sample 58, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144540",
+          "title": "Sample 60, JPC0661 treated, IGG"
+        },
+        {
+          "accession": "GSM9144514",
+          "title": "Sample 42, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144534",
+          "title": "Sample 56, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144517",
+          "title": "Sample 43, Veh treated, IP"
+        },
+        {
+          "accession": "GSM9144548",
+          "title": "Sample 64, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144531",
+          "title": "Sample 54, JPC0661 treated, IP"
+        },
+        {
+          "accession": "GSM9144528",
+          "title": "Sample 53, Veh treated, IGG"
+        },
+        {
+          "accession": "GSM9144525",
+          "title": "Sample 51, JPC0661 treated, IP"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 39,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41443415"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE304nnn/GSE304157/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1299281"
+    },
+    "200291921": {
+      "uid": "200291921",
+      "accession": "GSE291921",
+      "gds": "",
+      "title": "Linking trajectories of cerebrovascular remodeling and dysfunction to cross-species brain vessel transcriptome in Alzheimer\u2019s disease",
+      "summary": "Growing evidence implicates dysfunctional brain vasculature occurring early in Alzheimer\u2019s disease (AD) progression. Few studies have attempted to bridge transcriptomic signatures with early neuroimaging observations of vascular abnormalities. We leveraged longitudinal in vivo imaging of the cerebrovascular tree in APP/PS1 mice to identify when vascular abnormalities emerge, followed by bulk RNA-seq of isolated brain vessels at this time point. At 9\u201311 months of age, AD mice exhibited microvascular remodeling and dysfunction, including increased tortuosity, decreased capillary blood flow and reduced vascular density. Enriched gene pathways highlighted increased neuroinflammation, dysfunctional angiogenesis, and deficits in actin-mediated muscle contractility. Mapping transcriptional changes to a mouse vascular atlas implicated endothelial cells and microglia in impaired angiogenesis, while mural cells showed actin-filament and ion channel deficits. Mapping to a human vascular atlas identified translational targets to alleviate actin-mediated contractility deficits. Our integrated framework advances cerebrovascular biomarker understanding and informs early-stage AD therapeutic targets.",
+      "gpl": "30172",
+      "gse": "291921",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/13",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM8844397",
+          "title": "APP-Female-2"
+        },
+        {
+          "accession": "GSM8844391",
+          "title": "APP-Male-2"
+        },
+        {
+          "accession": "GSM8844411",
+          "title": "WT-Female-4"
+        },
+        {
+          "accession": "GSM8844394",
+          "title": "APP-Male-5"
+        },
+        {
+          "accession": "GSM8844400",
+          "title": "APP-Female-5"
+        },
+        {
+          "accession": "GSM8844403",
+          "title": "WT-Male-2"
+        },
+        {
+          "accession": "GSM8844406",
+          "title": "WT-Male-5"
+        },
+        {
+          "accession": "GSM8844409",
+          "title": "WT-Female-2"
+        },
+        {
+          "accession": "GSM8844412",
+          "title": "WT-Female-5"
+        },
+        {
+          "accession": "GSM8844392",
+          "title": "APP-Male-3"
+        },
+        {
+          "accession": "GSM8844398",
+          "title": "APP-Female-3"
+        },
+        {
+          "accession": "GSM8844395",
+          "title": "APP-Male-6"
+        },
+        {
+          "accession": "GSM8844407",
+          "title": "WT-Male-6"
+        },
+        {
+          "accession": "GSM8844401",
+          "title": "APP-Female-6"
+        },
+        {
+          "accession": "GSM8844404",
+          "title": "WT-Male-3"
+        },
+        {
+          "accession": "GSM8844410",
+          "title": "WT-Female-3"
+        },
+        {
+          "accession": "GSM8844390",
+          "title": "APP-Male-1"
+        },
+        {
+          "accession": "GSM8844393",
+          "title": "APP-Male-4"
+        },
+        {
+          "accession": "GSM8844396",
+          "title": "APP-Female-1"
+        },
+        {
+          "accession": "GSM8844413",
+          "title": "WT-Female-6"
+        },
+        {
+          "accession": "GSM8844399",
+          "title": "APP-Female-4"
+        },
+        {
+          "accession": "GSM8844402",
+          "title": "WT-Male-1"
+        },
+        {
+          "accession": "GSM8844405",
+          "title": "WT-Male-4"
+        },
+        {
+          "accession": "GSM8844408",
+          "title": "WT-Female-1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 24,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE291nnn/GSE291921/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1235782"
+    },
+    "200300348": {
+      "uid": "200300348",
+      "accession": "GSE300348",
+      "gds": "",
+      "title": "Cdkn2a/p16INK4A Loss affects hippocampal transcription in Young Adult Mice Independently of Alzheimer \u2019s-Associated Genetic Pathways",
+      "summary": "Background \u2013 The cyclin-dependent kinase inhibitor CDKN2A/p16INK4A is a central regulator of cellular senescence, widely studied in aging and cancer. Although its expression increases with age and disease, its role in the adult brain remains poorly defined. Recent evidence suggests a possible contribution to neuroinflammation and cognitive decline in Alzheimer\u2019s disease (AD), but underlying mechanisms are unclear. We investigated the functional impact of p16INK4A inactivation on hippocampal gene expression in adult mice under normal and amyloidogenic conditions using the AppNL-G-F AD model.  Methods \u2013. Hippocampal transcriptomes from control, p16INK4Aknockout (p16INK4AKO), AppNL-G-F, and double mutant mice were analysed by RNA sequencing. We performed differential gene expression analysis, gene set enrichment analysis (GSEA), and interaction modelling to assess the molecular consequences of p16INK4A loss alone and in combination with amyloid pathology.  Results \u2013Transcriptomic analysis revealed that p16INK4AKO upregulated metabolic, mitochondrial, and translational pathways, while downregulating synaptic and cytoskeletal genes. In contrast, AppNL-G-F mice displayed strong immune activation. The double mutants showed additive transcriptional changes, yet GSEA indicated non-linear interactions in synaptic and immune-related pathways. Unexpectedly, p16INK4A deletion alone enriched senescence-associated signatures, despite the loss of this canonical senescence gene.  Conclusion \u2013 Constitutive p16INK4A loss causes broad transcriptomic remodelling in the adult hippocampus, independently of amyloid pathology. These findings uncover non-canonical roles for p16INK4A in neuronal homeostasis and emphasise the need for temporally controlled models to better dissect the brain-specific functions of senescence regulators in ageing and neurodegeneration.",
+      "gpl": "30172",
+      "gse": "300348",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/11",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM9058849",
+          "title": "5 month old mouse brain hippocampus - APP<NLGF/NLGF>P16<KO/KO> genotype - sample 22"
+        },
+        {
+          "accession": "GSM9058846",
+          "title": "5 month old mouse brain hippocampus - APP<NLGF/NLGF>P16<KO/KO> genotype - sample 19"
+        },
+        {
+          "accession": "GSM9058829",
+          "title": "5 month old mouse brain hippocampus - WT genotype - sample 2"
+        },
+        {
+          "accession": "GSM9058838",
+          "title": "5 month old mouse brain hippocampus - P16 KO genotype - sample 11"
+        },
+        {
+          "accession": "GSM9058835",
+          "title": "5 month old mouse brain hippocampus - P16 KO genotype - sample 8"
+        },
+        {
+          "accession": "GSM9058832",
+          "title": "5 month old mouse brain hippocampus - WT genotype - sample 5"
+        },
+        {
+          "accession": "GSM9058841",
+          "title": "5 month old mouse brain hippocampus - APP NLGF genotype - sample 14"
+        },
+        {
+          "accession": "GSM9058844",
+          "title": "5 month old mouse brain hippocampus - APP NLGF genotype - sample 17"
+        },
+        {
+          "accession": "GSM9058830",
+          "title": "5 month old mouse brain hippocampus - WT genotype - sample 3"
+        },
+        {
+          "accession": "GSM9058850",
+          "title": "5 month old mouse brain hippocampus - APP<NLGF/NLGF>P16<KO/KO> genotype - sample 23"
+        },
+        {
+          "accession": "GSM9058847",
+          "title": "5 month old mouse brain hippocampus - APP<NLGF/NLGF>P16<KO/KO> genotype - sample 20"
+        },
+        {
+          "accession": "GSM9058833",
+          "title": "5 month old mouse brain hippocampus - WT genotype - sample 6"
+        },
+        {
+          "accession": "GSM9058839",
+          "title": "5 month old mouse brain hippocampus - P16 KO genotype - sample 12"
+        },
+        {
+          "accession": "GSM9058836",
+          "title": "5 month old mouse brain hippocampus - P16 KO genotype - sample 9"
+        },
+        {
+          "accession": "GSM9058848",
+          "title": "5 month old mouse brain hippocampus - APP<NLGF/NLGF>P16<KO/KO> genotype - sample 21"
+        },
+        {
+          "accession": "GSM9058845",
+          "title": "5 month old mouse brain hippocampus - APP<NLGF/NLGF>P16<KO/KO> genotype - sample 18"
+        },
+        {
+          "accession": "GSM9058842",
+          "title": "5 month old mouse brain hippocampus - APP NLGF genotype - sample 15"
+        },
+        {
+          "accession": "GSM9058831",
+          "title": "5 month old mouse brain hippocampus - WT genotype - sample 4"
+        },
+        {
+          "accession": "GSM9058828",
+          "title": "5 month old mouse brain hippocampus - WT genotype - sample 1"
+        },
+        {
+          "accession": "GSM9058834",
+          "title": "5 month old mouse brain hippocampus - P16 KO genotype - sample 7"
+        },
+        {
+          "accession": "GSM9058840",
+          "title": "5 month old mouse brain hippocampus - APP NLGF genotype - sample 13"
+        },
+        {
+          "accession": "GSM9058837",
+          "title": "5 month old mouse brain hippocampus - P16 KO genotype - sample 10"
+        },
+        {
+          "accession": "GSM9058843",
+          "title": "5 month old mouse brain hippocampus - APP NLGF genotype - sample 16"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 23,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41741874"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE300nnn/GSE300348/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1280130"
+    },
+    "200271806": {
+      "uid": "200271806",
+      "accession": "GSE271806",
+      "gds": "",
+      "title": "Over-expression of human mutated APP transgene in the mouse brain induces differential gene expression profiles depending on the age of exposure",
+      "summary": "Alzheimer\u00b4s disease (AD) is the most prevalent neurodegenerative disorder causing about two third of all dementia cases in the elderly. Although AD pathological features have been intensively examined in numerous scientific studies employing invertebrate and vertebrate model organisms, the exact underlying mechanisms remain poorly understood. Extracellular accumulation of amyloid beta (A\u03b2) peptides represents a pathological hallmark of AD and it has been considered as the initiation point of AD by the popular amyloid hypothesis. In the current study, we aim to address whether expression of a mutated APP transgene (APPSweInd) would provoke differential neurological outcomes depending on the age of exposure in mice. Towards this end, we employed a tetracycline-based inducible genetic system to target APPSweInd transgene expression to defined age intervals initiated at adulthood, i.e., between 6-18 months (= mid-aged group) and 12-24 months (= aged group). Surprisingly, over-expression of mutant APP reduced the transcriptional levels of genes embedded in the cholinergic network exclusively in the aged mouse brain, while gene expression profiles related to inflammatory activation and exacerbated gliosis were shared between age groups. Hence, our data support the notion that AD pathology may rely on a disruption of the cholinergic system that is triggered through an altered response of the aged brain towards toxic A\u03b2 aggregates.",
+      "gpl": "13112",
+      "gse": "271806",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/11",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8385680",
+          "title": "18-month doxycycline treated tTAxAPP, ID196"
+        },
+        {
+          "accession": "GSM8385677",
+          "title": "18-month placebo treated tTAxAPP, ID204"
+        },
+        {
+          "accession": "GSM8385683",
+          "title": "24-month placebo treated tTAxAPP, ID1547"
+        },
+        {
+          "accession": "GSM8385678",
+          "title": "18-month placebo treated tTAxAPP, ID164"
+        },
+        {
+          "accession": "GSM8385675",
+          "title": "18-month placebo treated tTAxAPP, ID172"
+        },
+        {
+          "accession": "GSM8385689",
+          "title": "24-month doxycycline treated tTAxAPP, ID45"
+        },
+        {
+          "accession": "GSM8385686",
+          "title": "24-month placebo treated tTAxAPP, ID43"
+        },
+        {
+          "accession": "GSM8385687",
+          "title": "24-month doxycycline treated tTAxAPP, ID3"
+        },
+        {
+          "accession": "GSM8385681",
+          "title": "18-month doxycycline treated tTAxAPP, ID199"
+        },
+        {
+          "accession": "GSM8385684",
+          "title": "24-month placebo treated tTAxAPP, ID27"
+        },
+        {
+          "accession": "GSM8385682",
+          "title": "18-month doxycycline treated tTAxAPP, ID205"
+        },
+        {
+          "accession": "GSM8385688",
+          "title": "24-month doxycycline treated tTAxAPP, ID80"
+        },
+        {
+          "accession": "GSM8385685",
+          "title": "24-month placebo treated tTAxAPP, ID1590"
+        },
+        {
+          "accession": "GSM8385679",
+          "title": "18-month doxycycline treated tTAxAPP, ID176"
+        },
+        {
+          "accession": "GSM8385676",
+          "title": "18-month placebo treated tTAxAPP, ID167"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 15,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41495755"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE271nnn/GSE271806/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1133653"
+    },
+    "200310560": {
+      "uid": "200310560",
+      "accession": "GSE310560",
+      "gds": "",
+      "title": "Deep profiling of multiple mouse tumor microenvironments using scRNAseq",
+      "summary": "The HuMu dataset (https://www.biorxiv.org/content/10.1101/2025.07.01.661217v1) contains single-cell sequencing data from 9 mouse tumor models that we use to dissect gene expression profiles across populations and tumor models. The data can be readily queried here https://quipi.org/app/quipi_humu",
+      "gpl": "24247",
+      "gse": "310560",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/05",
+      "suppfile": "RDS, TXT",
+      "samples": [
+        {
+          "accession": "GSM9303618",
+          "title": "HTO associated to XCRS1-POOL-SCG66"
+        },
+        {
+          "accession": "GSM9303581",
+          "title": "Enriched myeloid cells from CT26 tumors XCRS1-POOL-SCG43"
+        },
+        {
+          "accession": "GSM9303598",
+          "title": "Enriched lymphoid cells from MMT-PyMT GEMM females tumors 2"
+        },
+        {
+          "accession": "GSM9303601",
+          "title": "HTO associated to XCRS1-POOL-SCG10"
+        },
+        {
+          "accession": "GSM9303621",
+          "title": "HTO associated to XCRS1-POOL-SCG73"
+        },
+        {
+          "accession": "GSM9303575",
+          "title": "Enriched myeloid cells from MC38 tumors XCRS1-POOL-SCG22"
+        },
+        {
+          "accession": "GSM9303578",
+          "title": "Enriched lymphoid cells from 4T1 tumors from XCRS1-POOL-SCG36"
+        },
+        {
+          "accession": "GSM9303572",
+          "title": "Enriched lymphoid cells from LLC tumors from XCRS1-POOL-SCG15"
+        },
+        {
+          "accession": "GSM9303609",
+          "title": "HTO associated to XCRS1-POOL-SCG37"
+        },
+        {
+          "accession": "GSM9303589",
+          "title": "Enriched myeloid cells from B16-F10 tumors"
+        },
+        {
+          "accession": "GSM9303592",
+          "title": "Enriched lymphoid cells from RENCA tumors"
+        },
+        {
+          "accession": "GSM9303595",
+          "title": "Enriched myeloid cells from CT26 tumors"
+        },
+        {
+          "accession": "GSM9303612",
+          "title": "HTO associated to XCRS1-POOL-SCG48"
+        },
+        {
+          "accession": "GSM9303615",
+          "title": "HTO associated to XCRS1-POOL-SCG55"
+        },
+        {
+          "accession": "GSM9303570",
+          "title": "Enriched lymphoid cells from B16-F10 tumors from XCRS1-POOL-SCG9"
+        },
+        {
+          "accession": "GSM9303593",
+          "title": "Enriched myeloid cells from RENCA tumors"
+        },
+        {
+          "accession": "GSM9303573",
+          "title": "Enriched myeloid cells from LLC tumors XCRS1-POOL-SCG16"
+        },
+        {
+          "accession": "GSM9303576",
+          "title": "Enriched lymphoid cells from RENCA tumors XCRS1-POOL-SCG30"
+        },
+        {
+          "accession": "GSM9303613",
+          "title": "HTO associated to XCRS1-POOL-SCG49"
+        },
+        {
+          "accession": "GSM9303616",
+          "title": "HTO associated to XCRS1-POOL-SCG60"
+        },
+        {
+          "accession": "GSM9303596",
+          "title": "Enriched lymphoid cells from MMT-PyMT GEMM females tumors 1"
+        },
+        {
+          "accession": "GSM9303590",
+          "title": "Enriched lymphoid cells from 4T1 tumors"
+        },
+        {
+          "accession": "GSM9303607",
+          "title": "HTO associated to XCRS1-POOL-SCG31"
+        },
+        {
+          "accession": "GSM9303610",
+          "title": "HTO associated to XCRS1-POOL-SCG42"
+        },
+        {
+          "accession": "GSM9303604",
+          "title": "HTO associated to XCRS1-POOL-SCG21"
+        },
+        {
+          "accession": "GSM9303584",
+          "title": "Enriched lymphoid cells from LLC tumors"
+        },
+        {
+          "accession": "GSM9303624",
+          "title": "HTO associated to XCRS1-POOL-SCG84"
+        },
+        {
+          "accession": "GSM9303587",
+          "title": "Enriched myeloid cells from MC38 tumors"
+        },
+        {
+          "accession": "GSM9303608",
+          "title": "HTO associated to XCRS1-POOL-SCG36"
+        },
+        {
+          "accession": "GSM9303571",
+          "title": "Enriched myeloid cells from B16-F10 tumors from  XCRS1-POOL-SCG10"
+        },
+        {
+          "accession": "GSM9303611",
+          "title": "HTO associated to XCRS1-POOL-SCG43"
+        },
+        {
+          "accession": "GSM9303591",
+          "title": "Enriched myeloid cells from 4T1 tumors"
+        },
+        {
+          "accession": "GSM9303585",
+          "title": "Enriched myeloid cells from LLC tumors"
+        },
+        {
+          "accession": "GSM9303588",
+          "title": "Enriched lymphoid cells from B16-F10 tumors"
+        },
+        {
+          "accession": "GSM9303599",
+          "title": "Enriched myeloid cells from MMT-PyMT GEMM females tumors 2"
+        },
+        {
+          "accession": "GSM9303602",
+          "title": "HTO associated to XCRS1-POOL-SCG15"
+        },
+        {
+          "accession": "GSM9303582",
+          "title": "Enriched lymphoid cells from KPC-F/KPCY-C2 tumors"
+        },
+        {
+          "accession": "GSM9303619",
+          "title": "HTO associated to XCRS1-POOL-SCG67"
+        },
+        {
+          "accession": "GSM9303622",
+          "title": "HTO associated to XCRS1-POOL-SCG78"
+        },
+        {
+          "accession": "GSM9303625",
+          "title": "HTO associated to XCRS1-POOL-SCG85"
+        },
+        {
+          "accession": "GSM9303579",
+          "title": "Enriched myeloid cells from 4T1 tumors XCRS1-POOL-SCG37"
+        },
+        {
+          "accession": "GSM9303605",
+          "title": "HTO associated to XCRS1-POOL-SCG22"
+        },
+        {
+          "accession": "GSM9303580",
+          "title": "Enriched lymphoid cells from CT26 tumors XCRS1-POOL-SCG42"
+        },
+        {
+          "accession": "GSM9303583",
+          "title": "Enriched myeloid cells from KPC-F/KPCY-C2 tumors"
+        },
+        {
+          "accession": "GSM9303586",
+          "title": "Enriched lymphoid cells from MC38 tumors"
+        },
+        {
+          "accession": "GSM9303603",
+          "title": "HTO associated to XCRS1-POOL-SCG16"
+        },
+        {
+          "accession": "GSM9303606",
+          "title": "HTO associated to XCRS1-POOL-SCG30"
+        },
+        {
+          "accession": "GSM9303623",
+          "title": "HTO associated to XCRS1-POOL-SCG79"
+        },
+        {
+          "accession": "GSM9303617",
+          "title": "HTO associated to XCRS1-POOL-SCG61"
+        },
+        {
+          "accession": "GSM9303574",
+          "title": "Enriched lymphoid cells from MC38 tumors XCRS1-POOL-SCG21"
+        },
+        {
+          "accession": "GSM9303620",
+          "title": "HTO associated to XCRS1-POOL-SCG72"
+        },
+        {
+          "accession": "GSM9303600",
+          "title": "HTO associated to XCRS1-POOL-SCG9"
+        },
+        {
+          "accession": "GSM9303577",
+          "title": "Enriched myeloid cells from RENCA tumors from XCRS1-POOL-SCG31"
+        },
+        {
+          "accession": "GSM9303614",
+          "title": "HTO associated to XCRS1-POOL-SCG54"
+        },
+        {
+          "accession": "GSM9303594",
+          "title": "Enriched lymphoid cells from CT26 tumors"
+        },
+        {
+          "accession": "GSM9303597",
+          "title": "Enriched myeloid cells from MMT-PyMT GEMM females tumors 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 56,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE310nnn/GSE310560/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1366508"
+    },
+    "200171312": {
+      "uid": "200171312",
+      "accession": "GSE171312",
+      "gds": "",
+      "title": "Nanopore Direct RNA sequencing of mice hippocampal brain tissues",
+      "summary": "Oxford Nanopore enables direct RNA sequencing allowing for base calling of RNA modifications. However, current direct RNA sequencing protocols may not be detecting some classes of non-coding RNAs such as SINE RNAs produced by Short Interspersed Nuclear Elements (SINEs). Using mouse hippocampi RNA samples, we have established a novel Nanopore direct RNA-seq protocol that in addition to long poly A selected RNAs allows sequencing also of non-poly A RNAs as well as short RNAs < 200nt (including SINE RNAs and other non poly A non coding RNAs). We provide here as a resource the first direct RNA-sequencing performed in mouse brain tissues that includes both mRNAs and non poly A or short non-coding RNAs such as SINEs.",
+      "gpl": "26624;24973",
+      "gse": "171312",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing; Non-coding RNA profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/01",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM5222719",
+          "title": "APP-6m_2"
+        },
+        {
+          "accession": "GSM5222722",
+          "title": "Ctrl-6m_2"
+        },
+        {
+          "accession": "GSM5222720",
+          "title": "APP-6m_3"
+        },
+        {
+          "accession": "GSM5222723",
+          "title": "Ctrl-6m_3"
+        },
+        {
+          "accession": "GSM5222721",
+          "title": "Ctrl-6m_1"
+        },
+        {
+          "accession": "GSM5222718",
+          "title": "APP-6m_1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP313263",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP313/SRP313263/"
+        }
+      ],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE171nnn/GSE171312/",
+      "geo2r": "no",
+      "bioproject": "PRJNA719114"
+    },
+    "200322374": {
+      "uid": "200322374",
+      "accession": "GSE322374",
+      "gds": "",
+      "title": "Control CRISPR screen from glutamatergic neuron (ENCSR364KFC)",
+      "summary": "For data usage terms and conditions, please refer to http://www.genome.gov/27528022 and http://www.genome.gov/Pages/Research/ENCODE/ENCODE_Data_Use_Policy_for_External_Users_03-07-14.pdf",
+      "gpl": "24676",
+      "gse": "322374",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/28",
+      "suppfile": "TSV, TXT",
+      "samples": [
+        {
+          "accession": "GSM9552290",
+          "title": "Control CRISPR screen from glutamatergic neuron (ENCLB288QIX)"
+        },
+        {
+          "accession": "GSM9552289",
+          "title": "Control CRISPR screen from glutamatergic neuron (ENCLB518XKZ)"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "22955616"
+      ],
+      "projects": [
+        {
+          "name": "ENCODE",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/encode/"
+        }
+      ],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE322nnn/GSE322374/",
+      "geo2r": "no",
+      "bioproject": "PRJNA63443"
+    },
+    "200321756": {
+      "uid": "200321756",
+      "accession": "GSE321756",
+      "gds": "",
+      "title": "Control CRISPR screen from WTC11 (ENCSR418JRB)",
+      "summary": "For data usage terms and conditions, please refer to http://www.genome.gov/27528022 and http://www.genome.gov/Pages/Research/ENCODE/ENCODE_Data_Use_Policy_for_External_Users_03-07-14.pdf",
+      "gpl": "24676",
+      "gse": "321756",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/28",
+      "suppfile": "TSV, TXT",
+      "samples": [
+        {
+          "accession": "GSM9550066",
+          "title": "Control CRISPR screen from WTC11 (ENCLB946YBG)"
+        },
+        {
+          "accession": "GSM9550067",
+          "title": "Control CRISPR screen from WTC11 (ENCLB923TLK)"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "22955616"
+      ],
+      "projects": [
+        {
+          "name": "ENCODE",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/encode/"
+        }
+      ],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE321nnn/GSE321756/",
+      "geo2r": "no",
+      "bioproject": "PRJNA63443"
+    },
+    "200321558": {
+      "uid": "200321558",
+      "accession": "GSE321558",
+      "gds": "",
+      "title": "FACS CRISPR screen from glutamatergic neuron (ENCSR952RDF)",
+      "summary": "For data usage terms and conditions, please refer to http://www.genome.gov/27528022 and http://www.genome.gov/Pages/Research/ENCODE/ENCODE_Data_Use_Policy_for_External_Users_03-07-14.pdf",
+      "gpl": "24676",
+      "gse": "321558",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/28",
+      "suppfile": "TSV, TXT",
+      "samples": [
+        {
+          "accession": "GSM9548996",
+          "title": "FACS CRISPR screen from glutamatergic neuron (ENCLB873SYX)"
+        },
+        {
+          "accession": "GSM9548995",
+          "title": "FACS CRISPR screen from glutamatergic neuron (ENCLB415FCS)"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "22955616"
+      ],
+      "projects": [
+        {
+          "name": "ENCODE",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/encode/"
+        }
+      ],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE321nnn/GSE321558/",
+      "geo2r": "no",
+      "bioproject": "PRJNA63443"
+    }
+  }
+}

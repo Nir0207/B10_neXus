@@ -110,3 +110,14 @@ CREATE TABLE IF NOT EXISTS audit_logs (
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id VARCHAR(50)
 );
+
+CREATE TABLE IF NOT EXISTS app_users (
+    username VARCHAR(32) PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    full_name VARCHAR(120),
+    hashed_password TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_app_users_email_lower
+    ON app_users (LOWER(email));

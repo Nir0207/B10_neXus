@@ -1,0 +1,1779 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200290101",
+      "200310518",
+      "200288917",
+      "200307127",
+      "200276471",
+      "200303404",
+      "200295890",
+      "200277599",
+      "200298491",
+      "200297743"
+    ],
+    "200290101": {
+      "uid": "200290101",
+      "accession": "GSE290101",
+      "gds": "",
+      "title": "Signaling cascades shape functional subpopulations of cortical astrocytes in male wild-type mice and APP/PS1dE9 Alzheimer\u2019s disease model",
+      "summary": "Astrocytes are key partners for neurons and can impact diseases such as Alzheimer's disease (AD), as they exhibit multiple reactive changes. Recent single cell/nucleus genomics analyses evidence astrocyte subpopulations coexisting in normal and AD brains. However, the signaling cascades controlling them, their functional characteristics and roles in AD are still unknown. Here, thanks to astrocyte-specific reporters for STAT3 and NF-kB signaling pathways, two regulators of astrocyte reactivity, we report the presence of three astrocyte subpopulations defined by their signaling activity, in the prefrontal cortex of male APP/PS1dE9 mice. These subpopulations are not triggered by amyloid deposition and are also observed in wild-type mice. They show distinct morphologies, molecular signatures and functional profiles. While NF-kB+ astrocytes have larger territories and higher lysosomal activity, STAT3+ astrocytes display enhanced hemichannel activity. The specific inhibition of these subpopulations reduces amyloid plaque size and impacts anxiety, social preference and social memory in AD but not wild-type mice. Our results show how innate signaling shapes astrocyte subpopulations in the mouse cortex, with distinct functions in health and disease.",
+      "gpl": "24247",
+      "gse": "290101",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/19",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8806174",
+          "title": "AD3-STAT"
+        },
+        {
+          "accession": "GSM8806194",
+          "title": "WT4-NFKB"
+        },
+        {
+          "accession": "GSM8806171",
+          "title": "AD1-NFKB"
+        },
+        {
+          "accession": "GSM8806177",
+          "title": "AD4-DOUBLE"
+        },
+        {
+          "accession": "GSM8806173",
+          "title": "AD2-STAT"
+        },
+        {
+          "accession": "GSM8806170",
+          "title": "AD1-STAT"
+        },
+        {
+          "accession": "GSM8806202",
+          "title": "WT5-DOUBLE"
+        },
+        {
+          "accession": "GSM8806182",
+          "title": "WT2-DOUBLE"
+        },
+        {
+          "accession": "GSM8806179",
+          "title": "WT1-STAT"
+        },
+        {
+          "accession": "GSM8806176",
+          "title": "AD4-NFKB"
+        },
+        {
+          "accession": "GSM8806175",
+          "title": "AD4-STAT"
+        },
+        {
+          "accession": "GSM8806178",
+          "title": "AD5-STAT"
+        },
+        {
+          "accession": "GSM8806184",
+          "title": "WT4-STAT"
+        },
+        {
+          "accession": "GSM8806181",
+          "title": "WT2-NFKB"
+        },
+        {
+          "accession": "GSM8806201",
+          "title": "WT5-STAT"
+        },
+        {
+          "accession": "GSM8806200",
+          "title": "WT4-DOUBLE"
+        },
+        {
+          "accession": "GSM8806180",
+          "title": "WT2-STAT"
+        },
+        {
+          "accession": "GSM8806172",
+          "title": "AD1-DOUBLE"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 18,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE290nnn/GSE290101/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1226206"
+    },
+    "200310518": {
+      "uid": "200310518",
+      "accession": "GSE310518",
+      "gds": "",
+      "title": "bacTRAP profiling of astrocytes in five mouse brain regions in wildtype controls and hippocampus region in a Alzheimer's disease mouse model",
+      "summary": "We experimentally generated astrocyte gene expression profiles in five major brain regions in mouse: prefrontal cortex (P), hippocampus (H), amygdala (A), caudate nucleus (C) and ventral striatum (V) (Figure 1A, Methods), with more than three biological replicates in each region. To derive the differences between the regional transcriptional profiles, we utilized TRAP-seq, a method that enables detailed profiling of actively translated mRNA, rather than just transcribed mRNA, thus better capturing the functional state of the cell. This approach enables us to generate ex vivo region-specific astrocyte signatures.",
+      "gpl": "13112",
+      "gse": "310518",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/12/20",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9302517",
+          "title": "H1"
+        },
+        {
+          "accession": "GSM9302514",
+          "title": "C1"
+        },
+        {
+          "accession": "GSM9302497",
+          "title": "CD1"
+        },
+        {
+          "accession": "GSM9302508",
+          "title": "CH3"
+        },
+        {
+          "accession": "GSM9302511",
+          "title": "A1"
+        },
+        {
+          "accession": "GSM9302505",
+          "title": "CV2"
+        },
+        {
+          "accession": "GSM9302525",
+          "title": "V3"
+        },
+        {
+          "accession": "GSM9302509",
+          "title": "CP3"
+        },
+        {
+          "accession": "GSM9302512",
+          "title": "A2"
+        },
+        {
+          "accession": "GSM9302500",
+          "title": "CV1"
+        },
+        {
+          "accession": "GSM9302520",
+          "title": "P1"
+        },
+        {
+          "accession": "GSM9302523",
+          "title": "V1"
+        },
+        {
+          "accession": "GSM9302503",
+          "title": "CH2"
+        },
+        {
+          "accession": "GSM9302506",
+          "title": "CA3"
+        },
+        {
+          "accession": "GSM9302504",
+          "title": "CP2"
+        },
+        {
+          "accession": "GSM9302524",
+          "title": "V2"
+        },
+        {
+          "accession": "GSM9302507",
+          "title": "CD3"
+        },
+        {
+          "accession": "GSM9302518",
+          "title": "H2"
+        },
+        {
+          "accession": "GSM9302501",
+          "title": "CA2"
+        },
+        {
+          "accession": "GSM9302521",
+          "title": "P2"
+        },
+        {
+          "accession": "GSM9302515",
+          "title": "C2"
+        },
+        {
+          "accession": "GSM9302498",
+          "title": "CH1"
+        },
+        {
+          "accession": "GSM9302499",
+          "title": "CP1"
+        },
+        {
+          "accession": "GSM9302502",
+          "title": "CD2"
+        },
+        {
+          "accession": "GSM9302519",
+          "title": "H3"
+        },
+        {
+          "accession": "GSM9302522",
+          "title": "P3"
+        },
+        {
+          "accession": "GSM9302510",
+          "title": "CV3"
+        },
+        {
+          "accession": "GSM9302496",
+          "title": "CA1"
+        },
+        {
+          "accession": "GSM9302513",
+          "title": "A3"
+        },
+        {
+          "accession": "GSM9302516",
+          "title": "C3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 30,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE310nnn/GSE310518/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1366458"
+    },
+    "200288917": {
+      "uid": "200288917",
+      "accession": "GSE288917",
+      "gds": "",
+      "title": "RNA Sequencing (RNA-Seq) analysis of sex-matched neural stem cells derived from early-onset Alzheimer\u2019s disease (EOAD), late-onset Alzheimer\u2019s disease (LOAD), and wild-type controls",
+      "summary": "Neural stem cells derived from early-onset Alzheimer\u2019s disease (EOAD) patients with PSEN1 mutations, late-onset Alzheimer\u2019s disease (LOAD) patients with APOE4 genotypes, and sex-matched wild-type (WT) controls were cultured and differentiated to neurons. Undifferentiated cells (UD, cultured for 1 day) and differentiated cells (DIF, cultured for 35 days) were compared to study gene expression changes. Oligomeric amyloid beta (A\u03b2, 0.5 \u00b5M) was applied to differentiated WT neurons for 24 hours prior to RNA sequencing. Differential gene expression analysis revealed that genetic background differences between healthy controls, as well as between EOAD and LOAD, contribute as many expression changes as AD-specific mutations. Comparing differentiation-induced gene expression changes between AD neurons and corresponding healthy controls circumvents background variability and highlights disease-specific alterations.Analysis of over 100 AD-associated genes showed altered expression in differentiated EOAD and LOAD neurons, consistent with roles in neuronal functions and AD etiopathogenesis. Notably, LOAD neurons, but not EOAD neurons, exhibited significant deficiencies in heme and redox homeostasis, with reduced expression of genes associated with heme metabolism, oxidative phosphorylation, and NAD/NADH homeostasis. These deficiencies may underlie neuronal dysfunction and contribute to LOAD pathogenesis. Gene Ontology enrichment analysis identified pathways uniquely dysregulated in EOAD and LOAD, offering insights into the molecular mechanisms distinguishing these forms of Alzheimer\u2019s disease. This study emphasizes the critical role of redox and heme homeostasis in LOAD and identifies gene expression patterns altered specifically by AD mutations.",
+      "gpl": "30173",
+      "gse": "288917",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/09/21",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM8778589",
+          "title": "WT F UD Control 3"
+        },
+        {
+          "accession": "GSM8778609",
+          "title": "WT M DIF 3"
+        },
+        {
+          "accession": "GSM8778592",
+          "title": "WT F DIF 3"
+        },
+        {
+          "accession": "GSM8778612",
+          "title": "WT M AB DIF 3"
+        },
+        {
+          "accession": "GSM8778595",
+          "title": "WT F AB DIF 3"
+        },
+        {
+          "accession": "GSM8778581",
+          "title": "AD DIF APOE 1"
+        },
+        {
+          "accession": "GSM8778598",
+          "title": "AD DIF PSEN1 2"
+        },
+        {
+          "accession": "GSM8778601",
+          "title": "AD UD PSEN1 2"
+        },
+        {
+          "accession": "GSM8778594",
+          "title": "WT F AB DIF 2"
+        },
+        {
+          "accession": "GSM8778597",
+          "title": "AD DIF PSEN1 1"
+        },
+        {
+          "accession": "GSM8778603",
+          "title": "AD UD PSEN1 4"
+        },
+        {
+          "accession": "GSM8778586",
+          "title": "AD UD APOE 3"
+        },
+        {
+          "accession": "GSM8778606",
+          "title": "WT M UD Control 3"
+        },
+        {
+          "accession": "GSM8778600",
+          "title": "AD UD PSEN1 1"
+        },
+        {
+          "accession": "GSM8778583",
+          "title": "AD DIF APOE 3"
+        },
+        {
+          "accession": "GSM8778599",
+          "title": "AD DIF PSEN1 3"
+        },
+        {
+          "accession": "GSM8778582",
+          "title": "AD DIF APOE 2"
+        },
+        {
+          "accession": "GSM8778602",
+          "title": "AD UD PSEN1 3"
+        },
+        {
+          "accession": "GSM8778605",
+          "title": "WT M UD Control 2"
+        },
+        {
+          "accession": "GSM8778585",
+          "title": "AD UD APOE 2"
+        },
+        {
+          "accession": "GSM8778591",
+          "title": "WT F DIF 2"
+        },
+        {
+          "accession": "GSM8778588",
+          "title": "WT F UD Control 2"
+        },
+        {
+          "accession": "GSM8778608",
+          "title": "WT M DIF 2"
+        },
+        {
+          "accession": "GSM8778611",
+          "title": "WT M AB DIF 2"
+        },
+        {
+          "accession": "GSM8778604",
+          "title": "WT M UD Control 1"
+        },
+        {
+          "accession": "GSM8778587",
+          "title": "WT F UD Control 1"
+        },
+        {
+          "accession": "GSM8778607",
+          "title": "WT M DIF 1"
+        },
+        {
+          "accession": "GSM8778584",
+          "title": "AD UD APOE 1"
+        },
+        {
+          "accession": "GSM8778596",
+          "title": "WT F AB DIF 4"
+        },
+        {
+          "accession": "GSM8778590",
+          "title": "WT F DIF 1"
+        },
+        {
+          "accession": "GSM8778610",
+          "title": "WT M AB DIF 1"
+        },
+        {
+          "accession": "GSM8778593",
+          "title": "WT F AB DIF 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 32,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "40959270",
+        "41097067"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE288nnn/GSE288917/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1220015"
+    },
+    "200307127": {
+      "uid": "200307127",
+      "accession": "GSE307127",
+      "gds": "",
+      "title": "Immune Receptor Lag3 Deletion Alleviates Neurodegeneration Phenotypes in a Mouse Model of Alzheimer\u2019s Disease",
+      "summary": "Alzheimer\u2019s disease (AD) is the leading cause of dementia, but effective treatments remail unavailable. Using the 5xFAD familial AD mouse model, we show that deletion of the immune checkpoint receptor Lymphocyte activation gene 3 (Lag3) reduces amyloidosis, microgliosis, and neurodegeneration-related behavioral deficits. Transcriptional profiling revealed that Lag3 deletion reverses aberrant expression of disease-associated microglia (DAM) genes and decreased CD8+ T cells infiltration in the brain. These findings suggest that Lag3 regulates microglia function and may represent a potential therapeutic target for AD.",
+      "gpl": "19057",
+      "gse": "307127",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/09/10",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9216969",
+          "title": "Lag3-/-, 6 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216986",
+          "title": "Lag3-/-; 5xFAD+, 9 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216966",
+          "title": "5xFAD+, 6 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216972",
+          "title": "Lag3-/-; 5xFAD+, 6 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216980",
+          "title": "5xFAD+, 9 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216960",
+          "title": "Lag3-/-; 5xFAD+, 3 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216957",
+          "title": "Lag3-/-, 3 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216983",
+          "title": "Lag3-/-, 9 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216963",
+          "title": "WT, 6 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216961",
+          "title": "Lag3-/-; 5xFAD+, 3 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216967",
+          "title": "5xFAD+, 6 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216984",
+          "title": "Lag3-/-; 5xFAD+, 9 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216964",
+          "title": "WT, 6 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216981",
+          "title": "Lag3-/-, 9 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216952",
+          "title": "WT, 3 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216978",
+          "title": "5xFAD+, 9 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216958",
+          "title": "Lag3-/-, 3 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216975",
+          "title": "WT, 9 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216955",
+          "title": "5xFAD+, 3 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216979",
+          "title": "5xFAD+, 9 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216959",
+          "title": "Lag3-/-, 3 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216976",
+          "title": "WT, 9 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216956",
+          "title": "5xFAD+, 3 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216982",
+          "title": "Lag3-/-, 9 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216970",
+          "title": "Lag3-/-, 6 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216973",
+          "title": "Lag3-/-; 5xFAD+, 6 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216951",
+          "title": "WT, 3 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216953",
+          "title": "WT, 3 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216977",
+          "title": "WT, 9 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216974",
+          "title": "Lag3-/-; 5xFAD+, 6 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216954",
+          "title": "5xFAD+, 3 month, female, rep1"
+        },
+        {
+          "accession": "GSM9216971",
+          "title": "Lag3-/-, 6 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216968",
+          "title": "5xFAD+, 6 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216965",
+          "title": "WT, 6 month, female, rep3"
+        },
+        {
+          "accession": "GSM9216985",
+          "title": "Lag3-/-; 5xFAD+, 9 month, female, rep2"
+        },
+        {
+          "accession": "GSM9216962",
+          "title": "Lag3-/-; 5xFAD+, 3 month, female, rep3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 36,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE307nnn/GSE307127/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1314557"
+    },
+    "200276471": {
+      "uid": "200276471",
+      "accession": "GSE276471",
+      "gds": "",
+      "title": "Transcriptome regulation in the brain of a transgenic Alzheimer mouse model treated by lactate",
+      "summary": "To investigate the potential effect of lactate in Alzheimer disease (AD) therapy, we established  a transgenic Alzheimer disease mouse model, and  analyse the transcriptome regulation induced by lactate compared to vehicle treatment in AD mice. In parallel, the lactate induced transcriptome regulaltion also were analyzed in wild type mice compared to vehicle treatment.",
+      "gpl": "23479",
+      "gse": "276471",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/09/01",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8499107",
+          "title": "S16, WT_lac_M, rep 1"
+        },
+        {
+          "accession": "GSM8499113",
+          "title": "S22, WT_V_M, rep 1"
+        },
+        {
+          "accession": "GSM8499110",
+          "title": "S19, WT_V_F, rep 1"
+        },
+        {
+          "accession": "GSM8499104",
+          "title": "S13, WT_lac_F, rep 1"
+        },
+        {
+          "accession": "GSM8499101",
+          "title": "S10, AD_V_M_rep 1"
+        },
+        {
+          "accession": "GSM8499098",
+          "title": "S07, AD_V_F_rep 1"
+        },
+        {
+          "accession": "GSM8499105",
+          "title": "S14, WT_lac_F, rep 2"
+        },
+        {
+          "accession": "GSM8499102",
+          "title": "S11, AD_V_M_rep 2"
+        },
+        {
+          "accession": "GSM8499108",
+          "title": "S17, WT_lac_M, rep 2"
+        },
+        {
+          "accession": "GSM8499096",
+          "title": "S05, AD_lac_M, rep 2"
+        },
+        {
+          "accession": "GSM8499099",
+          "title": "S08, AD_V_F_rep 2"
+        },
+        {
+          "accession": "GSM8499093",
+          "title": "S02, AD_lac_F, rep 2"
+        },
+        {
+          "accession": "GSM8499097",
+          "title": "S06, AD_lac_M, rep 3"
+        },
+        {
+          "accession": "GSM8499103",
+          "title": "S12, AD_V_M_rep 3"
+        },
+        {
+          "accession": "GSM8499100",
+          "title": "S09, AD_V_F_rep 3"
+        },
+        {
+          "accession": "GSM8499094",
+          "title": "S03, AD_lac_F, rep 3"
+        },
+        {
+          "accession": "GSM8499114",
+          "title": "S23, WT_V_M, rep 2"
+        },
+        {
+          "accession": "GSM8499111",
+          "title": "S20, WT_V_F, rep 2"
+        },
+        {
+          "accession": "GSM8499115",
+          "title": "S24, WT_V_M, rep 3"
+        },
+        {
+          "accession": "GSM8499112",
+          "title": "S21, WT_V_F, rep 3"
+        },
+        {
+          "accession": "GSM8499095",
+          "title": "S04, AD_lac_M, rep 1"
+        },
+        {
+          "accession": "GSM8499092",
+          "title": "S01, AD_lac_F, rep 1"
+        },
+        {
+          "accession": "GSM8499106",
+          "title": "S15, WT_lac_F, rep 3"
+        },
+        {
+          "accession": "GSM8499109",
+          "title": "S18, WT_lac_M, rep 3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 24,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE276nnn/GSE276471/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1157431"
+    },
+    "200303404": {
+      "uid": "200303404",
+      "accession": "GSE303404",
+      "gds": "",
+      "title": "Gene Expression Networks of Synchronized Cells Reveal Alzheimer's Disease in Autopsy-Validated Skin and Blood Samples",
+      "summary": "Late-onset Alzheimer\u2019s disease (LOAD), which accounts for more than 95% of cases, lacks a well-defined gene expression signature, unlike early-onset forms caused by autosomal dominant mutations in PSEN1, PSEN2, and APP. Although early and late onset Alzheimer\u2019s share core neuropathological features, their genetic convergence had not previously been demonstrated. In this study, synchronized skin fibroblasts from autopsy-confirmed LOAD patients revealed 20 significantly dysregulated genes (Adjusted P \u2264 0.05) that clearly distinguished LOAD from non-Alzheimer\u2019s dementias. Among these, NHLH1, URB2, and WASF2 were also dysregulated in blood B lymphocytes, supporting a cross-tissue \u201cmodular resilience\u201d framework. An additional 12 dysregulated gene families in skin were validated in blood, resulting in 15 LOAD-associated gene families shared across tissues. Furthermore, five genes\u2014CARNS1, NORAD, SCG2, SNHG14, and WASF2\u2014were differentially expressed in skin fibroblasts and dysregulated in the prefrontal cortex, indicating a multi-layered resilience module connecting peripheral and central tissues. These genes participate in metabolic buffering, genomic stability, secretory organization, epigenetic regulation, and cytoskeletal remodeling. Their coordinated dysfunction suggests a systems-level impairment in stress adaptation relevant to AD biology. Overall, the results reveal previously unrecognized gene-network convergence between familial early-onset and sporadic late-onset Alzheimer\u2019s disease. The robust cross-tissue reproducibility of LOAD dysregulated gene networks highlights the potential of synchronized peripheral cells as accessible sources for disease-specific genomic profiling. This approach may enable the development of personalized biomarkers and targeted therapeutic strategies for Alzheimer\u2019s disease. ",
+      "gpl": "18573",
+      "gse": "303404",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/07/30",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9125379",
+          "title": "T_Set_Sample_4_586"
+        },
+        {
+          "accession": "GSM9125376",
+          "title": "T_Set_Sample_1_702"
+        },
+        {
+          "accession": "GSM9125393",
+          "title": "V_Set_Sample_18_39"
+        },
+        {
+          "accession": "GSM9125390",
+          "title": "V_Set_Sample_15_50"
+        },
+        {
+          "accession": "GSM9125387",
+          "title": "V_Set_Sample_12_598"
+        },
+        {
+          "accession": "GSM9125388",
+          "title": "V_Set_Sample_13_54"
+        },
+        {
+          "accession": "GSM9125391",
+          "title": "V_Set_Sample_16_586"
+        },
+        {
+          "accession": "GSM9125382",
+          "title": "T_Set_Sample_7_579"
+        },
+        {
+          "accession": "GSM9125385",
+          "title": "V_Set_Sample_10_656"
+        },
+        {
+          "accession": "GSM9125389",
+          "title": "V_Set_Sample_14_44"
+        },
+        {
+          "accession": "GSM9125383",
+          "title": "T_Set_Sample_8_599"
+        },
+        {
+          "accession": "GSM9125386",
+          "title": "V_Set_Sample_11_52"
+        },
+        {
+          "accession": "GSM9125380",
+          "title": "T_Set_Sample_5_539"
+        },
+        {
+          "accession": "GSM9125377",
+          "title": "T_Set_Sample_2_538"
+        },
+        {
+          "accession": "GSM9125381",
+          "title": "T_Set_Sample_6_596"
+        },
+        {
+          "accession": "GSM9125384",
+          "title": "V_Set_Sample_9_564"
+        },
+        {
+          "accession": "GSM9125378",
+          "title": "T_Set_Sample_3_545"
+        },
+        {
+          "accession": "GSM9125392",
+          "title": "V_Set_Sample_17_574"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 18,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE303nnn/GSE303404/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1295357"
+    },
+    "200295890": {
+      "uid": "200295890",
+      "accession": "GSE295890",
+      "gds": "",
+      "title": "Viral Infection Induces Alzheimer\u2019s Disease-Related Pathways and Senescence in iPSC-Derived Neuronal Models",
+      "summary": "The Pathogen Infection Hypothesis proposes that amyloid-\u03b2 (A\u03b2) functions as an antimicrobial peptide, with pathogen-induced aggregation potentially contributing to Alzheimer\u2019s disease (AD) pathology. We used human iPSC-derived 2D neurons and 3D cerebral organoids from wild-type and familial AD (PSEN1/2 mutant) lines to model acute infections with HSV-1 and TBEV and A\u03b2 aggregation. Transcriptomic and proteomic analyses were performed to assess molecular responses. HSV-1, but not TBEV, induced robust APP clustering in 2D and 3D models, dependent on extracellular A\u03b2 levels. Transcriptomic profiling revealed widespread HSV-1-induced changes, including activation of neurodegeneration-related pathways. Proteomic profiling confirmed the enrichment of neurodegeneration- and senescence-associated secretome signatures. PSEN1/2 mutations did not alter the acute infection response. Reanalysis of independent datasets confirmed our findings and revealed a limited protective effect of acyclovir. HSV-1 infection triggers APP aggregation, neuroinflammation, and cellular senescence in human brain models, supporting a causal role in AD pathogenesis.",
+      "gpl": "18573",
+      "gse": "295890",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/07/30",
+      "suppfile": "CSV, XLSX",
+      "samples": [
+        {
+          "accession": "GSM8960244",
+          "title": "AD3_TBEV-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960230",
+          "title": "AD1_CTRL-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960227",
+          "title": "WT1_TBEV-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960236",
+          "title": "AD2_CTRL-2_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960233",
+          "title": "WT2_CTRL-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960242",
+          "title": "AD3_CTRL-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960239",
+          "title": "WT3_CTRL-4_biolRepl_4"
+        },
+        {
+          "accession": "GSM8960231",
+          "title": "AD1_HSV-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960228",
+          "title": "WT1_CTRL-2_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960234",
+          "title": "WT2_HSV-3_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960240",
+          "title": "WT3_HSV-4_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960237",
+          "title": "AD2_HSV-2_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960226",
+          "title": "WT1_CTRL-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960243",
+          "title": "AD3_HSV-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960235",
+          "title": "WT2_TBEV-3_biolRepl2"
+        },
+        {
+          "accession": "GSM8960232",
+          "title": "AD1_TBEV-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960229",
+          "title": "WT1_HSV-2_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960241",
+          "title": "WT3_TBEV-4_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960238",
+          "title": "AD2_TBEV-2_biolRepl_2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 19,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "40661646"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE295nnn/GSE295890/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1256735"
+    },
+    "200277599": {
+      "uid": "200277599",
+      "accession": "GSE277599",
+      "gds": "",
+      "title": "Mislocalization of mitochondrial DNA and subcellular RNA is a convergent mechanism in neurodegenerative dementias and is rescued by VCP ATPase inhibition",
+      "summary": "Nucleocytoplasmic transport defects have been observed in Alzheimer\u2019s disease (AD) and frontotemporal dementia (FTD). However, there have been few systematic efforts to evaluate transcriptome-wide subcellular mRNA distribution in these conditions, which if deregulated may significantly compromise cellular homeostasis. Here, we assessed mRNA nucleocytoplasmic localization by performing transcriptome-wide profiling on nuclear and cytoplasmic fractions of human iPSC-derived cortical neurons from healthy individuals compared to those from both familial AD and FTD patients. Our findings revealed that AD and FTD mutations induce significant changes in mRNA nucleocytoplasmic distribution. We additionally reveal the redistribution of mitochondrial-related transcripts across different mutations. The significant \u2018leakage\u2019 of mitochondrial RNA (mtRNA) into the cytosol in AD and FTD mutant neurons motivated us to examine the leakage of mtDNA. Importantly, we found abnormal cytoplasmic accumulation of mtDNA in AD and FTD cortical neurons, which is reversible with treatment using a pharmacological inhibitor of the VCP D2 ATPase domain.",
+      "gpl": "24676",
+      "gse": "277599",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/06/27",
+      "suppfile": "RESULTS",
+      "samples": [
+        {
+          "accession": "GSM8525817",
+          "title": "APP_1_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525771",
+          "title": "APP_3_Whole"
+        },
+        {
+          "accession": "GSM8525797",
+          "title": "PSEN1_2_Cyto"
+        },
+        {
+          "accession": "GSM8525834",
+          "title": "PSEN1_3_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525814",
+          "title": "Ctrl_1_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525777",
+          "title": "VCP_3_Whole"
+        },
+        {
+          "accession": "GSM8525794",
+          "title": "APP_2_Cyto"
+        },
+        {
+          "accession": "GSM8525774",
+          "title": "PSEN1_3_Whole"
+        },
+        {
+          "accession": "GSM8525837",
+          "title": "VCP_3_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525788",
+          "title": "VCP_2_Nulceus"
+        },
+        {
+          "accession": "GSM8525825",
+          "title": "VCP_3_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525805",
+          "title": "APP_1_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525768",
+          "title": "Ctrl_3_Whole"
+        },
+        {
+          "accession": "GSM8525785",
+          "title": "PSEN1_2_Nulceus"
+        },
+        {
+          "accession": "GSM8525831",
+          "title": "APP_3_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525811",
+          "title": "VCP_1_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525828",
+          "title": "Ctrl_3_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525791",
+          "title": "Ctrl_2_Cyto"
+        },
+        {
+          "accession": "GSM8525808",
+          "title": "PSEN1_1_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525789",
+          "title": "VCP_3_Nulceus"
+        },
+        {
+          "accession": "GSM8525835",
+          "title": "VCP_1_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525769",
+          "title": "APP_1_Whole"
+        },
+        {
+          "accession": "GSM8525832",
+          "title": "PSEN1_1_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525786",
+          "title": "PSEN1_3_Nulceus"
+        },
+        {
+          "accession": "GSM8525766",
+          "title": "Ctrl_1_Whole"
+        },
+        {
+          "accession": "GSM8525812",
+          "title": "VCP_2_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525829",
+          "title": "APP_1_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525792",
+          "title": "Ctrl_3_Cyto"
+        },
+        {
+          "accession": "GSM8525772",
+          "title": "PSEN1_1_Whole"
+        },
+        {
+          "accession": "GSM8525809",
+          "title": "PSEN1_2_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525780",
+          "title": "Ctrl_3_Nulceus"
+        },
+        {
+          "accession": "GSM8525826",
+          "title": "Ctrl_1_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525806",
+          "title": "APP_2_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525823",
+          "title": "VCP_1_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525803",
+          "title": "Ctrl_2_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525820",
+          "title": "PSEN1_1_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525783",
+          "title": "APP_3_Nulceus"
+        },
+        {
+          "accession": "GSM8525800",
+          "title": "VCP_2_Cyto"
+        },
+        {
+          "accession": "GSM8525807",
+          "title": "APP_3_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525787",
+          "title": "VCP_1_Nulceus"
+        },
+        {
+          "accession": "GSM8525824",
+          "title": "VCP_2_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525804",
+          "title": "Ctrl_3_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525767",
+          "title": "Ctrl_2_Whole"
+        },
+        {
+          "accession": "GSM8525830",
+          "title": "APP_2_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525784",
+          "title": "PSEN1_1_Nulceus"
+        },
+        {
+          "accession": "GSM8525827",
+          "title": "Ctrl_2_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525798",
+          "title": "PSEN1_3_Cyto"
+        },
+        {
+          "accession": "GSM8525781",
+          "title": "APP_1_Nulceus"
+        },
+        {
+          "accession": "GSM8525815",
+          "title": "Ctrl_2_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525795",
+          "title": "APP_3_Cyto"
+        },
+        {
+          "accession": "GSM8525778",
+          "title": "Ctrl_1_Nulceus"
+        },
+        {
+          "accession": "GSM8525821",
+          "title": "PSEN1_2_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525775",
+          "title": "VCP_1_Whole"
+        },
+        {
+          "accession": "GSM8525801",
+          "title": "VCP_3_Cyto"
+        },
+        {
+          "accession": "GSM8525818",
+          "title": "APP_2_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525779",
+          "title": "Ctrl_2_Nulceus"
+        },
+        {
+          "accession": "GSM8525776",
+          "title": "VCP_2_Whole"
+        },
+        {
+          "accession": "GSM8525822",
+          "title": "PSEN1_3_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525802",
+          "title": "Ctrl_1_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525782",
+          "title": "APP_2_Nulceus"
+        },
+        {
+          "accession": "GSM8525819",
+          "title": "APP_3_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525799",
+          "title": "VCP_1_Cyto"
+        },
+        {
+          "accession": "GSM8525770",
+          "title": "APP_2_Whole"
+        },
+        {
+          "accession": "GSM8525796",
+          "title": "PSEN1_1_Cyto"
+        },
+        {
+          "accession": "GSM8525833",
+          "title": "PSEN1_2_Cyto_ML240"
+        },
+        {
+          "accession": "GSM8525816",
+          "title": "Ctrl_3_Nulceus_ML240"
+        },
+        {
+          "accession": "GSM8525793",
+          "title": "APP_1_Cyto"
+        },
+        {
+          "accession": "GSM8525813",
+          "title": "VCP_3_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525773",
+          "title": "PSEN1_2_Whole"
+        },
+        {
+          "accession": "GSM8525790",
+          "title": "Ctrl_1_Cyto"
+        },
+        {
+          "accession": "GSM8525810",
+          "title": "PSEN1_3_Whole_ML240"
+        },
+        {
+          "accession": "GSM8525836",
+          "title": "VCP_2_Cyto_ML240"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 72,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "40570368"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE277nnn/GSE277599/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1162889"
+    },
+    "200298491": {
+      "uid": "200298491",
+      "accession": "GSE298491",
+      "gds": "",
+      "title": "Mutations in PSEN1 predispose inflammation in an astrocyte model of familial Alzheimer\u2019s disease through disrupted regulated intramembrane proteolysis",
+      "summary": "Mutations in PSEN1 cause familial Alzheimer\u2019s disease with almost complete penetrance. Age at onset is highly variable between different PSEN1 mutations and even within families with the same mutation. Current research into late onset Alzheimer\u2019s disease implicates inflammation in both disease onset and progression. PSEN1 is the catalytic subunit of gamma-secretase, responsible for regulated intramembrane proteolysis of numerous substrates that include cytokine receptors. For this reason, we tested the hypothesis that mutations in PSEN1 impact inflammatory responses in astrocytes, thereby contributing to disease progression. We developed patient-derived models of iPSC-astrocytes, representing three lines harbouring PSEN1 mutations and six control lines (including two isogenic controls). Transcriptomic and biochemical assays were used to investigate differential inflammatory responses to TNFa, IL1a and C1q. We show that PSEN1 is upregulated in response to inflammatory stimuli, and this upregulation is disrupted by pathological PSEN1 mutations. Using transcriptomic analyses, we demonstrate that PSEN1 mutant astrocytes have an augmented inflammatory profile in their basal state, concomitant with gene expression signatures revealing dysregulated  intramembrane proteolysis and JAK-STAT signalling. Detailed investigation of the JAK-STAT2 signalling pathway showed reduced cell surface expression of IFNAR2, lower STAT2 phosphorylation cascades and delayed NF\u03baB nuclear localisation in PSEN1 mutant astrocytes in response to inflammatory stimuli, thereby implicating the notion of altered cytokine signalling cascades. Finally, we use small molecule modulators of gamma-secretase to confirm a role for PSEN1/gamma-secretase in regulating the astrocytic response to inflammatory stimuli. Together, these data suggest that mutations in PSEN1 enhance cytokine signalling via impaired regulated intramembrane proteolysis, thereby predisposing astrocytic inflammatory profiles. These findings support a two-hit contribution of PSEN1 mutations to fAD pathogenesis, not only impacting APP and Abeta processing but also altering the cellular response to inflammation.",
+      "gpl": "30173;24676",
+      "gse": "298491",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/06/25",
+      "suppfile": "TSV",
+      "samples": [
+        {
+          "accession": "GSM9015385",
+          "title": "astrocyte_ipsc_Y155H_tic; 73_Y_plus_S23"
+        },
+        {
+          "accession": "GSM9015431",
+          "title": "neuron_ipsc_R278I_tic; 73-R278I-Plus_S35"
+        },
+        {
+          "accession": "GSM9015405",
+          "title": "neuron_ipsc_APP1_nil; 70-APP1-0_S9"
+        },
+        {
+          "accession": "GSM9015368",
+          "title": "astrocyte_ipsc_DI4_nil; 71_D_0_S7"
+        },
+        {
+          "accession": "GSM9015365",
+          "title": "astrocyte_ipsc_Y155H_tic; 70_Y_plus_S44"
+        },
+        {
+          "accession": "GSM9015408",
+          "title": "neuron_ipsc_ctrl1_nil; 70-Ctrl1-0_S1"
+        },
+        {
+          "accession": "GSM9015362",
+          "title": "astrocyte_ipsc_ctrlW_nil; 70_W_0_S39"
+        },
+        {
+          "accession": "GSM9015382",
+          "title": "astrocyte_ipsc_ctrlW_nil; 73_W_0_S18"
+        },
+        {
+          "accession": "GSM9015428",
+          "title": "neuron_ipsc_DI4_nil; 73-dI4-0_S30"
+        },
+        {
+          "accession": "GSM9015425",
+          "title": "neuron_ipsc_ctrl2_tic; 73-Ctrl2-Plus_S22"
+        },
+        {
+          "accession": "GSM9015388",
+          "title": "astrocyte_fetal_ctrlN_nil; N2_FETAL_0_S29"
+        },
+        {
+          "accession": "GSM9015394",
+          "title": "astrocyte_ipsc_ctrl1_nil; 71_1_0_S47"
+        },
+        {
+          "accession": "GSM9015414",
+          "title": "neuron_ipsc_DI4_nil; 70-dI4-0_S13"
+        },
+        {
+          "accession": "GSM9015374",
+          "title": "astrocyte_ipsc_Y155H_nil; 71_Y_0_S9"
+        },
+        {
+          "accession": "GSM9015411",
+          "title": "neuron_ipsc_ctrl2_tic; 70-Ctrl2-Plus_S4"
+        },
+        {
+          "accession": "GSM9015371",
+          "title": "astrocyte_ipsc_R278I_tic; 71_R_plus_S12"
+        },
+        {
+          "accession": "GSM9015417",
+          "title": "neuron_ipsc_Y155H_nil; 70-Y115H-0_S15"
+        },
+        {
+          "accession": "GSM9015391",
+          "title": "astrocyte_ipsc_ctrl1_tic; 70_1_plus_S34"
+        },
+        {
+          "accession": "GSM9015434",
+          "title": "neuron_ipsc_Y155H_nil; 73-Y115H-0_S32"
+        },
+        {
+          "accession": "GSM9015397",
+          "title": "astrocyte_ipsc_ctrl2_tic; 71_2_plus_S1"
+        },
+        {
+          "accession": "GSM9015357",
+          "title": "astrocyte_ipsc_ctrl3_tic; 70_3_plus_S38"
+        },
+        {
+          "accession": "GSM9015403",
+          "title": "neuron_ipsc_APP1_tic; 56-APP1-Plus_S27"
+        },
+        {
+          "accession": "GSM9015423",
+          "title": "neuron_ipsc_ctrl1_tic; 73-Ctrl1-Plus_S20"
+        },
+        {
+          "accession": "GSM9015377",
+          "title": "astrocyte_ipsc_ctrl3_tic; 73_3_plus_S17"
+        },
+        {
+          "accession": "GSM9015383",
+          "title": "astrocyte_ipsc_ctrlW_tic; 73_W_plus_S19"
+        },
+        {
+          "accession": "GSM9015420",
+          "title": "neuron_ipsc_ctrl4_nil; 71-WT-0_S7"
+        },
+        {
+          "accession": "GSM9015380",
+          "title": "astrocyte_ipsc_R278I_nil; 73_R_0_S50"
+        },
+        {
+          "accession": "GSM9015400",
+          "title": "astrocyte_ipsc_ctrl5_nil; 73_2_0_S14"
+        },
+        {
+          "accession": "GSM9015363",
+          "title": "astrocyte_ipsc_ctrlW_tic; 70_W_plus_S40"
+        },
+        {
+          "accession": "GSM9015360",
+          "title": "astrocyte_ipsc_R278I_nil; 70_R_0_S45"
+        },
+        {
+          "accession": "GSM9015432",
+          "title": "neuron_ipsc_ctrl4_nil; 73-WT-0_S24"
+        },
+        {
+          "accession": "GSM9015386",
+          "title": "astrocyte_fetal_ctrlN_nil; N1_FETAL_0_S25"
+        },
+        {
+          "accession": "GSM9015429",
+          "title": "neuron_ipsc_DI4_tic; 73-dI4-Plus_S31"
+        },
+        {
+          "accession": "GSM9015392",
+          "title": "astrocyte_ipsc_ctrl2_nil; 70_2_0_S35"
+        },
+        {
+          "accession": "GSM9015366",
+          "title": "astrocyte_ipsc_ctrl5_nil; 71_3_0_S3"
+        },
+        {
+          "accession": "GSM9015412",
+          "title": "neuron_ipsc_ctrl3_nil; 70-Ctrl3-0_S5"
+        },
+        {
+          "accession": "GSM9015409",
+          "title": "neuron_ipsc_ctrl1_tic; 70-Ctrl1-Plus_S2"
+        },
+        {
+          "accession": "GSM9015426",
+          "title": "neuron_ipsc_ctrl3_nil; 73-Ctrl3-0_S36"
+        },
+        {
+          "accession": "GSM9015406",
+          "title": "neuron_ipsc_APP1_tic; 70-APP1-Plus_S10"
+        },
+        {
+          "accession": "GSM9015369",
+          "title": "astrocyte_ipsc_DI4_tic; 71_D_plus_S8"
+        },
+        {
+          "accession": "GSM9015389",
+          "title": "astrocyte_fetal_ctrlN_tic; N2_FETAL_plus_S30"
+        },
+        {
+          "accession": "GSM9015358",
+          "title": "astrocyte_ipsc_DI4_nil; 70_D_0_S41"
+        },
+        {
+          "accession": "GSM9015395",
+          "title": "astrocyte_ipsc_ctrl1_tic; 71_1_plus_S48"
+        },
+        {
+          "accession": "GSM9015375",
+          "title": "astrocyte_ipsc_Y155H_tic; 71_Y_plus_S10"
+        },
+        {
+          "accession": "GSM9015418",
+          "title": "neuron_ipsc_Y155H_tic; 70-Y115H-Plus_S16"
+        },
+        {
+          "accession": "GSM9015372",
+          "title": "astrocyte_ipsc_ctrlW_nil; 71_W_0_S5"
+        },
+        {
+          "accession": "GSM9015415",
+          "title": "neuron_ipsc_R278I_nil; 70-R278I-0_S17"
+        },
+        {
+          "accession": "GSM9015378",
+          "title": "astrocyte_ipsc_DI4_nil; 73_D_0_S20"
+        },
+        {
+          "accession": "GSM9015435",
+          "title": "neuron_ipsc_Y155H_tic; 73-Y115H-Plus_S33"
+        },
+        {
+          "accession": "GSM9015398",
+          "title": "astrocyte_ipsc_ctrl1_nil; 73_1_0_S24"
+        },
+        {
+          "accession": "GSM9015404",
+          "title": "neuron_ipsc_APP12_nil; 65-APP2-0_S28"
+        },
+        {
+          "accession": "GSM9015364",
+          "title": "astrocyte_ipsc_Y155H_nil; 70_Y_0_S43"
+        },
+        {
+          "accession": "GSM9015401",
+          "title": "astrocyte_ipsc_ctrl5_tic; 73_2_plus_S15"
+        },
+        {
+          "accession": "GSM9015421",
+          "title": "neuron_ipsc_ctrl4_tic; 71-WT-Plus_S8"
+        },
+        {
+          "accession": "GSM9015384",
+          "title": "astrocyte_ipsc_Y155H_nil; 73_Y_0_S22"
+        },
+        {
+          "accession": "GSM9015427",
+          "title": "neuron_ipsc_ctrl3_tic; 73-Ctrl3-Plus_S23"
+        },
+        {
+          "accession": "GSM9015424",
+          "title": "neuron_ipsc_ctrl2_nil; 73-Ctrl2-0_S21"
+        },
+        {
+          "accession": "GSM9015381",
+          "title": "astrocyte_ipsc_R278I_tic; 73_R_plus_S49"
+        },
+        {
+          "accession": "GSM9015361",
+          "title": "astrocyte_ipsc_R278I_tic; 70_R_plus_S46"
+        },
+        {
+          "accession": "GSM9015367",
+          "title": "astrocyte_ipsc_ctrl5_tic; 71_3_plus_S4"
+        },
+        {
+          "accession": "GSM9015407",
+          "title": "neuron_ipsc_APP12_nil; 70-APP2-0_S11"
+        },
+        {
+          "accession": "GSM9015373",
+          "title": "astrocyte_ipsc_ctrlW_tic; 71_W_plus_S6"
+        },
+        {
+          "accession": "GSM9015413",
+          "title": "neuron_ipsc_ctrl3_tic; 70-Ctrl3-Plus_S6"
+        },
+        {
+          "accession": "GSM9015393",
+          "title": "astrocyte_ipsc_ctrl2_tic; 70_2_plus_S36"
+        },
+        {
+          "accession": "GSM9015430",
+          "title": "neuron_ipsc_R278I_nil; 73-R278I-0_S34"
+        },
+        {
+          "accession": "GSM9015410",
+          "title": "neuron_ipsc_ctrl2_nil; 70-Ctrl2-0_S3"
+        },
+        {
+          "accession": "GSM9015390",
+          "title": "astrocyte_ipsc_ctrl1_nil; 70_1_0_S33"
+        },
+        {
+          "accession": "GSM9015387",
+          "title": "astrocyte_fetal_ctrlN_tic; N1_FETAL_plus_S26"
+        },
+        {
+          "accession": "GSM9015370",
+          "title": "astrocyte_ipsc_R278I_nil; 71_R_0_S11"
+        },
+        {
+          "accession": "GSM9015433",
+          "title": "neuron_ipsc_ctrl4_tic; 73-WT-Plus_S25"
+        },
+        {
+          "accession": "GSM9015376",
+          "title": "astrocyte_ipsc_ctrl3_nil; 73_3_0_S16"
+        },
+        {
+          "accession": "GSM9015422",
+          "title": "neuron_ipsc_ctrl1_nil; 73-Ctrl1-0_S19"
+        },
+        {
+          "accession": "GSM9015396",
+          "title": "astrocyte_ipsc_ctrl2_nil; 71_2_0_S2"
+        },
+        {
+          "accession": "GSM9015402",
+          "title": "neuron_ipsc_APP1_nil; 56-APP1-0_S26"
+        },
+        {
+          "accession": "GSM9015356",
+          "title": "astrocyte_ipsc_ctrl3_nil; 70_3_0_S37"
+        },
+        {
+          "accession": "GSM9015359",
+          "title": "astrocyte_ipsc_DI4_tic; 70_D_plus_S42"
+        },
+        {
+          "accession": "GSM9015399",
+          "title": "astrocyte_ipsc_ctrl1_tic; 73_1_plus_S13"
+        },
+        {
+          "accession": "GSM9015419",
+          "title": "neuron_ipsc_APP1_tic; 71-APP1-Plus_S29"
+        },
+        {
+          "accession": "GSM9015379",
+          "title": "astrocyte_ipsc_DI4_tic; 73_D_plus_S21"
+        },
+        {
+          "accession": "GSM9015416",
+          "title": "neuron_ipsc_R278I_tic; 70-R278I-Plus_S18"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 80,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "40542358"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE298nnn/GSE298491/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1269544"
+    },
+    "200297743": {
+      "uid": "200297743",
+      "accession": "GSE297743",
+      "gds": "",
+      "title": "APOE3-R136S mutation confers resilience against tau pathology via cGAS-STING-IFN inhibition [bulk RNA-seq]",
+      "summary": "The Christchurch mutation (R136S) on the APOE3 (E3S/S) gene is associated with attenuation of tau load and cognitive decline despite the presence of a causal PSEN1 mutation and high levels of amyloid beta pathology in the carrier. However, the specific molecular mechanisms enabling the E3S/S mutation to mitigate tau-induced neurodegeneration remain unclear. Here, we replaced mouse ApoE with wild-type human E3 or E3S/S on a tauopathy background. The R136S mutation markedly decreased tau load and protected against tau-induced synaptic loss, myelin loss, and reduction in theta and gamma powers. Additionally, the R136S mutation reduced interferon response to tau pathology in both mouse and human microglia, suppressing cGAS-STING activation. Treating tauopathy mice carrying wild-type E3 with a cGAS inhibitor protected against tau-induced synaptic loss and induced similar transcriptomic alterations to those induced by the R136S mutation across brain cell types. Thus, suppression of microglial cGAS-STING-IFN pathway plays a central role in mediating the protective effects of R136S against tauopathy.",
+      "gpl": "24247",
+      "gse": "297743",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/06/15",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM8998236",
+          "title": "E3A8SAN"
+        },
+        {
+          "accession": "GSM8998256",
+          "title": "E3CC_6"
+        },
+        {
+          "accession": "GSM8998259",
+          "title": "E3CT6SAN"
+        },
+        {
+          "accession": "GSM8998233",
+          "title": "E3B2SAN"
+        },
+        {
+          "accession": "GSM8998253",
+          "title": "E3CC_3"
+        },
+        {
+          "accession": "GSM8998245",
+          "title": "E3_3"
+        },
+        {
+          "accession": "GSM8998239",
+          "title": "E3CB3SAN"
+        },
+        {
+          "accession": "GSM8998242",
+          "title": "E3CA9SAN"
+        },
+        {
+          "accession": "GSM8998254",
+          "title": "E3CC_4"
+        },
+        {
+          "accession": "GSM8998248",
+          "title": "E3_6"
+        },
+        {
+          "accession": "GSM8998251",
+          "title": "E3T6SAN"
+        },
+        {
+          "accession": "GSM8998237",
+          "title": "E3A9SAN"
+        },
+        {
+          "accession": "GSM8998257",
+          "title": "E3CT4SAN"
+        },
+        {
+          "accession": "GSM8998240",
+          "title": "E3CA7SAN"
+        },
+        {
+          "accession": "GSM8998234",
+          "title": "E3B3SAN"
+        },
+        {
+          "accession": "GSM8998246",
+          "title": "E3_4"
+        },
+        {
+          "accession": "GSM8998243",
+          "title": "E3_1"
+        },
+        {
+          "accession": "GSM8998235",
+          "title": "E3A7SAN"
+        },
+        {
+          "accession": "GSM8998255",
+          "title": "E3CC_5"
+        },
+        {
+          "accession": "GSM8998249",
+          "title": "E3T4SAN"
+        },
+        {
+          "accession": "GSM8998232",
+          "title": "E3B1SAN"
+        },
+        {
+          "accession": "GSM8998252",
+          "title": "E3CC_2"
+        },
+        {
+          "accession": "GSM8998238",
+          "title": "E3CB2SAN"
+        },
+        {
+          "accession": "GSM8998258",
+          "title": "E3CT5SAN"
+        },
+        {
+          "accession": "GSM8998241",
+          "title": "E3CA8SAN"
+        },
+        {
+          "accession": "GSM8998244",
+          "title": "E3_2"
+        },
+        {
+          "accession": "GSM8998247",
+          "title": "E3_5"
+        },
+        {
+          "accession": "GSM8998250",
+          "title": "E3T5SAN"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 28,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "40555238"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE297nnn/GSE297743/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1266081"
+    }
+  }
+}

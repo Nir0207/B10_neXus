@@ -14,7 +14,7 @@ import {
   saveAuthSession,
   type AuthSession,
 } from "@/lib/authStorage";
-import { loginWithPassword } from "@/services/authService";
+import { loginWithPassword, registerWithPassword, type RegisterPayload } from "@/services/authService";
 
 interface LoginPayload {
   username: string;
@@ -26,6 +26,7 @@ interface AuthContextValue {
   isReady: boolean;
   isSubmitting: boolean;
   login: (payload: LoginPayload) => Promise<void>;
+  register: (payload: RegisterPayload) => Promise<void>;
   logout: () => void;
   session: AuthSession | null;
 }
@@ -62,6 +63,16 @@ export function AuthProvider({ children }: PropsWithChildren): React.JSX.Element
       setIsSubmitting(true);
       try {
         const nextSession = await loginWithPassword(username, password);
+        saveAuthSession(nextSession);
+        setSession(nextSession);
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    register: async (payload: RegisterPayload) => {
+      setIsSubmitting(true);
+      try {
+        const nextSession = await registerWithPassword(payload);
         saveAuthSession(nextSession);
         setSession(nextSession);
       } finally {

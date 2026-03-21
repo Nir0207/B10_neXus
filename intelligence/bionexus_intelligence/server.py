@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 from typing import Any
 
@@ -30,6 +31,30 @@ class MCPToolAdapter:
 
     def explain_pathway(self, study_id: str) -> str:
         return self._service.explain_pathway(study_id)
+
+    def render_visual_report(self, prompt: str, disease: str = "") -> str:
+        report = self._service.render_visual_report(prompt=prompt, disease=disease or prompt)
+        if report is None:
+            return json.dumps({"error": "Disease trend snapshot not found"})
+        return json.dumps(
+            {
+                "chart_type": report.chart_type,
+                "title": report.title,
+                "disease_id": report.disease_id,
+                "disease_name": report.disease_name,
+                "x_key": report.x_key,
+                "y_key": report.y_key,
+                "datasets": report.datasets,
+                "clinical_summary": report.clinical_summary,
+                "sources": [
+                    "Source: Postgres disease_intelligence",
+                    "Source: NCBI GEO",
+                    "Source: UniProt",
+                    "Source: Open Targets",
+                    "Source: ChEMBL",
+                ],
+            }
+        )
 
 
 def create_intelligence_service(settings: Settings) -> IntelligenceService:
@@ -78,6 +103,13 @@ def create_mcp_server(settings: Settings | None = None) -> FastMCP:
     )
     def explain_pathway(study_id: str) -> str:
         return adapter.explain_pathway(study_id)
+
+    @mcp.tool(
+        name="render_visual_report",
+        description="Return a JSON chart payload for disease trend and target analytics.",
+    )
+    def render_visual_report(prompt: str, disease: str = "") -> str:
+        return adapter.render_visual_report(prompt, disease)
 
     return mcp
 

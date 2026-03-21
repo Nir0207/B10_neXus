@@ -211,3 +211,30 @@ def test_explain_gene_uses_featured_profile_when_staging_mapping_missing() -> No
     assert "Glutamate Ionotropic Receptor NMDA Type Subunit 2B" in result
     assert "featured-target profile" in result
     assert "Source: BioNexus featured gene profiles" in result
+
+
+def test_summarize_organ_context_uses_featured_profiles() -> None:
+    result = _build_sparse_service(FailingLLM()).summarize_organ_context(
+        organ="brain",
+        question="What is the focus of this organ atlas?",
+    )
+
+    assert "brain atlas" in result.lower()
+    assert "blood-brain barrier" in result
+    assert "Source: BioNexus organ atlas profiles" in result
+
+
+def test_summarize_discovery_context_uses_current_graph_state() -> None:
+    result = _build_sparse_service(FailingLLM()).summarize_discovery_context(
+        question="What should we test next?",
+        organ="liver",
+        gene="GRIN2B",
+        disease="Liver Neoplasms",
+        medicine="Gefitinib",
+        history=["user: What is GRIN2B?"],
+    )
+
+    assert "Liver" in result
+    assert "Liver Neoplasms" in result
+    assert "Gefitinib" in result
+    assert "Recommended next step" in result

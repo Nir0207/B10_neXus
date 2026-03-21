@@ -108,6 +108,13 @@ export default function OrganNavigator({
         </button>
         <div className="mt-6 space-y-2">
           <Link
+            href="/historical-trends"
+            className="flex items-center gap-3 text-on-surface-variant opacity-70 hover:opacity-100 text-[10px] uppercase tracking-wider font-semibold"
+          >
+            <span className="material-symbols-outlined text-sm">monitoring</span>
+            Historical Trends
+          </Link>
+          <Link
             href="/documentation"
             className="flex items-center gap-3 text-on-surface-variant opacity-70 hover:opacity-100 text-[10px] uppercase tracking-wider font-semibold"
           >

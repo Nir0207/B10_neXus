@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+import re
 from typing import Any
 
 from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
@@ -8,13 +10,21 @@ from neo4j import AsyncSession
 
 from auth import get_current_user
 from database import get_postgres_connection, get_neo4j_session
+from html_export import build_export_html
 from schemas import (
+    ExportChartRequest,
+    ExportHtmlResponse,
+    FrequencyTimelinePoint,
     GeneResponse,
+    GeneDistributionPoint,
     GraphNode,
     GraphRelationship,
     GraphResponse,
     IntelligenceQueryRequest,
     IntelligenceQueryResponse,
+    OrganAffinityPoint,
+    TherapeuticLandscapePoint,
+    TrendAnalyticsResponse,
     TripletEdge,
     TripletNode,
     TripletResponse,
@@ -28,6 +38,7 @@ except ImportError:  # pragma: no cover - environment-dependent fallback
     asyncpg = None  # type: ignore[assignment]
 
 router = APIRouter(prefix="/api/v1")
+_NON_ALNUM_PATTERN = re.compile(r"[^a-z0-9]+")
 
 
 def _to_properties(value: Any) -> dict[str, Any]:
@@ -46,6 +57,19 @@ def _serialize_node(node: Any) -> GraphNode:
     labels: list[str] = list(labels_raw) if not isinstance(labels_raw, str) else [labels_raw]
     properties: dict[str, Any] = _to_properties(node)
     return GraphNode(id=node_id, labels=labels, properties=properties)
+
+
+def _json_list(value: Any) -> list[dict[str, Any]]:
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, dict)]
+    if isinstance(value, str) and value.strip():
+        try:
+            parsed = json.loads(value)
+        except json.JSONDecodeError:
+            return []
+        if isinstance(parsed, list):
+            return [item for item in parsed if isinstance(item, dict)]
+    return []
 
 
 def _serialize_relationship(relationship: Any) -> GraphRelationship:
@@ -188,6 +212,10 @@ async def _query_intelligence_service(payload: IntelligenceQueryRequest) -> Inte
     return IntelligenceQueryResponse(**response.json())
 
 
+def _canonical_disease_id(value: str) -> str:
+    return _NON_ALNUM_PATTERN.sub("-", value.strip().lower()).strip("-")
+
+
 @router.get("/genes/{id}", response_model=GeneResponse)
 async def get_gene(
     id: str = Path(
@@ -291,3 +319,74 @@ async def query_intelligence(
 ) -> IntelligenceQueryResponse:
     del current_user
     return await _query_intelligence_service(payload)
+
+
+@router.get("/analytics/trends/{disease_id}", response_model=TrendAnalyticsResponse)
+async def get_disease_trends(
+    disease_id: str = Path(..., min_length=1, max_length=128),
+    current_user: User = Depends(get_current_user),
+    pg_conn: Any | None = Depends(get_postgres_connection),
+) -> TrendAnalyticsResponse:
+    del current_user
+    if pg_conn is None:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Postgres connection unavailable",
+        )
+
+    normalized = _canonical_disease_id(disease_id)
+    lowered = disease_id.strip().lower()
+
+    try:
+        row: Any | None = await pg_conn.fetchrow(
+            """
+            SELECT
+                disease_id,
+                disease_name,
+                clinical_summary,
+                frequency_timeline,
+                gene_distribution,
+                organ_affinity,
+                therapeutic_landscape,
+                updated_at
+            FROM disease_intelligence
+            WHERE LOWER(disease_id) = $1
+               OR LOWER(disease_name) = $2
+               OR REPLACE(LOWER(disease_name), ' ', '-') = $1
+            LIMIT 1
+            """,
+            normalized,
+            lowered,
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail="Failed to retrieve disease trends from staging proxy",
+        ) from exc
+
+    if row is None:
+        raise HTTPException(status_code=404, detail="Disease trend not found")
+
+    payload = dict(row)
+    payload["frequency_timeline"] = [FrequencyTimelinePoint(**item) for item in _json_list(payload.get("frequency_timeline"))]
+    payload["gene_distribution"] = [GeneDistributionPoint(**item) for item in _json_list(payload.get("gene_distribution"))]
+    payload["organ_affinity"] = [OrganAffinityPoint(**item) for item in _json_list(payload.get("organ_affinity"))]
+    payload["therapeutic_landscape"] = [
+        TherapeuticLandscapePoint(**item)
+        for item in _json_list(payload.get("therapeutic_landscape"))
+    ]
+    return TrendAnalyticsResponse(**payload)
+
+
+@router.post("/analytics/export", response_model=ExportHtmlResponse)
+async def export_analytics_chart(
+    payload: ExportChartRequest,
+    current_user: User = Depends(get_current_user),
+) -> ExportHtmlResponse:
+    del current_user
+    html = build_export_html(payload)
+    slug = _canonical_disease_id(payload.disease_name or payload.disease_id or payload.title or "report")
+    return ExportHtmlResponse(
+        filename=f"bionexus-{slug or 'report'}.html",
+        html=html,
+    )
