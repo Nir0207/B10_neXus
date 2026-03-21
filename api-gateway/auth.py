@@ -17,6 +17,8 @@ from schemas import TokenData, User
 
 ALGORITHM: str = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+JWT_ISSUER: str = os.getenv("JWT_ISSUER", "bionexus-api-gateway")
+JWT_AUDIENCE: str = os.getenv("JWT_AUDIENCE", "bionexus-ui")
 
 # Use an environment key when provided; otherwise generate a random process key.
 # This avoids a predictable hardcoded secret in source code.
@@ -77,10 +79,15 @@ def authenticate_user(username: str, password: str) -> bool:
 
 def create_access_token(data: dict[str, Any], expires_delta: timedelta | None = None) -> str:
     to_encode: dict[str, Any] = data.copy()
-    expire: datetime = datetime.now(timezone.utc) + (
+    now = datetime.now(timezone.utc)
+    expire: datetime = now + (
         expires_delta if expires_delta is not None else timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     )
     to_encode["exp"] = int(expire.timestamp())
+    to_encode["iat"] = int(now.timestamp())
+    to_encode["nbf"] = int(now.timestamp())
+    to_encode["iss"] = JWT_ISSUER
+    to_encode["aud"] = JWT_AUDIENCE
 
     header_segment = _b64url_encode_json({"alg": ALGORITHM, "typ": "JWT"})
     payload_segment = _b64url_encode_json(to_encode)
@@ -121,6 +128,14 @@ def _decode_jwt(token: str) -> dict[str, Any]:
     header_segment, payload_segment, signature_segment = parts
     signing_input = f"{header_segment}.{payload_segment}".encode("utf-8")
 
+    header_raw = _b64url_decode(header_segment)
+    try:
+        header = json.loads(header_raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise JWTError("Invalid header") from exc
+    if not isinstance(header, dict) or header.get("alg") != ALGORITHM:
+        raise JWTError("Invalid algorithm")
+
     expected_signature = hmac.new(
         SECRET_KEY.encode("utf-8"),
         signing_input,
@@ -141,14 +156,29 @@ def _decode_jwt(token: str) -> dict[str, Any]:
         raise JWTError("Invalid payload type")
 
     exp = payload.get("exp")
+    nbf = payload.get("nbf")
+    iss = payload.get("iss")
+    aud = payload.get("aud")
+    now_ts = int(datetime.now(timezone.utc).timestamp())
     if exp is not None:
         try:
             exp_ts = int(exp)
         except (TypeError, ValueError) as exc:
             raise JWTError("Invalid expiry") from exc
 
-        if int(datetime.now(timezone.utc).timestamp()) >= exp_ts:
+        if now_ts >= exp_ts:
             raise JWTError("Token expired")
+    if nbf is not None:
+        try:
+            nbf_ts = int(nbf)
+        except (TypeError, ValueError) as exc:
+            raise JWTError("Invalid not-before") from exc
+        if now_ts < nbf_ts:
+            raise JWTError("Token not yet valid")
+    if iss != JWT_ISSUER:
+        raise JWTError("Invalid issuer")
+    if aud != JWT_AUDIENCE:
+        raise JWTError("Invalid audience")
 
     return payload
 

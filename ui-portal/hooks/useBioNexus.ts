@@ -27,6 +27,7 @@ export function useBioNexus(organType: string): UseBioNexusResult {
   const [isError, setIsError] = useState<boolean>(false);
   const refreshCounterRef = useRef<number>(0);
   const hasDataRef = useRef<boolean>(false);
+  const previousOrganRef = useRef<string>("");
   const [refreshCounter, setRefreshCounter] = useState<number>(0);
 
   useEffect(() => {
@@ -37,6 +38,13 @@ export function useBioNexus(organType: string): UseBioNexusResult {
     const normalizedOrgan = organType.trim();
     if (!normalizedOrgan) {
       return;
+    }
+
+    const organChanged = previousOrganRef.current !== normalizedOrgan;
+    if (organChanged) {
+      previousOrganRef.current = normalizedOrgan;
+      hasDataRef.current = false;
+      setData(undefined);
     }
 
     const abortController = new AbortController();

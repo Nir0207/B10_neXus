@@ -5,6 +5,7 @@ from typing import Any
 from fastapi.testclient import TestClient
 from main import app, LOG_FILE
 from database import get_postgres_connection, get_neo4j_session
+from schemas import IntelligenceQueryResponse
 
 client = TestClient(app)
 
@@ -79,12 +80,19 @@ def test_get_discovery_graph_authorized():
                             "end_node": "node2",
                             "properties": {},
                         },
+                        {
+                            "id": "rel3",
+                            "type": "BINDS_TO",
+                            "start_node": "node3",
+                            "end_node": "node1",
+                            "properties": {},
+                        },
                     ],
                 }
             ]
 
     class FakeNeo4jSession:
-        async def run(self, _query: str) -> FakeNeo4jResult:
+        async def run(self, _query: str, **_params: Any) -> FakeNeo4jResult:
             return FakeNeo4jResult()
 
     async def _override_neo4j_session() -> Any:
@@ -100,6 +108,45 @@ def test_get_discovery_graph_authorized():
         data = response.json()
         assert "nodes" in data
         assert "relationships" in data
+    finally:
+        app.dependency_overrides.pop(get_neo4j_session, None)
+
+def test_get_discovery_triplets_authorized():
+    class FakeNeo4jResult:
+        async def data(self) -> list[dict[str, Any]]:
+            return [
+                {
+                    "nodes": [
+                        {"id": "gene1", "labels": ["Gene"], "properties": {"uniprot_id": "P12345", "symbol": "CYP3A4"}},
+                        {"id": "disease1", "labels": ["Disease"], "properties": {"name": "Liver injury"}},
+                        {"id": "medicine1", "labels": ["Medicine"], "properties": {"name": "DrugX"}},
+                    ],
+                    "relationships": [
+                        {"id": "r1", "type": "ASSOCIATED_WITH", "start_node": "gene1", "end_node": "disease1", "properties": {"score": 0.9}},
+                        {"id": "r2", "type": "TREATS", "start_node": "medicine1", "end_node": "disease1", "properties": {"phase": 3}},
+                    ],
+                }
+            ]
+
+    class FakeNeo4jSession:
+        async def run(self, _query: str, **_params: Any) -> FakeNeo4jResult:
+            return FakeNeo4jResult()
+
+    async def _override_neo4j_session() -> Any:
+        yield FakeNeo4jSession()
+
+    app.dependency_overrides[get_neo4j_session] = _override_neo4j_session
+    token = client.post("/token", data={"username": "admin", "password": "password"}).json()["access_token"]
+
+    try:
+        response = client.get(
+            "/api/v1/discovery/triplets?organ=liver",
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert response.status_code == 200
+        data = response.json()
+        assert data["nodes"][0]["type"] == "Gene"
+        assert any(edge["relationship"] == "TREATS" for edge in data["edges"])
     finally:
         app.dependency_overrides.pop(get_neo4j_session, None)
 
@@ -119,3 +166,27 @@ def test_audit_log_created():
         assert "Request_Hash" in last_log
         assert "Status_Code" in last_log
         assert last_log["Endpoint"] == "/"
+
+
+def test_query_intelligence_authorized(monkeypatch):
+    async def _fake_query(_payload):
+        return IntelligenceQueryResponse(
+            reply="EGFR fallback reply",
+            mode="drug_leads",
+            resolved_entity="EGFR",
+            sources=["Source: UniProt"],
+        )
+
+    monkeypatch.setattr("router._query_intelligence_service", _fake_query)
+    token = client.post("/token", data={"username": "admin", "password": "password"}).json()["access_token"]
+
+    response = client.post(
+        "/api/v1/intelligence/query",
+        headers={"Authorization": f"Bearer {token}"},
+        json={"prompt": "What leads do we have for EGFR?", "gene": "EGFR"},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["mode"] == "drug_leads"
+    assert body["resolved_entity"] == "EGFR"

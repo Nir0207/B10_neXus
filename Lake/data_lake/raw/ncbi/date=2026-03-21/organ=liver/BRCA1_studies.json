@@ -1,0 +1,2626 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200267911",
+      "200307271",
+      "200307270",
+      "200306768",
+      "200292492",
+      "200300991",
+      "200308455",
+      "200306867",
+      "200249915",
+      "200301614",
+      "200292142",
+      "200292140",
+      "200310469",
+      "200292585",
+      "200283656",
+      "200310239",
+      "200300163",
+      "200301416",
+      "200301072",
+      "200300882"
+    ],
+    "200267911": {
+      "uid": "200267911",
+      "accession": "GSE267911",
+      "gds": "",
+      "title": "KAT2B-Mediated Epigenetic Suppression of RAD51C Enhances Olaparib Sensitivity in Colorectal Cancer",
+      "summary": "By blocking poly ADP ribose polymerase (PARP), olaparib prevents DNA damage repair, particularly in tumors that have a BRCA1/2 mutation or are BRCA-positive. Nevertheless, a Phase II study of 33 CRC patients receiving mono-Olaparib therapy revealed that some of these individuals still had resistance to Olaparib while having poor DNA damage repair. RAD51 reversion mutations are a frequent cause of resistance to PARP inhibitors in cancers that do not have BRCA mutations. Though little is known, a number of tactics have been studied when combining PARPi with other inhibitors. Here, we introduce the enzyme KAT2B as a protein involved in transcription that is connected to RAD51C, reducing the levels of RAD51C by lowering the acetylation of Histone H3 (H3K27) at the beginning of the RAD51C gene. Consequently, colorectal cancer cells become more vulnerable to Olaparib therapy. The H3K27ac binding domain is necessary for the transcription of RAD51C. We find that a subpopulation of tumor cells expressing RAD51C have reduced endogenous KAT2B expression. This expression leads to increased DNA damage accumulation and decreased PARPi resistance in RAD51C-expressing cells. According to our findings, RAD51C-expressing cells' RAD51C and PARPi responses are significantly regulated by KAT2B and histone acetylation. This information offers vital new understandings into the molecular requirements for focusing on BRCA-functional malignancies.",
+      "gpl": "15433",
+      "gse": "267911",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/18",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8281485",
+          "title": "RKO-DMSO-rep-1"
+        },
+        {
+          "accession": "GSM8281482",
+          "title": "RKO-Ola-rep-1"
+        },
+        {
+          "accession": "GSM8281486",
+          "title": "RKO-DMSO-rep-2"
+        },
+        {
+          "accession": "GSM8281483",
+          "title": "RKO-Ola-rep-2"
+        },
+        {
+          "accession": "GSM8281487",
+          "title": "RKO-DMSO-rep-3"
+        },
+        {
+          "accession": "GSM8281484",
+          "title": "RKO-Ola-rep-3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41826541"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE267nnn/GSE267911/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1113624"
+    },
+    "200307271": {
+      "uid": "200307271",
+      "accession": "GSE307271",
+      "gds": "",
+      "title": "Glutamine Deprivation Triggers TRIB3-Dependent G4-DNA Resolution to Maintain DNA Repair and Tumor Survival  [TRIB3]",
+      "summary": "Glutamine, the most abundant circulating amino acid, is a central metabolite critical for the survival and growth of many tumor cells. Efforts to exploit this vulnerability have met with limited success, due to the inherent adaptability of tumor cells to withstand nutrient scarcity in the tumor microenvironment. This resilience has rendered glutamine-targeting therapies ineffective in clinical trials, demanding new mechanistic insights. Here, we identify the pseudokinase TRIB3 as a key mediator of the metabolic adaptation of hepatocellular carcinoma (HCC) cells to limiting glutamine availability. TRIB3 is upregulated under glutamine deprivation in a c-Jun-dependent manner, functioning in the nucleus to safeguard DNA repair fidelity, allowing the timely resolution of DNA damage and preventing replication catastrophe. TRIB3 binds to G-quadruplex DNA (G4-DNA) structures throughout the genome, recruiting the helicase DDX5 to resolve them as a cooperative functional complex. Depleting TRIB3 or DDX5 in HCC cells leads to exaggerated G4-DNA accumulation and heightened DNA damage associated with the downregulation of DNA damage response (DDR) pathways. We illustrate this effect on homologous recombination (HR) pathway genes, finding that TRIB3-DDX5 preventing G4-DNA accumulation at the BRCA1 and RAD51AP1 promoter regions that would otherwise suppress transcription. In vivo, TRIB3 silencing suppresses HCC xenograft growth, patently increasing DNA damage and apoptosis when mice were maintained on glutamine-deficient diets. Clinically, TRIB3 is overexpressed in HCC where its elevated levels correlate with poorer patient prognosis. Together findings nominate TRIB3-DDX5-G4 axis as a therapeutically exploitable metabolic dependency in HCC and possibly other malignancies with elevated TRIB3 expression.",
+      "gpl": "24676",
+      "gse": "307271",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/13",
+      "suppfile": "XLS",
+      "samples": [
+        {
+          "accession": "GSM9220265",
+          "title": "Hep G2 cells, TRIB3 sh2_Rep_02"
+        },
+        {
+          "accession": "GSM9220260",
+          "title": "Hep G2 cells, Ctrl_shRNA_Rep_03"
+        },
+        {
+          "accession": "GSM9220266",
+          "title": "Hep G2 cells, TRIB3 sh2_Rep_03"
+        },
+        {
+          "accession": "GSM9220263",
+          "title": "Hep G2 cells, TRIB3 sh1_Rep_03"
+        },
+        {
+          "accession": "GSM9220264",
+          "title": "Hep G2 cells, TRIB3 sh2_Rep_01"
+        },
+        {
+          "accession": "GSM9220258",
+          "title": "Hep G2 cells, Ctrl_shRNA_Rep_01"
+        },
+        {
+          "accession": "GSM9220261",
+          "title": "Hep G2 cells, TRIB3 sh1_Rep_01"
+        },
+        {
+          "accession": "GSM9220259",
+          "title": "Hep G2 cells, Ctrl_shRNA_Rep_02"
+        },
+        {
+          "accession": "GSM9220262",
+          "title": "Hep G2 cells, TRIB3 sh1_Rep_02"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 9,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41793192"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE307nnn/GSE307271/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1311355"
+    },
+    "200307270": {
+      "uid": "200307270",
+      "accession": "GSE307270",
+      "gds": "",
+      "title": "Glutamine Deprivation Triggers TRIB3-Dependent G4-DNA Resolution to Maintain DNA Repair and Tumor Survival [Glutamin deprivation]",
+      "summary": "Glutamine, the most abundant circulating amino acid, is a central metabolite critical for the survival and growth of many tumor cells. Efforts to exploit this vulnerability have met with limited success, due to the inherent adaptability of tumor cells to withstand nutrient scarcity in the tumor microenvironment. This resilience has rendered glutamine-targeting therapies ineffective in clinical trials, demanding new mechanistic insights. Here, we identify the pseudokinase TRIB3 as a key mediator of the metabolic adaptation of hepatocellular carcinoma (HCC) cells to limiting glutamine availability. TRIB3 is upregulated under glutamine deprivation in a c-Jun-dependent manner, functioning in the nucleus to safeguard DNA repair fidelity, allowing the timely resolution of DNA damage and preventing replication catastrophe. TRIB3 binds to G-quadruplex DNA (G4-DNA) structures throughout the genome, recruiting the helicase DDX5 to resolve them as a cooperative functional complex. Depleting TRIB3 or DDX5 in HCC cells leads to exaggerated G4-DNA accumulation and heightened DNA damage associated with the downregulation of DNA damage response (DDR) pathways. We illustrate this effect on homologous recombination (HR) pathway genes, finding that TRIB3-DDX5 preventing G4-DNA accumulation at the BRCA1 and RAD51AP1 promoter regions that would otherwise suppress transcription. In vivo, TRIB3 silencing suppresses HCC xenograft growth, patently increasing DNA damage and apoptosis when mice were maintained on glutamine-deficient diets. Clinically, TRIB3 is overexpressed in HCC where its elevated levels correlate with poorer patient prognosis. Together findings nominate TRIB3-DDX5-G4 axis as a therapeutically exploitable metabolic dependency in HCC and possibly other malignancies with elevated TRIB3 expression.",
+      "gpl": "24676",
+      "gse": "307270",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/13",
+      "suppfile": "XLS",
+      "samples": [
+        {
+          "accession": "GSM9220253",
+          "title": "Hep G2 cells, Glutamin deprivation_12hours_Rep_02"
+        },
+        {
+          "accession": "GSM9220250",
+          "title": "Hep G2 cells, Normal medium_Rep_02"
+        },
+        {
+          "accession": "GSM9220256",
+          "title": "Hep G2 cells, Glutamin deprivation_24hours_Rep_02"
+        },
+        {
+          "accession": "GSM9220257",
+          "title": "Hep G2 cells, Glutamin deprivation_24hours_Rep_03"
+        },
+        {
+          "accession": "GSM9220254",
+          "title": "Hep G2 cells, Glutamin deprivation_12hours_Rep_03"
+        },
+        {
+          "accession": "GSM9220251",
+          "title": "Hep G2 cells, Normal medium_Rep_03"
+        },
+        {
+          "accession": "GSM9220255",
+          "title": "Hep G2 cells, Glutamin deprivation_24hours_Rep_01"
+        },
+        {
+          "accession": "GSM9220252",
+          "title": "Hep G2 cells, Glutamin deprivation_12hours_Rep_01"
+        },
+        {
+          "accession": "GSM9220249",
+          "title": "Hep G2 cells, Normal medium_Rep_01"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 9,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41793192"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE307nnn/GSE307270/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1310151"
+    },
+    "200306768": {
+      "uid": "200306768",
+      "accession": "GSE306768",
+      "gds": "",
+      "title": "Glutamine Deprivation Triggers TRIB3-Dependent G4-DNA Resolution to Maintain DNA Repair and Tumor Survival [CUT&Tag]",
+      "summary": "Glutamine, the most abundant circulating amino acid, is a central metabolite critical for the survival and growth of many tumor cells. Efforts to exploit this vulnerability have met with limited success, due to the inherent adaptability of tumor cells to withstand nutrient scarcity in the tumor microenvironment. This resilience has rendered glutamine-targeting therapies ineffective in clinical trials, demanding new mechanistic insights. Here, we identify the pseudokinase TRIB3 as a key mediator of the metabolic adaptation of hepatocellular carcinoma (HCC) cells to limiting glutamine availability. TRIB3 is upregulated under glutamine deprivation in a c-Jun-dependent manner, functioning in the nucleus to safeguard DNA repair fidelity, allowing the timely resolution of DNA damage and preventing replication catastrophe. TRIB3 binds to G-quadruplex DNA (G4-DNA) structures throughout the genome, recruiting the helicase DDX5 to resolve them as a cooperative functional complex. Depleting TRIB3 or DDX5 in HCC cells leads to exaggerated G4-DNA accumulation and heightened DNA damage associated with the downregulation of DNA damage response (DDR) pathways. We illustrate this effect on homologous recombination (HR) pathway genes, finding that TRIB3-DDX5 preventing G4-DNA accumulation at the BRCA1 and RAD51AP1 promoter regions that would otherwise suppress transcription. In vivo, TRIB3 silencing suppresses HCC xenograft growth, patently increasing DNA damage and apoptosis when mice were maintained on glutamine-deficient diets. Clinically, TRIB3 is overexpressed in HCC where its elevated levels correlate with poorer patient prognosis. Together findings nominate TRIB3-DDX5-G4 axis as a therapeutically exploitable metabolic dependency in HCC and possibly other malignancies with elevated TRIB3 expression.",
+      "gpl": "24676",
+      "gse": "306768",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/13",
+      "suppfile": "BW",
+      "samples": [
+        {
+          "accession": "GSM9207382",
+          "title": "CUT&Tag of G4-DNA in HepG2 cells with normal condition_Rep1"
+        },
+        {
+          "accession": "GSM9207379",
+          "title": "CUT&Tag of DDX5 in HepG2 cells with Glutamine deprivation_Rep1"
+        },
+        {
+          "accession": "GSM9207385",
+          "title": "CUT&Tag of G4-DNA in HepG2 cells with Glutamine deprivation_Rep2"
+        },
+        {
+          "accession": "GSM9207376",
+          "title": "CUT&Tag of TRIB3 in HepG2 cells with normal condition_Rep2"
+        },
+        {
+          "accession": "GSM9207374",
+          "title": "CUT&Tag of TRIB3 in HepG2 cells with normal condition_Rep1"
+        },
+        {
+          "accession": "GSM9207380",
+          "title": "CUT&Tag of DDX5 in HepG2 cells with normal condition_Rep2"
+        },
+        {
+          "accession": "GSM9207377",
+          "title": "CUT&Tag of TRIB3 in HepG2 cells with Glutamine deprivation_Rep2"
+        },
+        {
+          "accession": "GSM9207391",
+          "title": "CUT&Tag of G4-DNA in HepG2 cellsinfected with TRIB3 sh2 lentivirus_Rep2"
+        },
+        {
+          "accession": "GSM9207388",
+          "title": "CUT&Tag of G4-DNA in HepG2 cellsinfected with TRIB3 sh1 lentivirus_Rep1"
+        },
+        {
+          "accession": "GSM9207375",
+          "title": "CUT&Tag of TRIB3 in HepG2 cells with Glutamine deprivation_Rep1"
+        },
+        {
+          "accession": "GSM9207383",
+          "title": "CUT&Tag of G4-DNA in HepG2 cells with Glutamine deprivation_Rep1"
+        },
+        {
+          "accession": "GSM9207389",
+          "title": "CUT&Tag of G4-DNA in HepG2 cellsinfected with TRIB3 sh1 lentivirus_Rep2"
+        },
+        {
+          "accession": "GSM9207386",
+          "title": "CUT&Tag of G4-DNA in HepG2 cellsinfected with control shRNA lentivirus_Rep1"
+        },
+        {
+          "accession": "GSM9207390",
+          "title": "CUT&Tag of G4-DNA in HepG2 cellsinfected with TRIB3 sh2 lentivirus_Rep1"
+        },
+        {
+          "accession": "GSM9207387",
+          "title": "CUT&Tag of G4-DNA in HepG2 cellsinfected with control shRNA lentivirus_Rep2"
+        },
+        {
+          "accession": "GSM9207384",
+          "title": "CUT&Tag of G4-DNA in HepG2 cells with normal condition_Rep2"
+        },
+        {
+          "accession": "GSM9207381",
+          "title": "CUT&Tag of DDX5 in HepG2 cells with Glutamine deprivation_Rep2"
+        },
+        {
+          "accession": "GSM9207378",
+          "title": "CUT&Tag of DDX5 in HepG2 cells with normal condition_Rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 18,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41793192"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE306nnn/GSE306768/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1311356"
+    },
+    "200292492": {
+      "uid": "200292492",
+      "accession": "GSE292492",
+      "gds": "",
+      "title": "Cancer-associated SF3B1 mutation suppress DNA damage repair by disrupting circRNA biogenesis",
+      "summary": "Cancer-associated SF3B1 mutation leads to alternative splicing of hundreds of genes that affect cancer progression in multiple pathways. It has been reported that SF3B1 mutation interrupt with DNA damage repair independent of the BRCA1/RAD51 pathway. Here, we report that SF3B1 mutation compromise DNA homologous recombination (HR) repair by disrupting circATP9B biogenesis to repair the later stages of Rad51 loading. Mechanistically, circATP9B specifically binds to MYH9, and accelerate MYH9 protein degradation at the post-transcriptional level. circATP9B interferes with the motivity of DNA double-strand damage (DSB) sites by obstructing the assembly of nuclear actin and leads to persistent DSB sites in heterochromatin. It was further determined that the up-regulation of circATP9B enhanced the sensitivity of tumor cells to the PARP inhibitors, indicating that circATP9B interrupt with DNA damage repair. Taken together, these data shed light on the mechanisms by which SF3B1 interferes with DNA damage repair, providing new perspectives for treating tumors with SF3B1 mutation.",
+      "gpl": "24676",
+      "gse": "292492",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Non-coding RNA profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/01",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8859979",
+          "title": "Hela cells-WT_rep2"
+        },
+        {
+          "accession": "GSM8859985",
+          "title": "HEK293T cells-WT_rep2"
+        },
+        {
+          "accession": "GSM8859988",
+          "title": "HEK293T cells-K700E_rep2"
+        },
+        {
+          "accession": "GSM8859982",
+          "title": "Hela cells-K700E_rep2"
+        },
+        {
+          "accession": "GSM8859983",
+          "title": "Hela cells-K700E_rep3"
+        },
+        {
+          "accession": "GSM8859980",
+          "title": "Hela cells-WT_rep3"
+        },
+        {
+          "accession": "GSM8859989",
+          "title": "HEK293T cells-K700E_rep3"
+        },
+        {
+          "accession": "GSM8859986",
+          "title": "HEK293T cells-WT_rep3"
+        },
+        {
+          "accession": "GSM8859978",
+          "title": "Hela cells-WT_rep1"
+        },
+        {
+          "accession": "GSM8859984",
+          "title": "HEK293T cells-WT_rep1"
+        },
+        {
+          "accession": "GSM8859987",
+          "title": "HEK293T cells-K700E_rep1"
+        },
+        {
+          "accession": "GSM8859981",
+          "title": "Hela cells-K700E_rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE292nnn/GSE292492/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1238861"
+    },
+    "200300991": {
+      "uid": "200300991",
+      "accession": "GSE300991",
+      "gds": "",
+      "title": "Single-cell RNA-seq analysis was performed on CD45-positive cells isolated from mouse mammary tumors.",
+      "summary": "Tumors derived from BP cells of mouse mammary cancer were collected after treatment with vehicle control, olaparib alone, or the combination of olaparib and an IRG1 inhibitor. CD45-positive cells were isolated from these tumors for single-cell RNA-seq analysis to investigate the impact of the combination therapy on the tumor immune microenvironment.",
+      "gpl": "34290",
+      "gse": "300991",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/24",
+      "suppfile": "MTX, TSV, TXT",
+      "samples": [
+        {
+          "accession": "GSM9073321",
+          "title": "CD45+ cells, olaparib+IRG1-IN-1"
+        },
+        {
+          "accession": "GSM9073319",
+          "title": "CD45+ cells, vehicle"
+        },
+        {
+          "accession": "GSM9073320",
+          "title": "CD45+ cells, olaparib"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 3,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41279612"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE300nnn/GSE300991/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1282966"
+    },
+    "200308455": {
+      "uid": "200308455",
+      "accession": "GSE308455",
+      "gds": "",
+      "title": "Functional characterization of BAP1 mutations in genome edited cholangiocarcinoma organoids: role in cell death and drug responses",
+      "summary": "Cholangiocarcinoma (CCA) is a genetically heterogeneous malignancy of the bile ducts with limited effective treatments and variable chemotherapeutic responses. BRCA1-associated protein 1 (BAP1), a tumor suppressor gene frequently mutated in CCA, encodes a nuclear deubiquitinating enzyme involved in chromatin remodeling and cell death regulation. In this study, we investigated the role of BAP1 mutations in programmed cell death and drug response using patient-derived and prime-edited CCA organoids (CCAOs). BAP1-mutant organoids exhibited impaired activation of apoptosis and necroptosis, as evidenced by reduced cleaved caspase-3 and pMLKL expression. Transcriptomic analysis revealed BAP1-dependent gene expression changes including enrichment of pathways related to stress response, ion transport, and metabolic detoxification. Interesting, BAP1 mutant CCAOs showed enhanced sensitivity to sorafenib, a multikinase inhibitor commonly used in biliary tract cancer. These findings highlight BAP1 as a modulator of cell death and a potential predictive biomarker for sorafenib response in CCA, with implications for personalized therapy design.",
+      "gpl": "34281",
+      "gse": "308455",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/04",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9245955",
+          "title": "prime edited, CCAOBAP1-WT clone 9, rep1"
+        },
+        {
+          "accession": "GSM9245952",
+          "title": "Non-edited, CCAOBAP1-WT clone 9, rep1"
+        },
+        {
+          "accession": "GSM9245956",
+          "title": "prime edited, CCAOBAP1-WT clone 9, rep2"
+        },
+        {
+          "accession": "GSM9245953",
+          "title": "Non-edited, CCAOBAP1-WT clone 9, rep2"
+        },
+        {
+          "accession": "GSM9245957",
+          "title": "prime edited, CCAOBAP1-WT clone 9, rep3"
+        },
+        {
+          "accession": "GSM9245954",
+          "title": "Non-edited, CCAOBAP1-WT clone 9, rep3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE308nnn/GSE308455/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1330621"
+    },
+    "200306867": {
+      "uid": "200306867",
+      "accession": "GSE306867",
+      "gds": "",
+      "title": "Cryptic redundancy between PAR1b and PAR1a, two members of the PAR1 kinase family, in the survival of PAR1b-knockout mice",
+      "summary": "The PAR1/MARK family of serine/threonine kinases (Par1a-d) redundantly regulates cell polarity. Furthermore, PAR1b facilitates nuclear translocation of BRCA1 through phosphorylation. Within the nucleus, BRCA1 protects stalled replication forks and repairs DNA double-strand breaks through homologous recombination. Consequently, BRCA1-knockout mice are embryonically lethal. In contrast, conventional PAR1b-knockout mice reach adulthood, suggesting a compensatory mechanism for PAR1b in regulating BRCA1 in these knockout mice. Here we find that while PAR1b knockout leads to the death of wild-type mouse embryonic fibroblasts (MEFs), PAR1b-null MEFs can be readily established from conventional PAR1b-knockout mice. In PAR1b-null MEFs from PAR1b-knockout mice, PAR1a, but not PAR1c or PAR1d, is essential for cell survival. Thus, PAR1a-mediated cryptic redundancy is unleashed only when functional PAR1b is absent from the onset of embryogenesis, which induces epigenetic changes in gene regulation. This study presents the first evidence of cryptic redundancy driven by epigenetic modifications in the regulation of gene expression during early embryogenesis.",
+      "gpl": "34290",
+      "gse": "306867",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/02",
+      "suppfile": "BW",
+      "samples": [
+        {
+          "accession": "GSM9211071",
+          "title": "Mouse, conventional PAR1b-knockout, immortalized mouse embryonic fibroblasts"
+        },
+        {
+          "accession": "GSM9211070",
+          "title": "Mouse, wild-type, immortalized mouse embryonic fibroblasts"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE306nnn/GSE306867/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1312816"
+    },
+    "200249915": {
+      "uid": "200249915",
+      "accession": "GSE249915",
+      "gds": "",
+      "title": "FABP7 Progenitors are a Targetable Metabolic Root in the BRCA1 Breast",
+      "summary": "It has been nearly 3 decades since the discovery of the BRCA1/2 genes and their link to breast cancer risk, with prophylactic mastectomy remaining the primary management option for these high-risk mutation carriers. The current paucity of interception strategies is due to undefined, targetable cancer precursor populations in the high-risk breast. Despite known cellular alterations in the BRCA1 breast, epithelial populations at the root of unwarranted cell state transitions remain unresolved. Here, we identify a root progenitor population that is dysregulated in BRCA1 carriers stemming from the metabolic role of BRCA1. This fatty-acid binding protein 7 (FABP7) expressing luminal progenitor population is spatially confined to the mammary ducts, has enhanced clonogenic capacity, and is the predicted origin of mixed basal-luminal differentiation in the BRCA1 but not BRCA2 breast. We show global H3K27 acetylation is reduced within ductal FABP7 cells in BRCA1 carriers in situ, linking to a non-canonical metabolic role of BRCA1 in regulating acetyl-CoA pools and de novo fatty acid synthesis. We demonstrate FABP7 progenitor capacity is preferentially ablated in BRCA1 carriers through inhibition of fatty acid metabolism using an FDA-approved fatty acid synthase (FASN) inhibitor. This study lays the foundation for metabolic control of breast progenitor dynamics to mitigate breast cancer risk in the BRCA1 breast.",
+      "gpl": "24676",
+      "gse": "249915",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/30",
+      "suppfile": "CSV, XLSX",
+      "samples": [
+        {
+          "accession": "GSM7966921",
+          "title": "Sample_D_barcode"
+        },
+        {
+          "accession": "GSM7966924",
+          "title": "Samples_I_K"
+        },
+        {
+          "accession": "GSM7966918",
+          "title": "Samples_C_J"
+        },
+        {
+          "accession": "GSM7966915",
+          "title": "Samples_A_H_barcode"
+        },
+        {
+          "accession": "GSM7966914",
+          "title": "Samples_A_H"
+        },
+        {
+          "accession": "GSM7966923",
+          "title": "Samples_E_F_barcode"
+        },
+        {
+          "accession": "GSM7966920",
+          "title": "Sample_D"
+        },
+        {
+          "accession": "GSM7966917",
+          "title": "Samples_B_G_barcode"
+        },
+        {
+          "accession": "GSM7966919",
+          "title": "Samples_C_J_barcode"
+        },
+        {
+          "accession": "GSM7966916",
+          "title": "Samples_B_G"
+        },
+        {
+          "accession": "GSM7966922",
+          "title": "Samples_E_F"
+        },
+        {
+          "accession": "GSM7966925",
+          "title": "Samples_I_K_barcode"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE249nnn/GSE249915/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1051131"
+    },
+    "200301614": {
+      "uid": "200301614",
+      "accession": "GSE301614",
+      "gds": "",
+      "title": "Targeting ATR offers multifaceted treatment strategies involving RAD51-mediated compensatory DNA repair in bladder cancer",
+      "summary": "Background: Muscle-invasive bladder cancer treatment depends on histological and molecular subtypes. While urothelial carcinoma (UC) benefits from diverse therapies, options beyond radical cystectomy for rare subtypes such as squamous cell carcinoma (SCC) remain limited. We previously demonstrated that ATR inhibitor (ATRi) Ceralasertib, enhanced UC and SCC treatment efficacy in vitro. Thus, we investigated the therapeutic impact of ATRi, its downstream effects and compensatory pathways bypassing ATR dysfunction in patient-derived ex vivo models.  Results: Patient-derived ex vivo ATRi-adapted models (p-SCCATRi) were generated through long-term ATRi treatment (Ceralasertib) and characterized via RNA-seq profiling. In p-SCCATRi, ATRi adaptation led to decreased sensitivity (up to 3.3-fold IC50 increase), with compensatory upregulation of DNA repair, particularly homologous recombination (HR) genes like BRCA1 and RAD51, plus chromatin reorganization and immune downregulation. HR upregulation was targetd with application of RAD51 inhibitor (B02).  Conclusion: Our results propose ATR as a promising target in bladder cancer by (1) enhancing radiosensitivity through classical ATR inhibition, and (2) exploiting ATRi-adaptation as a vulnerability by targeting compensatory HR activation through RAD51 inhibition. These findings offer novel strategies for improving bladder cancer treatment.",
+      "gpl": "24676",
+      "gse": "301614",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/28",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9086501",
+          "title": "Resistenz pSCC DMSO rep1"
+        },
+        {
+          "accession": "GSM9086504",
+          "title": "Resistenz pSCC Cera rep2"
+        },
+        {
+          "accession": "GSM9086502",
+          "title": "Resistenz pSCC Cera rep1"
+        },
+        {
+          "accession": "GSM9086503",
+          "title": "Resistenz pSCC DMSO rep2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 4,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41387887"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE301nnn/GSE301614/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1285798"
+    },
+    "200292142": {
+      "uid": "200292142",
+      "accession": "GSE292142",
+      "gds": "",
+      "title": "Beyond BRCA deficiency: Clinical and molecular predictors of survival in patients with BRCA-deficient tubo-ovarian high-grade serous carcinoma [RNA-Seq]",
+      "summary": "Homologous recombination DNA repair deficient (HRD) tumors account for about 50% of tubo-ovarian high-grade serous carcinomas (HGSC) and are associated with a high response to platinum-based chemotherapy. However, a subset of patients with HRD tumors have unexpected resistance to chemotherapy and experience short survival. Our study compared BRCA-deficient and proficient HGSC among patients with short (<3 years, the lowest quartile of overall survival (OS)) versus longer-term (>3 year OS) to identify prognostic markers and potential therapeutic opportunities.  Primary tumors from a cohort of patients with advanced-stage HGSC (n=154) enriched for those with HRD tumors and short survival (n=42) were analyzed using whole-genome sequencing, bulk RNA-sequencing, and DNA methylation profiling. A subset of HRD tumors (n=143) were characterized for immune cell densities by multiplex immunofluorescence. Clinicopathological features were assessed in 1,389 patients with HGSC, including 282 with pathogenic germline BRCA variants (gBRCApv). Findings were validated in two international HGSC cohorts: the Ovarian Tumor Tissue Analysis consortium (n=5,875) and Multisciplinary Ovarian Cancer Outcome Group (n=895). In gBRCApv-carriers, residual disease following surgical cytoreduction was not associated with shorter OS unlike in non-carriers where it was strongly associated. While most patients with gBRCApv had a more favorable OS compared to non-carriers, a survival advantage was not apparent in those with variants located outside of BRCA1 exon 10/23 and BRCA2 exon 11/27. Patient survival correlated with HRD score, such that those with a score \u226563 had significantly longer OS compared to those with HRD scores of 42-63 and <42. While higher HRD scores were associated with better survival outcomes, most gBRCApv carriers with a short survival had tumor HRD scores that exceeded the threshold typically considered predictive of a good response to carboplatin or PARP inhibitors. BRCA2-deficient HGSC with loss of the tumor suppressor NF1 was associated with exceptionally favorable outcome (median OS 17 years), whereas amplification of both PIK3CA and RAD21, was associated with poor outcome in BRCA2-deficient HGSC (median OS 2.9 years). The density of tumor-infiltrating CD8+ PD-1+ T cells was prognostic for OS in gBRCApv-carriers. In summary, rather than simply the presence or absence of a germline BRCA pathological variant influencing patient survival, the co-occurrence of specific somatic gene alterations, the extent of immune cell infiltration, the level of homologous recombination deficiency, and BRCA-variant location may modify clinical outcomes in patients with BRCA-deficient HGSC. Analysis of exceptional outcome patients, in this case gBRCApv-carriers with an atypically short survival, may identify determinants of outcome applicable to the wider HGSC patient population.",
+      "gpl": "24676",
+      "gse": "292142",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing; Third-party reanalysis",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/26",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8851081",
+          "title": "BRCA_21_4_8"
+        },
+        {
+          "accession": "GSM8851078",
+          "title": "BRCA_19_4_4"
+        },
+        {
+          "accession": "GSM8851075",
+          "title": "BRCA_16_4_3"
+        },
+        {
+          "accession": "GSM8851090",
+          "title": "BRCA_9_4_1"
+        },
+        {
+          "accession": "GSM8851087",
+          "title": "BRCA_6_4_0"
+        },
+        {
+          "accession": "GSM8851084",
+          "title": "BRCA_24_4_9"
+        },
+        {
+          "accession": "GSM8851073",
+          "title": "BRCA_14_4_6"
+        },
+        {
+          "accession": "GSM8851070",
+          "title": "BRCA_11_4_5"
+        },
+        {
+          "accession": "GSM8851076",
+          "title": "BRCA_17_4_7"
+        },
+        {
+          "accession": "GSM8851082",
+          "title": "BRCA_22_4_1"
+        },
+        {
+          "accession": "GSM8851079",
+          "title": "BRCA_2_4_6"
+        },
+        {
+          "accession": "GSM8851085",
+          "title": "BRCA_3_4_X"
+        },
+        {
+          "accession": "GSM8851071",
+          "title": "BRCA_12_4_9"
+        },
+        {
+          "accession": "GSM8851068",
+          "title": "BRCA_1_4_2"
+        },
+        {
+          "accession": "GSM8851088",
+          "title": "BRCA_7_4_4"
+        },
+        {
+          "accession": "GSM8851074",
+          "title": "BRCA_15_4_X"
+        },
+        {
+          "accession": "GSM8851080",
+          "title": "BRCA_20_4_4"
+        },
+        {
+          "accession": "GSM8851077",
+          "title": "BRCA_18_4_0"
+        },
+        {
+          "accession": "GSM8851083",
+          "title": "BRCA_23_4_5"
+        },
+        {
+          "accession": "GSM8851086",
+          "title": "BRCA_4_4_3"
+        },
+        {
+          "accession": "GSM8851072",
+          "title": "BRCA_13_4_2"
+        },
+        {
+          "accession": "GSM8851089",
+          "title": "BRCA_8_4_8"
+        },
+        {
+          "accession": "GSM8851069",
+          "title": "BRCA_10_4_1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 23,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41040691"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE292nnn/GSE292142/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1237271"
+    },
+    "200292140": {
+      "uid": "200292140",
+      "accession": "GSE292140",
+      "gds": "",
+      "title": "Beyond BRCA deficiency: Clinical and molecular predictors of survival in patients with BRCA-deficient tubo-ovarian high-grade serous carcinoma [Methylation]",
+      "summary": "Homologous recombination DNA repair deficient (HRD) tumors account for about 50% of tubo-ovarian high-grade serous carcinomas (HGSC) and are associated with a high response to platinum-based chemotherapy. However, a subset of patients with HRD tumors have unexpected resistance to chemotherapy and experience short survival. Our study compared BRCA-deficient and proficient HGSC among patients with short (<3 years, the lowest quartile of overall survival (OS)) versus longer-term (>3 year OS) to identify prognostic markers and potential therapeutic opportunities.  Primary tumors from a cohort of patients with advanced-stage HGSC (n=154) enriched for those with HRD tumors and short survival (n=42) were analyzed using whole-genome sequencing, bulk RNA-sequencing, and DNA methylation profiling. A subset of HRD tumors (n=143) were characterized for immune cell densities by multiplex immunofluorescence. Clinicopathological features were assessed in 1,389 patients with HGSC, including 282 with pathogenic germline BRCA variants (gBRCApv). Findings were validated in two international HGSC cohorts: the Ovarian Tumor Tissue Analysis consortium (n=5,875) and Multisciplinary Ovarian Cancer Outcome Group (n=895).  In gBRCApv-carriers, residual disease following surgical cytoreduction was not associated with shorter OS unlike in non-carriers where it was strongly associated. While most patients with gBRCApv had a more favorable OS compared to non-carriers, a survival advantage was not apparent in those with variants located outside of BRCA1 exon 10/23 and BRCA2 exon 11/27. Patient survival correlated with HRD score, such that those with a score \u226563 had significantly longer OS compared to those with HRD scores of 42-63 and <42. While higher HRD scores were associated with better survival outcomes, most gBRCApv carriers with a short survival had tumor HRD scores that exceeded the threshold typically considered predictive of a good response to carboplatin or PARP inhibitors. BRCA2-deficient HGSC with loss of the tumor suppressor NF1 was associated with exceptionally favorable outcome (median OS 17 years), whereas amplification of both PIK3CA and RAD21, was associated with poor outcome in BRCA2-deficient HGSC (median OS 2.9 years). The density of tumor-infiltrating CD8+ PD-1+ T cells was prognostic for OS in gBRCApv-carriers.   In summary, rather than simply the presence or absence of a germline BRCA pathological variant influencing patient survival, the co-occurrence of specific somatic gene alterations, the extent of immune cell infiltration, the level of homologous recombination deficiency, and BRCA-variant location may modify clinical outcomes in patients with BRCA-deficient HGSC. Analysis of exceptional outcome patients, in this case gBRCApv-carriers with an atypically short survival, may identify determinants of outcome applicable to the wider HGSC patient population.",
+      "gpl": "21145",
+      "gse": "292140",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Methylation profiling by genome tiling array; Third-party reanalysis",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/26",
+      "suppfile": "IDAT, TXT",
+      "samples": [
+        {
+          "accession": "GSM8851044",
+          "title": "BRCA_6_3_2"
+        },
+        {
+          "accession": "GSM8851024",
+          "title": "BRCA_1_3_7"
+        },
+        {
+          "accession": "GSM8851030",
+          "title": "BRCA_15_3_4"
+        },
+        {
+          "accession": "GSM8851047",
+          "title": "BRCA_9_3_X"
+        },
+        {
+          "accession": "GSM8851027",
+          "title": "BRCA_12_3_7"
+        },
+        {
+          "accession": "GSM8851036",
+          "title": "BRCA_20_3_X"
+        },
+        {
+          "accession": "GSM8851033",
+          "title": "BRCA_18_3_1"
+        },
+        {
+          "accession": "GSM8851045",
+          "title": "BRCA_7_3_1"
+        },
+        {
+          "accession": "GSM8851042",
+          "title": "BRCA_4_3_4"
+        },
+        {
+          "accession": "GSM8851039",
+          "title": "BRCA_23_3_7"
+        },
+        {
+          "accession": "GSM8851025",
+          "title": "BRCA_10_3_9"
+        },
+        {
+          "accession": "GSM8851031",
+          "title": "BRCA_16_3_3"
+        },
+        {
+          "accession": "GSM8851028",
+          "title": "BRCA_13_3_6"
+        },
+        {
+          "accession": "GSM8851034",
+          "title": "BRCA_19_3_0"
+        },
+        {
+          "accession": "GSM8851040",
+          "title": "BRCA_24_3_6"
+        },
+        {
+          "accession": "GSM8851037",
+          "title": "BRCA_21_3_9"
+        },
+        {
+          "accession": "GSM8851026",
+          "title": "BRCA_11_3_8"
+        },
+        {
+          "accession": "GSM8851043",
+          "title": "BRCA_5_3_3"
+        },
+        {
+          "accession": "GSM8851046",
+          "title": "BRCA_8_3_0"
+        },
+        {
+          "accession": "GSM8851035",
+          "title": "BRCA_2_3_6"
+        },
+        {
+          "accession": "GSM8851032",
+          "title": "BRCA_17_3_2"
+        },
+        {
+          "accession": "GSM8851029",
+          "title": "BRCA_14_3_5"
+        },
+        {
+          "accession": "GSM8851041",
+          "title": "BRCA_3_3_5"
+        },
+        {
+          "accession": "GSM8851038",
+          "title": "BRCA_22_3_8"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 24,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41040691"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE292nnn/GSE292140/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1237270"
+    },
+    "200310469": {
+      "uid": "200310469",
+      "accession": "GSE310469",
+      "gds": "",
+      "title": "RNA-seq data for studying the influence of fallopian tube stromal cells and/or estrogen treatment on fallopian tube epithilial cells",
+      "summary": "This study aims to investigate the role of fallopian tube (FT) stromal cells (SCs) in supporting the growth, proliferation and differentiation of fallopian tube epithelial (FTE) cells in response to estrogen signaling. Estrogen receptor alpha (encoded by Esr1) positive cells are present in both FTE and FT stromal compartments. Thus, estrogen exposure can affect FTE cells either directly or indirectly via Esr1+ SCs. Here we used RNA-seq expression profiling of murine FTE cells under various treatment conditions to demonstrate how estradiol (E2) treatment affected their transcriptomics directly, and indirectly via the co-cultured FT SCs, utilizing an organoid culture/co-culture system.",
+      "gpl": "34290",
+      "gse": "310469",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/21",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM9301854",
+          "title": "PBP-null FTE cells sorted from FTE+SC organoid culture treated with E2, replicate 2"
+        },
+        {
+          "accession": "GSM9301851",
+          "title": "PBP-null FTE cells sorted from FTE+SC organoid culture, replicate 1"
+        },
+        {
+          "accession": "GSM9301848",
+          "title": "PBP-null FTE cells sorted from FTE only organoid culture, replicate 2"
+        },
+        {
+          "accession": "GSM9301845",
+          "title": "WT FTE cells sorted from FTE+SC organoid culture treated with E2, replicate 1"
+        },
+        {
+          "accession": "GSM9301842",
+          "title": "WT FTE cells sorted from FTE only organoid culture treated with E2, replicate 2"
+        },
+        {
+          "accession": "GSM9301846",
+          "title": "WT FTE cells sorted from FTE+SC organoid culture treated with E2, replicate 2"
+        },
+        {
+          "accession": "GSM9301843",
+          "title": "WT FTE cells sorted from FTE+SC organoid culture, replicate 1"
+        },
+        {
+          "accession": "GSM9301849",
+          "title": "PBP-null FTE cells sorted from FTE only organoid culture treated with E2, replicate 1"
+        },
+        {
+          "accession": "GSM9301840",
+          "title": "WT FTE cells sorted from FTE only organoid culture, replicate 2"
+        },
+        {
+          "accession": "GSM9301844",
+          "title": "WT FTE cells sorted from FTE+SC organoid culture, replicate 2"
+        },
+        {
+          "accession": "GSM9301841",
+          "title": "WT FTE cells sorted from FTE only organoid culture treated with E2, replicate 1"
+        },
+        {
+          "accession": "GSM9301852",
+          "title": "PBP-null FTE cells sorted from FTE+SC organoid culture, replicate 2"
+        },
+        {
+          "accession": "GSM9301853",
+          "title": "PBP-null FTE cells sorted from FTE+SC organoid culture treated with E2, replicate 1"
+        },
+        {
+          "accession": "GSM9301847",
+          "title": "PBP-null FTE cells sorted from FTE only organoid culture, replicate 1"
+        },
+        {
+          "accession": "GSM9301839",
+          "title": "WT FTE cells sorted from FTE only organoid culture, replicate 1"
+        },
+        {
+          "accession": "GSM9301850",
+          "title": "PBP-null FTE cells sorted from FTE only organoid culture treated with E2, replicate 2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 16,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE310nnn/GSE310469/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1366384"
+    },
+    "200292585": {
+      "uid": "200292585",
+      "accession": "GSE292585",
+      "gds": "",
+      "title": "Mechanism of SETX-BRCA1-BARD1 complex in resolution of R-loops and transcription-replication conflicts",
+      "summary": "Senataxin (SETX), a RNA-DNA helicase, is recruited to transcription pause sites via the tumor suppressor BRCA1. Here, we define the mechanism by which SETX-BRCA1 resolves transcription-associated R-loops to prevent deleterious outcomes. Specifically, we show that SETX unwinds R-loops, and that the complex of BRCA1 and its obligatory partner BARD1 binds R-loops and stimulates R-loop unwinding by SETX. Importantly, BRCA1-BARD1 alleviates the inhibitory effect of RAD52 on SETX-mediated R-loop unwinding. We also demonstrate that phosphorylation of Ser642 in SETX promotes its interaction with BRCA1 via the tandem BRCT domain of the latter. Accordingly, mutations in the catalytic domain or Ser642 in SETX lead to R-loop accumulation, transcription-replication conflicts, replication fork stalling, and DNA double strand breaks in human cells. Our results thus establish the molecular basis for functional synergy between SETX and BRCA1-BARD1 in R-loop resolution and the mitigation of transcription-replication conflicts to preserve genome integrity.",
+      "gpl": "24676",
+      "gse": "292585",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/16",
+      "suppfile": "BW",
+      "samples": [
+        {
+          "accession": "GSM8862080",
+          "title": "HAP1, SETX KO, DRIP(RNH)"
+        },
+        {
+          "accession": "GSM8862083",
+          "title": "HAP1, SETX WT, DRIP(REP3)"
+        },
+        {
+          "accession": "GSM8862078",
+          "title": "HAP1, SETX KO, DRIP(REP3)"
+        },
+        {
+          "accession": "GSM8862081",
+          "title": "HAP1, SETX WT, DRIP(REP1)"
+        },
+        {
+          "accession": "GSM8862084",
+          "title": "HAP1, SETX WT, DRIP(INPUT)"
+        },
+        {
+          "accession": "GSM8862076",
+          "title": "HAP1, SETX KO, DRIP(REP1)"
+        },
+        {
+          "accession": "GSM8862079",
+          "title": "HAP1, SETX KO, DRIP(INPUT)"
+        },
+        {
+          "accession": "GSM8862082",
+          "title": "HAP1, SETX WT, DRIP(REP2)"
+        },
+        {
+          "accession": "GSM8862085",
+          "title": "HAP1, SETX WT, DRIP(RNH)"
+        },
+        {
+          "accession": "GSM8862077",
+          "title": "HAP1, SETX KO, DRIP(REP2)"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 10,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE292nnn/GSE292585/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1240259"
+    },
+    "200283656": {
+      "uid": "200283656",
+      "accession": "GSE283656",
+      "gds": "",
+      "title": "Assessing mifepristone's effects on endometrial tissue in women with BRCA mutations: A randomised clinical trial",
+      "summary": "Background: The endometrium, regulated by steroid hormones, is particularly susceptible to disease under imbalanced hormonal conditions. Progesterone regulates cell growth differently across tissues, acting as a pro-tumorigenic agent in the breast while serving as a tumor suppressor in the endometrium by countering the effects of oestradiol. Progesterone receptor modulators like mifepristone may prevent breast cancer formation but raise concerns about unopposed oestradiol exposure in the endometrium. This study examines mifepristone\u2019s impact on the endometrium, particularly its potential link to endometrial carcinogenesis in BRCA mutation carriers, who have DNA repair and replication vulnerabilities. Methods: This study was part of a randomised, double-blind, placebo-controlled trial in which pre-menopausal women carrying BRCA1 or BRCA2 mutations were assigned to a three-month treatment with either mifepristone (50 mg) or a non-hormonal comparator (TrioB) every second day. Endometrial biopsies were collected pre- and post- treatment, processed, and analysed for changes in endometrial thickness, cellular composition, methylation patterns, and gene expression profiles. Compliance and safety monitoring were rigorously maintained. Results: Mifepristone treatment led to amenorrhea in all treated participants, consistent with its inhibition of ovulation. Ultrasound showed a non-significant increase in endometrial thickness post-treatment. Cellular analysis indicated a shift in composition, with a reduction in epithelial cells and an increase in fibroblast levels, suggesting that endometrial thickening may primarily reflect stromal expansion rather than epithelial proliferation. This distinction is clinically important, as epithelial proliferation is more closely associated with carcinogenesis. DNA methylation analysis revealed no significant alterations in the TCGA-EC methylation index, and gene expression profiling showed no significant elevation in carcinogenesis-related genes. Conclusions: Mifepristone treatment in BRCA mutation carriers does not significantly impact methylation or gene expression profiles associated with endometrial carcinogenesis. The findings support from the safety of short-term mifepristone use in this population, although long-time safety of mifepristone use in BRCA mutation carriers will be needed.",
+      "gpl": "34281",
+      "gse": "283656",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/14",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8668969",
+          "title": "Subject 14, post treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668986",
+          "title": "Subject 36, pre treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668966",
+          "title": "Subject 10, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668972",
+          "title": "Subject 21, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668978",
+          "title": "Subject 4, pre treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668975",
+          "title": "Subject 35, post treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668971",
+          "title": "Subject 15, post treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668974",
+          "title": "Subject 35, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668963",
+          "title": "Subject 8, post treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668960",
+          "title": "Subject 6, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668980",
+          "title": "Subject 22, pre treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668977",
+          "title": "Subject 3, post treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668983",
+          "title": "Subject 24, post treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668982",
+          "title": "Subject 24, pre treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668979",
+          "title": "Subject 4, post treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668976",
+          "title": "Subject 3, pre treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668962",
+          "title": "Subject 8, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668968",
+          "title": "Subject 14, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668965",
+          "title": "Subject 9, post treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668985",
+          "title": "Subject 30, post treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668981",
+          "title": "Subject 22, post treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668964",
+          "title": "Subject 9, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668961",
+          "title": "Subject 6, post treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668987",
+          "title": "Subject 36, post treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668984",
+          "title": "Subject 30, pre treatment of Placebo group"
+        },
+        {
+          "accession": "GSM8668973",
+          "title": "Subject 21, post treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668970",
+          "title": "Subject 15, pre treatment of Mifepristone treatment group"
+        },
+        {
+          "accession": "GSM8668967",
+          "title": "Subject 10, post treatment of Mifepristone treatment group"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 28,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE283nnn/GSE283656/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1194992"
+    },
+    "200310239": {
+      "uid": "200310239",
+      "accession": "GSE310239",
+      "gds": "",
+      "title": "BAP1 deletion in hepatocytes primes an inflammatory transcriptional response",
+      "summary": "BRCA1-associated protein 1 (BAP1) is a deubiquitinase, frequently altered in cancers including hepatocellular carcinoma and cholangiocarcinoma. While Bap1 has been shown to play key roles in metabolism, maintenance of tissue homeostasis, and immune cell development, little is known about its normal functions in the liver in vivo. This study aims to identify Bap1 specific effects on the liver\u2019s immune microenvironment and biological functions. Using AAV8-mediated CRISPR/CAS9 genome editing we generated a mouse hepatocyte-specific model of Bap1 knockout to define the changes that occur in liver biology in an in vivo system and characterize how loss of Bap1 alters the liver\u2019s response to injury. Single-cell resolution spatial transcriptomics were performed in conjunction with immunohistochemistry to analyze cell-type composition and immune cell recruitment changes. Bulk RNA-sequencing was performed for further assessment of the impact of Bap1 loss on transcription. Hepatocyte-specific depletion of Bap1 induced transcriptional changes shared with acute injury. We observed a strong dysregulation of inflammatory pathways associated with BAP1 loss. Moreover, the transcriptional response of Bap1 depletion in hepatocytes to damage was markedly different than in control liver, with Bap1-deleted livers showing a decreased hepatocyte identity based on gene expression. Spatial transcriptomics and quantitative texture analysis of immunohistochemistry revealed an altered immune environment prior to damage and an impaired recruitment of immune cells in Bap1 depleted livers after damage. Using a hepatocyte-specific Bap1 deletion we identified Bap1 as a critical modulator in the liver\u2019s immune cell response. We show that Bap1 loss leads to an inflammatory environment prior to damage and disrupts the recruitment immune cells. Our quantitative spatial analysis highlights the power of such approaches to characterize the spatial distribution of different cell types in a tissue.",
+      "gpl": "30172",
+      "gse": "310239",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/01/07",
+      "suppfile": "TSV",
+      "samples": [
+        {
+          "accession": "GSM9291927",
+          "title": "Liver, sgBap1 CCl4 , rep 3"
+        },
+        {
+          "accession": "GSM9291924",
+          "title": "Liver, sgBap1 Veh , rep 1"
+        },
+        {
+          "accession": "GSM9291925",
+          "title": "Liver, sgBap1 Veh , rep 2"
+        },
+        {
+          "accession": "GSM9291919",
+          "title": "Liver, sgBap1 CCl4 , rep 1"
+        },
+        {
+          "accession": "GSM9291922",
+          "title": "Liver, NTC Veh , rep 1"
+        },
+        {
+          "accession": "GSM9291926",
+          "title": "Liver, sgBap1 CCl4 , rep 2"
+        },
+        {
+          "accession": "GSM9291923",
+          "title": "Liver, NTC Veh , rep 2"
+        },
+        {
+          "accession": "GSM9291920",
+          "title": "Liver, NTC CCl4 , rep 2"
+        },
+        {
+          "accession": "GSM9291918",
+          "title": "Liver, NTC CCl4 , rep 1"
+        },
+        {
+          "accession": "GSM9291921",
+          "title": "Liver, NTC CCl4 , rep 3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 10,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE310nnn/GSE310239/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1365517"
+    },
+    "200300163": {
+      "uid": "200300163",
+      "accession": "GSE300163",
+      "gds": "",
+      "title": "The Breakome of BRCA1 and BRCA2 Mutation Carriers Reveals Early Processes in Breast Oncogenesis",
+      "summary": "DNA double-strand breaks (DSBs) can lead to genome instability in cancer. Cells rely on an efficient DNA damage response (DDR) to maintain their DNA integrity and prevent oncogenic transformation. However, the early events that connect recurrent DNA damage to oncogenesis are not yet fully understood. Here, we employed in-suspension Breaks Labeling in-situ and Sequencing (sBLISS) to identify DSBs in primary cells of non-malignant carriers of BRCA1 and BRCA2 mutations (BRCAmut), categorized as high-risk patients, to characterize the effects of homologous recombination (HR) loss on cancer initiation. We demonstrate that the landscape of physiological DSBs in BRCAmut samples differs from that in healthy controls, and resemble more the pattern observed in cancer cells. Our results reveal that proto-oncogenes and tumor suppressors contain more breaks in BRCAmut samples, and that highly broken genes tend to be more highly expressed.  These highly broken genes are also often mutated in breast cancer tumors. Finally, differentially broken genes in BRCAmut samples exhibit a strong correlation with homologous recombination repair. Together, our findings underscore the impact of BRCA loss on the early stages of carcinogenesis and highlight future possibilities for early cancer detection.",
+      "gpl": "34281",
+      "gse": "300163",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/12/30",
+      "suppfile": "XLSX",
+      "samples": [
+        {
+          "accession": "GSM9054667",
+          "title": "non-malignant primary breast cells, BRCA2 mut2, rep1"
+        },
+        {
+          "accession": "GSM9054693",
+          "title": "DKAT breast cancer cells, NT, rep3"
+        },
+        {
+          "accession": "GSM9054687",
+          "title": "non-malignant primary breast cells, BRCA wt7, rep2"
+        },
+        {
+          "accession": "GSM9054670",
+          "title": "non-malignant primary breast cells, BRCA2 mut3, rep2"
+        },
+        {
+          "accession": "GSM9054690",
+          "title": "MDAMB231 breast cancer cells, NT, rep3"
+        },
+        {
+          "accession": "GSM9054710",
+          "title": "T47D breast cancer cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054673",
+          "title": "non-malignant primary breast cells, BRCA wt1, rep1"
+        },
+        {
+          "accession": "GSM9054702",
+          "title": "MCF10a non-malignant cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054676",
+          "title": "non-malignant primary breast cells, BRCA wt2, rep1"
+        },
+        {
+          "accession": "GSM9054656",
+          "title": "non-malignant primary breast cells, BRCA1 mut3, rep2"
+        },
+        {
+          "accession": "GSM9054696",
+          "title": "HMLE non-malignant cells, NT, rep3"
+        },
+        {
+          "accession": "GSM9054699",
+          "title": "MCF7 breast cancer cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054659",
+          "title": "non-malignant primary breast cells, BRCA1 mut6, rep1"
+        },
+        {
+          "accession": "GSM9054653",
+          "title": "non-malignant primary breast cells, BRCA1 mut2, rep1"
+        },
+        {
+          "accession": "GSM9054679",
+          "title": "non-malignant primary breast cells, BRCA wt3, rep2"
+        },
+        {
+          "accession": "GSM9054685",
+          "title": "non-malignant primary breast cells, BRCA wt6, rep2"
+        },
+        {
+          "accession": "GSM9054688",
+          "title": "MDAMB231 breast cancer cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054668",
+          "title": "non-malignant primary breast cells, BRCA2 mut2, rep2"
+        },
+        {
+          "accession": "GSM9054662",
+          "title": "non-malignant primary breast cells,BRCA1 mut7, rep2"
+        },
+        {
+          "accession": "GSM9054705",
+          "title": "MDAMB436 breast cancer cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054708",
+          "title": "MDAMB468 breast cancer cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054665",
+          "title": "non-malignant primary breast cells, BRCA2 mut1, rep1"
+        },
+        {
+          "accession": "GSM9054682",
+          "title": "non-malignant primary breast cells, BRCA wt5, rep1"
+        },
+        {
+          "accession": "GSM9054694",
+          "title": "HMLE non-malignant cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054651",
+          "title": "non-malignant primary breast cells, BRCA1 mut1, rep1"
+        },
+        {
+          "accession": "GSM9054671",
+          "title": "non-malignant primary breast cells, BRCA2 mut4, rep1"
+        },
+        {
+          "accession": "GSM9054654",
+          "title": "non-malignant primary breast cells, BRCA1 mut2, rep2"
+        },
+        {
+          "accession": "GSM9054711",
+          "title": "T47D breast cancer cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054674",
+          "title": "non-malignant primary breast cells, BRCA wt1, rep2"
+        },
+        {
+          "accession": "GSM9054657",
+          "title": "non-malignant primary breast cells, BRCA1 mut5, rep1"
+        },
+        {
+          "accession": "GSM9054691",
+          "title": "DKAT breast cancer cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054703",
+          "title": "MCF10a non-malignant cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054677",
+          "title": "non-malignant primary breast cells, BRCA wt2, rep2"
+        },
+        {
+          "accession": "GSM9054697",
+          "title": "HMLE non-malignant cells, NT, rep4"
+        },
+        {
+          "accession": "GSM9054660",
+          "title": "non-malignant primary breast cells, BRCA1 mut6, rep2"
+        },
+        {
+          "accession": "GSM9054680",
+          "title": "non-malignant primary breast cells, BRCA wt4, rep1"
+        },
+        {
+          "accession": "GSM9054683",
+          "title": "non-malignant primary breast cells, BRCA wt5, rep2"
+        },
+        {
+          "accession": "GSM9054700",
+          "title": "MCF7 breast cancer cells, NT, rep3"
+        },
+        {
+          "accession": "GSM9054712",
+          "title": "T47D breast cancer cells, NT, rep3"
+        },
+        {
+          "accession": "GSM9054669",
+          "title": "non-malignant primary breast cells, BRCA2 mut3, rep1"
+        },
+        {
+          "accession": "GSM9054706",
+          "title": "MDAMB436 breast cancer cells, NT, rep3"
+        },
+        {
+          "accession": "GSM9054666",
+          "title": "non-malignant primary breast cells, BRCA2 mut1, rep2"
+        },
+        {
+          "accession": "GSM9054686",
+          "title": "non-malignant primary breast cells, BRCA wt7, rep1"
+        },
+        {
+          "accession": "GSM9054709",
+          "title": "MDAMB468 breast cancer cells, NT, rep3"
+        },
+        {
+          "accession": "GSM9054689",
+          "title": "MDAMB231 breast cancer cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054663",
+          "title": "non-malignant primary breast cells, BRCA1 mut8, rep1"
+        },
+        {
+          "accession": "GSM9054675",
+          "title": "non-malignant primary breast cells, BRCA wt1, rep3"
+        },
+        {
+          "accession": "GSM9054678",
+          "title": "non-malignant primary breast cells, BRCA wt3, rep1"
+        },
+        {
+          "accession": "GSM9054695",
+          "title": "HMLE non-malignant cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054652",
+          "title": "non-malignant primary breast cells, BRCA1 mut1, rep2"
+        },
+        {
+          "accession": "GSM9054655",
+          "title": "non-malignant primary breast cells, BRCA1 mut3, rep1"
+        },
+        {
+          "accession": "GSM9054672",
+          "title": "non-malignant primary breast cells, BRCA2 mut4, rep2"
+        },
+        {
+          "accession": "GSM9054698",
+          "title": "MCF7 breast cancer cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054692",
+          "title": "DKAT breast cancer cells, NT, rep2"
+        },
+        {
+          "accession": "GSM9054658",
+          "title": "non-malignant primary breast cells, BRCA1 mut5, rep2"
+        },
+        {
+          "accession": "GSM9054704",
+          "title": "MDAMB436 breast cancer cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054684",
+          "title": "non-malignant primary breast cells, BRCA wt6, rep1"
+        },
+        {
+          "accession": "GSM9054681",
+          "title": "non-malignant primary breast cells, BRCA wt4, rep2"
+        },
+        {
+          "accession": "GSM9054707",
+          "title": "MDAMB468 breast cancer cells, NT, rep1"
+        },
+        {
+          "accession": "GSM9054661",
+          "title": "non-malignant primary breast cells, BRCA1 mut7, rep1"
+        },
+        {
+          "accession": "GSM9054701",
+          "title": "MCF7 breast cancer cells, NT, rep4"
+        },
+        {
+          "accession": "GSM9054664",
+          "title": "non-malignant primary breast cells, BRCA1 mut8, rep2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 62,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41350536"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE300nnn/GSE300163/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1279157"
+    },
+    "200301416": {
+      "uid": "200301416",
+      "accession": "GSE301416",
+      "gds": "",
+      "title": "Comparative Analysis of microRNA Expression in Serum and Plasma in Patients Screened for BRCA1/2 Mutations, dataset 2",
+      "summary": "Serum samples from 94 healthy women were analyzed using a custom qPCR panel comprising 182 miRNAs. Since this experiment is part of a broader study on miRnome alterations associated with BRCA mutations or BRCA-related cancers (particularly ovarian and breast cancer), 37 of the analyzed samples came from patients with BRCA1 mutations and 19 from BRCA2 mutation carriers. This analysis was preceded by sequencing-based quantification on the same set of the samples, the results of which are submitted separately to GEO under accession number GSE299787. The generation of this dataset was supported by The Gray Foundation grant \u201cCirculating microRNAs for assessment of risk beyond the BRCA genes and early detection of breast cancer in high-risk families\u201d awarded to Dipanjan Chowdhury, and by the National Science Centre (Poland) OPUS grant \u201cPredictive Potential of Circulating MicroRNA Biomarkers in Patients with High Familial or Genetic Risk of Cancer\u201d (2023/49/B/NZ5/03835) awarded to Wojciech Fendler.",
+      "gpl": "35981",
+      "gse": "301416",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Non-coding RNA profiling by array; Expression profiling by RT-PCR",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/12/16",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9082876",
+          "title": "Patient083-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082913",
+          "title": "Patient169-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082873",
+          "title": "Patient074-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082856",
+          "title": "Patient048-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082893",
+          "title": "Patient117-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082890",
+          "title": "Patient114-Serum-Healthy-BRCA_status_unknown-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082853",
+          "title": "Patient043-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082850",
+          "title": "Patient037-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082896",
+          "title": "Patient126-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082870",
+          "title": "Patient070-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082916",
+          "title": "Patient173-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082839",
+          "title": "Patient011-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082922",
+          "title": "Patient185-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082905",
+          "title": "Patient147-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082836",
+          "title": "Patient001-Serum-Healthy-BRCA_status_unknown-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082882",
+          "title": "Patient096-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082919",
+          "title": "Patient178-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082902",
+          "title": "Patient141-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082862",
+          "title": "Patient059-Serum-Healthy-BRCA2_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082899",
+          "title": "Patient130-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082859",
+          "title": "Patient055-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082879",
+          "title": "Patient093-Serum-Healthy-BRCA_status_unknown-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082925",
+          "title": "Patient191-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082842",
+          "title": "Patient018-Serum-Healthy-BRCA_wild-type-Female-Unknown"
+        },
+        {
+          "accession": "GSM9082885",
+          "title": "Patient100-Serum-Healthy-BRCA_status_unknown-Female-Unknown"
+        },
+        {
+          "accession": "GSM9082848",
+          "title": "Patient033-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082868",
+          "title": "Patient067-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082865",
+          "title": "Patient063-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082911",
+          "title": "Patient162-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082908",
+          "title": "Patient155-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082871",
+          "title": "Patient071-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082891",
+          "title": "Patient115-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082928",
+          "title": "Patient195-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082845",
+          "title": "Patient026-Serum-Healthy-BRCA_status_unknown-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082888",
+          "title": "Patient106-Serum-Healthy-BRCA2_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082894",
+          "title": "Patient119-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082857",
+          "title": "Patient049-Serum-Healthy-BRCA_wild-type-Female-Unknown"
+        },
+        {
+          "accession": "GSM9082914",
+          "title": "Patient170-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082920",
+          "title": "Patient181-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082877",
+          "title": "Patient085-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082837",
+          "title": "Patient002-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082874",
+          "title": "Patient078-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082917",
+          "title": "Patient175-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082854",
+          "title": "Patient046-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082900",
+          "title": "Patient136-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082897",
+          "title": "Patient127-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082851",
+          "title": "Patient039-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082903",
+          "title": "Patient142-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082866",
+          "title": "Patient064-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082923",
+          "title": "Patient187-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082840",
+          "title": "Patient014-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082886",
+          "title": "Patient101-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082883",
+          "title": "Patient098-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082843",
+          "title": "Patient023-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082926",
+          "title": "Patient192-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082880",
+          "title": "Patient094-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082863",
+          "title": "Patient061-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082860",
+          "title": "Patient057-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082906",
+          "title": "Patient149-Serum-Healthy-BRCA2_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082912",
+          "title": "Patient167-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082895",
+          "title": "Patient125-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082849",
+          "title": "Patient034-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082846",
+          "title": "Patient030-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082929",
+          "title": "Patient200-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082892",
+          "title": "Patient116-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082889",
+          "title": "Patient110-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082852",
+          "title": "Patient042-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082872",
+          "title": "Patient072-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082869",
+          "title": "Patient069-Serum-Healthy-BRCA2_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082909",
+          "title": "Patient160-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082915",
+          "title": "Patient171-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082901",
+          "title": "Patient137-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082858",
+          "title": "Patient053-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082921",
+          "title": "Patient184-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082875",
+          "title": "Patient081-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082838",
+          "title": "Patient004-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082855",
+          "title": "Patient047-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082918",
+          "title": "Patient176-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082881",
+          "title": "Patient095-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082878",
+          "title": "Patient090-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082898",
+          "title": "Patient128-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082904",
+          "title": "Patient145-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082861",
+          "title": "Patient058-Serum-Healthy-BRCA2_mutation-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082867",
+          "title": "Patient066-Serum-Healthy-BRCA_status_unknown-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082910",
+          "title": "Patient161-Serum-Healthy-BRCA_wild-type-Female-Postmenopausal"
+        },
+        {
+          "accession": "GSM9082847",
+          "title": "Patient032-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082884",
+          "title": "Patient099-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082864",
+          "title": "Patient062-Serum-Healthy-BRCA_wild-type-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082927",
+          "title": "Patient194-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082844",
+          "title": "Patient024-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082924",
+          "title": "Patient189-Serum-Healthy-BRCA1_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082841",
+          "title": "Patient016-Serum-Healthy-BRCA2_mutation-Female-Premenopausal"
+        },
+        {
+          "accession": "GSM9082887",
+          "title": "Patient103-Serum-Healthy-BRCA_status_unknown-Female-Unknown"
+        },
+        {
+          "accession": "GSM9082907",
+          "title": "Patient151-Serum-Healthy-BRCA1_mutation-Female-Postmenopausal"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 94,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41508138"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE301nnn/GSE301416/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA1284955"
+    },
+    "200301072": {
+      "uid": "200301072",
+      "accession": "GSE301072",
+      "gds": "",
+      "title": "Comparative Analysis of microRNA Expression in Serum and Plasma in Patients Screened for BRCA1/2 Mutations, dataset 1",
+      "summary": "Paired serum and plasma samples from 23 patients were analyzed using a custom qPCR panel comprising 182 miRNAs. Since this experiment is part of a broader study on miRnome alterations associated with BRCA mutations or BRCA-related cancers (particularly ovarian and breast cancer), 17 of the analyzed samples came from patients with BRCA1/2 mutations. This analysis was preceded by sequencing-based quantification on a larger set subset of the samples, the results of which are submitted separately to GEO under accession number GSE299150. The generation of this dataset was supported by The Gray Foundation grant \u201cCirculating microRNAs for assessment of risk beyond the BRCA genes and early detection of breast cancer in high-risk families\u201d awarded to Dipanjan Chowdhury, and by the National Science Centre (Poland) OPUS grant \u201cPredictive Potential of Circulating MicroRNA Biomarkers in Patients with High Familial or Genetic Risk of Cancer\u201d (2023/49/B/NZ5/03835) awarded to Wojciech Fendler.",
+      "gpl": "35981",
+      "gse": "301072",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by RT-PCR",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/12/16",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9074661",
+          "title": "Patient 17-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074678",
+          "title": "Patient 29-Serum-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074641",
+          "title": "Patient 6-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074658",
+          "title": "Patient 15-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074638",
+          "title": "Patient 4-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074664",
+          "title": "Patient 18-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074644",
+          "title": "Patient 7-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074670",
+          "title": "Patient 22-Serum-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074650",
+          "title": "Patient 11-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074667",
+          "title": "Patient 21-Plasma-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074647",
+          "title": "Patient 10-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074673",
+          "title": "Patient 26-Plasma-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074636",
+          "title": "Patient 3-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074653",
+          "title": "Patient 13-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074633",
+          "title": "Patient 2-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074676",
+          "title": "Patient 27-Serum-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074656",
+          "title": "Patient 14-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074645",
+          "title": "Patient 8-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074662",
+          "title": "Patient 17-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074642",
+          "title": "Patient 6-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074659",
+          "title": "Patient 16-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074639",
+          "title": "Patient 5-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074665",
+          "title": "Patient 20-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074671",
+          "title": "Patient 23-Plasma-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074651",
+          "title": "Patient 12-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074668",
+          "title": "Patient 21-Serum-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074648",
+          "title": "Patient 10-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074654",
+          "title": "Patient 13-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074674",
+          "title": "Patient 26-Serum-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074634",
+          "title": "Patient 2-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074660",
+          "title": "Patient 16-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074677",
+          "title": "Patient 29-Plasma-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074640",
+          "title": "Patient 5-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074657",
+          "title": "Patient 15-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074637",
+          "title": "Patient 4-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074646",
+          "title": "Patient 8-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074663",
+          "title": "Patient 18-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074643",
+          "title": "Patient 7-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074666",
+          "title": "Patient 20-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074672",
+          "title": "Patient 23-Serum-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074635",
+          "title": "Patient 3-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074655",
+          "title": "Patient 14-Plasma-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074669",
+          "title": "Patient 22-Plasma-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074652",
+          "title": "Patient 12-Serum-Healthy-BRCA mutation-Female"
+        },
+        {
+          "accession": "GSM9074675",
+          "title": "Patient 27-Plasma-Healthy-BRCA wild-type-Female"
+        },
+        {
+          "accession": "GSM9074649",
+          "title": "Patient 11-Plasma-Healthy-BRCA mutation-Female"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 46,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41508138"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE301nnn/GSE301072/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA1283214"
+    },
+    "200300882": {
+      "uid": "200300882",
+      "accession": "GSE300882",
+      "gds": "",
+      "title": "Comparative Analysis of microRNA Expression in Serum and Plasma in Patients Screened for BRCA1 or BRCA2 Mutations - dataset 3 part 1",
+      "summary": "This dataset consists of miRNA expression in plasma of 78 women with germline BRCA1/2 mutations and expression in serum of 11 of them. Serum samples of remaining 67 women have been already submitted to GEO in GSE226445 dataset and to SRA as Bioproject PRJNA898621, while counts generated in re-mapping for this project are deposited as GSE299846 data set. MicroRNA abundance was quantified with sequencing in both biological materials. Data was analyzed with the aim of assessing the impact of blood processing steps on quantified miRNA abundance. Generation of this dataset was supported by The Gray Foundation grant \u201cCirculating microRNAs for assessment of risk beyond the BRCA genes and early detection of breast cancer in high-risk families\u201d awarded to Dipanjan Chowdhury and Polish National Research Center grant OPUS \u201cPredictive Potential of Circulating MicroRNA Biomarkers in Patients with High Familial or Genetic Risk of Cancer\u201d (2023/49/B/NZ5/03835) awarded to Wojciech Fendler.",
+      "gpl": "30882;21697",
+      "gse": "300882",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Non-coding RNA profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/12/16",
+      "suppfile": "XLSX",
+      "samples": [
+        {
+          "accession": "GSM9071060",
+          "title": "Patient 58, female, 31 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071014",
+          "title": "Patient 12, female, 60 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071080",
+          "title": "Patient 78, female, 56 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071034",
+          "title": "Patient 32, female, 50 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9070997",
+          "title": "Patient 41, female, 63 years old, ovarian cancer, serum"
+        },
+        {
+          "accession": "GSM9071077",
+          "title": "Patient 75, female, 60 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9070994",
+          "title": "Patient 28, female, 81 years old, healthy, serum"
+        },
+        {
+          "accession": "GSM9071040",
+          "title": "Patient 38, female, 36 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071037",
+          "title": "Patient 35, female, 62 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071057",
+          "title": "Patient 55, female, 44 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071020",
+          "title": "Patient 18, female, 53 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071017",
+          "title": "Patient 15, female, 52 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071043",
+          "title": "Patient 41, female, 63 years old, ovarian cancer, plasma"
+        },
+        {
+          "accession": "GSM9071006",
+          "title": "Patient 4, female, 57 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071003",
+          "title": "Patient 1, female, 69 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071069",
+          "title": "Patient 67, female, 60 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071023",
+          "title": "Patient 21, female, 39 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071000",
+          "title": "Patient 1, female, 69 years old, healthy, serum"
+        },
+        {
+          "accession": "GSM9071066",
+          "title": "Patient 64, female, 43 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071063",
+          "title": "Patient 61, female, 52 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071026",
+          "title": "Patient 24, female, 42 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071046",
+          "title": "Patient 44, female, 76 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071052",
+          "title": "Patient 50, female, 53 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071015",
+          "title": "Patient 13, female, 52 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071049",
+          "title": "Patient 47, female, 56 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071012",
+          "title": "Patient 10, female, 42 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071032",
+          "title": "Patient 30, female, 63 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9070992",
+          "title": "Patient 42, female, 66 years old, ovarian cancer, serum"
+        },
+        {
+          "accession": "GSM9071075",
+          "title": "Patient 73, female, 39 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071029",
+          "title": "Patient 27, female, 73 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071035",
+          "title": "Patient 33, female, 66 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071072",
+          "title": "Patient 70, female, 45 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071009",
+          "title": "Patient 7, female, 42 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071055",
+          "title": "Patient 53, female, 56 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071061",
+          "title": "Patient 59, female, 56 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071021",
+          "title": "Patient 19, female, 28 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071058",
+          "title": "Patient 56, female, 33 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071041",
+          "title": "Patient 39, female, 43 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071078",
+          "title": "Patient 76, female, 57 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9070995",
+          "title": "Patient 78, female, 56 years old, healthy, serum"
+        },
+        {
+          "accession": "GSM9071038",
+          "title": "Patient 36, female, 76 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071001",
+          "title": "Patient 40, female, 37 years old, ovarian cancer, serum"
+        },
+        {
+          "accession": "GSM9070998",
+          "title": "Patient 77, female, 43 years old, healthy, serum"
+        },
+        {
+          "accession": "GSM9071018",
+          "title": "Patient 16, female, 49 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071064",
+          "title": "Patient 62, female, 62 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071024",
+          "title": "Patient 22, female, 66 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071070",
+          "title": "Patient 68, female, 54 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071030",
+          "title": "Patient 28, female, 81 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071067",
+          "title": "Patient 65, female, 28 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071050",
+          "title": "Patient 48, female, 32 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071004",
+          "title": "Patient 2, female, 64 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071047",
+          "title": "Patient 45, female, 57 years old, breast cancer, plasma"
+        },
+        {
+          "accession": "GSM9071044",
+          "title": "Patient 42, female, 66 years old, ovarian cancer, plasma"
+        },
+        {
+          "accession": "GSM9071007",
+          "title": "Patient 5, female, 42 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071027",
+          "title": "Patient 25, female, 43 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071033",
+          "title": "Patient 31, female, 73 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071079",
+          "title": "Patient 77, female, 43 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9070996",
+          "title": "Patient 31, female, 73 years old, healthy, serum"
+        },
+        {
+          "accession": "GSM9071053",
+          "title": "Patient 51, female, 32 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071013",
+          "title": "Patient 11, female, 53 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071059",
+          "title": "Patient 57, female, 54 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071016",
+          "title": "Patient 14, female, 60 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071056",
+          "title": "Patient 54, female, 37 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071010",
+          "title": "Patient 8, female, 65 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071076",
+          "title": "Patient 74, female, 50 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071073",
+          "title": "Patient 71, female, 30 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9070993",
+          "title": "Patient 27, female, 73 years old, healthy, serum"
+        },
+        {
+          "accession": "GSM9071036",
+          "title": "Patient 34, female, 55 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071042",
+          "title": "Patient 40, female, 37 years old, ovarian cancer, plasma"
+        },
+        {
+          "accession": "GSM9071062",
+          "title": "Patient 60, female, 72 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071025",
+          "title": "Patient 23, female, 79 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071065",
+          "title": "Patient 63, female, 61 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071022",
+          "title": "Patient 20, female, 55 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071039",
+          "title": "Patient 37, female, 52 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071002",
+          "title": "Patient 45, female, 57 years old, breast cancer, serum"
+        },
+        {
+          "accession": "GSM9071019",
+          "title": "Patient 17, female, 68 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9070999",
+          "title": "Patient 49, female, 60 years old, healthy, serum"
+        },
+        {
+          "accession": "GSM9071005",
+          "title": "Patient 3, female, 61 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071045",
+          "title": "Patient 43, female, 62 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071071",
+          "title": "Patient 69, female, 32 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071051",
+          "title": "Patient 49, female, 60 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071068",
+          "title": "Patient 66, female, 58 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071031",
+          "title": "Patient 29, female, 35 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071028",
+          "title": "Patient 26, female, 50 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071074",
+          "title": "Patient 72, female, 50 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071011",
+          "title": "Patient 9, female, 27 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071008",
+          "title": "Patient 6, female, 63 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071048",
+          "title": "Patient 46, female, 49 years old, healthy, plasma"
+        },
+        {
+          "accession": "GSM9071054",
+          "title": "Patient 52, female, 50 years old, healthy, plasma"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 89,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41508138"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE300nnn/GSE300882/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1282593"
+    }
+  }
+}

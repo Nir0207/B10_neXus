@@ -183,6 +183,12 @@ class TestRefineUniProt:
         # BRCA1 has 2 Reactome xrefs
         assert len(reactome_df) == 2
 
+    def test_gene_map_uses_hgnc_symbol_column(self) -> None:
+        _, gene_map_df, _ = refine_uniprot(
+            self.raw_dir, self.out_dir, skip_processed=False
+        )
+        assert {"uniprot_id", "hgnc_symbol", "source_file"}.issubset(set(gene_map_df.columns))
+
     def test_egfr_no_reactome_yields_empty_df(self) -> None:
         (self.raw_dir / "EGFR.json").write_text(
             json.dumps(EGFR_STUB), encoding="utf-8"

@@ -1,0 +1,3994 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200316067",
+      "200313416",
+      "200308936",
+      "200323366",
+      "200323365",
+      "200304115",
+      "200298765",
+      "200295570",
+      "200235829",
+      "200295133",
+      "200319594",
+      "200293576",
+      "200320026",
+      "200310335",
+      "200302469",
+      "200316244",
+      "200316243",
+      "200316241",
+      "200291056",
+      "200290241"
+    ],
+    "200316067": {
+      "uid": "200316067",
+      "accession": "GSE316067",
+      "gds": "",
+      "title": "Amphiregulin Switches Progenitor Cell Fate for Lineage Commitment During Gastric Mucosal Regeneration",
+      "summary": "Background & Aims: Isthmic progenitors, tissue-specific stem cells in the stomach corpus, maintain mucosal homeostasis by balancing between proliferation and differentiation to gastric epithelial lineages. The progenitor cells rapidly adopt an active state in response to mucosal injury. However, it remains unclear how the isthmic progenitor cell niche is controlled during the regeneration of damaged epithelium. Methods: We recapitulated tissue recovery process after acute mucosal injury in the mouse stomach. BrdU incorporation was utilized to trace newly generated cells during the injury and recovery phases. To define epithelial lineage commitment process during recovery, we performed single cell RNA-sequencing on epithelial cells from the mouse stomachs. We validated the effects of amphiregulin (AREG) on the mucosal recovery, utilizing recombinant AREG treatment or AREG deficient mice.  Results: We determined that an EGFR ligand, AREG, can control progenitor cell lineage commitment. Based on the identification of lineage-committed subpopulations in the corpus epithelium through single cell RNA-sequencing and BrdU incorporation, we showed that isthmic progenitors give rise to epithelial cell lineages through an ordered paradigm during mucosal regeneration. During recovery, AREG treatment promotes repopulation with parietal cells, while suppressing surface cell commitment of progenitors. In contrast, TGF-alpha did not alter parietal cell regeneration but did induce expansion of surface cell populations.  AREG deficiency impairs parietal cell regeneration, but increases surface cell commitment. Conclusions: These data demonstrate that different EGF receptor ligands can distinctly regulate isthmic progenitor-driven mucosal regeneration and lineage commitment.",
+      "gpl": "24247",
+      "gse": "316067",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/12",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM9444075",
+          "title": "WT_Injury_D1"
+        },
+        {
+          "accession": "GSM9444074",
+          "title": "WT_Untreated"
+        },
+        {
+          "accession": "GSM9444077",
+          "title": "WT_Recovery_AREG_D3"
+        },
+        {
+          "accession": "GSM9444076",
+          "title": "WT_Recovery_D3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 4,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE316nnn/GSE316067/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1400550"
+    },
+    "200313416": {
+      "uid": "200313416",
+      "accession": "GSE313416",
+      "gds": "",
+      "title": "Transient proliferation by reversible YAP- and mitogen-control of the cyclin D1/p27 ratio",
+      "summary": "Hippo-YAP signaling orchestrates epithelial tissue repair and is therefore an attractive target in regenerative medicine. A challenge has been to understand how YAP activity is integrated with mitogen signaling and contact inhibition to control a transient proliferative response. Here we show that reduced contact inhibition, increased mitogen signaling, and YAP-TEAD activation converge on increasing the nuclear cyclin D1/p27 protein ratio during early G1 phase, towards a threshold ratio that dictates whether individual cells enter or exit the cell cycle. YAP increases this ratio in concert with inducing mitogen signaling, by increasing EGFR and other receptors that signal primarily through ERK. After a delay, contact inhibition suppresses YAP activity, which gradually downregulates mitogen signaling and the cyclin D1/p27 ratio. Increasing YAP activity by ablating the suppressor Merlin/NF2 reveals a balancing mechanism whereby YAP suppression and contact inhibition of proliferation can be recovered but only at higher local cell density. Thus, critical for regeneration, robust proliferation responses result from the YAP-induced and receptor-mediated prolonged increase in the cyclin D1/p27 ratio, which is reversed by delayed suppression of receptor signaling after contact inhibition of YAP.",
+      "gpl": "24676",
+      "gse": "313416",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/11",
+      "suppfile": "CSV, TXT",
+      "samples": [
+        {
+          "accession": "GSM9367737",
+          "title": "CA-YAP RPE1 serum replicate 1 DOX 12h"
+        },
+        {
+          "accession": "GSM9367740",
+          "title": "CA-YAP RPE1 serum replicate 1 DOX 36h"
+        },
+        {
+          "accession": "GSM9367720",
+          "title": "WT RPE1 serum replicate 2 LATSi 3h"
+        },
+        {
+          "accession": "GSM9367760",
+          "title": "CA-YAP RPE1 serum replicate 3 DOX 6h"
+        },
+        {
+          "accession": "GSM9367723",
+          "title": "WT RPE1 starved replicate 3 LATSi 3h"
+        },
+        {
+          "accession": "GSM9367717",
+          "title": "WT RPE1 starved replicate 2 LATSi 6h"
+        },
+        {
+          "accession": "GSM9367763",
+          "title": "CA-YAP RPE1 serum replicate 3 DOX 24h"
+        },
+        {
+          "accession": "GSM9367743",
+          "title": "CA-YAP RPE1 starved replicate 2 DOX 12h"
+        },
+        {
+          "accession": "GSM9367709",
+          "title": "WT RPE1 starved replicate 1 LATSi 3h"
+        },
+        {
+          "accession": "GSM9367746",
+          "title": "CA-YAP RPE1 starved replicate 2 DOX 36h"
+        },
+        {
+          "accession": "GSM9367749",
+          "title": "CA-YAP RPE1 serum replicate 2 DOX 12h"
+        },
+        {
+          "accession": "GSM9367729",
+          "title": "CA-YAP RPE1 starved replicate 1 DMSO"
+        },
+        {
+          "accession": "GSM9367766",
+          "title": "Merlin KO RPE1 serum replicate 1 DMSO"
+        },
+        {
+          "accession": "GSM9367769",
+          "title": "Merlin KO RPE1 starved replicate 3 DMSO"
+        },
+        {
+          "accession": "GSM9367726",
+          "title": "WT RPE1 serum replicate 3 LATSi 1h"
+        },
+        {
+          "accession": "GSM9367765",
+          "title": "Merlin KO RPE1 starved replicate 1 DMSO"
+        },
+        {
+          "accession": "GSM9367728",
+          "title": "WT RPE1 serum replicate 3 LATSi 6h"
+        },
+        {
+          "accession": "GSM9367745",
+          "title": "CA-YAP RPE1 starved replicate 2 DOX 24h"
+        },
+        {
+          "accession": "GSM9367748",
+          "title": "CA-YAP RPE1 serum replicate 2 DOX 6h"
+        },
+        {
+          "accession": "GSM9367742",
+          "title": "CA-YAP RPE1 starved replicate 2 DOX 6h"
+        },
+        {
+          "accession": "GSM9367722",
+          "title": "WT RPE1 starved replicate 3 DMSO"
+        },
+        {
+          "accession": "GSM9367768",
+          "title": "Merlin KO RPE1 serum replicate 2 DMSO"
+        },
+        {
+          "accession": "GSM9367725",
+          "title": "WT RPE1 serum replicate 3 DMSO"
+        },
+        {
+          "accession": "GSM9367708",
+          "title": "WT RPE1 starved replicate 1 DMSO"
+        },
+        {
+          "accession": "GSM9367731",
+          "title": "CA-YAP RPE1 starved replicate 1 DOX 12h"
+        },
+        {
+          "accession": "GSM9367757",
+          "title": "CA-YAP RPE1 starved replicate 3 DOX 24h"
+        },
+        {
+          "accession": "GSM9367751",
+          "title": "CA-YAP RPE1 serum replicate 2 DOX 24h"
+        },
+        {
+          "accession": "GSM9367711",
+          "title": "WT RPE1 serum replicate 1 DMSO"
+        },
+        {
+          "accession": "GSM9367714",
+          "title": "WT RPE1 serum replicate 1 LATSi 6h"
+        },
+        {
+          "accession": "GSM9367754",
+          "title": "CA-YAP RPE1 starved replicate 3 DOX 6h"
+        },
+        {
+          "accession": "GSM9367734",
+          "title": "CA-YAP RPE1 starved replicate 1 DOX 36h"
+        },
+        {
+          "accession": "GSM9367710",
+          "title": "WT RPE1 starved replicate 1 LATSi 6h"
+        },
+        {
+          "accession": "GSM9367747",
+          "title": "CA-YAP RPE1 serum replicate 2 DMSO"
+        },
+        {
+          "accession": "GSM9367727",
+          "title": "WT RPE1 serum replicate 3 LATSi 3h"
+        },
+        {
+          "accession": "GSM9367730",
+          "title": "CA-YAP RPE1 starved replicate 1 DOX 6h"
+        },
+        {
+          "accession": "GSM9367770",
+          "title": "Merlin KO RPE1 serum replicate 3 DMSO"
+        },
+        {
+          "accession": "GSM9367733",
+          "title": "CA-YAP RPE1 starved replicate 1 DOX 24h"
+        },
+        {
+          "accession": "GSM9367750",
+          "title": "CA-YAP RPE1 serum replicate 2 DMSO 24h"
+        },
+        {
+          "accession": "GSM9367753",
+          "title": "CA-YAP RPE1 starved replicate 3 DMSO"
+        },
+        {
+          "accession": "GSM9367719",
+          "title": "WT RPE1 serum replicate 2 LATSi 1h"
+        },
+        {
+          "accession": "GSM9367756",
+          "title": "CA-YAP RPE1 starved replicate 3 DMSO 24h"
+        },
+        {
+          "accession": "GSM9367736",
+          "title": "CA-YAP RPE1 serum replicate 1 DOX 6h"
+        },
+        {
+          "accession": "GSM9367739",
+          "title": "CA-YAP RPE1 serum replicate 1 DOX 24h"
+        },
+        {
+          "accession": "GSM9367713",
+          "title": "WT RPE1 serum replicate 1 LATSi 3h"
+        },
+        {
+          "accession": "GSM9367759",
+          "title": "CA-YAP RPE1 serum replicate 3 DMSO"
+        },
+        {
+          "accession": "GSM9367716",
+          "title": "WT RPE1 starved replicate 2 LATSi 3h"
+        },
+        {
+          "accession": "GSM9367762",
+          "title": "CA-YAP RPE1 serum replicate 3 DMSO 24h"
+        },
+        {
+          "accession": "GSM9367755",
+          "title": "CA-YAP RPE1 starved replicate 3 DOX 12h"
+        },
+        {
+          "accession": "GSM9367758",
+          "title": "CA-YAP RPE1 starved replicate 3 DOX 36h"
+        },
+        {
+          "accession": "GSM9367738",
+          "title": "CA-YAP RPE1 serum replicate 1 DMSO 24h"
+        },
+        {
+          "accession": "GSM9367712",
+          "title": "WT RPE1 serum replicate 1 LATSi 1h"
+        },
+        {
+          "accession": "GSM9367732",
+          "title": "CA-YAP RPE1 starved replicate 1 DMSO 24h"
+        },
+        {
+          "accession": "GSM9367735",
+          "title": "CA-YAP RPE1 serum replicate 1 DMSO"
+        },
+        {
+          "accession": "GSM9367752",
+          "title": "CA-YAP RPE1 serum replicate 2 DOX 36h"
+        },
+        {
+          "accession": "GSM9367715",
+          "title": "WT RPE1 starved replicate 2 DMSO"
+        },
+        {
+          "accession": "GSM9367764",
+          "title": "CA-YAP RPE1 serum replicate 3 DOX 36h"
+        },
+        {
+          "accession": "GSM9367767",
+          "title": "Merlin KO RPE1 starved replicate 2 DMSO"
+        },
+        {
+          "accession": "GSM9367718",
+          "title": "WT RPE1 serum replicate 2 DMSO"
+        },
+        {
+          "accession": "GSM9367721",
+          "title": "WT RPE1 serum replicate 2 LATSi 6h"
+        },
+        {
+          "accession": "GSM9367724",
+          "title": "WT RPE1 starved replicate 3 LATSi 6h"
+        },
+        {
+          "accession": "GSM9367761",
+          "title": "CA-YAP RPE1 serum replicate 3 DOX 12h"
+        },
+        {
+          "accession": "GSM9367741",
+          "title": "CA-YAP RPE1 starved replicate 2 DMSO"
+        },
+        {
+          "accession": "GSM9367744",
+          "title": "CA-YAP RPE1 starved replicate 2 DMSO 24h"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 63,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41611993"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE313nnn/GSE313416/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1379470"
+    },
+    "200308936": {
+      "uid": "200308936",
+      "accession": "GSE308936",
+      "gds": "",
+      "title": "Simplified Molecular Classification of Urothelial Carcinoma via Multi-Omic Profiling: Implications for Precision Therapy",
+      "summary": "Urothelial carcinoma (UC) is a biologically heterogeneous disease and current molecular classification frameworks have limited integration into clinical decision-making. To foster precision oncology in UC, we developed a molecular classification framework of UC applicable to transcriptomic and proteomic data of non-muscle invasive bladder cancers (NMIBC), muscle-invasive bladder cancer (MIBC), and urothelial cancer cell lines. Using a whole-transcriptome self-organized map and regularized semi-supervised clustering ofn 4439 bulk NMIBC and MIBC transcriptomes and proteomes, and 33 UC cell lines, we identified three molecular UC clusters. The clusters had distinct signatures of mRNA, proteins, biological processes, metabolism, and essential driver genes. They also differed in prognosis and machine learning-predicted treatment vulnerabilities. High-risk stroma-rich cluster #1 cancers were predicted to respond to selected cytotoxic drugs, ferroptosis inducers, and PARP inhibitors. For the aggressive, fast proliferating and immune-infiltrated cluster #2 tumors with basal/squamous differentiation, cytotoxic agents and EGFR/ERBB- and MEK/ERK-targeting therapy was proposed. Cluster #3 cancers of predominantly luminal papillary phenotype, with scarce stroma and immune infiltration were enriched with NMIBC and low-risk malignancies. For cluster #3 patients, selected epigenetic drugs or EGFR/FGFR inhibitors may pose an attractive treatment option. This molecular taxonomy holds promise as a practical framework for patient stratification and therapeutic guidance in UC. Our molecular classification scheme may facilitate personalized transcriptome- and proteome-based risk assessment and therapy guidance, and the development of new cancer medication.",
+      "gpl": "26167",
+      "gse": "308936",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/11",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9256465",
+          "title": "5637 Control rep3"
+        },
+        {
+          "accession": "GSM9256462",
+          "title": "UMUC3 4 \u00b5M Afatinib rep3"
+        },
+        {
+          "accession": "GSM9256445",
+          "title": "UMUC3 Control rep2"
+        },
+        {
+          "accession": "GSM9256442",
+          "title": "RT112 4 \u00b5M Afatinib rep1"
+        },
+        {
+          "accession": "GSM9256439",
+          "title": "5637 7 \u00b5M Erdafitinib rep1"
+        },
+        {
+          "accession": "GSM9256459",
+          "title": "RT112 7 \u00b5M Erdafitinib rep2"
+        },
+        {
+          "accession": "GSM9256456",
+          "title": "RT112 0.6 \u00b5M Neratinib rep2"
+        },
+        {
+          "accession": "GSM9256453",
+          "title": "5637 2 \u00b5M Trametinib rep2"
+        },
+        {
+          "accession": "GSM9256436",
+          "title": "5637 0.6 \u00b5M Neratinib rep1"
+        },
+        {
+          "accession": "GSM9256473",
+          "title": "RT112 2 \u00b5M Trametinib rep3"
+        },
+        {
+          "accession": "GSM9256433",
+          "title": "UMUC3 2 \u00b5M Trametinib rep1"
+        },
+        {
+          "accession": "GSM9256437",
+          "title": "5637 4 \u00b5M Afatinib rep1"
+        },
+        {
+          "accession": "GSM9256457",
+          "title": "RT112 4 \u00b5M Afatinib rep2"
+        },
+        {
+          "accession": "GSM9256454",
+          "title": "5637 7 \u00b5M Erdafitinib rep2"
+        },
+        {
+          "accession": "GSM9256460",
+          "title": "UMUC3 Control rep3"
+        },
+        {
+          "accession": "GSM9256434",
+          "title": "UMUC3 7 \u00b5M Erdafitinib rep1"
+        },
+        {
+          "accession": "GSM9256440",
+          "title": "RT112 Control rep1"
+        },
+        {
+          "accession": "GSM9256474",
+          "title": "RT112 7 \u00b5M Erdafitinib rep3"
+        },
+        {
+          "accession": "GSM9256448",
+          "title": "UMUC3 2 \u00b5M Trametinib rep2"
+        },
+        {
+          "accession": "GSM9256451",
+          "title": "5637 0.6 \u00b5M Neratinib rep2"
+        },
+        {
+          "accession": "GSM9256471",
+          "title": "RT112 0.6 \u00b5M Neratinib rep3"
+        },
+        {
+          "accession": "GSM9256431",
+          "title": "UMUC3 0.6 \u00b5M Neratinib rep1"
+        },
+        {
+          "accession": "GSM9256468",
+          "title": "5637 2 \u00b5M Trametinib rep3"
+        },
+        {
+          "accession": "GSM9256472",
+          "title": "RT112 4 \u00b5M Afatinib rep3"
+        },
+        {
+          "accession": "GSM9256435",
+          "title": "5637 Control rep1"
+        },
+        {
+          "accession": "GSM9256455",
+          "title": "RT112 Control rep2"
+        },
+        {
+          "accession": "GSM9256432",
+          "title": "UMUC3 4 \u00b5M Afatinib rep1"
+        },
+        {
+          "accession": "GSM9256452",
+          "title": "5637 4 \u00b5M Afatinib rep2"
+        },
+        {
+          "accession": "GSM9256449",
+          "title": "UMUC3 7 \u00b5M Erdafitinib rep2"
+        },
+        {
+          "accession": "GSM9256446",
+          "title": "UMUC3 0.6 \u00b5M Neratinib rep2"
+        },
+        {
+          "accession": "GSM9256466",
+          "title": "5637 0.6 \u00b5M Neratinib rep3"
+        },
+        {
+          "accession": "GSM9256463",
+          "title": "UMUC3 2 \u00b5M Trametinib rep3"
+        },
+        {
+          "accession": "GSM9256469",
+          "title": "5637 7 \u00b5M Erdafitinib rep3"
+        },
+        {
+          "accession": "GSM9256443",
+          "title": "RT112 2 \u00b5M Trametinib rep1"
+        },
+        {
+          "accession": "GSM9256447",
+          "title": "UMUC3 4 \u00b5M Afatinib rep2"
+        },
+        {
+          "accession": "GSM9256464",
+          "title": "UMUC3 7 \u00b5M Erdafitinib rep3"
+        },
+        {
+          "accession": "GSM9256444",
+          "title": "RT112 7 \u00b5M Erdafitinib rep1"
+        },
+        {
+          "accession": "GSM9256430",
+          "title": "UMUC3 Control rep1"
+        },
+        {
+          "accession": "GSM9256470",
+          "title": "RT112 Control rep3"
+        },
+        {
+          "accession": "GSM9256450",
+          "title": "5637 Control rep2"
+        },
+        {
+          "accession": "GSM9256467",
+          "title": "5637 4 \u00b5M Afatinib rep3"
+        },
+        {
+          "accession": "GSM9256438",
+          "title": "5637 2 \u00b5M Trametinib rep1"
+        },
+        {
+          "accession": "GSM9256461",
+          "title": "UMUC3 0.6 \u00b5M Neratinib rep3"
+        },
+        {
+          "accession": "GSM9256458",
+          "title": "RT112 2 \u00b5M Trametinib rep2"
+        },
+        {
+          "accession": "GSM9256441",
+          "title": "RT112 0.6 \u00b5M Neratinib rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 45,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41804750"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE308nnn/GSE308936/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1333445"
+    },
+    "200323366": {
+      "uid": "200323366",
+      "accession": "GSE323366",
+      "gds": "",
+      "title": "Genome-wide profiling identifies the genetic dependencies of cell death following EGFR inhibition [RNA-Seq]",
+      "summary": "EGFR is a proto-oncogene that is mutationally activated in a variety of cancers. Small molecule inhibitors targeting EGFR can effectively slow the progression of disease, and in some settings, these drugs even cause dramatic tumor regression. However, responses to EGFR inhibitors are rarely durable, and the mechanisms contributing to response variation remain unclear. In particular, several distinct mechanisms have been proposed to explain how EGFR inhibition activates cell death, and a consensus has yet to emerge. In this study, we use functional genomics with specialized analyses to infer how genetic perturbations affect the drug-induced death rate. Our data clarify that inhibition of PI3K signaling drives the lethality of EGFR inhibition. Inhibition of other pathways downstream of EGFR, including the RAS-MAPK pathway, promotes growth suppression but not the lethal effects of EGFR inhibitors. Taken together, our study provides a \u201creference map\u201d for the genome-wide genetic dependencies of lethality in response to EGFR inhibitors.",
+      "gpl": "24676",
+      "gse": "323366",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/10",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM9564412",
+          "title": "PC9 cells, Osimertinib, 36 hours, replicate 1"
+        },
+        {
+          "accession": "GSM9564415",
+          "title": "H1650 cells, DMSO, 0 hour, replicate 2"
+        },
+        {
+          "accession": "GSM9564418",
+          "title": "PC9 cells, Osimertinib, 36 hours, replicate 2"
+        },
+        {
+          "accession": "GSM9564413",
+          "title": "H1650 cells, Osimertinib, 36 hours, replicate 1"
+        },
+        {
+          "accession": "GSM9564410",
+          "title": "PC9 cells, Erlotinib, 36 hours, replicate 1"
+        },
+        {
+          "accession": "GSM9564416",
+          "title": "PC9 cells, Erlotinib, 36 hours, replicate 2"
+        },
+        {
+          "accession": "GSM9564419",
+          "title": "H1650 cells, Osimertinib, 36 hours, replicate 2"
+        },
+        {
+          "accession": "GSM9564408",
+          "title": "PC9 cells, DMSO, 0 hour, replicate 1"
+        },
+        {
+          "accession": "GSM9564414",
+          "title": "PC9 cells, DMSO, 0 hour, replicate 2"
+        },
+        {
+          "accession": "GSM9564417",
+          "title": "H1650 cells, Erlotinib, 36 hours, replicate 2"
+        },
+        {
+          "accession": "GSM9564411",
+          "title": "H1650 cells, Erlotinib, 36 hours, replicate 1"
+        },
+        {
+          "accession": "GSM9564409",
+          "title": "H1650 cells, DMSO, 0 hour, replicate 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE323nnn/GSE323366/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1432659"
+    },
+    "200323365": {
+      "uid": "200323365",
+      "accession": "GSE323365",
+      "gds": "",
+      "title": "Genome-wide profiling identifies the genetic dependencies of cell death following EGFR inhibition",
+      "summary": "EGFR is a proto-oncogene that is mutationally activated in a variety of cancers. Small molecule inhibitors targeting EGFR can effectively slow the progression of disease, and in some settings, these drugs even cause dramatic tumor regression. However, responses to EGFR inhibitors are rarely durable, and the mechanisms contributing to response variation remain unclear. In particular, several distinct mechanisms have been proposed to explain how EGFR inhibition activates cell death, and a consensus has yet to emerge. In this study, we use functional genomics with specialized analyses to infer how genetic perturbations affect the drug-induced death rate. Our data clarify that inhibition of PI3K signaling drives the lethality of EGFR inhibition. Inhibition of other pathways downstream of EGFR, including the RAS-MAPK pathway, promotes growth suppression but not the lethal effects of EGFR inhibitors. Taken together, our study provides a \u201creference map\u201d for the genome-wide genetic dependencies of lethality in response to EGFR inhibitors.",
+      "gpl": "30173",
+      "gse": "323365",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/10",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM9564400",
+          "title": "PC9-Cas9 cells, T0, replicate 1"
+        },
+        {
+          "accession": "GSM9564403",
+          "title": "PC9-Cas9 cells, Untreated, replicate 2"
+        },
+        {
+          "accession": "GSM9564406",
+          "title": "PC9-Cas9 cells, 10 \u00b5M erlotinib, replicate 1"
+        },
+        {
+          "accession": "GSM9564401",
+          "title": "PC9-Cas9 cells, T0, replicate 2"
+        },
+        {
+          "accession": "GSM9564407",
+          "title": "PC9-Cas9 cells, 10 \u00b5M erlotinib, replicate 2"
+        },
+        {
+          "accession": "GSM9564404",
+          "title": "PC9-Cas9 cells, 0.1 \u00b5M osimertinib, replicate 1"
+        },
+        {
+          "accession": "GSM9564402",
+          "title": "PC9-Cas9 cells, Untreated, replicate 1"
+        },
+        {
+          "accession": "GSM9564405",
+          "title": "PC9-Cas9 cells, 0.1 \u00b5M osimertinib, replicate 2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 8,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE323nnn/GSE323365/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1432535"
+    },
+    "200304115": {
+      "uid": "200304115",
+      "accession": "GSE304115",
+      "gds": "",
+      "title": "Bulk RNA-seq of Genetically Diverse Triple-Negative Breast Cancer Mouse Models Treated with Immunotherapy, Chemotherapy, Erlotinib, or Trametinib",
+      "summary": "To investigate the molecular determinants of response to therapy, we profiled 26 genetically diverse murine models of mammary cancer using bulk RNA sequencing. Tumors were harvested from mice that were either untreated or treated with immunotherapy (anti-PD-1 and anti-CTLA-4), chemotherapy (Carboplatin + Paclitaxel), EGFR inhibition (Erlotinib), or MEK inhibition (Trametinib) for 7 days. Each model represents a distinct transcriptional subtype and genetic background, enabling the assessment of intertumoral heterogeneity in treatment response. This dataset includes RNA-seq from 2-9 biological replicates per model per condition. Tumor samples were collected prior to or during treatment response assessment, and are accompanied by corresponding survival from similarly-treated tumors. All sequencing was performed on polyA-selected RNA using Illumina platforms.",
+      "gpl": "24247;17021",
+      "gse": "304115",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/09",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9512484",
+          "title": "2250 Tumor, Trametinib, CP-3550"
+        },
+        {
+          "accession": "GSM9512521",
+          "title": "KPB25L-UV Tumor, Trametinib, CP-3829"
+        },
+        {
+          "accession": "GSM9512567",
+          "title": "p53RB-626 Tumor, Trametinib, CP-4100"
+        },
+        {
+          "accession": "GSM9143860",
+          "title": "E0771 Tumor, Carboplatin + Paclitaxel, CP-4289"
+        },
+        {
+          "accession": "GSM9143943",
+          "title": "KPB1-B Tumor, anti-PD1 + anti-CTLA4, CP-5082"
+        },
+        {
+          "accession": "GSM9143823",
+          "title": "T11 Tumor, Untreated, CP-3582"
+        },
+        {
+          "accession": "GSM9143906",
+          "title": "p53RB-626 Tumor, anti-PD1 + anti-CTLA4, CP-4692"
+        },
+        {
+          "accession": "GSM9143989",
+          "title": "KPB25L Tumor, Carboplatin + Paclitaxel, CP-5308"
+        },
+        {
+          "accession": "GSM9143923",
+          "title": "C3-TAG Tumor, Untreated, CP-4738"
+        },
+        {
+          "accession": "GSM9143840",
+          "title": "4T1 Tumor, Carboplatin + Paclitaxel, CP-4072"
+        },
+        {
+          "accession": "GSM9143969",
+          "title": "p53RB-624 Tumor, anti-PD1 + anti-CTLA4, CP-5108"
+        },
+        {
+          "accession": "GSM9143886",
+          "title": "2208 Tumor, Untreated, CP-4537"
+        },
+        {
+          "accession": "GSM9512501",
+          "title": "4T1 Tumor, Trametinib, CP-4067"
+        },
+        {
+          "accession": "GSM9512547",
+          "title": "MMTV-Neu Tumor, Erlotinib, CP-4940"
+        },
+        {
+          "accession": "GSM9512464",
+          "title": "2153 Tumor, Erlotinib, CP-4083"
+        },
+        {
+          "accession": "GSM9512584",
+          "title": "T11-APOBEC Tumor, Erlotinib, CP-3605"
+        },
+        {
+          "accession": "GSM9512564",
+          "title": "p53RB-624 Tumor, Erlotinib, CP-4526"
+        },
+        {
+          "accession": "GSM9512527",
+          "title": "KPB1-A Tumor, Trametinib, CP-4284"
+        },
+        {
+          "accession": "GSM9143986",
+          "title": "4T1 Tumor, anti-PD1 + anti-CTLA4, CP-5243"
+        },
+        {
+          "accession": "GSM9143866",
+          "title": "T12 Tumor, Untreated, CP-4354"
+        },
+        {
+          "accession": "GSM9143949",
+          "title": "2336 Tumor, Carboplatin + Paclitaxel, CP-5088"
+        },
+        {
+          "accession": "GSM9143820",
+          "title": "KPB1-B Tumor, Untreated, CP-2825"
+        },
+        {
+          "accession": "GSM9512481",
+          "title": "2225 Tumor, Erlotinib, CP-3574"
+        },
+        {
+          "accession": "GSM9143903",
+          "title": "2208 Tumor, Carboplatin + Paclitaxel, CP-4686"
+        },
+        {
+          "accession": "GSM9512544",
+          "title": "MMTV-Neu Tumor, Trametinib, CP-4937"
+        },
+        {
+          "accession": "GSM9512461",
+          "title": "2153 Tumor, Trametinib, CP-4086"
+        },
+        {
+          "accession": "GSM9143883",
+          "title": "p53RB-624 Tumor, Carboplatin + Paclitaxel, CP-4534"
+        },
+        {
+          "accession": "GSM9143929",
+          "title": "K14-TRT Tumor, Untreated, CP-4973"
+        },
+        {
+          "accession": "GSM9143966",
+          "title": "2250 Tumor, Carboplatin + Paclitaxel, CP-5105"
+        },
+        {
+          "accession": "GSM9143846",
+          "title": "p53RB-626 Tumor, Carboplatin + Paclitaxel, CP-4105"
+        },
+        {
+          "accession": "GSM9143909",
+          "title": "C3-TAG Tumor, anti-PD1 + anti-CTLA4, CP-4714"
+        },
+        {
+          "accession": "GSM9143946",
+          "title": "E0771 Tumor, anti-PD1 + anti-CTLA4, CP-5085"
+        },
+        {
+          "accession": "GSM9143863",
+          "title": "E0771 Tumor, Carboplatin + Paclitaxel, CP-4300"
+        },
+        {
+          "accession": "GSM9143992",
+          "title": "T11 Tumor, Carboplatin + Paclitaxel, CP-5311"
+        },
+        {
+          "accession": "GSM9512524",
+          "title": "KPB25L-UV Tumor, Erlotinib, CP-3835"
+        },
+        {
+          "accession": "GSM9512587",
+          "title": "T12 Tumor, Trametinib, CP-4358"
+        },
+        {
+          "accession": "GSM9512504",
+          "title": "4T1 Tumor, Erlotinib, CP-4064"
+        },
+        {
+          "accession": "GSM9143926",
+          "title": "K14-TRT Tumor, Untreated, CP-4910"
+        },
+        {
+          "accession": "GSM9512541",
+          "title": "KPB25L Tumor, Erlotinib, CP-3817"
+        },
+        {
+          "accession": "GSM9143843",
+          "title": "p53RB-626 Tumor, Untreated, CP-4090"
+        },
+        {
+          "accession": "GSM9143980",
+          "title": "MMTV-Neu Tumor, Carboplatin + Paclitaxel, CP-5163"
+        },
+        {
+          "accession": "GSM9512558",
+          "title": "p53RB-426 Tumor, Erlotinib, CP-4261"
+        },
+        {
+          "accession": "GSM9512475",
+          "title": "2224 Tumor, Erlotinib, CP-3767"
+        },
+        {
+          "accession": "GSM9512512",
+          "title": "C3-TAG Tumor, Erlotinib, CP-4966"
+        },
+        {
+          "accession": "GSM9143897",
+          "title": "2153 Tumor, Carboplatin + Paclitaxel, CP-4677"
+        },
+        {
+          "accession": "GSM9512575",
+          "title": "T11 Tumor, Trametinib, CP-3596"
+        },
+        {
+          "accession": "GSM9512492",
+          "title": "9263 Tumor, Erlotinib, CP-3558"
+        },
+        {
+          "accession": "GSM9143877",
+          "title": "KPB1-B Tumor, Carboplatin + Paclitaxel, CP-4522"
+        },
+        {
+          "accession": "GSM9143960",
+          "title": "KPB25L-UV Tumor, Carboplatin + Paclitaxel, CP-5099"
+        },
+        {
+          "accession": "GSM9512538",
+          "title": "KPB25L Tumor, Trametinib, CP-3811"
+        },
+        {
+          "accession": "GSM9512555",
+          "title": "p53RB-426 Tumor, Trametinib, CP-4205"
+        },
+        {
+          "accession": "GSM9512472",
+          "title": "2224 Tumor, Trametinib, CP-3760"
+        },
+        {
+          "accession": "GSM9143857",
+          "title": "KPB1-A Tumor, Untreated, CP-4280"
+        },
+        {
+          "accession": "GSM9512518",
+          "title": "E0771 Tumor, Erlotinib, CP-4299"
+        },
+        {
+          "accession": "GSM9143940",
+          "title": "2224 Tumor, Carboplatin + Paclitaxel, CP-5079"
+        },
+        {
+          "accession": "GSM9143977",
+          "title": "C3-TAG Tumor, Carboplatin + Paclitaxel, CP-5149"
+        },
+        {
+          "accession": "GSM9143894",
+          "title": "2153 Tumor, anti-PD1 + anti-CTLA4, CP-4674"
+        },
+        {
+          "accession": "GSM9512535",
+          "title": "KPB1-B Tumor, Erlotinib, CP-4515"
+        },
+        {
+          "accession": "GSM9143874",
+          "title": "KPB1-B Tumor, Untreated, CP-4513"
+        },
+        {
+          "accession": "GSM9512581",
+          "title": "T11-APOBEC Tumor, Trametinib, CP-3611"
+        },
+        {
+          "accession": "GSM9143957",
+          "title": "9263 Tumor, Carboplatin + Paclitaxel, CP-5096"
+        },
+        {
+          "accession": "GSM9512498",
+          "title": "2336 Tumor, Erlotinib, CP-3528"
+        },
+        {
+          "accession": "GSM9143837",
+          "title": "KPB25L-UV Tumor, Untreated, CP-3821"
+        },
+        {
+          "accession": "GSM9143920",
+          "title": "MMTV-PyMT Tumor, anti-PD1 + anti-CTLA4, CP-4733"
+        },
+        {
+          "accession": "GSM9512515",
+          "title": "E0771 Tumor, Trametinib, CP-4296"
+        },
+        {
+          "accession": "GSM9143983",
+          "title": "KPB1-A Tumor, anti-PD1 + anti-CTLA4, CP-5240"
+        },
+        {
+          "accession": "GSM9143854",
+          "title": "p53RB-426 Tumor, Carboplatin + Paclitaxel, CP-4265"
+        },
+        {
+          "accession": "GSM9143817",
+          "title": "T11 Tumor, Untreated, CP-2205"
+        },
+        {
+          "accession": "GSM9143900",
+          "title": "2208 Tumor, anti-PD1 + anti-CTLA4, CP-4683"
+        },
+        {
+          "accession": "GSM9143937",
+          "title": "2224 Tumor, anti-PD1 + anti-CTLA4, CP-5076"
+        },
+        {
+          "accession": "GSM9512561",
+          "title": "p53RB-624 Tumor, Trametinib, CP-4529"
+        },
+        {
+          "accession": "GSM9512478",
+          "title": "2225 Tumor, Trametinib, CP-3580"
+        },
+        {
+          "accession": "GSM9512495",
+          "title": "2336 Tumor, Trametinib, CP-3534"
+        },
+        {
+          "accession": "GSM9512578",
+          "title": "T11 Tumor, Erlotinib, CP-3590"
+        },
+        {
+          "accession": "GSM9143917",
+          "title": "MMTV-PyMT Tumor, Untreated, CP-4727"
+        },
+        {
+          "accession": "GSM9143834",
+          "title": "KPB25L Tumor, Untreated, CP-3806"
+        },
+        {
+          "accession": "GSM9143880",
+          "title": "p53RB-624 Tumor, Untreated, CP-4525"
+        },
+        {
+          "accession": "GSM9143963",
+          "title": "2250 Tumor, anti-PD1 + anti-CTLA4, CP-5102"
+        },
+        {
+          "accession": "GSM9143898",
+          "title": "2153 Tumor, Carboplatin + Paclitaxel, CP-4678"
+        },
+        {
+          "accession": "GSM9143861",
+          "title": "KPB1-A Tumor, Carboplatin + Paclitaxel, CP-4290"
+        },
+        {
+          "accession": "GSM9143981",
+          "title": "KPB1-A Tumor, anti-PD1 + anti-CTLA4, CP-5238"
+        },
+        {
+          "accession": "GSM9143944",
+          "title": "KPB1-B Tumor, anti-PD1 + anti-CTLA4, CP-5083"
+        },
+        {
+          "accession": "GSM9143841",
+          "title": "p53RB-626 Tumor, Untreated, CP-4088"
+        },
+        {
+          "accession": "GSM9143961",
+          "title": "2250 Tumor, anti-PD1 + anti-CTLA4, CP-5100"
+        },
+        {
+          "accession": "GSM9143878",
+          "title": "p53RB-624 Tumor, Untreated, CP-4523"
+        },
+        {
+          "accession": "GSM9143924",
+          "title": "C3-TAG Tumor, Untreated, CP-4739"
+        },
+        {
+          "accession": "GSM9512539",
+          "title": "KPB25L Tumor, Trametinib, CP-3812"
+        },
+        {
+          "accession": "GSM9512519",
+          "title": "KPB25L-UV Tumor, Trametinib, CP-3827"
+        },
+        {
+          "accession": "GSM9143941",
+          "title": "2224 Tumor, Carboplatin + Paclitaxel, CP-5080"
+        },
+        {
+          "accession": "GSM9143858",
+          "title": "KPB1-A Tumor, Untreated, CP-4281"
+        },
+        {
+          "accession": "GSM9143987",
+          "title": "KPB25L Tumor, Carboplatin + Paclitaxel, CP-5306"
+        },
+        {
+          "accession": "GSM9512536",
+          "title": "KPB1-B Tumor, Erlotinib, CP-4516"
+        },
+        {
+          "accession": "GSM9512473",
+          "title": "2224 Tumor, Trametinib, CP-3762"
+        },
+        {
+          "accession": "GSM9512582",
+          "title": "T11-APOBEC Tumor, Erlotinib, CP-3603"
+        },
+        {
+          "accession": "GSM9512499",
+          "title": "2336 Tumor, Erlotinib, CP-3529"
+        },
+        {
+          "accession": "GSM9143838",
+          "title": "4T1 Tumor, Carboplatin + Paclitaxel, CP-4070"
+        },
+        {
+          "accession": "GSM9143921",
+          "title": "MMTV-PyMT Tumor, anti-PD1 + anti-CTLA4, CP-4734"
+        },
+        {
+          "accession": "GSM9143938",
+          "title": "2224 Tumor, anti-PD1 + anti-CTLA4, CP-5077"
+        },
+        {
+          "accession": "GSM9512516",
+          "title": "E0771 Tumor, Erlotinib, CP-4297"
+        },
+        {
+          "accession": "GSM9143855",
+          "title": "p53RB-426 Tumor, Carboplatin + Paclitaxel, CP-4266"
+        },
+        {
+          "accession": "GSM9143818",
+          "title": "C3-TAG Tumor, Untreated, CP-2387"
+        },
+        {
+          "accession": "GSM9143901",
+          "title": "2208 Tumor, anti-PD1 + anti-CTLA4, CP-4684"
+        },
+        {
+          "accession": "GSM9143984",
+          "title": "4T1 Tumor, anti-PD1 + anti-CTLA4, CP-5241"
+        },
+        {
+          "accession": "GSM9512562",
+          "title": "p53RB-624 Tumor, Trametinib, CP-4530"
+        },
+        {
+          "accession": "GSM9512479",
+          "title": "2225 Tumor, Trametinib, CP-3581"
+        },
+        {
+          "accession": "GSM9143964",
+          "title": "2250 Tumor, Carboplatin + Paclitaxel, CP-5103"
+        },
+        {
+          "accession": "GSM9143835",
+          "title": "KPB25L-UV Tumor, Untreated, CP-3819"
+        },
+        {
+          "accession": "GSM9512542",
+          "title": "KPB25L Tumor, Erlotinib, CP-3818"
+        },
+        {
+          "accession": "GSM9512579",
+          "title": "T11-APOBEC Tumor, Trametinib, CP-3609"
+        },
+        {
+          "accession": "GSM9143881",
+          "title": "p53RB-624 Tumor, Carboplatin + Paclitaxel, CP-4532"
+        },
+        {
+          "accession": "GSM9512522",
+          "title": "KPB25L-UV Tumor, Erlotinib, CP-3833"
+        },
+        {
+          "accession": "GSM9512496",
+          "title": "2336 Tumor, Trametinib, CP-3535"
+        },
+        {
+          "accession": "GSM9512559",
+          "title": "p53RB-426 Tumor, Erlotinib, CP-4262"
+        },
+        {
+          "accession": "GSM9143918",
+          "title": "MMTV-PyMT Tumor, Untreated, CP-4728"
+        },
+        {
+          "accession": "GSM9512476",
+          "title": "2224 Tumor, Erlotinib, CP-3768"
+        },
+        {
+          "accession": "GSM9512530",
+          "title": "KPB1-A Tumor, Erlotinib, CP-4287"
+        },
+        {
+          "accession": "GSM9143832",
+          "title": "KPB25L Tumor, Untreated, CP-3804"
+        },
+        {
+          "accession": "GSM9143915",
+          "title": "MMTV-Neu Tumor, anti-PD1 + anti-CTLA4, CP-4720"
+        },
+        {
+          "accession": "GSM9512493",
+          "title": "9263 Tumor, Erlotinib, CP-3559"
+        },
+        {
+          "accession": "GSM9143952",
+          "title": "9263 Tumor, anti-PD1 + anti-CTLA4, CP-5091"
+        },
+        {
+          "accession": "GSM9143869",
+          "title": "T12 Tumor, Carboplatin + Paclitaxel, CP-4363"
+        },
+        {
+          "accession": "GSM9512576",
+          "title": "T11 Tumor, Erlotinib, CP-3588"
+        },
+        {
+          "accession": "GSM9512510",
+          "title": "C3-TAG Tumor, Erlotinib, CP-4936"
+        },
+        {
+          "accession": "GSM9512490",
+          "title": "9263 Tumor, Trametinib, CP-3565"
+        },
+        {
+          "accession": "GSM9512556",
+          "title": "p53RB-426 Tumor, Trametinib, CP-4139"
+        },
+        {
+          "accession": "GSM9143829",
+          "title": "2225 Tumor, Carboplatin + Paclitaxel, CP-3749"
+        },
+        {
+          "accession": "GSM9143912",
+          "title": "MMTV-Neu Tumor, Untreated, CP-4717"
+        },
+        {
+          "accession": "GSM9143849",
+          "title": "K14-TRT Tumor, Untreated, CP-4186"
+        },
+        {
+          "accession": "GSM9143895",
+          "title": "2153 Tumor, anti-PD1 + anti-CTLA4, CP-4675"
+        },
+        {
+          "accession": "GSM9143932",
+          "title": "MMTV-PyMT Tumor, Carboplatin + Paclitaxel, CP-5071"
+        },
+        {
+          "accession": "GSM9143978",
+          "title": "MMTV-Neu Tumor, Carboplatin + Paclitaxel, CP-5154"
+        },
+        {
+          "accession": "GSM9512590",
+          "title": "T12 Tumor, Erlotinib, CP-4361"
+        },
+        {
+          "accession": "GSM9512573",
+          "title": "T11 Tumor, Trametinib, CP-3594"
+        },
+        {
+          "accession": "GSM9143875",
+          "title": "KPB1-B Tumor, Carboplatin + Paclitaxel, CP-4520"
+        },
+        {
+          "accession": "GSM9512470",
+          "title": "2208 Tumor, Erlotinib, CP-4056"
+        },
+        {
+          "accession": "GSM9512507",
+          "title": "C3-TAG Tumor, Trametinib, CP-4935"
+        },
+        {
+          "accession": "GSM9143958",
+          "title": "KPB25L-UV Tumor, Carboplatin + Paclitaxel, CP-5097"
+        },
+        {
+          "accession": "GSM9143975",
+          "title": "T11-APOBEC Tumor, Carboplatin + Paclitaxel, CP-5114"
+        },
+        {
+          "accession": "GSM9143892",
+          "title": "p53RB-626 Tumor, Untreated, CP-4549"
+        },
+        {
+          "accession": "GSM9512487",
+          "title": "2250 Tumor, Erlotinib, CP-3544"
+        },
+        {
+          "accession": "GSM9512553",
+          "title": "MMTV-PyMT Tumor, Erlotinib, CP-4947"
+        },
+        {
+          "accession": "GSM9143826",
+          "title": "T11-APOBEC Tumor, Untreated, CP-3597"
+        },
+        {
+          "accession": "GSM9512570",
+          "title": "p53RB-626 Tumor, Erlotinib, CP-4097"
+        },
+        {
+          "accession": "GSM9512533",
+          "title": "KPB1-B Tumor, Trametinib, CP-4519"
+        },
+        {
+          "accession": "GSM9143955",
+          "title": "9263 Tumor, Carboplatin + Paclitaxel, CP-5094"
+        },
+        {
+          "accession": "GSM9143935",
+          "title": "p53RB-426 Tumor, anti-PD1 + anti-CTLA4, CP-5074"
+        },
+        {
+          "accession": "GSM9143872",
+          "title": "KPB1-B Tumor, Untreated, CP-4511"
+        },
+        {
+          "accession": "GSM9512467",
+          "title": "2208 Tumor, Trametinib, CP-4059"
+        },
+        {
+          "accession": "GSM9512513",
+          "title": "E0771 Tumor, Trametinib, CP-4294"
+        },
+        {
+          "accession": "GSM9512550",
+          "title": "MMTV-PyMT Tumor, Trametinib, CP-4943"
+        },
+        {
+          "accession": "GSM9143889",
+          "title": "2153 Tumor, Untreated, CP-4543"
+        },
+        {
+          "accession": "GSM9143852",
+          "title": "p53RB-426 Tumor, Untreated, CP-4204"
+        },
+        {
+          "accession": "GSM9143972",
+          "title": "T12 Tumor, anti-PD1 + anti-CTLA4, CP-5111"
+        },
+        {
+          "accession": "GSM9143833",
+          "title": "KPB25L Tumor, Untreated, CP-3805"
+        },
+        {
+          "accession": "GSM9143916",
+          "title": "MMTV-Neu Tumor, anti-PD1 + anti-CTLA4, CP-4721"
+        },
+        {
+          "accession": "GSM9512577",
+          "title": "T11 Tumor, Erlotinib, CP-3589"
+        },
+        {
+          "accession": "GSM9512474",
+          "title": "2224 Tumor, Erlotinib, CP-3766"
+        },
+        {
+          "accession": "GSM9512531",
+          "title": "KPB1-B Tumor, Trametinib, CP-4517"
+        },
+        {
+          "accession": "GSM9512494",
+          "title": "9263 Tumor, Erlotinib, CP-3560"
+        },
+        {
+          "accession": "GSM9143896",
+          "title": "2153 Tumor, Carboplatin + Paclitaxel, CP-4676"
+        },
+        {
+          "accession": "GSM9512557",
+          "title": "p53RB-426 Tumor, Trametinib, CP-4260"
+        },
+        {
+          "accession": "GSM9143979",
+          "title": "MMTV-Neu Tumor, Carboplatin + Paclitaxel, CP-5161"
+        },
+        {
+          "accession": "GSM9512574",
+          "title": "T11 Tumor, Trametinib, CP-3595"
+        },
+        {
+          "accession": "GSM9512511",
+          "title": "C3-TAG Tumor, Erlotinib, CP-4967"
+        },
+        {
+          "accession": "GSM9143850",
+          "title": "p53RB-426 Tumor, Untreated, CP-4202"
+        },
+        {
+          "accession": "GSM9512491",
+          "title": "9263 Tumor, Trametinib, CP-3566"
+        },
+        {
+          "accession": "GSM9143933",
+          "title": "MMTV-PyMT Tumor, Carboplatin + Paclitaxel, CP-5072"
+        },
+        {
+          "accession": "GSM9512537",
+          "title": "KPB25L Tumor, Trametinib, CP-3810"
+        },
+        {
+          "accession": "GSM9143830",
+          "title": "2225 Tumor, Carboplatin + Paclitaxel, CP-3750"
+        },
+        {
+          "accession": "GSM9143913",
+          "title": "MMTV-Neu Tumor, Untreated, CP-4718"
+        },
+        {
+          "accession": "GSM9143876",
+          "title": "KPB1-B Tumor, Carboplatin + Paclitaxel, CP-4521"
+        },
+        {
+          "accession": "GSM9143959",
+          "title": "KPB25L-UV Tumor, Carboplatin + Paclitaxel, CP-5098"
+        },
+        {
+          "accession": "GSM9143893",
+          "title": "2153 Tumor, anti-PD1 + anti-CTLA4, CP-4673"
+        },
+        {
+          "accession": "GSM9143976",
+          "title": "C3-TAG Tumor, Carboplatin + Paclitaxel, CP-5147"
+        },
+        {
+          "accession": "GSM9143856",
+          "title": "KPB1-A Tumor, Untreated, CP-4279"
+        },
+        {
+          "accession": "GSM9512517",
+          "title": "E0771 Tumor, Erlotinib, CP-4298"
+        },
+        {
+          "accession": "GSM9512471",
+          "title": "2208 Tumor, Erlotinib, CP-4057"
+        },
+        {
+          "accession": "GSM9512554",
+          "title": "MMTV-PyMT Tumor, Erlotinib, CP-4948"
+        },
+        {
+          "accession": "GSM9143939",
+          "title": "2224 Tumor, anti-PD1 + anti-CTLA4, CP-5078"
+        },
+        {
+          "accession": "GSM9143919",
+          "title": "MMTV-PyMT Tumor, Untreated, CP-4729"
+        },
+        {
+          "accession": "GSM9512534",
+          "title": "KPB1-B Tumor, Erlotinib, CP-4514"
+        },
+        {
+          "accession": "GSM9143836",
+          "title": "KPB25L-UV Tumor, Untreated, CP-3820"
+        },
+        {
+          "accession": "GSM9143956",
+          "title": "9263 Tumor, Carboplatin + Paclitaxel, CP-5095"
+        },
+        {
+          "accession": "GSM9512551",
+          "title": "MMTV-PyMT Tumor, Trametinib, CP-4944"
+        },
+        {
+          "accession": "GSM9143873",
+          "title": "KPB1-B Tumor, Untreated, CP-4512"
+        },
+        {
+          "accession": "GSM9512514",
+          "title": "E0771 Tumor, Trametinib, CP-4295"
+        },
+        {
+          "accession": "GSM9512468",
+          "title": "2208 Tumor, Trametinib, CP-4060"
+        },
+        {
+          "accession": "GSM9143853",
+          "title": "p53RB-426 Tumor, Carboplatin + Paclitaxel, CP-4264"
+        },
+        {
+          "accession": "GSM9143936",
+          "title": "p53RB-426 Tumor, anti-PD1 + anti-CTLA4, CP-5075"
+        },
+        {
+          "accession": "GSM9143953",
+          "title": "9263 Tumor, anti-PD1 + anti-CTLA4, CP-5092"
+        },
+        {
+          "accession": "GSM9143870",
+          "title": "T12 Tumor, Carboplatin + Paclitaxel, CP-4364"
+        },
+        {
+          "accession": "GSM9143824",
+          "title": "T11 Tumor, Untreated, CP-3583"
+        },
+        {
+          "accession": "GSM9512568",
+          "title": "p53RB-626 Tumor, Trametinib, CP-4101"
+        },
+        {
+          "accession": "GSM9512465",
+          "title": "2153 Tumor, Erlotinib, CP-4084"
+        },
+        {
+          "accession": "GSM9512585",
+          "title": "T12 Tumor, Trametinib, CP-4356"
+        },
+        {
+          "accession": "GSM9512548",
+          "title": "MMTV-Neu Tumor, Erlotinib, CP-4941"
+        },
+        {
+          "accession": "GSM9143990",
+          "title": "T11 Tumor, Carboplatin + Paclitaxel, CP-5309"
+        },
+        {
+          "accession": "GSM9143970",
+          "title": "T12 Tumor, anti-PD1 + anti-CTLA4, CP-5109"
+        },
+        {
+          "accession": "GSM9143907",
+          "title": "p53RB-626 Tumor, anti-PD1 + anti-CTLA4, CP-4693"
+        },
+        {
+          "accession": "GSM9512565",
+          "title": "p53RB-624 Tumor, Erlotinib, CP-4527"
+        },
+        {
+          "accession": "GSM9512482",
+          "title": "2225 Tumor, Erlotinib, CP-3575"
+        },
+        {
+          "accession": "GSM9143950",
+          "title": "2336 Tumor, Carboplatin + Paclitaxel, CP-5089"
+        },
+        {
+          "accession": "GSM9143821",
+          "title": "KPB25L-APOBEC Tumor, Untreated, CP-2838"
+        },
+        {
+          "accession": "GSM9143904",
+          "title": "2208 Tumor, Carboplatin + Paclitaxel, CP-4687"
+        },
+        {
+          "accession": "GSM9143867",
+          "title": "T12 Tumor, Untreated, CP-4355"
+        },
+        {
+          "accession": "GSM9512462",
+          "title": "2153 Tumor, Trametinib, CP-4087"
+        },
+        {
+          "accession": "GSM9512545",
+          "title": "MMTV-Neu Tumor, Trametinib, CP-4938"
+        },
+        {
+          "accession": "GSM9512502",
+          "title": "4T1 Tumor, Trametinib, CP-4068"
+        },
+        {
+          "accession": "GSM9143887",
+          "title": "2153 Tumor, Untreated, CP-4541"
+        },
+        {
+          "accession": "GSM9143847",
+          "title": "K14-TRT Tumor, Untreated, CP-4184"
+        },
+        {
+          "accession": "GSM9143930",
+          "title": "C3-TAG Tumor, Carboplatin + Paclitaxel, CP-5050"
+        },
+        {
+          "accession": "GSM9512528",
+          "title": "KPB1-A Tumor, Erlotinib, CP-4285"
+        },
+        {
+          "accession": "GSM9143967",
+          "title": "p53RB-624 Tumor, anti-PD1 + anti-CTLA4, CP-5106"
+        },
+        {
+          "accession": "GSM9512508",
+          "title": "C3-TAG Tumor, Trametinib, CP-4934"
+        },
+        {
+          "accession": "GSM9512571",
+          "title": "p53RB-626 Tumor, Erlotinib, CP-4098"
+        },
+        {
+          "accession": "GSM9512488",
+          "title": "2250 Tumor, Erlotinib, CP-3545"
+        },
+        {
+          "accession": "GSM9143947",
+          "title": "E0771 Tumor, anti-PD1 + anti-CTLA4, CP-5086"
+        },
+        {
+          "accession": "GSM9143827",
+          "title": "T11-APOBEC Tumor, Untreated, CP-3598"
+        },
+        {
+          "accession": "GSM9143864",
+          "title": "E0771 Tumor, Carboplatin + Paclitaxel, CP-4301"
+        },
+        {
+          "accession": "GSM9143884",
+          "title": "2208 Tumor, Untreated, CP-4535"
+        },
+        {
+          "accession": "GSM9143844",
+          "title": "p53RB-626 Tumor, Carboplatin + Paclitaxel, CP-4103"
+        },
+        {
+          "accession": "GSM9512588",
+          "title": "T12 Tumor, Erlotinib, CP-4359"
+        },
+        {
+          "accession": "GSM9143927",
+          "title": "K14-TRT Tumor, Untreated, CP-4911"
+        },
+        {
+          "accession": "GSM9143890",
+          "title": "p53RB-626 Tumor, Untreated, CP-4547"
+        },
+        {
+          "accession": "GSM9512485",
+          "title": "2250 Tumor, Trametinib, CP-3551"
+        },
+        {
+          "accession": "GSM9512525",
+          "title": "KPB1-A Tumor, Trametinib, CP-4282"
+        },
+        {
+          "accession": "GSM9143973",
+          "title": "T11-APOBEC Tumor, Carboplatin + Paclitaxel, CP-5112"
+        },
+        {
+          "accession": "GSM9143910",
+          "title": "C3-TAG Tumor, anti-PD1 + anti-CTLA4, CP-4715"
+        },
+        {
+          "accession": "GSM9143993",
+          "title": "K14-TRT Tumor, Untreated, CP-5313"
+        },
+        {
+          "accession": "GSM9512549",
+          "title": "MMTV-PyMT Tumor, Trametinib, CP-4945"
+        },
+        {
+          "accession": "GSM9512505",
+          "title": "4T1 Tumor, Erlotinib, CP-4065"
+        },
+        {
+          "accession": "GSM9143934",
+          "title": "p53RB-426 Tumor, anti-PD1 + anti-CTLA4, CP-5073"
+        },
+        {
+          "accession": "GSM9143851",
+          "title": "p53RB-426 Tumor, Untreated, CP-4203"
+        },
+        {
+          "accession": "GSM9512466",
+          "title": "2208 Tumor, Trametinib, CP-4058"
+        },
+        {
+          "accession": "GSM9512529",
+          "title": "KPB1-A Tumor, Erlotinib, CP-4286"
+        },
+        {
+          "accession": "GSM9143888",
+          "title": "2153 Tumor, Untreated, CP-4542"
+        },
+        {
+          "accession": "GSM9143831",
+          "title": "2225 Tumor, Carboplatin + Paclitaxel, CP-3751"
+        },
+        {
+          "accession": "GSM9143951",
+          "title": "2336 Tumor, Carboplatin + Paclitaxel, CP-5090"
+        },
+        {
+          "accession": "GSM9143914",
+          "title": "MMTV-Neu Tumor, anti-PD1 + anti-CTLA4, CP-4719"
+        },
+        {
+          "accession": "GSM9143971",
+          "title": "T12 Tumor, anti-PD1 + anti-CTLA4, CP-5110"
+        },
+        {
+          "accession": "GSM9143931",
+          "title": "MMTV-PyMT Tumor, Carboplatin + Paclitaxel, CP-5070"
+        },
+        {
+          "accession": "GSM9143848",
+          "title": "K14-TRT Tumor, Untreated, CP-4185"
+        },
+        {
+          "accession": "GSM9512546",
+          "title": "MMTV-Neu Tumor, Erlotinib, CP-4942"
+        },
+        {
+          "accession": "GSM9512463",
+          "title": "2153 Tumor, Erlotinib, CP-4082"
+        },
+        {
+          "accession": "GSM9512509",
+          "title": "C3-TAG Tumor, Trametinib, CP-4968"
+        },
+        {
+          "accession": "GSM9143868",
+          "title": "T12 Tumor, Carboplatin + Paclitaxel, CP-4362"
+        },
+        {
+          "accession": "GSM9512572",
+          "title": "p53RB-626 Tumor, Erlotinib, CP-4099"
+        },
+        {
+          "accession": "GSM9512526",
+          "title": "KPB1-A Tumor, Trametinib, CP-4283"
+        },
+        {
+          "accession": "GSM9143828",
+          "title": "T11-APOBEC Tumor, Untreated, CP-3599"
+        },
+        {
+          "accession": "GSM9143911",
+          "title": "MMTV-Neu Tumor, Untreated, CP-4716"
+        },
+        {
+          "accession": "GSM9143994",
+          "title": "K14-TRT Tumor, Untreated, CP-5314"
+        },
+        {
+          "accession": "GSM9512552",
+          "title": "MMTV-PyMT Tumor, Erlotinib, CP-4946"
+        },
+        {
+          "accession": "GSM9512469",
+          "title": "2208 Tumor, Erlotinib, CP-4055"
+        },
+        {
+          "accession": "GSM9512506",
+          "title": "4T1 Tumor, Erlotinib, CP-4066"
+        },
+        {
+          "accession": "GSM9143845",
+          "title": "p53RB-626 Tumor, Carboplatin + Paclitaxel, CP-4104"
+        },
+        {
+          "accession": "GSM9143928",
+          "title": "K14-TRT Tumor, Untreated, CP-4912"
+        },
+        {
+          "accession": "GSM9512489",
+          "title": "9263 Tumor, Trametinib, CP-3564"
+        },
+        {
+          "accession": "GSM9143891",
+          "title": "p53RB-626 Tumor, Untreated, CP-4548"
+        },
+        {
+          "accession": "GSM9143865",
+          "title": "T12 Tumor, Untreated, CP-4353"
+        },
+        {
+          "accession": "GSM9512589",
+          "title": "T12 Tumor, Erlotinib, CP-4360"
+        },
+        {
+          "accession": "GSM9143825",
+          "title": "T11 Tumor, Untreated, CP-3584"
+        },
+        {
+          "accession": "GSM9143908",
+          "title": "C3-TAG Tumor, Untreated, CP-4695"
+        },
+        {
+          "accession": "GSM9143954",
+          "title": "9263 Tumor, anti-PD1 + anti-CTLA4, CP-5093"
+        },
+        {
+          "accession": "GSM9143991",
+          "title": "T11 Tumor, Carboplatin + Paclitaxel, CP-5310"
+        },
+        {
+          "accession": "GSM9512532",
+          "title": "KPB1-B Tumor, Trametinib, CP-4518"
+        },
+        {
+          "accession": "GSM9512569",
+          "title": "p53RB-626 Tumor, Trametinib, CP-4102"
+        },
+        {
+          "accession": "GSM9143974",
+          "title": "T11-APOBEC Tumor, Carboplatin + Paclitaxel, CP-5113"
+        },
+        {
+          "accession": "GSM9512540",
+          "title": "KPB25L Tumor, Erlotinib, CP-3816"
+        },
+        {
+          "accession": "GSM9143879",
+          "title": "p53RB-624 Tumor, Untreated, CP-4524"
+        },
+        {
+          "accession": "GSM9512503",
+          "title": "4T1 Tumor, Trametinib, CP-4069"
+        },
+        {
+          "accession": "GSM9143962",
+          "title": "2250 Tumor, anti-PD1 + anti-CTLA4, CP-5101"
+        },
+        {
+          "accession": "GSM9143925",
+          "title": "C3-TAG Tumor, anti-PD1 + anti-CTLA4, CP-4740"
+        },
+        {
+          "accession": "GSM9143871",
+          "title": "KPB1-A Tumor, Carboplatin + Paclitaxel, CP-4510"
+        },
+        {
+          "accession": "GSM9512566",
+          "title": "p53RB-624 Tumor, Erlotinib, CP-4528"
+        },
+        {
+          "accession": "GSM9512520",
+          "title": "KPB25L-UV Tumor, Trametinib, CP-3828"
+        },
+        {
+          "accession": "GSM9143905",
+          "title": "p53RB-626 Tumor, anti-PD1 + anti-CTLA4, CP-4691"
+        },
+        {
+          "accession": "GSM9143859",
+          "title": "KPB1-A Tumor, Carboplatin + Paclitaxel, CP-4288"
+        },
+        {
+          "accession": "GSM9143822",
+          "title": "KPB1-B Tumor, Untreated, CP-3060"
+        },
+        {
+          "accession": "GSM9512486",
+          "title": "2250 Tumor, Erlotinib, CP-3543"
+        },
+        {
+          "accession": "GSM9512500",
+          "title": "2336 Tumor, Erlotinib, CP-3530"
+        },
+        {
+          "accession": "GSM9143988",
+          "title": "KPB25L Tumor, Carboplatin + Paclitaxel, CP-5307"
+        },
+        {
+          "accession": "GSM9512586",
+          "title": "T12 Tumor, Trametinib, CP-4357"
+        },
+        {
+          "accession": "GSM9143842",
+          "title": "p53RB-626 Tumor, Untreated, CP-4089"
+        },
+        {
+          "accession": "GSM9143885",
+          "title": "2208 Tumor, Untreated, CP-4536"
+        },
+        {
+          "accession": "GSM9512483",
+          "title": "2250 Tumor, Trametinib, CP-3549"
+        },
+        {
+          "accession": "GSM9143942",
+          "title": "2224 Tumor, Carboplatin + Paclitaxel, CP-5081"
+        },
+        {
+          "accession": "GSM9143922",
+          "title": "MMTV-PyMT Tumor, anti-PD1 + anti-CTLA4, CP-4735"
+        },
+        {
+          "accession": "GSM9512583",
+          "title": "T11-APOBEC Tumor, Erlotinib, CP-3604"
+        },
+        {
+          "accession": "GSM9143985",
+          "title": "4T1 Tumor, anti-PD1 + anti-CTLA4, CP-5242"
+        },
+        {
+          "accession": "GSM9143902",
+          "title": "2208 Tumor, Carboplatin + Paclitaxel, CP-4685"
+        },
+        {
+          "accession": "GSM9143968",
+          "title": "p53RB-624 Tumor, anti-PD1 + anti-CTLA4, CP-5107"
+        },
+        {
+          "accession": "GSM9143819",
+          "title": "KPB1-B Tumor, Untreated, CP-2824"
+        },
+        {
+          "accession": "GSM9512497",
+          "title": "2336 Tumor, Trametinib, CP-3536"
+        },
+        {
+          "accession": "GSM9143839",
+          "title": "4T1 Tumor, Carboplatin + Paclitaxel, CP-4071"
+        },
+        {
+          "accession": "GSM9512543",
+          "title": "MMTV-Neu Tumor, Trametinib, CP-4939"
+        },
+        {
+          "accession": "GSM9143882",
+          "title": "p53RB-624 Tumor, Carboplatin + Paclitaxel, CP-4533"
+        },
+        {
+          "accession": "GSM9512580",
+          "title": "T11-APOBEC Tumor, Trametinib, CP-3610"
+        },
+        {
+          "accession": "GSM9143965",
+          "title": "2250 Tumor, Carboplatin + Paclitaxel, CP-5104"
+        },
+        {
+          "accession": "GSM9512477",
+          "title": "2225 Tumor, Trametinib, CP-3579"
+        },
+        {
+          "accession": "GSM9512563",
+          "title": "p53RB-624 Tumor, Trametinib, CP-4531"
+        },
+        {
+          "accession": "GSM9512480",
+          "title": "2225 Tumor, Erlotinib, CP-3573"
+        },
+        {
+          "accession": "GSM9143948",
+          "title": "E0771 Tumor, anti-PD1 + anti-CTLA4, CP-5087"
+        },
+        {
+          "accession": "GSM9143982",
+          "title": "KPB1-A Tumor, anti-PD1 + anti-CTLA4, CP-5239"
+        },
+        {
+          "accession": "GSM9512460",
+          "title": "2153 Tumor, Trametinib, CP-4085"
+        },
+        {
+          "accession": "GSM9143899",
+          "title": "2208 Tumor, anti-PD1 + anti-CTLA4, CP-4682"
+        },
+        {
+          "accession": "GSM9512523",
+          "title": "KPB25L-UV Tumor, Erlotinib, CP-3834"
+        },
+        {
+          "accession": "GSM9512560",
+          "title": "p53RB-426 Tumor, Erlotinib, CP-4263"
+        },
+        {
+          "accession": "GSM9143945",
+          "title": "KPB1-B Tumor, anti-PD1 + anti-CTLA4, CP-5084"
+        },
+        {
+          "accession": "GSM9143862",
+          "title": "E0771 Tumor, Untreated, CP-4293"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 309,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE304nnn/GSE304115/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1298937"
+    },
+    "200298765": {
+      "uid": "200298765",
+      "accession": "GSE298765",
+      "gds": "",
+      "title": "Impact of LDOC1 depletion on transcriptome of human EGFR mutated NSCLC PC9 cell line",
+      "summary": "Transcriptome profiling of NSCLC PC9 cells with (shLDOC1) or without (shCtrl) LDOC1 depletion revealed widespread alterations in gene expression, suggesting that LDOC1 broadly influences transcriptional programs. One possibility is that LDOC1 exerts its impact on the transcriptome through epigenetic mechanisms",
+      "gpl": "570",
+      "gse": "298765",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/06",
+      "suppfile": "CEL",
+      "samples": [
+        {
+          "accession": "GSM9022780",
+          "title": "PC9-LDOC1 expressing-Rep2"
+        },
+        {
+          "accession": "GSM9022781",
+          "title": "PC9-LDOC1 depletion-Rep1"
+        },
+        {
+          "accession": "GSM9022779",
+          "title": "PC9-LDOC1 expressing-Rep1"
+        },
+        {
+          "accession": "GSM9022782",
+          "title": "PC9-LDOC1 depletion-Rep2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 4,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41484780"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE298nnn/GSE298765/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA1271072"
+    },
+    "200295570": {
+      "uid": "200295570",
+      "accession": "GSE295570",
+      "gds": "",
+      "title": "Development and validation of a 5mC-based prognostic model for lung adenocarcinoma survival: a multicentre, retrospective study",
+      "summary": "Lung adenocarcinoma (LUAD) exhibits marked prognostic heterogeneity. Existing methylation-based prognostic models lack robustness, accuracy, or external validation, limiting their clinical utility. We develop MethPro-LUAD, a prognostic model based on eight 5-methylcytosine features, using TCGA-LUAD data (training, N=269; testing, N=180), and validate the model across two independent hospital cohorts (Beijing, N=195; Nanjing, N=88) and two external GEO datasets (N=82 and N=155) to ensure its generalizability and effectiveness. MethPro-LUAD stratifies patients into high- and low-risk groups, with high-risk individuals consistently showing significantly shorter overall survival across all cohorts. In addition, the model\u2019s predictive performance remains robust in subgroups defined by age, sex, stage, and EGFR mutation, and in disease-free survival analyses. Compared with other reported LUAD prognostic models, MethPro-LUAD demonstrates better performance across cohorts, which offers valuable support for personalized postoperative treatment and follow-up, and warrants further prospective evaluation, highlighting its strong potential for clinical translation through feasible targeted assays.",
+      "gpl": "21145",
+      "gse": "295570",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Methylation profiling by genome tiling array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/06",
+      "suppfile": "IDAT, TSV",
+      "samples": [
+        {
+          "accession": "GSM8953080",
+          "title": "PUMCH tumor 75"
+        },
+        {
+          "accession": "GSM8953163",
+          "title": "PUMCH tumor 158"
+        },
+        {
+          "accession": "GSM8953183",
+          "title": "PUMCH tumor 178"
+        },
+        {
+          "accession": "GSM8953063",
+          "title": "PUMCH tumor 58"
+        },
+        {
+          "accession": "GSM8953266",
+          "title": "NDTH tumor 57"
+        },
+        {
+          "accession": "GSM8953146",
+          "title": "PUMCH tumor 141"
+        },
+        {
+          "accession": "GSM8953017",
+          "title": "PUMCH tumor 12"
+        },
+        {
+          "accession": "GSM8953100",
+          "title": "PUMCH tumor 95"
+        },
+        {
+          "accession": "GSM8953229",
+          "title": "NDTH tumor 20"
+        },
+        {
+          "accession": "GSM8953037",
+          "title": "PUMCH tumor 32"
+        },
+        {
+          "accession": "GSM8953166",
+          "title": "PUMCH tumor 161"
+        },
+        {
+          "accession": "GSM8953120",
+          "title": "PUMCH tumor 115"
+        },
+        {
+          "accession": "GSM8953203",
+          "title": "PUMCH tumor 198"
+        },
+        {
+          "accession": "GSM8953286",
+          "title": "NDTH tumor 77"
+        },
+        {
+          "accession": "GSM8953249",
+          "title": "NDTH tumor 40"
+        },
+        {
+          "accession": "GSM8953083",
+          "title": "PUMCH tumor 78"
+        },
+        {
+          "accession": "GSM8953103",
+          "title": "PUMCH tumor 98"
+        },
+        {
+          "accession": "GSM8953186",
+          "title": "PUMCH tumor 181"
+        },
+        {
+          "accession": "GSM8953269",
+          "title": "NDTH tumor 60"
+        },
+        {
+          "accession": "GSM8953057",
+          "title": "PUMCH tumor 52"
+        },
+        {
+          "accession": "GSM8953020",
+          "title": "PUMCH tumor 15"
+        },
+        {
+          "accession": "GSM8953140",
+          "title": "PUMCH tumor 135"
+        },
+        {
+          "accession": "GSM8953223",
+          "title": "NDTH tumor 14"
+        },
+        {
+          "accession": "GSM8953123",
+          "title": "PUMCH tumor 118"
+        },
+        {
+          "accession": "GSM8953206",
+          "title": "PUMCH tumor 201"
+        },
+        {
+          "accession": "GSM8953040",
+          "title": "PUMCH tumor 35"
+        },
+        {
+          "accession": "GSM8953289",
+          "title": "NDTH tumor 80"
+        },
+        {
+          "accession": "GSM8953226",
+          "title": "NDTH tumor 17"
+        },
+        {
+          "accession": "GSM8953189",
+          "title": "PUMCH tumor 184"
+        },
+        {
+          "accession": "GSM8953272",
+          "title": "NDTH tumor 63"
+        },
+        {
+          "accession": "GSM8953060",
+          "title": "PUMCH tumor 55"
+        },
+        {
+          "accession": "GSM8953143",
+          "title": "PUMCH tumor 138"
+        },
+        {
+          "accession": "GSM8953126",
+          "title": "PUMCH tumor 121"
+        },
+        {
+          "accession": "GSM8953292",
+          "title": "NDTH tumor 83"
+        },
+        {
+          "accession": "GSM8953043",
+          "title": "PUMCH tumor 38"
+        },
+        {
+          "accession": "GSM8953246",
+          "title": "NDTH tumor 37"
+        },
+        {
+          "accession": "GSM8953209",
+          "title": "PUMCH tumor 204"
+        },
+        {
+          "accession": "GSM8953155",
+          "title": "PUMCH tumor 150"
+        },
+        {
+          "accession": "GSM8953072",
+          "title": "PUMCH tumor 67"
+        },
+        {
+          "accession": "GSM8953275",
+          "title": "NDTH tumor 66"
+        },
+        {
+          "accession": "GSM8953192",
+          "title": "PUMCH tumor 187"
+        },
+        {
+          "accession": "GSM8953238",
+          "title": "NDTH tumor 29"
+        },
+        {
+          "accession": "GSM8953258",
+          "title": "NDTH tumor 49"
+        },
+        {
+          "accession": "GSM8953026",
+          "title": "PUMCH tumor 21"
+        },
+        {
+          "accession": "GSM8953109",
+          "title": "PUMCH tumor 104"
+        },
+        {
+          "accession": "GSM8953295",
+          "title": "NDTH tumor 86"
+        },
+        {
+          "accession": "GSM8953092",
+          "title": "PUMCH tumor 87"
+        },
+        {
+          "accession": "GSM8953175",
+          "title": "PUMCH tumor 170"
+        },
+        {
+          "accession": "GSM8953046",
+          "title": "PUMCH tumor 41"
+        },
+        {
+          "accession": "GSM8953129",
+          "title": "PUMCH tumor 124"
+        },
+        {
+          "accession": "GSM8953212",
+          "title": "NDTH tumor 3"
+        },
+        {
+          "accession": "GSM8953009",
+          "title": "PUMCH tumor 4"
+        },
+        {
+          "accession": "GSM8953232",
+          "title": "NDTH tumor 23"
+        },
+        {
+          "accession": "GSM8953149",
+          "title": "PUMCH tumor 144"
+        },
+        {
+          "accession": "GSM8953195",
+          "title": "PUMCH tumor 190"
+        },
+        {
+          "accession": "GSM8953066",
+          "title": "PUMCH tumor 61"
+        },
+        {
+          "accession": "GSM8953029",
+          "title": "PUMCH tumor 24"
+        },
+        {
+          "accession": "GSM8953112",
+          "title": "PUMCH tumor 107"
+        },
+        {
+          "accession": "GSM8953278",
+          "title": "NDTH tumor 69"
+        },
+        {
+          "accession": "GSM8953086",
+          "title": "PUMCH tumor 81"
+        },
+        {
+          "accession": "GSM8953049",
+          "title": "PUMCH tumor 44"
+        },
+        {
+          "accession": "GSM8953169",
+          "title": "PUMCH tumor 164"
+        },
+        {
+          "accession": "GSM8953252",
+          "title": "NDTH tumor 43"
+        },
+        {
+          "accession": "GSM8953215",
+          "title": "NDTH tumor 6"
+        },
+        {
+          "accession": "GSM8953132",
+          "title": "PUMCH tumor 127"
+        },
+        {
+          "accession": "GSM8953152",
+          "title": "PUMCH tumor 147"
+        },
+        {
+          "accession": "GSM8953235",
+          "title": "NDTH tumor 26"
+        },
+        {
+          "accession": "GSM8953023",
+          "title": "PUMCH tumor 18"
+        },
+        {
+          "accession": "GSM8953069",
+          "title": "PUMCH tumor 64"
+        },
+        {
+          "accession": "GSM8953106",
+          "title": "PUMCH tumor 101"
+        },
+        {
+          "accession": "GSM8953089",
+          "title": "PUMCH tumor 84"
+        },
+        {
+          "accession": "GSM8953172",
+          "title": "PUMCH tumor 167"
+        },
+        {
+          "accession": "GSM8953255",
+          "title": "NDTH tumor 46"
+        },
+        {
+          "accession": "GSM8953006",
+          "title": "PUMCH tumor 1"
+        },
+        {
+          "accession": "GSM8953118",
+          "title": "PUMCH tumor 113"
+        },
+        {
+          "accession": "GSM8953201",
+          "title": "PUMCH tumor 196"
+        },
+        {
+          "accession": "GSM8953284",
+          "title": "NDTH tumor 75"
+        },
+        {
+          "accession": "GSM8953035",
+          "title": "PUMCH tumor 30"
+        },
+        {
+          "accession": "GSM8953221",
+          "title": "NDTH tumor 12"
+        },
+        {
+          "accession": "GSM8953055",
+          "title": "PUMCH tumor 50"
+        },
+        {
+          "accession": "GSM8953138",
+          "title": "PUMCH tumor 133"
+        },
+        {
+          "accession": "GSM8953267",
+          "title": "NDTH tumor 58"
+        },
+        {
+          "accession": "GSM8953287",
+          "title": "NDTH tumor 78"
+        },
+        {
+          "accession": "GSM8953075",
+          "title": "PUMCH tumor 70"
+        },
+        {
+          "accession": "GSM8953158",
+          "title": "PUMCH tumor 153"
+        },
+        {
+          "accession": "GSM8953121",
+          "title": "PUMCH tumor 116"
+        },
+        {
+          "accession": "GSM8953204",
+          "title": "PUMCH tumor 199"
+        },
+        {
+          "accession": "GSM8953038",
+          "title": "PUMCH tumor 33"
+        },
+        {
+          "accession": "GSM8953241",
+          "title": "NDTH tumor 32"
+        },
+        {
+          "accession": "GSM8953261",
+          "title": "NDTH tumor 52"
+        },
+        {
+          "accession": "GSM8953224",
+          "title": "NDTH tumor 15"
+        },
+        {
+          "accession": "GSM8953058",
+          "title": "PUMCH tumor 53"
+        },
+        {
+          "accession": "GSM8953141",
+          "title": "PUMCH tumor 136"
+        },
+        {
+          "accession": "GSM8953012",
+          "title": "PUMCH tumor 7"
+        },
+        {
+          "accession": "GSM8953095",
+          "title": "PUMCH tumor 90"
+        },
+        {
+          "accession": "GSM8953178",
+          "title": "PUMCH tumor 173"
+        },
+        {
+          "accession": "GSM8953078",
+          "title": "PUMCH tumor 73"
+        },
+        {
+          "accession": "GSM8953161",
+          "title": "PUMCH tumor 156"
+        },
+        {
+          "accession": "GSM8953198",
+          "title": "PUMCH tumor 193"
+        },
+        {
+          "accession": "GSM8953281",
+          "title": "NDTH tumor 72"
+        },
+        {
+          "accession": "GSM8953032",
+          "title": "PUMCH tumor 27"
+        },
+        {
+          "accession": "GSM8953115",
+          "title": "PUMCH tumor 110"
+        },
+        {
+          "accession": "GSM8953244",
+          "title": "NDTH tumor 35"
+        },
+        {
+          "accession": "GSM8953052",
+          "title": "PUMCH tumor 47"
+        },
+        {
+          "accession": "GSM8953181",
+          "title": "PUMCH tumor 176"
+        },
+        {
+          "accession": "GSM8953264",
+          "title": "NDTH tumor 55"
+        },
+        {
+          "accession": "GSM8953218",
+          "title": "NDTH tumor 9"
+        },
+        {
+          "accession": "GSM8953015",
+          "title": "PUMCH tumor 10"
+        },
+        {
+          "accession": "GSM8953135",
+          "title": "PUMCH tumor 130"
+        },
+        {
+          "accession": "GSM8953098",
+          "title": "PUMCH tumor 93"
+        },
+        {
+          "accession": "GSM8953081",
+          "title": "PUMCH tumor 76"
+        },
+        {
+          "accession": "GSM8953293",
+          "title": "NDTH tumor 84"
+        },
+        {
+          "accession": "GSM8953044",
+          "title": "PUMCH tumor 39"
+        },
+        {
+          "accession": "GSM8953247",
+          "title": "NDTH tumor 38"
+        },
+        {
+          "accession": "GSM8953127",
+          "title": "PUMCH tumor 122"
+        },
+        {
+          "accession": "GSM8953210",
+          "title": "NDTH tumor 1"
+        },
+        {
+          "accession": "GSM8953164",
+          "title": "PUMCH tumor 159"
+        },
+        {
+          "accession": "GSM8953184",
+          "title": "PUMCH tumor 179"
+        },
+        {
+          "accession": "GSM8953018",
+          "title": "PUMCH tumor 13"
+        },
+        {
+          "accession": "GSM8953101",
+          "title": "PUMCH tumor 96"
+        },
+        {
+          "accession": "GSM8953230",
+          "title": "NDTH tumor 21"
+        },
+        {
+          "accession": "GSM8953147",
+          "title": "PUMCH tumor 142"
+        },
+        {
+          "accession": "GSM8953064",
+          "title": "PUMCH tumor 59"
+        },
+        {
+          "accession": "GSM8953084",
+          "title": "PUMCH tumor 79"
+        },
+        {
+          "accession": "GSM8953167",
+          "title": "PUMCH tumor 162"
+        },
+        {
+          "accession": "GSM8953250",
+          "title": "NDTH tumor 41"
+        },
+        {
+          "accession": "GSM8953187",
+          "title": "PUMCH tumor 182"
+        },
+        {
+          "accession": "GSM8953104",
+          "title": "PUMCH tumor 99"
+        },
+        {
+          "accession": "GSM8953270",
+          "title": "NDTH tumor 61"
+        },
+        {
+          "accession": "GSM8953021",
+          "title": "PUMCH tumor 16"
+        },
+        {
+          "accession": "GSM8953233",
+          "title": "NDTH tumor 24"
+        },
+        {
+          "accession": "GSM8953150",
+          "title": "PUMCH tumor 145"
+        },
+        {
+          "accession": "GSM8953290",
+          "title": "NDTH tumor 81"
+        },
+        {
+          "accession": "GSM8953087",
+          "title": "PUMCH tumor 82"
+        },
+        {
+          "accession": "GSM8953170",
+          "title": "PUMCH tumor 165"
+        },
+        {
+          "accession": "GSM8953124",
+          "title": "PUMCH tumor 119"
+        },
+        {
+          "accession": "GSM8953207",
+          "title": "PUMCH tumor 202"
+        },
+        {
+          "accession": "GSM8953253",
+          "title": "NDTH tumor 44"
+        },
+        {
+          "accession": "GSM8953107",
+          "title": "PUMCH tumor 102"
+        },
+        {
+          "accession": "GSM8953190",
+          "title": "PUMCH tumor 185"
+        },
+        {
+          "accession": "GSM8953041",
+          "title": "PUMCH tumor 36"
+        },
+        {
+          "accession": "GSM8953273",
+          "title": "NDTH tumor 64"
+        },
+        {
+          "accession": "GSM8953227",
+          "title": "NDTH tumor 18"
+        },
+        {
+          "accession": "GSM8953024",
+          "title": "PUMCH tumor 19"
+        },
+        {
+          "accession": "GSM8953061",
+          "title": "PUMCH tumor 56"
+        },
+        {
+          "accession": "GSM8953144",
+          "title": "PUMCH tumor 139"
+        },
+        {
+          "accession": "GSM8953007",
+          "title": "PUMCH tumor 2"
+        },
+        {
+          "accession": "GSM8953136",
+          "title": "PUMCH tumor 131"
+        },
+        {
+          "accession": "GSM8953219",
+          "title": "NDTH tumor 10"
+        },
+        {
+          "accession": "GSM8953053",
+          "title": "PUMCH tumor 48"
+        },
+        {
+          "accession": "GSM8953090",
+          "title": "PUMCH tumor 85"
+        },
+        {
+          "accession": "GSM8953173",
+          "title": "PUMCH tumor 168"
+        },
+        {
+          "accession": "GSM8953256",
+          "title": "NDTH tumor 47"
+        },
+        {
+          "accession": "GSM8953156",
+          "title": "PUMCH tumor 151"
+        },
+        {
+          "accession": "GSM8953239",
+          "title": "NDTH tumor 30"
+        },
+        {
+          "accession": "GSM8953276",
+          "title": "NDTH tumor 67"
+        },
+        {
+          "accession": "GSM8953073",
+          "title": "PUMCH tumor 68"
+        },
+        {
+          "accession": "GSM8953110",
+          "title": "PUMCH tumor 105"
+        },
+        {
+          "accession": "GSM8953027",
+          "title": "PUMCH tumor 22"
+        },
+        {
+          "accession": "GSM8953193",
+          "title": "PUMCH tumor 188"
+        },
+        {
+          "accession": "GSM8953213",
+          "title": "NDTH tumor 4"
+        },
+        {
+          "accession": "GSM8953010",
+          "title": "PUMCH tumor 5"
+        },
+        {
+          "accession": "GSM8953296",
+          "title": "NDTH tumor 87"
+        },
+        {
+          "accession": "GSM8953093",
+          "title": "PUMCH tumor 88"
+        },
+        {
+          "accession": "GSM8953176",
+          "title": "PUMCH tumor 171"
+        },
+        {
+          "accession": "GSM8953130",
+          "title": "PUMCH tumor 125"
+        },
+        {
+          "accession": "GSM8953047",
+          "title": "PUMCH tumor 42"
+        },
+        {
+          "accession": "GSM8953259",
+          "title": "NDTH tumor 50"
+        },
+        {
+          "accession": "GSM8953030",
+          "title": "PUMCH tumor 25"
+        },
+        {
+          "accession": "GSM8953113",
+          "title": "PUMCH tumor 108"
+        },
+        {
+          "accession": "GSM8953067",
+          "title": "PUMCH tumor 62"
+        },
+        {
+          "accession": "GSM8953196",
+          "title": "PUMCH tumor 191"
+        },
+        {
+          "accession": "GSM8953279",
+          "title": "NDTH tumor 70"
+        },
+        {
+          "accession": "GSM8953216",
+          "title": "NDTH tumor 7"
+        },
+        {
+          "accession": "GSM8953262",
+          "title": "NDTH tumor 53"
+        },
+        {
+          "accession": "GSM8953050",
+          "title": "PUMCH tumor 45"
+        },
+        {
+          "accession": "GSM8953133",
+          "title": "PUMCH tumor 128"
+        },
+        {
+          "accession": "GSM8953033",
+          "title": "PUMCH tumor 28"
+        },
+        {
+          "accession": "GSM8953236",
+          "title": "NDTH tumor 27"
+        },
+        {
+          "accession": "GSM8953153",
+          "title": "PUMCH tumor 148"
+        },
+        {
+          "accession": "GSM8953070",
+          "title": "PUMCH tumor 65"
+        },
+        {
+          "accession": "GSM8953282",
+          "title": "NDTH tumor 73"
+        },
+        {
+          "accession": "GSM8953265",
+          "title": "NDTH tumor 56"
+        },
+        {
+          "accession": "GSM8953182",
+          "title": "PUMCH tumor 177"
+        },
+        {
+          "accession": "GSM8953116",
+          "title": "PUMCH tumor 111"
+        },
+        {
+          "accession": "GSM8953099",
+          "title": "PUMCH tumor 94"
+        },
+        {
+          "accession": "GSM8953199",
+          "title": "PUMCH tumor 194"
+        },
+        {
+          "accession": "GSM8953082",
+          "title": "PUMCH tumor 77"
+        },
+        {
+          "accession": "GSM8953285",
+          "title": "NDTH tumor 76"
+        },
+        {
+          "accession": "GSM8953036",
+          "title": "PUMCH tumor 31"
+        },
+        {
+          "accession": "GSM8953228",
+          "title": "NDTH tumor 19"
+        },
+        {
+          "accession": "GSM8953165",
+          "title": "PUMCH tumor 160"
+        },
+        {
+          "accession": "GSM8953248",
+          "title": "NDTH tumor 39"
+        },
+        {
+          "accession": "GSM8953016",
+          "title": "PUMCH tumor 11"
+        },
+        {
+          "accession": "GSM8953185",
+          "title": "PUMCH tumor 180"
+        },
+        {
+          "accession": "GSM8953268",
+          "title": "NDTH tumor 59"
+        },
+        {
+          "accession": "GSM8953056",
+          "title": "PUMCH tumor 51"
+        },
+        {
+          "accession": "GSM8953119",
+          "title": "PUMCH tumor 114"
+        },
+        {
+          "accession": "GSM8953202",
+          "title": "PUMCH tumor 197"
+        },
+        {
+          "accession": "GSM8953139",
+          "title": "PUMCH tumor 134"
+        },
+        {
+          "accession": "GSM8953102",
+          "title": "PUMCH tumor 97"
+        },
+        {
+          "accession": "GSM8953242",
+          "title": "NDTH tumor 33"
+        },
+        {
+          "accession": "GSM8953205",
+          "title": "PUMCH tumor 200"
+        },
+        {
+          "accession": "GSM8953288",
+          "title": "NDTH tumor 79"
+        },
+        {
+          "accession": "GSM8953159",
+          "title": "PUMCH tumor 154"
+        },
+        {
+          "accession": "GSM8953076",
+          "title": "PUMCH tumor 71"
+        },
+        {
+          "accession": "GSM8953039",
+          "title": "PUMCH tumor 34"
+        },
+        {
+          "accession": "GSM8953019",
+          "title": "PUMCH tumor 14"
+        },
+        {
+          "accession": "GSM8953222",
+          "title": "NDTH tumor 13"
+        },
+        {
+          "accession": "GSM8953059",
+          "title": "PUMCH tumor 54"
+        },
+        {
+          "accession": "GSM8953142",
+          "title": "PUMCH tumor 137"
+        },
+        {
+          "accession": "GSM8953179",
+          "title": "PUMCH tumor 174"
+        },
+        {
+          "accession": "GSM8953122",
+          "title": "PUMCH tumor 117"
+        },
+        {
+          "accession": "GSM8953079",
+          "title": "PUMCH tumor 74"
+        },
+        {
+          "accession": "GSM8953162",
+          "title": "PUMCH tumor 157"
+        },
+        {
+          "accession": "GSM8953245",
+          "title": "NDTH tumor 36"
+        },
+        {
+          "accession": "GSM8953225",
+          "title": "NDTH tumor 16"
+        },
+        {
+          "accession": "GSM8953013",
+          "title": "PUMCH tumor 8"
+        },
+        {
+          "accession": "GSM8953096",
+          "title": "PUMCH tumor 91"
+        },
+        {
+          "accession": "GSM8953191",
+          "title": "PUMCH tumor 186"
+        },
+        {
+          "accession": "GSM8953025",
+          "title": "PUMCH tumor 20"
+        },
+        {
+          "accession": "GSM8953108",
+          "title": "PUMCH tumor 103"
+        },
+        {
+          "accession": "GSM8953062",
+          "title": "PUMCH tumor 57"
+        },
+        {
+          "accession": "GSM8953145",
+          "title": "PUMCH tumor 140"
+        },
+        {
+          "accession": "GSM8953274",
+          "title": "NDTH tumor 65"
+        },
+        {
+          "accession": "GSM8953294",
+          "title": "NDTH tumor 85"
+        },
+        {
+          "accession": "GSM8953211",
+          "title": "NDTH tumor 2"
+        },
+        {
+          "accession": "GSM8953128",
+          "title": "PUMCH tumor 123"
+        },
+        {
+          "accession": "GSM8953111",
+          "title": "PUMCH tumor 106"
+        },
+        {
+          "accession": "GSM8953194",
+          "title": "PUMCH tumor 189"
+        },
+        {
+          "accession": "GSM8953277",
+          "title": "NDTH tumor 68"
+        },
+        {
+          "accession": "GSM8953065",
+          "title": "PUMCH tumor 60"
+        },
+        {
+          "accession": "GSM8953045",
+          "title": "PUMCH tumor 40"
+        },
+        {
+          "accession": "GSM8953085",
+          "title": "PUMCH tumor 80"
+        },
+        {
+          "accession": "GSM8953168",
+          "title": "PUMCH tumor 163"
+        },
+        {
+          "accession": "GSM8953214",
+          "title": "NDTH tumor 5"
+        },
+        {
+          "accession": "GSM8953251",
+          "title": "NDTH tumor 42"
+        },
+        {
+          "accession": "GSM8953297",
+          "title": "NDTH tumor 88"
+        },
+        {
+          "accession": "GSM8953131",
+          "title": "PUMCH tumor 126"
+        },
+        {
+          "accession": "GSM8953231",
+          "title": "NDTH tumor 22"
+        },
+        {
+          "accession": "GSM8953148",
+          "title": "PUMCH tumor 143"
+        },
+        {
+          "accession": "GSM8953022",
+          "title": "PUMCH tumor 17"
+        },
+        {
+          "accession": "GSM8953188",
+          "title": "PUMCH tumor 183"
+        },
+        {
+          "accession": "GSM8953234",
+          "title": "NDTH tumor 25"
+        },
+        {
+          "accession": "GSM8953105",
+          "title": "PUMCH tumor 100"
+        },
+        {
+          "accession": "GSM8953271",
+          "title": "NDTH tumor 62"
+        },
+        {
+          "accession": "GSM8953048",
+          "title": "PUMCH tumor 43"
+        },
+        {
+          "accession": "GSM8953068",
+          "title": "PUMCH tumor 63"
+        },
+        {
+          "accession": "GSM8953291",
+          "title": "NDTH tumor 82"
+        },
+        {
+          "accession": "GSM8953088",
+          "title": "PUMCH tumor 83"
+        },
+        {
+          "accession": "GSM8953171",
+          "title": "PUMCH tumor 166"
+        },
+        {
+          "accession": "GSM8953208",
+          "title": "PUMCH tumor 203"
+        },
+        {
+          "accession": "GSM8953151",
+          "title": "PUMCH tumor 146"
+        },
+        {
+          "accession": "GSM8953034",
+          "title": "PUMCH tumor 29"
+        },
+        {
+          "accession": "GSM8953200",
+          "title": "PUMCH tumor 195"
+        },
+        {
+          "accession": "GSM8953117",
+          "title": "PUMCH tumor 112"
+        },
+        {
+          "accession": "GSM8953237",
+          "title": "NDTH tumor 28"
+        },
+        {
+          "accession": "GSM8953254",
+          "title": "NDTH tumor 45"
+        },
+        {
+          "accession": "GSM8953220",
+          "title": "NDTH tumor 11"
+        },
+        {
+          "accession": "GSM8953042",
+          "title": "PUMCH tumor 37"
+        },
+        {
+          "accession": "GSM8953125",
+          "title": "PUMCH tumor 120"
+        },
+        {
+          "accession": "GSM8953137",
+          "title": "PUMCH tumor 132"
+        },
+        {
+          "accession": "GSM8953054",
+          "title": "PUMCH tumor 49"
+        },
+        {
+          "accession": "GSM8953008",
+          "title": "PUMCH tumor 3"
+        },
+        {
+          "accession": "GSM8953091",
+          "title": "PUMCH tumor 86"
+        },
+        {
+          "accession": "GSM8953174",
+          "title": "PUMCH tumor 169"
+        },
+        {
+          "accession": "GSM8953071",
+          "title": "PUMCH tumor 66"
+        },
+        {
+          "accession": "GSM8953283",
+          "title": "NDTH tumor 74"
+        },
+        {
+          "accession": "GSM8953154",
+          "title": "PUMCH tumor 149"
+        },
+        {
+          "accession": "GSM8953240",
+          "title": "NDTH tumor 31"
+        },
+        {
+          "accession": "GSM8953028",
+          "title": "PUMCH tumor 23"
+        },
+        {
+          "accession": "GSM8953257",
+          "title": "NDTH tumor 48"
+        },
+        {
+          "accession": "GSM8953011",
+          "title": "PUMCH tumor 6"
+        },
+        {
+          "accession": "GSM8953074",
+          "title": "PUMCH tumor 69"
+        },
+        {
+          "accession": "GSM8953157",
+          "title": "PUMCH tumor 152"
+        },
+        {
+          "accession": "GSM8953094",
+          "title": "PUMCH tumor 89"
+        },
+        {
+          "accession": "GSM8953243",
+          "title": "NDTH tumor 34"
+        },
+        {
+          "accession": "GSM8953160",
+          "title": "PUMCH tumor 155"
+        },
+        {
+          "accession": "GSM8953197",
+          "title": "PUMCH tumor 192"
+        },
+        {
+          "accession": "GSM8953280",
+          "title": "NDTH tumor 71"
+        },
+        {
+          "accession": "GSM8953114",
+          "title": "PUMCH tumor 109"
+        },
+        {
+          "accession": "GSM8953031",
+          "title": "PUMCH tumor 26"
+        },
+        {
+          "accession": "GSM8953260",
+          "title": "NDTH tumor 51"
+        },
+        {
+          "accession": "GSM8953177",
+          "title": "PUMCH tumor 172"
+        },
+        {
+          "accession": "GSM8953217",
+          "title": "NDTH tumor 8"
+        },
+        {
+          "accession": "GSM8953014",
+          "title": "PUMCH tumor 9"
+        },
+        {
+          "accession": "GSM8953134",
+          "title": "PUMCH tumor 129"
+        },
+        {
+          "accession": "GSM8953097",
+          "title": "PUMCH tumor 92"
+        },
+        {
+          "accession": "GSM8953263",
+          "title": "NDTH tumor 54"
+        },
+        {
+          "accession": "GSM8953077",
+          "title": "PUMCH tumor 72"
+        },
+        {
+          "accession": "GSM8953051",
+          "title": "PUMCH tumor 46"
+        },
+        {
+          "accession": "GSM8953180",
+          "title": "PUMCH tumor 175"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 292,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE295nnn/GSE295570/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1255194"
+    },
+    "200235829": {
+      "uid": "200235829",
+      "accession": "GSE235829",
+      "gds": "",
+      "title": "Transcriptomic effect of LDOC1 and H2Bub1 in NSCLC",
+      "summary": "Despite declining incidence and improved survival rate, lung cancer therapeutic outcomes remain unsatisfactory and still is a leading cause of cancer death. Metastasis and treatment resistance hampers the survival of lung cancer patients. Lung adenocarcinoma (LUAD) is the main subtype of lung cancer. Our studies showed that LDOC1 strongly inhibits human LUAD A549 cells invasiveness and LDOC1 knockdown (KD) sensitized A549 cells to cisplatin. The mechanisms have not been fully elucidated.Coimmunoprecipitation-western blot and confocal microscopic analysis demonstrated the interaction between LDOC1 and the E3 ubiquitin ligase RNF40. RNF40 and its paralog RNF20 forms a heterodimer to monoubiquitylate histone H2B on lysine 120. H2B monoubiquitination (H2Bub1) is a prominent epigenetic mark involved in a variety of cellular processes mainly by regulating the transcription of specific gene sets. Our results showed that LDOC1 negatively regulates H2Bub1 in cell lines and specimens of LUAD. The regulatory mechanism may involve the proteasome degradation of H2B and nuclear translocation of RNF40 mediated by LDOC1. Microarray analysis revealed LDOC1 KD caused a global change in gene expression. SLC7A11, which encodes a cystine-glutamate antiporter, is a key component of ferroptosis epigenetically regulated by H2Bub1 and is significantly upregulated in LDOC1-deficient A549 cells, supporting that the increased H2Bub1 level is the cause of transcriptome reprogram triggered by LDOC1 KD. The IPA results and GEPIA database suggested nine genes upregulated by LDOC1 KD were lethal metastasis gene (LM) candidates with their high expression is associated with shorter overall survival of LUAD patients. Genes involved in inhibition of idiopathic pulmonary fibrosis signaling and upregulated in LDOC1 KD cells will be considered as cisplatin-responsive (CS) gene candidates regulated by LDOC1/H2Bub1 axis.We hypothesized that LDOC1 epigenetically affects tumor metastasis and chemotherapy efficacy of LUAD via regulation of H2Bub1. We aimed to meta-analysis the gene expression array data and chromatin immunoprecipitation (ChIP)-sequencing data to identify lethal-metastasis (LM) and cisplatin-responsive (CR) genes that regulated by LDOC1/H2Bub1 axis in LUAD.",
+      "gpl": "23159",
+      "gse": "235829",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/06",
+      "suppfile": "CEL",
+      "samples": [
+        {
+          "accession": "GSM7510205",
+          "title": "A549-shLDOC1 (1)"
+        },
+        {
+          "accession": "GSM7510208",
+          "title": "A549-shLDOC1-H2BK120R (2)"
+        },
+        {
+          "accession": "GSM7510203",
+          "title": "A549-shCtrl (1)"
+        },
+        {
+          "accession": "GSM7510206",
+          "title": "A549-shLDOC1 (2)"
+        },
+        {
+          "accession": "GSM7510209",
+          "title": "A549-shLDOC1-V (1)"
+        },
+        {
+          "accession": "GSM7510204",
+          "title": "A549-shCtrl (2)"
+        },
+        {
+          "accession": "GSM7510207",
+          "title": "A549-shLDOC1-H2BK120R (1)"
+        },
+        {
+          "accession": "GSM7510210",
+          "title": "A549-shLDOC1-V (2)"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 8,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41484780"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE235nnn/GSE235829/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA987682"
+    },
+    "200295133": {
+      "uid": "200295133",
+      "accession": "GSE295133",
+      "gds": "",
+      "title": "Characterization of resistance to the KRAS inhibitor sotorasib in KRASG12C-positive non-small cell lung cancer (NSCLC) cells",
+      "summary": "Inhibitors of KRAS show clinical efficacy for non\u2013small cell lung cancer (NSCLC) positive for the G12C mutation of KRAS, but primary and acquired resistance to these drugs remains a major clinical problem. Activation of EGFR signaling via the MAPK pathway is a key mechanism of such resistance. We used expression data to understand the gene expression profile and identified distinct charactersitics on resistance cells.",
+      "gpl": "23159",
+      "gse": "295133",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/03",
+      "suppfile": "CEL, CHP",
+      "samples": [
+        {
+          "accession": "GSM8942669",
+          "title": "H2122_AR30_rep1"
+        },
+        {
+          "accession": "GSM8942667",
+          "title": "H2122_AR14_rep1"
+        },
+        {
+          "accession": "GSM8942670",
+          "title": "H2122_AR30_rep2"
+        },
+        {
+          "accession": "GSM8942665",
+          "title": "H2122_rep1"
+        },
+        {
+          "accession": "GSM8942668",
+          "title": "H2122_AR14_rep2"
+        },
+        {
+          "accession": "GSM8942666",
+          "title": "H2122_rep2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE295nnn/GSE295133/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA1253596"
+    },
+    "200319594": {
+      "uid": "200319594",
+      "accession": "GSE319594",
+      "gds": "",
+      "title": "A Proteostasis Checkpoint Governs EGFR Stability and Cell Fitness, Defined by an lncRNA",
+      "summary": "EGFR RNA immunoprecipitation (RIP) followed by RNA profiling in EGFR wild-type (WT) and EGFR knockout (KO) cells.",
+      "gpl": "16956",
+      "gse": "319594",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/02",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9520810",
+          "title": "EGFR WT Replicate 1"
+        },
+        {
+          "accession": "GSM9520809",
+          "title": "EGFR KO Replicate 2"
+        },
+        {
+          "accession": "GSM9520811",
+          "title": "EGFR WT Replicate 2"
+        },
+        {
+          "accession": "GSM9520808",
+          "title": "EGFR KO Replicate 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 4,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE319nnn/GSE319594/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1424551"
+    },
+    "200293576": {
+      "uid": "200293576",
+      "accession": "GSE293576",
+      "gds": "",
+      "title": "Partial truncation of the C-terminal domain of PTCH1 in cancer promotes tumorigenesis by non-canonical activation of GLI transcriptional activity.",
+      "summary": "Loss of function mutations of the Hedgehog receptor PTCH1 are oncogenic drivers in some skin and brain cancers. We recently reported mutations in exons encoding the C-terminal tail of PTCH1 in colon cancer, which result in premature truncation but do not impair canonical Hedgehog signalling. In this study, we show that colon cancer cells engineered by CRISPR/Cas9 to express endogenous truncated PTCH1 have enhanced proliferation, colony formation, anchorage-independent growth and form larger tumours in vivo than isogenic cells expressing wild-type PTCH1. Analysis of the mechanisms underlying this growth advantage revealed profound transcriptional changes and unexpectedly, upregulation of GLI1 and GLI2 by a non-canonical route that proved to be necessary for the proliferative advantage. Furthermore, we found that truncation of PTCH1 C-tail upregulated several cancer-related pathways, including EGFR and several EGFR ligands and led to enhanced GLI-dependent PI3K activation, which exerted a positive feedback regulation on GLI expression and activity. Accordingly, PTCH1 mutant cells were highly sensitive to PI3K and GLI inhibitors and were only partially sensitive to EGFR and MEK inhibitors. Altogether, these findings reveal that PTCH1 C-tail truncating mutations promote colon cancer tumorigenesis through a non-canonical GLI-PI3K positive loop.",
+      "gpl": "24676",
+      "gse": "293576",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/28",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8885760",
+          "title": "C15 clone repeat 3"
+        },
+        {
+          "accession": "GSM8885757",
+          "title": "C9 clone repeat 3"
+        },
+        {
+          "accession": "GSM8885754",
+          "title": "Scrambled gRNA cells repeat 3"
+        },
+        {
+          "accession": "GSM8885752",
+          "title": "Scrambled gRNA cells repeat 1"
+        },
+        {
+          "accession": "GSM8885758",
+          "title": "C15 clone repeat 1"
+        },
+        {
+          "accession": "GSM8885755",
+          "title": "C9 clone repeat 1"
+        },
+        {
+          "accession": "GSM8885753",
+          "title": "Scrambled gRNA cells repeat 2"
+        },
+        {
+          "accession": "GSM8885756",
+          "title": "C9 clone repeat 2"
+        },
+        {
+          "accession": "GSM8885759",
+          "title": "C15 clone repeat 2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 9,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41748949"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE293nnn/GSE293576/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1245284"
+    },
+    "200320026": {
+      "uid": "200320026",
+      "accession": "GSE320026",
+      "gds": "",
+      "title": "A Proteostasis Checkpoint Governs EGFR Stability and Cell Fitness, Defined by an lncRNA [RNA-seq]",
+      "summary": "The protein abundance of receptor tyrosine kinases such as EGFR is actively maintained under basal conditions by mechanisms that are distinct from ligand-induced signaling and degradation, yet the molecular basis of this regulation remains poorly understood. Here, we identify the long noncoding RNA ERBBride as a critical regulator of EGFR proteostasis. ERBBride binds the EGFR intracellular domain and prevents K48-linked ubiquitination and proteasomal degradation via a UBAP2L-PSMD1 axis. Loss of ERBBride triggers rapid EGFR degradation, robustly reversed by proteasome inhibition, establishing ERBBride as a determinant of receptor stability. This regulation occurs across diverse cancer contexts, irrespective of EGFR mutation, demonstrating mutation-agnostic control of EGFR proteostasis. Despite preserved or even enhanced canonical EGFR signaling outputs, ERBBride depletion selectively impairs EGFR-driven cellular proliferation, including in EGFR-expressing models with oncogenic KRAS backgrounds, revealing that EGFR abundance sustains cell fitness independently of acute canonical signaling. Both genetic depletion and steric-blocking antisense oligonucleotides targeting the ERBBride-EGFR interface reduce tumor growth, providing mechanistic validation and potential therapeutic modulation. Together, these findings define an lncRNA-governed proteostasis checkpoint that controls EGFR stability and cellular fitness, uncovering a previously unappreciated layer of receptor regulation with broad implications for cancer biology and therapy.",
+      "gpl": "24676",
+      "gse": "320026",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/27",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9531948",
+          "title": "MDA-MB231 cells, siCTRL, biol rep 2"
+        },
+        {
+          "accession": "GSM9531951",
+          "title": "MDA-MB231 cells, ERBBride-targeting siRNA-1, biol rep 2"
+        },
+        {
+          "accession": "GSM9531947",
+          "title": "MDA-MB231 cells, siCTRL, biol rep 1"
+        },
+        {
+          "accession": "GSM9531950",
+          "title": "MDA-MB231 cells, ERBBride-targeting siRNA-1, biol rep 1"
+        },
+        {
+          "accession": "GSM9531949",
+          "title": "MDA-MB231 cells, siCTRL, biol rep 3"
+        },
+        {
+          "accession": "GSM9531952",
+          "title": "MDA-MB231 cells, ERBBride-targeting siRNA-1, biol rep 3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE320nnn/GSE320026/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1426010"
+    },
+    "200310335": {
+      "uid": "200310335",
+      "accession": "GSE310335",
+      "gds": "",
+      "title": "Early fibrotic niches establish tumour-permissive microenvironments",
+      "summary": "Pathologic transformation represents a critical yet poorly defined window during which mutant epithelial stem cells actively construct the microenvironment that enables tumour initiation. Here, using integrated single-cell, spatial, and functional analyses, we define the earliest multicellular events that license this transition following oncogenic activation in the lung. KrasG12D-mutant alveolar type II cells rapidly adopt regenerative-like states that act as signalling hubs, orchestrating coordinated stromal and immune reprogramming while enhancing epithelial plasticity. Through secretion of Amphiregulin (Areg), mutant epithelial cells activate EGFR signalling in adjacent fibroblasts, inducing a fibrotic, injury-like programme. Reprogrammed fibroblasts, in turn, expand and reprogramme alveolar macrophages, amplifying inflammatory signalling and reinforcing epithelial plasticity. These reciprocal interactions establish a self-sustaining epithelial\u2013stromal\u2013immune circuit that generates a tumour-permissive niche prior to malignant outgrowth. Disruption of the Areg\u2013EGFR axis prevents early niche formation and abrogates tumour initiation. Conservation of this programme in KRASG12D-inducible human alveolar organoids and early-stage lung adenocarcinoma tissues identifies epithelial\u2013microenvironment communication as a therapeutically actionable vulnerability and suggests that intercepting niche formation may prevent progression to treatment-resistant disease.",
+      "gpl": "24676",
+      "gse": "310335",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/25",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM9294144",
+          "title": "KrasG12D-transduced organoids S53"
+        },
+        {
+          "accession": "GSM9294147",
+          "title": "KrasG12D-transduced organoids S56"
+        },
+        {
+          "accession": "GSM9294138",
+          "title": "Control organoids S51"
+        },
+        {
+          "accession": "GSM9294136",
+          "title": "Control organoids S49"
+        },
+        {
+          "accession": "GSM9294141",
+          "title": "Control organoids S18"
+        },
+        {
+          "accession": "GSM9294139",
+          "title": "Control organoids S52"
+        },
+        {
+          "accession": "GSM9294142",
+          "title": "Control organoids S19"
+        },
+        {
+          "accession": "GSM9294150",
+          "title": "KrasG12D-transduced organoids S23"
+        },
+        {
+          "accession": "GSM9294137",
+          "title": "Control organoids S50"
+        },
+        {
+          "accession": "GSM9294145",
+          "title": "KrasG12D-transduced organoids S54"
+        },
+        {
+          "accession": "GSM9294148",
+          "title": "KrasG12D-transduced organoids S21"
+        },
+        {
+          "accession": "GSM9294151",
+          "title": "KrasG12D-transduced organoids S24"
+        },
+        {
+          "accession": "GSM9294149",
+          "title": "KrasG12D-transduced organoids S22"
+        },
+        {
+          "accession": "GSM9294146",
+          "title": "KrasG12D-transduced organoids S55"
+        },
+        {
+          "accession": "GSM9294140",
+          "title": "Control organoids S17"
+        },
+        {
+          "accession": "GSM9294143",
+          "title": "Control organoids S20"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 16,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE310nnn/GSE310335/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1365773"
+    },
+    "200302469": {
+      "uid": "200302469",
+      "accession": "GSE302469",
+      "gds": "",
+      "title": "Differential Transcriptomic Modulation by Histone Deacetylase Inhibitor SAHA in LUAD and LUSC",
+      "summary": "Background: Histone deacetylases (HDACs) drive non-small-cell lung cancer (NSCLC) progression, yet HDAC inhibitor (HDACi) responses vary by tumor subtype. We compared the pan-HDAC inhibitor SAHA (vorinostat) in two NSCLC models-HER2-mutant lung adenocarcinoma (NCI-H1299; TP53del, NRASQ61K) and EGFR/PI3K-driven squamous carcinoma (NCI-H1703; PDGFRAamp, PIK3CAE542K)-to uncover lineage-specific mechanisms. Methods: Cells were treated with SAHA (10 \u00b5M, 24 h), a clinically relevant dose yielding ~1 \u00b5M free drug in plasma. Strand-specific RNA-seq was aligned to GRCh38.p13 and analyzed with edgeR and DESeq2 (FDR < 0.05, |Log\u2082FC|\u2265 1). Pathway, protein-interaction, apoptosis (Annexin V/PI), and migration (scratch, trans-well + mitomycin C) assays complemented transcriptomics. Clinical relevance was assessed by correlating SAHA-regulated genes with disease-free survival in TCGA-LUAD and TCGA-LUSC via GEPIA2. Results: SAHA altered 1098 genes in H1299 and 1532 in H1703, with only 437 shared. In H1299, SAHA induced EMT and MAPK-feedback genes while repressing interferon/apoptosis pathways. In H1703, SAHA activated complement/ECM remodeling and suppressed cell-cycle regulators. Class II HDACs (HDAC4/6) were downregulated only in H1703. Functionally, H1703 exhibited greater apoptosis; H1299 showed stronger migration inhibition. SAHA-reversed gene signatures (e.g., HMMR, PLK1 in LUAD; PAPPA, SAMD11 in LUSC) were significantly associated with poor disease-free survival, defining HDAC9-HMMR/PLK1 and HDAC4/6-PAPPA/SAMD11 axes. Conclusions: SAHA elicits distinct subtype-specific transcriptional and phenotypic effects in NSCLC. These findings highlight the importance of genetic context in HDACi therapy and support tailored combinations-such as SAHA with MAPK inhibitors in LUAD or HDAC4/6-targeted approaches in LUSC-and the use of SAHA-modulated biomarkers for patient stratification.",
+      "gpl": "24676",
+      "gse": "302469",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/25",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9104595",
+          "title": "H1703 cells, SAHA, Repeat2"
+        },
+        {
+          "accession": "GSM9104592",
+          "title": "H1703 cells, Control, Repeat2"
+        },
+        {
+          "accession": "GSM9104589",
+          "title": "H1299 cells, SAHA, Repeat2"
+        },
+        {
+          "accession": "GSM9104586",
+          "title": "H1299 cells, Control, Repeat2"
+        },
+        {
+          "accession": "GSM9104593",
+          "title": "H1703 cells, Control, Repeat3"
+        },
+        {
+          "accession": "GSM9104590",
+          "title": "H1299 cells, SAHA, Repeat3"
+        },
+        {
+          "accession": "GSM9104596",
+          "title": "H1703 cells, SAHA, Repeat3"
+        },
+        {
+          "accession": "GSM9104587",
+          "title": "H1299 cells, Control, Repeat3"
+        },
+        {
+          "accession": "GSM9104588",
+          "title": "H1299 cells, SAHA, Repeat1"
+        },
+        {
+          "accession": "GSM9104585",
+          "title": "H1299 cells, Control, Repeat1"
+        },
+        {
+          "accession": "GSM9104591",
+          "title": "H1703 cells, Control, Repeat1"
+        },
+        {
+          "accession": "GSM9104594",
+          "title": "H1703 cells, SAHA, Repeat1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41593801"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE302nnn/GSE302469/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1291043"
+    },
+    "200316244": {
+      "uid": "200316244",
+      "accession": "GSE316244",
+      "gds": "",
+      "title": "Early fibrotic niches establish tumour-permissive microenvironments [Experiment 3]",
+      "summary": "Pathologic transformation represents a pivotal yet poorly defined window during which early alterations in epithelial stem cells remodel their surrounding niche to prime tumour initiation. Here, we integrate single-cell, spatial, and functional analyses to map the dynamics of this early multicellular reorganisation. We show that KrasG12D-mutant alveolar type II cells undergo an early reprogramming transition that transforms them into signalling hubs, with the Amphiregulin (Areg)-EGFR axis emerging as a central driver of cross-compartmental cooperation. Mutant epithelial cells secrete Areg to activate EGFR in adjacent fibroblasts, eliciting a regenerative-like fibrotic programme. These reprogrammed fibroblasts, in turn, reshape the immune landscape by expanding and reprogramming alveolar macrophages, amplifying inflammatory signalling, immune recruitment, and epithelial plasticity. Together, these interactions establish a self-reinforcing multicellular circuit that generates and maintains a tumour permissive niche. Disrupting that circuit through genetic and pharmacological perturbation of the Areg-EGFR axis prevents both early niche cell reprogramming and tumour formation. Findings from KRASG12D-inducible human alveolar organoids and early-stage lung adenocarcinoma tissues confirm conservation of these interactions, identifying early mutant epithelial-stromal crosstalk as a targetable step in pathologic transformation with potential to avert establishment of treatment-resistant disease.",
+      "gpl": "24247",
+      "gse": "316244",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/24",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM9447780",
+          "title": "Expt3_Hom_niche"
+        },
+        {
+          "accession": "GSM9447782",
+          "title": "Expt3_Hom_RFP"
+        },
+        {
+          "accession": "GSM9447779",
+          "title": "Expt3_Het_niche"
+        },
+        {
+          "accession": "GSM9447781",
+          "title": "Expt3_Het_RFP"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 4,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE316nnn/GSE316244/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1401859"
+    },
+    "200316243": {
+      "uid": "200316243",
+      "accession": "GSE316243",
+      "gds": "",
+      "title": "Early fibrotic niches establish tumour-permissive microenvironments [Experiment 2]",
+      "summary": "Pathologic transformation represents a pivotal yet poorly defined window during which early alterations in epithelial stem cells remodel their surrounding niche to prime tumour initiation. Here, we integrate single-cell, spatial, and functional analyses to map the dynamics of this early multicellular reorganisation. We show that KrasG12D-mutant alveolar type II cells undergo an early reprogramming transition that transforms them into signalling hubs, with the Amphiregulin (Areg)-EGFR axis emerging as a central driver of cross-compartmental cooperation. Mutant epithelial cells secrete Areg to activate EGFR in adjacent fibroblasts, eliciting a regenerative-like fibrotic programme. These reprogrammed fibroblasts, in turn, reshape the immune landscape by expanding and reprogramming alveolar macrophages, amplifying inflammatory signalling, immune recruitment, and epithelial plasticity. Together, these interactions establish a self-reinforcing multicellular circuit that generates and maintains a tumour permissive niche. Disrupting that circuit through genetic and pharmacological perturbation of the Areg-EGFR axis prevents both early niche cell reprogramming and tumour formation. Findings from KRASG12D-inducible human alveolar organoids and early-stage lung adenocarcinoma tissues confirm conservation of these interactions, identifying early mutant epithelial-stromal crosstalk as a targetable step in pathologic transformation with potential to avert establishment of treatment-resistant disease.",
+      "gpl": "24247",
+      "gse": "316243",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/24",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM9447778",
+          "title": "Expt2_Red2Kras_niche"
+        },
+        {
+          "accession": "GSM9447777",
+          "title": "Expt2_Confetti_niche"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE316nnn/GSE316243/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1401854"
+    },
+    "200316241": {
+      "uid": "200316241",
+      "accession": "GSE316241",
+      "gds": "",
+      "title": "Early fibrotic niches establish tumour-permissive microenvironments [Experiment 1]",
+      "summary": "Pathologic transformation represents a pivotal yet poorly defined window during which early alterations in epithelial stem cells remodel their surrounding niche to prime tumour initiation. Here, we integrate single-cell, spatial, and functional analyses to map the dynamics of this early multicellular reorganisation. We show that KrasG12D-mutant alveolar type II cells undergo an early reprogramming transition that transforms them into signalling hubs, with the Amphiregulin (Areg)-EGFR axis emerging as a central driver of cross-compartmental cooperation. Mutant epithelial cells secrete Areg to activate EGFR in adjacent fibroblasts, eliciting a regenerative-like fibrotic programme. These reprogrammed fibroblasts, in turn, reshape the immune landscape by expanding and reprogramming alveolar macrophages, amplifying inflammatory signalling, immune recruitment, and epithelial plasticity. Together, these interactions establish a self-reinforcing multicellular circuit that generates and maintains a tumour permissive niche. Disrupting that circuit through genetic and pharmacological perturbation of the Areg-EGFR axis prevents both early niche cell reprogramming and tumour formation. Findings from KRASG12D-inducible human alveolar organoids and early-stage lung adenocarcinoma tissues confirm conservation of these interactions, identifying early mutant epithelial-stromal crosstalk as a targetable step in pathologic transformation with potential to avert establishment of treatment-resistant disease.",
+      "gpl": "34328",
+      "gse": "316241",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/24",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM9447764",
+          "title": "Expt1_Red2Kras_mesenchyme"
+        },
+        {
+          "accession": "GSM9447763",
+          "title": "Expt1_Confetti_mesenchyme"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE316nnn/GSE316241/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1401861"
+    },
+    "200291056": {
+      "uid": "200291056",
+      "accession": "GSE291056",
+      "gds": "",
+      "title": "Hh and EGFR-Ras signaling promote distinct steps of tumor progression in the Drosophila follicle epithelium",
+      "summary": "Controlled signaling activity is vital for normal tissue homeostasis and oncogenic signaling activation facilitates tumorigenesis. Here we combine single-cell transcriptomics with in-depth genetic and imaging analysis to investigate the role of the EGFR-Ras and Hedgehog signaling pathways in homeostasis of the Drosophila follicle stem cell lineage. We find that Hedgehog signaling simultaneously promotes an undifferentiated state and induces differentiation via activation of the epithelial-mesenchymal-transition associated transcription factor Zfh1. Overactivation of Hedgehog signaling generates a mixed transcriptional state comparable to partial epithelial-mesenchymal-transition. EGFR-Ras overactivation induces cell cycle defects by activating the transcription factors Pointed and E2f1 and impedes differentiation. Overactivation of both pathways blocks differentiation and induces tumor-like growth where follicle cells exhibit a loss of tissue architecture, sustained proliferation and a reduced lifespan of the host. These findings provide new insight into how signaling pathways converge at the transcriptional level to prevent malignant cell behavior.",
+      "gpl": "17275",
+      "gse": "291056",
+      "taxon": "Drosophila melanogaster",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/18",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM8828137",
+          "title": "ovarian cells, Hh, replicate 1"
+        },
+        {
+          "accession": "GSM8828140",
+          "title": "ovarian cells, yki3SA, replicate 2"
+        },
+        {
+          "accession": "GSM8828129",
+          "title": "ovarian cells, armS10, replicate 1"
+        },
+        {
+          "accession": "GSM8828126",
+          "title": "ovarian cells, w1118, replicate 2"
+        },
+        {
+          "accession": "GSM8828138",
+          "title": "ovarian cells, Hh, replicate 2"
+        },
+        {
+          "accession": "GSM8828135",
+          "title": "ovarian cells, hepCA, replicate 1"
+        },
+        {
+          "accession": "GSM8828132",
+          "title": "ovarian cells, Ltop4.4, replicate 2"
+        },
+        {
+          "accession": "GSM8828130",
+          "title": "ovarian cells, armS10, replicate 2"
+        },
+        {
+          "accession": "GSM8828127",
+          "title": "ovarian cells, w1118, replicate 3"
+        },
+        {
+          "accession": "GSM8828133",
+          "title": "ovarian cells, RasV12, replicate 1"
+        },
+        {
+          "accession": "GSM8828139",
+          "title": "ovarian cells, yki3SA, replicate 1"
+        },
+        {
+          "accession": "GSM8828136",
+          "title": "ovarian cells, hepCA, replicate 2"
+        },
+        {
+          "accession": "GSM8828128",
+          "title": "ovarian cells, w1118, replicate 4"
+        },
+        {
+          "accession": "GSM8828125",
+          "title": "ovarian cells, w1118, replicate 1"
+        },
+        {
+          "accession": "GSM8828134",
+          "title": "ovarian cells, RasV12, replicate 2"
+        },
+        {
+          "accession": "GSM8828131",
+          "title": "ovarian cells, Ltop4.4, replicate 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 16,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE291nnn/GSE291056/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1231470"
+    },
+    "200290241": {
+      "uid": "200290241",
+      "accession": "GSE290241",
+      "gds": "",
+      "title": "Hh and EGFR-Ras signaling promote distinct steps of tumor progression in the Drosophila follicle epithelium",
+      "summary": "Controlled signaling activity is vital for normal tissue homeostasis and oncogenic signaling activation facilitates tumorigenesis. Here we combine single-cell transcriptomics with in-depth genetic and imaging analysis to investigate the role of the EGFR-Ras and Hedgehog signaling pathways in homeostasis of the Drosophila follicle stem cell lineage. We find that Hedgehog signaling simultaneously promotes an undifferentiated state and induces differentiation via activation of the epithelial-mesenchymal-transition associated transcription factor Zfh1. Overactivation of Hedgehog signaling generates a mixed transcriptional state comparable to partial epithelial-mesenchymal-transition. EGFR-Ras overactivation induces cell cycle defects by activating the transcription factors Pointed and E2f1 and impedes differentiation. Overactivation of both pathways blocks differentiation and induces tumor-like growth where follicle cells exhibit a loss of tissue architecture, sustained proliferation and a reduced lifespan of the host. These findings provide new insight into how signaling pathways converge at the transcriptional level to prevent malignant cell behavior.",
+      "gpl": "25244",
+      "gse": "290241",
+      "taxon": "Drosophila melanogaster",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/18",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM8809076",
+          "title": "ovarian cells, w1118, replicate 1"
+        },
+        {
+          "accession": "GSM8809079",
+          "title": "ovarian cells, Hh,RasV12, replicate 2"
+        },
+        {
+          "accession": "GSM8809081",
+          "title": "ovarian cells, Hh,Ltop4.4, replicate 2"
+        },
+        {
+          "accession": "GSM8809078",
+          "title": "ovarian cells, Hh,RasV12, replicate 1"
+        },
+        {
+          "accession": "GSM8809077",
+          "title": "ovarian cells, w1118, replicate 2"
+        },
+        {
+          "accession": "GSM8809080",
+          "title": "ovarian cells, Hh,Ltop4.4, replicate 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE290nnn/GSE290241/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1226640"
+    }
+  }
+}

@@ -24,4 +24,20 @@ describe('OrganNavigator', () => {
     fireEvent.click(heartBtn);
     expect(mockOnSelect).toHaveBeenCalledWith('heart');
   });
+
+  it('renders explorer view options when provided', () => {
+    const mockOnSelect = jest.fn();
+    const mockOnSelectView = jest.fn();
+    render(
+      <OrganNavigator
+        selectedOrgan="liver"
+        onSelectOrgan={mockOnSelect}
+        selectedExplorerView="genomic-map"
+        onSelectExplorerView={mockOnSelectView}
+      />
+    );
+
+    fireEvent.click(screen.getByText('Discovery Graph'));
+    expect(mockOnSelectView).toHaveBeenCalledWith('discovery-graph');
+  });
 });

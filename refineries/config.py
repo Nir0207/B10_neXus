@@ -17,8 +17,21 @@ load_dotenv()
 # In Docker the data lake is mounted at /data_lake; locally it lives under
 # the repository root.  Either env var or the default relative path is used.
 _REPO_ROOT: Path = Path(__file__).resolve().parents[1]
-_DEFAULT_RAW_ROOT: Path = _REPO_ROOT / "Lake" / "data_lake" / "raw"
-_DEFAULT_SILVER: Path = _REPO_ROOT / "Lake" / "data_lake" / "silver"
+
+
+def _existing_data_lake_root() -> Path:
+    for candidate in (
+        _REPO_ROOT / "Lake" / "data_lake",
+        _REPO_ROOT / "lake" / "data_lake",
+    ):
+        if candidate.exists():
+            return candidate
+    return _REPO_ROOT / "Lake" / "data_lake"
+
+
+_DATA_LAKE_ROOT: Path = _existing_data_lake_root()
+_DEFAULT_RAW_ROOT: Path = _DATA_LAKE_ROOT / "raw"
+_DEFAULT_SILVER: Path = _DATA_LAKE_ROOT / "silver"
 
 RAW_ROOT_DIR: Path = Path(os.getenv("RAW_ROOT_DIR", str(_DEFAULT_RAW_ROOT)))
 RAW_UNIPROT_DIR: Path = RAW_ROOT_DIR / "uniprot"

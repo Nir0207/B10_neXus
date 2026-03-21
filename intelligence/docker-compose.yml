@@ -13,7 +13,7 @@ services:
       PG_DSN: "postgresql://${POSTGRES_USER:-bionexus_user}:${POSTGRES_PASSWORD:-bionexus_dev_password}@postgres:5432/${POSTGRES_DB:-bionexus}"
       OLLAMA_HOST: "http://ollama:11434"
       OLLAMA_MODEL: "${OLLAMA_MODEL:-qwen2.5:3b}"
-      OLLAMA_TIMEOUT_SECONDS: "${OLLAMA_TIMEOUT_SECONDS:-120}"
+      OLLAMA_TIMEOUT_SECONDS: "${OLLAMA_TIMEOUT_SECONDS:-20}"
       MCP_HOST: "0.0.0.0"
       MCP_PORT: "8080"
       MCP_TRANSPORT: "sse"
@@ -24,7 +24,7 @@ services:
     volumes:
       - ../Lake/data_lake:/data_lake:ro
     ports:
-      - "8080:8080"
+      - "8081:8080"
     depends_on:
       postgres-probe:
         condition: service_completed_successfully

@@ -1,43 +1,4 @@
 uniprot_id,reactome_id,pathway_name
-P38398,R-HSA-1221632,Meiotic synapsis
-P38398,R-HSA-3108214,SUMOylation of DNA damage response and repair proteins
-P38398,R-HSA-5685938,HDR through Single Strand Annealing (SSA)
-P38398,R-HSA-5685942,HDR through Homologous Recombination (HRR)
-P38398,R-HSA-5689901,Metalloprotease DUBs
-P38398,R-HSA-5693554,Resolution of D-loop Structures through Synthesis-Dependent Strand Annealing (SDSA)
-P38398,R-HSA-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
-P38398,R-HSA-5693568,Resolution of D-loop Structures through Holliday Junction Intermediates
-P38398,R-HSA-5693571,Nonhomologous End-Joining (NHEJ)
-P38398,R-HSA-5693579,Homologous DNA Pairing and Strand Exchange
-P38398,R-HSA-5693607,Processing of DNA double-strand break ends
-P38398,R-HSA-5693616,Presynaptic phase of homologous DNA pairing and strand exchange
-P38398,R-HSA-6796648,TP53 Regulates Transcription of DNA Repair Genes
-P38398,R-HSA-6804756,Regulation of TP53 Activity through Phosphorylation
-P38398,R-HSA-69473,G2/M DNA damage checkpoint
-P38398,R-HSA-8951664,Neddylation
-P38398,R-HSA-8953750,Transcriptional Regulation by E2F6
-P38398,R-HSA-912446,Meiotic recombination
-P38398,R-HSA-9663199,Defective DNA double strand break response due to BRCA1 loss of function
-P38398,R-HSA-9699150,Defective DNA double strand break response due to BARD1 loss of function
-P38398,R-HSA-9701192,Defective homologous recombination repair (HRR) due to BRCA1 loss of function
-P38398,R-HSA-9704331,Defective HDR through Homologous Recombination Repair (HRR) due to PALB2 loss of BRCA1 binding function
-P38398,R-HSA-9704646,Defective HDR through Homologous Recombination Repair (HRR) due to PALB2 loss of BRCA2/RAD51/RAD51C binding function
-P38398,R-HSA-9709570,Impaired BRCA2 binding to RAD51
-P38398,R-HSA-9709603,Impaired BRCA2 binding to PALB2
-P38398,R-HSA-9755511,KEAP1-NFE2L2 pathway
-P38398,R-HSA-9825895,"Regulation of MITF-M-dependent genes involved in DNA replication, damage repair and senescence"
-P48754,R-MMU-3108214,SUMOylation of DNA damage response and repair proteins
-P48754,R-MMU-5685938,HDR through Single Strand Annealing (SSA)
-P48754,R-MMU-5685942,HDR through Homologous Recombination (HRR)
-P48754,R-MMU-5689901,Metalloprotease DUBs
-P48754,R-MMU-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
-P48754,R-MMU-5693568,Resolution of D-loop Structures through Holliday Junction Intermediates
-P48754,R-MMU-5693571,Nonhomologous End-Joining (NHEJ)
-P48754,R-MMU-5693579,Homologous DNA Pairing and Strand Exchange
-P48754,R-MMU-5693607,Processing of DNA double-strand break ends
-P48754,R-MMU-5693616,Presynaptic phase of homologous DNA pairing and strand exchange
-P48754,R-MMU-6804756,Regulation of TP53 Activity through Phosphorylation
-P48754,R-MMU-69473,G2/M DNA damage checkpoint
 O54952,R-RNO-3108214,SUMOylation of DNA damage response and repair proteins
 O54952,R-RNO-5685938,HDR through Single Strand Annealing (SSA)
 O54952,R-RNO-5685942,HDR through Homologous Recombination (HRR)
@@ -114,6 +75,45 @@ P04412,R-DME-8856828,Clathrin-mediated endocytosis
 P04412,R-DME-8863795,Downregulation of ERBB2 signaling
 P04412,R-DME-9018519,Estrogen-dependent gene expression
 P04412,R-DME-9652282,Drug-mediated inhibition of ERBB2 signaling
+P38398,R-HSA-1221632,Meiotic synapsis
+P38398,R-HSA-3108214,SUMOylation of DNA damage response and repair proteins
+P38398,R-HSA-5685938,HDR through Single Strand Annealing (SSA)
+P38398,R-HSA-5685942,HDR through Homologous Recombination (HRR)
+P38398,R-HSA-5689901,Metalloprotease DUBs
+P38398,R-HSA-5693554,Resolution of D-loop Structures through Synthesis-Dependent Strand Annealing (SDSA)
+P38398,R-HSA-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
+P38398,R-HSA-5693568,Resolution of D-loop Structures through Holliday Junction Intermediates
+P38398,R-HSA-5693571,Nonhomologous End-Joining (NHEJ)
+P38398,R-HSA-5693579,Homologous DNA Pairing and Strand Exchange
+P38398,R-HSA-5693607,Processing of DNA double-strand break ends
+P38398,R-HSA-5693616,Presynaptic phase of homologous DNA pairing and strand exchange
+P38398,R-HSA-6796648,TP53 Regulates Transcription of DNA Repair Genes
+P38398,R-HSA-6804756,Regulation of TP53 Activity through Phosphorylation
+P38398,R-HSA-69473,G2/M DNA damage checkpoint
+P38398,R-HSA-8951664,Neddylation
+P38398,R-HSA-8953750,Transcriptional Regulation by E2F6
+P38398,R-HSA-912446,Meiotic recombination
+P38398,R-HSA-9663199,Defective DNA double strand break response due to BRCA1 loss of function
+P38398,R-HSA-9699150,Defective DNA double strand break response due to BARD1 loss of function
+P38398,R-HSA-9701192,Defective homologous recombination repair (HRR) due to BRCA1 loss of function
+P38398,R-HSA-9704331,Defective HDR through Homologous Recombination Repair (HRR) due to PALB2 loss of BRCA1 binding function
+P38398,R-HSA-9704646,Defective HDR through Homologous Recombination Repair (HRR) due to PALB2 loss of BRCA2/RAD51/RAD51C binding function
+P38398,R-HSA-9709570,Impaired BRCA2 binding to RAD51
+P38398,R-HSA-9709603,Impaired BRCA2 binding to PALB2
+P38398,R-HSA-9755511,KEAP1-NFE2L2 pathway
+P38398,R-HSA-9825895,"Regulation of MITF-M-dependent genes involved in DNA replication, damage repair and senescence"
+P48754,R-MMU-3108214,SUMOylation of DNA damage response and repair proteins
+P48754,R-MMU-5685938,HDR through Single Strand Annealing (SSA)
+P48754,R-MMU-5685942,HDR through Homologous Recombination (HRR)
+P48754,R-MMU-5689901,Metalloprotease DUBs
+P48754,R-MMU-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks
+P48754,R-MMU-5693568,Resolution of D-loop Structures through Holliday Junction Intermediates
+P48754,R-MMU-5693571,Nonhomologous End-Joining (NHEJ)
+P48754,R-MMU-5693579,Homologous DNA Pairing and Strand Exchange
+P48754,R-MMU-5693607,Processing of DNA double-strand break ends
+P48754,R-MMU-5693616,Presynaptic phase of homologous DNA pairing and strand exchange
+P48754,R-MMU-6804756,Regulation of TP53 Activity through Phosphorylation
+P48754,R-MMU-69473,G2/M DNA damage checkpoint
 Q01279,R-MMU-1227986,Signaling by ERBB2
 Q01279,R-MMU-1236394,Signaling by ERBB4
 Q01279,R-MMU-1250196,SHC1 events in ERBB2 signaling

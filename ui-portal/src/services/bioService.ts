@@ -19,6 +19,14 @@ export interface TripletData {
   edges: BioEdge[];
 }
 
+export interface GeneDetail {
+  data_source: string;
+  description?: string | null;
+  gene_symbol: string;
+  name: string;
+  uniprot_id: string;
+}
+
 export interface FetchTripletOptions {
   signal?: AbortSignal;
 }
@@ -29,14 +37,24 @@ export const bioService = {
     options?: FetchTripletOptions
   ): Promise<TripletData> => {
     try {
-      // Mocked endpoint shape for the UI Portal (requires mapping in API Gateway)
-      const response = await apiClient.get<TripletData>(`/api/triplets`, {
+      const response = await apiClient.get<TripletData>(`/api/v1/discovery/triplets`, {
         signal: options?.signal,
         params: { organ: organType },
       });
       return response.data;
     } catch (error) {
       console.error(`Error fetching triplets for ${organType}`, error);
+      throw error;
+    }
+  },
+  fetchGene: async (uniprotId: string, options?: FetchTripletOptions): Promise<GeneDetail> => {
+    try {
+      const response = await apiClient.get<GeneDetail>(`/api/v1/genes/${uniprotId}`, {
+        signal: options?.signal,
+      });
+      return response.data;
+    } catch (error) {
+      console.error(`Error fetching gene ${uniprotId}`, error);
       throw error;
     }
   },

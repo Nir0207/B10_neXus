@@ -31,6 +31,7 @@ REQUIRED_NEO4J_CONSTRAINT_DDL: dict[str, str] = {
     "gene_uniprot_id": "CREATE CONSTRAINT gene_uniprot_id IF NOT EXISTS FOR (g:Gene) REQUIRE g.uniprot_id IS UNIQUE",
     "disease_mesh_id": "CREATE CONSTRAINT disease_mesh_id IF NOT EXISTS FOR (d:Disease) REQUIRE d.mesh_id IS UNIQUE",
     "medicine_chembl_id": "CREATE CONSTRAINT medicine_chembl_id IF NOT EXISTS FOR (m:Medicine) REQUIRE m.chembl_id IS UNIQUE",
+    "pathway_reactome_id": "CREATE CONSTRAINT pathway_reactome_id IF NOT EXISTS FOR (p:Pathway) REQUIRE p.reactome_id IS UNIQUE",
 }
 
 REQUIRED_NEO4J_INDEX_DDL: dict[str, str] = {
@@ -216,7 +217,11 @@ def _normalize_uniprot_id(value: Any) -> str:
 
 def _fetch_postgres_uniprot_ids(cursor: Any) -> set[str]:
     # Support either legacy "UniProt_ID" or normalized lowercase "uniprot_id".
-    for query in ("SELECT uniprot_id FROM genes;", 'SELECT "UniProt_ID" FROM genes;'):
+    for query in (
+        "SELECT uniprot_id FROM silver.genes;",
+        "SELECT uniprot_id FROM genes;",
+        'SELECT "UniProt_ID" FROM genes;',
+    ):
         try:
             cursor.execute(query)
             return {

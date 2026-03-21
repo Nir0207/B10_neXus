@@ -1,38 +1,25 @@
-import json
-import re
-import httpx
+from __future__ import annotations
+
 from pathlib import Path
+from typing import Any
+
+from base import BaseGatherer
 
 
-DEFAULT_BASE_DIR = (
-    Path(__file__).resolve().parents[1] / "Lake" / "data_lake" / "raw" / "uniprot"
-)
-
-
-def _safe_file_stem(value: str) -> str:
-    safe = re.sub(r"[^A-Za-z0-9._-]", "_", value.strip()).strip("._")
-    return safe or "unknown"
-
-
-class UniProtGatherer:
-    def __init__(self, base_dir: str | Path | None = None):
-        self.base_dir = Path(base_dir) if base_dir is not None else DEFAULT_BASE_DIR
-        self.base_dir.mkdir(parents=True, exist_ok=True)
+class UniProtGatherer(BaseGatherer):
+    def __init__(self, base_dir: str | Path | None = None) -> None:
+        super().__init__(source_name="uniprot", base_dir=base_dir)
         self.api_url = "https://rest.uniprot.org/uniprotkb/search"
 
-    async def fetch(self, gene_symbol: str):
-        print(f"[UniProt] Fetching data for {gene_symbol}...")
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.get(
-                self.api_url,
-                params={"query": f"gene_exact:{gene_symbol} AND reviewed:true", "format": "json"}
-            )
-            response.raise_for_status()
-            data = response.json()
-            
-            output_file = self.base_dir / f"{_safe_file_stem(gene_symbol)}.json"
-            with open(output_file, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2)
-            
-            print(f"[UniProt] Saved {gene_symbol} data to {output_file}")
-            return data
+    async def fetch(self, gene_symbol: str, *, organism: str = "human") -> dict[str, Any]:
+        payload = await self.request_json(
+            method="GET",
+            url=self.api_url,
+            request_name=f"gene={gene_symbol}",
+            params={
+                "query": f"gene_exact:{gene_symbol} AND reviewed:true",
+                "format": "json",
+            },
+        )
+        self.save_json(stem=gene_symbol, organ=organism, payload=payload)
+        return payload

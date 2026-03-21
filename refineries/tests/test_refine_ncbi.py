@@ -26,41 +26,91 @@ from refine_ncbi import _extract_study, refine_ncbi
 
 class TestExtractStudy:
     def test_uid_preserved(self) -> None:
-        rec = _extract_study("200267911", NCBI_STUB["result"]["200267911"])
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert rec["uid"] == "200267911"
 
     def test_accession_preserved(self) -> None:
-        rec = _extract_study("200267911", NCBI_STUB["result"]["200267911"])
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert rec["accession"] == "GSE267911"
 
     def test_title_preserved(self) -> None:
-        rec = _extract_study("200267911", NCBI_STUB["result"]["200267911"])
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert "KAT2B" in rec["title"]
 
     def test_taxon_preserved(self) -> None:
-        rec = _extract_study("200267911", NCBI_STUB["result"]["200267911"])
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert rec["taxon"] == "Homo sapiens"
 
     def test_sample_count_one_sample(self) -> None:
-        rec = _extract_study("200267911", NCBI_STUB["result"]["200267911"])
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert rec["sample_count"] == 1
 
     def test_sample_count_zero_samples(self) -> None:
-        rec = _extract_study("200307271", NCBI_STUB["result"]["200307271"])
+        rec = _extract_study(
+            "200307271",
+            NCBI_STUB["result"]["200307271"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert rec["sample_count"] == 0
 
     def test_publication_date_preserved(self) -> None:
-        rec = _extract_study("200267911", NCBI_STUB["result"]["200267911"])
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert rec["publication_date"] == "2026/03/18"
 
     def test_platform_preserved(self) -> None:
-        rec = _extract_study("200267911", NCBI_STUB["result"]["200267911"])
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
         assert rec["platform"] == "15433"
 
     def test_missing_fields_default_to_empty_string(self) -> None:
-        rec = _extract_study("999", {})
+        rec = _extract_study("999", {}, gene_symbol="BRCA1", source_file="missing.json")
         assert rec["accession"] == ""
         assert rec["sample_count"] == 0
+
+    def test_gene_symbol_and_source_file_added(self) -> None:
+        rec = _extract_study(
+            "200267911",
+            NCBI_STUB["result"]["200267911"],
+            gene_symbol="BRCA1",
+            source_file="BRCA1_studies.json",
+        )
+        assert rec["gene_symbol"] == "BRCA1"
+        assert rec["source_file"] == "BRCA1_studies.json"
 
 
 # ── refine_ncbi (integration) ─────────────────────────────────────────────────
@@ -95,7 +145,7 @@ class TestRefineNCBI:
 
     def test_required_columns_present(self) -> None:
         df = refine_ncbi(self.raw_dir, self.out_dir, skip_processed=False)
-        required = {"uid", "accession", "title", "taxon", "publication_date", "sample_count"}
+        required = {"uid", "accession", "gene_symbol", "title", "taxon", "publication_date", "sample_count"}
         assert required.issubset(set(df.columns))
 
     def test_multiple_files_all_rows_present(self) -> None:

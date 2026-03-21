@@ -40,12 +40,13 @@ def _write_csvs(tmp: Path) -> dict[str, Path]:
             "gene_synonyms": ["RNF53", ""],
             "annotation_score": [5.0, 5.0],
             "sequence_length": [1863, 1210],
+            "data_source": ["UniProt", "UniProt"],
         }
     ).write_csv(proteins)
 
     pl.DataFrame(
         {
-            "gene_symbol": ["BRCA1", "EGFR"],
+            "hgnc_symbol": ["BRCA1", "EGFR"],
             "uniprot_id": ["P38398", "P00533"],
             "source_file": ["BRCA1.json", "EGFR.json"],
         }
@@ -127,14 +128,14 @@ class TestLoadGenes:
         from load_postgres import load_genes
 
         mock_conn, mock_cur = _mock_pg_conn()
-        load_genes(mock_conn, self.csvs["gene_map"])
+        load_genes(mock_conn, self.csvs["gene_map"], self.csvs["proteins"])
         mock_cur.executemany.assert_called_once()
 
     def test_returns_unique_gene_count(self) -> None:
         from load_postgres import load_genes
 
         mock_conn, mock_cur = _mock_pg_conn()
-        result = load_genes(mock_conn, self.csvs["gene_map"])
+        result = load_genes(mock_conn, self.csvs["gene_map"], self.csvs["proteins"])
         assert result == 2
 
 
@@ -161,8 +162,7 @@ class TestLoadPathways:
 
         mock_conn, mock_cur = _mock_pg_conn()
         load_pathways(mock_conn, self.csvs["reactome"])
-        # Two CREATE TABLE IF NOT EXISTS statements
-        assert mock_cur.execute.call_count == 2
+        assert mock_cur.execute.call_count == 14
 
     def test_returns_pathway_plus_link_count(self) -> None:
         from load_postgres import load_pathways
@@ -201,9 +201,7 @@ class TestNeo4jLoadGenesAndProteins:
         from load_neo4j import (
             _ensure_constraints_tx,
             _load_genes_and_proteins,
-            _merge_encodes_tx,
             _merge_genes_tx,
-            _merge_proteins_tx,
         )
 
         driver, session = _mock_neo4j_driver()
@@ -211,22 +209,21 @@ class TestNeo4jLoadGenesAndProteins:
         callbacks = [c.args[0] for c in session.execute_write.call_args_list]
         assert callbacks == [
             _ensure_constraints_tx,
-            _merge_proteins_tx,
             _merge_genes_tx,
-            _merge_encodes_tx,
         ]
 
-    def test_protein_batch_contains_all_rows(self) -> None:
-        from load_neo4j import _load_genes_and_proteins, _merge_proteins_tx
+    def test_gene_batch_contains_all_rows(self) -> None:
+        from load_neo4j import _load_genes_and_proteins, _merge_genes_tx
 
         driver, session = _mock_neo4j_driver()
         _load_genes_and_proteins(driver, self.csvs["proteins"], self.csvs["gene_map"])
-        protein_call = next(
-            c for c in session.execute_write.call_args_list if c.args[0] == _merge_proteins_tx
+        gene_call = next(
+            c for c in session.execute_write.call_args_list if c.args[0] == _merge_genes_tx
         )
-        rows = protein_call.args[1]
+        rows = gene_call.args[1]
         assert len(rows) == 2
         assert {row["uniprot_id"] for row in rows} == {"P38398", "P00533"}
+        assert {row["hgnc_symbol"] for row in rows} == {"BRCA1", "EGFR"}
 
     def test_gene_batch_contains_unique_symbols(self) -> None:
         from load_neo4j import _load_genes_and_proteins, _merge_genes_tx

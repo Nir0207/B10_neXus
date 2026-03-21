@@ -1,33 +1,30 @@
-import asyncio
-from uniprot import UniProtGatherer
-from opentargets import OpenTargetsGatherer
-from ncbi import NCBIGatherer
+from __future__ import annotations
 
-async def main():
-    print("Starting BioNexus Gatherers...")
-    
-    # Initialize gatherers
-    # Using the project root relative paths so it populates the local Lake correctly.
-    uniprot = UniProtGatherer(base_dir="../Lake/data_lake/raw/uniprot")
-    opentargets = OpenTargetsGatherer(base_dir="../Lake/data_lake/raw/opentargets")
-    ncbi = NCBIGatherer(base_dir="../Lake/data_lake/raw/ncbi")
-    
-    # We will gather a few sample targets to demonstrate functionality
+import asyncio
+import logging
+
+from ncbi import NCBIGatherer
+from opentargets import OpenTargetsGatherer
+from uniprot import UniProtGatherer
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+
+
+async def main() -> None:
+    uniprot = UniProtGatherer()
+    opentargets = OpenTargetsGatherer()
+    ncbi = NCBIGatherer()
+
     sample_genes = ["BRCA1", "EGFR"]
-    
-    print("\n--- Running UniProt Gatherer ---")
+
     for gene in sample_genes:
-        await uniprot.fetch(gene)
-    
-    print("\n--- Running Open Targets Gatherer ---")
-    # Fetch Target-Disease Evidence for Liver Disease (EFO_0000572)
+        await uniprot.fetch(gene, organism="liver")
+
     await opentargets.fetch_liver_evidence("EFO_0000572")
-    
-    print("\n--- Running NCBI Gatherer ---")
+
     for gene in sample_genes:
-        await ncbi.fetch_geo_studies(gene)
-        
-    print("\nDone! Data has been populated into the local Lake.")
+        await ncbi.fetch_geo_studies(gene, organ="liver")
+
 
 if __name__ == "__main__":
     asyncio.run(main())

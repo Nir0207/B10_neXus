@@ -3,8 +3,7 @@ Neo4j Silver-layer loader.
 
 Merges nodes and relationships into the BioNexus knowledge graph:
 
-    (:Gene {hgnc_symbol})  -[:ENCODES]->    (:Protein {uniprot_accession})
-    (:Protein)             -[:INVOLVED_IN]-> (:Pathway  {reactome_id})
+    (:Gene {uniprot_id}) -[:INVOLVED_IN]-> (:Pathway {reactome_id})
 
 All Cypher statements use MERGE for idempotency so re-running the loader
 never creates duplicate nodes.
@@ -24,15 +23,9 @@ logger = logging.getLogger(__name__)
 # ── Cypher templates ─────────────────────────────────────────────────────────
 
 _CREATE_CONSTRAINT_GENE = """
-CREATE CONSTRAINT gene_hgnc_symbol_unique IF NOT EXISTS
+CREATE CONSTRAINT gene_uniprot_id_unique IF NOT EXISTS
 FOR (g:Gene)
-REQUIRE g.hgnc_symbol IS UNIQUE
-"""
-
-_CREATE_CONSTRAINT_PROTEIN = """
-CREATE CONSTRAINT protein_uniprot_accession_unique IF NOT EXISTS
-FOR (p:Protein)
-REQUIRE p.uniprot_accession IS UNIQUE
+REQUIRE g.uniprot_id IS UNIQUE
 """
 
 _CREATE_CONSTRAINT_PATHWAY = """
@@ -41,34 +34,27 @@ FOR (pw:Pathway)
 REQUIRE pw.reactome_id IS UNIQUE
 """
 
-_MERGE_PROTEIN_BATCH = """
-UNWIND $rows AS row
-MERGE (p:Protein {uniprot_accession: row.uniprot_id})
-ON CREATE SET
-    p.name             = row.protein_name,
-    p.uniprot_kb_id    = row.uniprot_kb_id,
-    p.organism         = row.organism,
-    p.sequence_length  = row.sequence_length,
-    p.molecular_weight = row.molecular_weight,
-    p.created_at       = timestamp()
-ON MATCH SET
-    p.name             = row.protein_name,
-    p.sequence_length  = row.sequence_length,
-    p.molecular_weight = row.molecular_weight,
-    p.updated_at       = timestamp()
-"""
-
 _MERGE_GENE_BATCH = """
 UNWIND $rows AS row
-MERGE (g:Gene {hgnc_symbol: row.hgnc_symbol})
-ON CREATE SET g.created_at = timestamp()
-"""
-
-_MERGE_ENCODES_BATCH = """
-UNWIND $rows AS row
-MATCH (g:Gene    {hgnc_symbol: row.hgnc_symbol})
-MATCH (p:Protein {uniprot_accession: row.uniprot_id})
-MERGE (g)-[:ENCODES]->(p)
+MERGE (g:Gene {uniprot_id: row.uniprot_id})
+ON CREATE SET
+    g.symbol           = row.hgnc_symbol,
+    g.name             = row.protein_name,
+    g.uniprot_kb_id    = row.uniprot_kb_id,
+    g.organism         = row.organism,
+    g.sequence_length  = row.sequence_length,
+    g.molecular_weight = row.molecular_weight,
+    g.data_source      = row.data_source,
+    g.created_at       = timestamp()
+ON MATCH SET
+    g.symbol           = row.hgnc_symbol,
+    g.name             = row.protein_name,
+    g.uniprot_kb_id    = row.uniprot_kb_id,
+    g.organism         = row.organism,
+    g.sequence_length  = row.sequence_length,
+    g.molecular_weight = row.molecular_weight,
+    g.data_source      = row.data_source,
+    g.updated_at       = timestamp()
 """
 
 _MERGE_PATHWAY_BATCH = """
@@ -80,9 +66,9 @@ ON MATCH SET  pw.name = row.pathway_name
 
 _MERGE_INVOLVED_IN_BATCH = """
 UNWIND $rows AS row
-MATCH (p:Protein {uniprot_accession: row.uniprot_id})
+MATCH (g:Gene {uniprot_id: row.uniprot_id})
 MATCH (pw:Pathway {reactome_id:       row.reactome_id})
-MERGE (p)-[:INVOLVED_IN]->(pw)
+MERGE (g)-[:INVOLVED_IN]->(pw)
 """
 
 
@@ -90,29 +76,14 @@ MERGE (p)-[:INVOLVED_IN]->(pw)
 
 def _ensure_constraints_tx(tx: ManagedTransaction) -> None:
     tx.run(_CREATE_CONSTRAINT_GENE)
-    tx.run(_CREATE_CONSTRAINT_PROTEIN)
     tx.run(_CREATE_CONSTRAINT_PATHWAY)
-
-
-def _merge_proteins_tx(
-    tx: ManagedTransaction,
-    rows: list[dict[str, object]],
-) -> None:
-    tx.run(_MERGE_PROTEIN_BATCH, rows=rows)
 
 
 def _merge_genes_tx(
     tx: ManagedTransaction,
-    rows: list[dict[str, str]],
+    rows: list[dict[str, object]],
 ) -> None:
     tx.run(_MERGE_GENE_BATCH, rows=rows)
-
-
-def _merge_encodes_tx(
-    tx: ManagedTransaction,
-    rows: list[dict[str, str]],
-) -> None:
-    tx.run(_MERGE_ENCODES_BATCH, rows=rows)
 
 
 def _merge_pathways_tx(
@@ -134,41 +105,38 @@ def _load_genes_and_proteins(
     proteins_csv: Path,
     gene_map_csv: Path,
 ) -> None:
-    proteins_df = pl.read_csv(proteins_csv, null_values=[""])
-    gene_map_df = pl.read_csv(gene_map_csv, null_values=[""])
+    proteins_df = _with_gene_defaults(pl.read_csv(proteins_csv, null_values=[""]))
+    gene_map_df = pl.read_csv(gene_map_csv, null_values=[""]).select(["uniprot_id", "hgnc_symbol"])
 
-    proteins_rows: list[dict[str, object]] = [
-        {
-            "uniprot_id": row["uniprot_id"],
-            "protein_name": row.get("protein_name") or "",
-            "uniprot_kb_id": row.get("uniprot_kb_id") or "",
-            "organism": row.get("organism") or "Homo sapiens",
-            "sequence_length": row.get("sequence_length"),
-            "molecular_weight": row.get("molecular_weight"),
-        }
-        for row in proteins_df.to_dicts()
-    ]
-    gene_rows: list[dict[str, str]] = [
-        {"hgnc_symbol": symbol}
-        for symbol in gene_map_df["gene_symbol"].unique().to_list()
-        if symbol
-    ]
-    encodes_rows: list[dict[str, str]] = proteins_df.filter(
-        pl.col("hgnc_symbol") != ""
-    ).select(["hgnc_symbol", "uniprot_id"]).unique().to_dicts()
+    gene_rows: list[dict[str, object]] = (
+        proteins_df.join(gene_map_df, on="uniprot_id", how="left", suffix="_map")
+        .with_columns(
+            pl.coalesce([pl.col("hgnc_symbol"), pl.col("hgnc_symbol_map")]).alias("hgnc_symbol")
+        )
+        .select(
+            [
+                "uniprot_id",
+                "hgnc_symbol",
+                "protein_name",
+                "uniprot_kb_id",
+                "organism",
+                "sequence_length",
+                "molecular_weight",
+                "data_source",
+            ]
+        )
+        .unique(subset=["uniprot_id"])
+        .sort("uniprot_id")
+        .to_dicts()
+    )
 
     with driver.session() as session:
         session.execute_write(_ensure_constraints_tx)
-        if proteins_rows:
-            session.execute_write(_merge_proteins_tx, proteins_rows)
         if gene_rows:
             session.execute_write(_merge_genes_tx, gene_rows)
-        if encodes_rows:
-            session.execute_write(_merge_encodes_tx, encodes_rows)
 
     logger.info(
-        "Loaded %d Protein nodes and %d Gene nodes into Neo4j",
-        len(proteins_rows),
+        "Loaded %d Gene nodes into Neo4j",
         len(gene_rows),
     )
 
@@ -195,6 +163,19 @@ def _load_pathways(driver: Driver, reactome_csv: Path) -> None:
         len(pathway_rows),
         len(involved_rows),
     )
+
+
+def _with_gene_defaults(df: pl.DataFrame) -> pl.DataFrame:
+    defaults: list[pl.Expr] = []
+    if "data_source" not in df.columns:
+        defaults.append(pl.lit("UniProt", dtype=pl.Utf8).alias("data_source"))
+    if "sequence_length" not in df.columns:
+        defaults.append(pl.lit(None, dtype=pl.Int64).alias("sequence_length"))
+    if "molecular_weight" not in df.columns:
+        defaults.append(pl.lit(None, dtype=pl.Int64).alias("molecular_weight"))
+    if defaults:
+        df = df.with_columns(defaults)
+    return df
 
 
 # ── Orchestrator ──────────────────────────────────────────────────────────────

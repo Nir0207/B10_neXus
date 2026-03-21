@@ -139,9 +139,11 @@ def test_audit_and_fix_neo4j_schema_creates_missing_artifacts_when_autofix_enabl
         "gene_uniprot_id",
         "disease_mesh_id",
         "medicine_chembl_id",
+        "pathway_reactome_id",
         "disease_name_fulltext",
     }
     assert any("CREATE CONSTRAINT gene_uniprot_id" in query for query in issued_queries)
     assert any("CREATE CONSTRAINT disease_mesh_id" in query for query in issued_queries)
     assert any("CREATE CONSTRAINT medicine_chembl_id" in query for query in issued_queries)
+    assert any("CREATE CONSTRAINT pathway_reactome_id" in query for query in issued_queries)
     assert any("CREATE FULLTEXT INDEX disease_name_fulltext" in query for query in issued_queries)

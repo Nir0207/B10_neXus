@@ -25,6 +25,32 @@ from idempotency import filter_unprocessed, mark_processed_many
 
 logger = logging.getLogger(__name__)
 
+PROTEIN_SCHEMA: dict[str, pl.DataType] = {
+    "uniprot_id": pl.Utf8,
+    "uniprot_kb_id": pl.Utf8,
+    "hgnc_symbol": pl.Utf8,
+    "gene_synonyms": pl.Utf8,
+    "protein_name": pl.Utf8,
+    "organism": pl.Utf8,
+    "sequence_length": pl.Int64,
+    "molecular_weight": pl.Int64,
+    "annotation_score": pl.Float64,
+    "sequence": pl.Utf8,
+    "data_source": pl.Utf8,
+}
+
+GENE_MAP_SCHEMA: dict[str, pl.DataType] = {
+    "uniprot_id": pl.Utf8,
+    "hgnc_symbol": pl.Utf8,
+    "source_file": pl.Utf8,
+}
+
+REACTOME_SCHEMA: dict[str, pl.DataType] = {
+    "uniprot_id": pl.Utf8,
+    "reactome_id": pl.Utf8,
+    "pathway_name": pl.Utf8,
+}
+
 
 # ── Field extraction helpers ─────────────────────────────────────────────────
 
@@ -60,6 +86,7 @@ def _extract_record(entry: dict[str, Any]) -> dict[str, Any]:
         "molecular_weight": seq.get("molWeight"),
         "annotation_score": entry.get("annotationScore"),
         "sequence": seq.get("value", ""),
+        "data_source": "UniProt",
     }
 
 
@@ -90,6 +117,33 @@ def _extract_reactome_mappings(
     return rows
 
 
+def _read_uniprot_entries(filepath: Path) -> list[dict[str, Any]]:
+    data: dict[str, Any] = json.loads(filepath.read_text(encoding="utf-8"))
+    results = data.get("results", [])
+    if not isinstance(results, list):
+        raise ValueError(f"Unexpected UniProt payload shape in {filepath}")
+    return results
+
+
+def _validate_uniprot_integrity(proteins_df: pl.DataFrame) -> pl.DataFrame:
+    if proteins_df.is_empty():
+        raise ValueError("No protein records extracted — check raw JSON format.")
+
+    missing_keys = proteins_df.filter(pl.col("uniprot_id").str.strip_chars() == "")
+    if not missing_keys.is_empty():
+        raise ValueError("Encountered UniProt records without primary accession.")
+
+    duplicate_keys = proteins_df.group_by("uniprot_id").len().filter(pl.col("len") > 1)
+    if not duplicate_keys.is_empty():
+        duplicates = duplicate_keys["uniprot_id"].to_list()
+        logger.warning(
+            "Duplicate UniProt primary keys detected in raw lake snapshot; keeping the last record for %s",
+            duplicates,
+        )
+
+    return proteins_df.unique(subset=["uniprot_id"], keep="last")
+
+
 # ── Public refinery entry point ───────────────────────────────────────────────
 
 def refine_uniprot(
@@ -112,7 +166,7 @@ def refine_uniprot(
     touching the filesystem.
     """
     out_dir.mkdir(parents=True, exist_ok=True)
-    json_files = sorted(raw_dir.glob("*.json"))
+    json_files = sorted(raw_dir.rglob("*.json"))
     if not json_files:
         raise FileNotFoundError(f"No JSON files found in {raw_dir}")
 
@@ -132,42 +186,45 @@ def refine_uniprot(
             len(json_files),
         )
 
-    proteins: list[dict] = []
-    gene_maps: list[dict] = []
-    reactome_maps: list[dict] = []
+    proteins: list[dict[str, Any]] = []
+    gene_maps: list[dict[str, str]] = []
+    reactome_maps: list[dict[str, str]] = []
 
     for filepath in json_files:
         logger.info("Refining %s", filepath.name)
-        data: dict = json.loads(filepath.read_text(encoding="utf-8"))
-
-        for entry in data.get("results", []):
+        for entry in _read_uniprot_entries(filepath):
             rec = _extract_record(entry)
             proteins.append(rec)
-            gene_maps.append(
-                {
-                    "gene_symbol": rec["hgnc_symbol"],
-                    "uniprot_id": rec["uniprot_id"],
-                    "source_file": filepath.name,
-                }
-            )
+            if rec["hgnc_symbol"]:
+                gene_maps.append(
+                    {
+                        "uniprot_id": rec["uniprot_id"],
+                        "hgnc_symbol": rec["hgnc_symbol"],
+                        "source_file": filepath.relative_to(raw_dir).as_posix(),
+                    }
+                )
             reactome_maps.extend(
                 _extract_reactome_mappings(rec["uniprot_id"], entry)
             )
 
-    if not proteins:
-        raise ValueError("No protein records extracted — check raw JSON format.")
-
-    proteins_df = pl.DataFrame(proteins)
-    gene_map_df = pl.DataFrame(gene_maps)
+    proteins_df = _validate_uniprot_integrity(pl.from_dicts(proteins, schema=PROTEIN_SCHEMA))
+    gene_map_df = (
+        pl.from_dicts(gene_maps, schema=GENE_MAP_SCHEMA)
+        .unique(subset=["uniprot_id", "hgnc_symbol"], keep="last")
+        .sort(["hgnc_symbol", "uniprot_id"])
+    )
     reactome_df = (
-        pl.DataFrame(reactome_maps)
+        pl.from_dicts(reactome_maps, schema=REACTOME_SCHEMA)
+        .unique(subset=["uniprot_id", "reactome_id"], keep="last")
+        .sort(["uniprot_id", "reactome_id"])
         if reactome_maps
         else pl.DataFrame(
             {"uniprot_id": [], "reactome_id": [], "pathway_name": []},
-            schema={"uniprot_id": pl.Utf8, "reactome_id": pl.Utf8, "pathway_name": pl.Utf8},
+            schema=REACTOME_SCHEMA,
         )
     )
 
+    proteins_df = proteins_df.sort("uniprot_id")
     proteins_df.write_csv(out_dir / "silver_proteins.csv")
     gene_map_df.write_csv(out_dir / "silver_gene_symbol_map.csv")
     reactome_df.write_csv(out_dir / "silver_reactome_map.csv")
