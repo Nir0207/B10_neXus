@@ -89,16 +89,3 @@ BioNexus does not rely on a single large LLM. It uses a **Task-Specific Routing*
 * **Router (Phi-3.5 Mini):** Analyzes user intent and selects the correct tool.
 * **Researcher (RAG + pgvector):** Fetches relevant study snippets from the local vector DB.
 * **Analyst (Neo4j + BioMistral):** Traverses the knowledge graph to explain *why* a drug-gene link exists.
-
-
-
----
-
-## 🛡 Compliance & Audit
-* **Data Lineage:** Every data point in the Staging DB can be traced back to its raw Parquet file in the Lake.
-* **Audit Logs:** All AI-generated hypotheses are logged in the `telemetry_db` for review.
-* **Privacy:** 100% Local. No data ever leaves your hardware.
-
----
-
-**Would you like me to help you draft the `CONTRIBUTING.md` file next, specifically for managing the local Git workflow between Copilot and Antigravity?**
