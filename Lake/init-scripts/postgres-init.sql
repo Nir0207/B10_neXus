@@ -95,6 +95,17 @@ CREATE TABLE IF NOT EXISTS metadata.processing_log (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS app_users (
+    username VARCHAR(32) PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    full_name VARCHAR(120),
+    hashed_password TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_app_users_email_lower
+    ON app_users (LOWER(email));
+
 -- Initialize known data sources
 INSERT INTO metadata.data_source (source_name, source_type, url, status) VALUES
     ('NCBI', 'API', 'https://www.ncbi.nlm.nih.gov/', 'active'),

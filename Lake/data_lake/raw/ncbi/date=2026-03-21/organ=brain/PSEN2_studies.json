@@ -1,0 +1,984 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200228907",
+      "200303404",
+      "200295890",
+      "200206603",
+      "200206602",
+      "200206588",
+      "200223572",
+      "200254570",
+      "200254548",
+      "200243177"
+    ],
+    "200228907": {
+      "uid": "200228907",
+      "accession": "GSE228907",
+      "gds": "",
+      "title": "Transcriptomic profiling of PSEN2 mutation",
+      "summary": "Here we compared the transcriptomic profiles of cardiomyocytes derived from human induced pluripotent stem cells with or with presenilin 2 mutation (S130L).",
+      "gpl": "11154",
+      "gse": "228907",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/09/01",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM7142497",
+          "title": "h377_p3: Line 4 control"
+        },
+        {
+          "accession": "GSM7142494",
+          "title": "h202_2_54: Line 3 control"
+        },
+        {
+          "accession": "GSM7142492",
+          "title": "h114_32: Line 2 mutation"
+        },
+        {
+          "accession": "GSM7142495",
+          "title": "h202_2_77: Line 3 mutation"
+        },
+        {
+          "accession": "GSM7142490",
+          "title": "h113_1_48: Line 1 control"
+        },
+        {
+          "accession": "GSM7142496",
+          "title": "h377_1: Line 4 mutation"
+        },
+        {
+          "accession": "GSM7142493",
+          "title": "h114: Line 2 control"
+        },
+        {
+          "accession": "GSM7142491",
+          "title": "h113_2_5: Line 1 mutation"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 8,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE228nnn/GSE228907/",
+      "geo2r": "no",
+      "bioproject": "PRJNA952132"
+    },
+    "200303404": {
+      "uid": "200303404",
+      "accession": "GSE303404",
+      "gds": "",
+      "title": "Gene Expression Networks of Synchronized Cells Reveal Alzheimer's Disease in Autopsy-Validated Skin and Blood Samples",
+      "summary": "Late-onset Alzheimer\u2019s disease (LOAD), which accounts for more than 95% of cases, lacks a well-defined gene expression signature, unlike early-onset forms caused by autosomal dominant mutations in PSEN1, PSEN2, and APP. Although early and late onset Alzheimer\u2019s share core neuropathological features, their genetic convergence had not previously been demonstrated. In this study, synchronized skin fibroblasts from autopsy-confirmed LOAD patients revealed 20 significantly dysregulated genes (Adjusted P \u2264 0.05) that clearly distinguished LOAD from non-Alzheimer\u2019s dementias. Among these, NHLH1, URB2, and WASF2 were also dysregulated in blood B lymphocytes, supporting a cross-tissue \u201cmodular resilience\u201d framework. An additional 12 dysregulated gene families in skin were validated in blood, resulting in 15 LOAD-associated gene families shared across tissues. Furthermore, five genes\u2014CARNS1, NORAD, SCG2, SNHG14, and WASF2\u2014were differentially expressed in skin fibroblasts and dysregulated in the prefrontal cortex, indicating a multi-layered resilience module connecting peripheral and central tissues. These genes participate in metabolic buffering, genomic stability, secretory organization, epigenetic regulation, and cytoskeletal remodeling. Their coordinated dysfunction suggests a systems-level impairment in stress adaptation relevant to AD biology. Overall, the results reveal previously unrecognized gene-network convergence between familial early-onset and sporadic late-onset Alzheimer\u2019s disease. The robust cross-tissue reproducibility of LOAD dysregulated gene networks highlights the potential of synchronized peripheral cells as accessible sources for disease-specific genomic profiling. This approach may enable the development of personalized biomarkers and targeted therapeutic strategies for Alzheimer\u2019s disease. ",
+      "gpl": "18573",
+      "gse": "303404",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/07/30",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9125379",
+          "title": "T_Set_Sample_4_586"
+        },
+        {
+          "accession": "GSM9125376",
+          "title": "T_Set_Sample_1_702"
+        },
+        {
+          "accession": "GSM9125393",
+          "title": "V_Set_Sample_18_39"
+        },
+        {
+          "accession": "GSM9125390",
+          "title": "V_Set_Sample_15_50"
+        },
+        {
+          "accession": "GSM9125387",
+          "title": "V_Set_Sample_12_598"
+        },
+        {
+          "accession": "GSM9125388",
+          "title": "V_Set_Sample_13_54"
+        },
+        {
+          "accession": "GSM9125391",
+          "title": "V_Set_Sample_16_586"
+        },
+        {
+          "accession": "GSM9125382",
+          "title": "T_Set_Sample_7_579"
+        },
+        {
+          "accession": "GSM9125385",
+          "title": "V_Set_Sample_10_656"
+        },
+        {
+          "accession": "GSM9125389",
+          "title": "V_Set_Sample_14_44"
+        },
+        {
+          "accession": "GSM9125383",
+          "title": "T_Set_Sample_8_599"
+        },
+        {
+          "accession": "GSM9125386",
+          "title": "V_Set_Sample_11_52"
+        },
+        {
+          "accession": "GSM9125380",
+          "title": "T_Set_Sample_5_539"
+        },
+        {
+          "accession": "GSM9125377",
+          "title": "T_Set_Sample_2_538"
+        },
+        {
+          "accession": "GSM9125381",
+          "title": "T_Set_Sample_6_596"
+        },
+        {
+          "accession": "GSM9125384",
+          "title": "V_Set_Sample_9_564"
+        },
+        {
+          "accession": "GSM9125378",
+          "title": "T_Set_Sample_3_545"
+        },
+        {
+          "accession": "GSM9125392",
+          "title": "V_Set_Sample_17_574"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 18,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE303nnn/GSE303404/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1295357"
+    },
+    "200295890": {
+      "uid": "200295890",
+      "accession": "GSE295890",
+      "gds": "",
+      "title": "Viral Infection Induces Alzheimer\u2019s Disease-Related Pathways and Senescence in iPSC-Derived Neuronal Models",
+      "summary": "The Pathogen Infection Hypothesis proposes that amyloid-\u03b2 (A\u03b2) functions as an antimicrobial peptide, with pathogen-induced aggregation potentially contributing to Alzheimer\u2019s disease (AD) pathology. We used human iPSC-derived 2D neurons and 3D cerebral organoids from wild-type and familial AD (PSEN1/2 mutant) lines to model acute infections with HSV-1 and TBEV and A\u03b2 aggregation. Transcriptomic and proteomic analyses were performed to assess molecular responses. HSV-1, but not TBEV, induced robust APP clustering in 2D and 3D models, dependent on extracellular A\u03b2 levels. Transcriptomic profiling revealed widespread HSV-1-induced changes, including activation of neurodegeneration-related pathways. Proteomic profiling confirmed the enrichment of neurodegeneration- and senescence-associated secretome signatures. PSEN1/2 mutations did not alter the acute infection response. Reanalysis of independent datasets confirmed our findings and revealed a limited protective effect of acyclovir. HSV-1 infection triggers APP aggregation, neuroinflammation, and cellular senescence in human brain models, supporting a causal role in AD pathogenesis.",
+      "gpl": "18573",
+      "gse": "295890",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/07/30",
+      "suppfile": "CSV, XLSX",
+      "samples": [
+        {
+          "accession": "GSM8960244",
+          "title": "AD3_TBEV-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960230",
+          "title": "AD1_CTRL-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960227",
+          "title": "WT1_TBEV-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960236",
+          "title": "AD2_CTRL-2_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960233",
+          "title": "WT2_CTRL-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960242",
+          "title": "AD3_CTRL-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960239",
+          "title": "WT3_CTRL-4_biolRepl_4"
+        },
+        {
+          "accession": "GSM8960231",
+          "title": "AD1_HSV-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960228",
+          "title": "WT1_CTRL-2_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960234",
+          "title": "WT2_HSV-3_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960240",
+          "title": "WT3_HSV-4_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960237",
+          "title": "AD2_HSV-2_biolRepl_2"
+        },
+        {
+          "accession": "GSM8960226",
+          "title": "WT1_CTRL-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960243",
+          "title": "AD3_HSV-3_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960235",
+          "title": "WT2_TBEV-3_biolRepl2"
+        },
+        {
+          "accession": "GSM8960232",
+          "title": "AD1_TBEV-1_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960229",
+          "title": "WT1_HSV-2_biolRepl_1"
+        },
+        {
+          "accession": "GSM8960241",
+          "title": "WT3_TBEV-4_biolRepl_3"
+        },
+        {
+          "accession": "GSM8960238",
+          "title": "AD2_TBEV-2_biolRepl_2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 19,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "40661646"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE295nnn/GSE295890/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1256735"
+    },
+    "200206603": {
+      "uid": "200206603",
+      "accession": "GSE206603",
+      "gds": "",
+      "title": "Transcriptomic and chromatin profiling of familial Alzheimer\u2019s disease mutations in PSEN1, PSEN2, APP",
+      "summary": "This SuperSeries is composed of the SubSeries listed below.",
+      "gpl": "20301",
+      "gse": "206603",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing; Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/01/06",
+      "suppfile": "",
+      "samples": [
+        {
+          "accession": "GSM6257607",
+          "title": "NDC replicate 3 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257303",
+          "title": "PSEN1-A79V replicate 2 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257615",
+          "title": "PSEN2-N141I replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257306",
+          "title": "PSEN2-N141I replicate 2 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257616",
+          "title": "PSEN2-N141I replicate 3 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257304",
+          "title": "PSEN1-A79V replicate 3 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257307",
+          "title": "PSEN2-N141I replicate 3 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257301",
+          "title": "APP-V717I replicate 3 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257298",
+          "title": "NDC replicate 3 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257613",
+          "title": "PSEN1-A79V replicate 3 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257610",
+          "title": "APP-V717I replicate 3 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257302",
+          "title": "PSEN1-A79V replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257614",
+          "title": "PSEN2-N141I replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257611",
+          "title": "PSEN1-A79V replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257299",
+          "title": "APP-V717I replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257305",
+          "title": "PSEN2-N141I replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257608",
+          "title": "APP-V717I replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257605",
+          "title": "NDC replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257296",
+          "title": "NDC replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257300",
+          "title": "APP-V717I replicate 2 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257612",
+          "title": "PSEN1-A79V replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257606",
+          "title": "NDC replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257609",
+          "title": "APP-V717I replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257297",
+          "title": "NDC replicate 2 [ATAC-seq]"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 24,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "39754192"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE206nnn/GSE206603/",
+      "geo2r": "no",
+      "bioproject": "PRJNA851445"
+    },
+    "200206602": {
+      "uid": "200206602",
+      "accession": "GSE206602",
+      "gds": "",
+      "title": "Transcriptomic and chromatin profiling of familial Alzheimer\u2019s disease mutations in PSEN1, PSEN2, APP [RNA-seq]",
+      "summary": "Mutations in PSEN1, PSEN2, and APP cause familial Alzheimer\u2019s Disease (FAD) with an early age at onset and progressive cognitive decline. We mechanistically characterize mutations in these three FAD genes using patient-derived neurons by integrating RNA- and ATAC-sequencing. Here, we demonstrate that FAD mutations share common disease endotypes with varying severity, particularly activation of non-ectoderm lineage and loss of neuron mitochondrial energy production, paving the way for potential therapeutic interventions.",
+      "gpl": "20301",
+      "gse": "206602",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/01/06",
+      "suppfile": "TSV",
+      "samples": [
+        {
+          "accession": "GSM6257611",
+          "title": "PSEN1-A79V replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257608",
+          "title": "APP-V717I replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257614",
+          "title": "PSEN2-N141I replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257612",
+          "title": "PSEN1-A79V replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257615",
+          "title": "PSEN2-N141I replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257609",
+          "title": "APP-V717I replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257606",
+          "title": "NDC replicate 2 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257610",
+          "title": "APP-V717I replicate 3 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257607",
+          "title": "NDC replicate 3 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257605",
+          "title": "NDC replicate 1 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257616",
+          "title": "PSEN2-N141I replicate 3 [RNA-seq]"
+        },
+        {
+          "accession": "GSM6257613",
+          "title": "PSEN1-A79V replicate 3 [RNA-seq]"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "39754192"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE206nnn/GSE206602/",
+      "geo2r": "no",
+      "bioproject": "PRJNA851439"
+    },
+    "200206588": {
+      "uid": "200206588",
+      "accession": "GSE206588",
+      "gds": "",
+      "title": "Transcriptomic and chromatin profiling of familial Alzheimer\u2019s disease mutations in PSEN1, PSEN2, APP [ATAC-seq]",
+      "summary": "Mutations in PSEN1, PSEN2, and APP cause familial Alzheimer\u2019s Disease (FAD) with an early age at onset and progressive cognitive decline. We mechanistically characterize mutations in these three FAD genes using patient-derived neurons by integrating RNA- and ATAC-sequencing. Here, we demonstrate that FAD mutations share common disease endotypes with varying severity, particularly activation of non-ectoderm lineage and loss of neuron mitochondrial energy production, paving the way for potential therapeutic interventions.",
+      "gpl": "20301",
+      "gse": "206588",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/01/06",
+      "suppfile": "TSV",
+      "samples": [
+        {
+          "accession": "GSM6257302",
+          "title": "PSEN1-A79V replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257305",
+          "title": "PSEN2-N141I replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257306",
+          "title": "PSEN2-N141I replicate 2 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257303",
+          "title": "PSEN1-A79V replicate 2 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257297",
+          "title": "NDC replicate 2 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257300",
+          "title": "APP-V717I replicate 2 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257301",
+          "title": "APP-V717I replicate 3 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257304",
+          "title": "PSEN1-A79V replicate 3 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257298",
+          "title": "NDC replicate 3 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257296",
+          "title": "NDC replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257299",
+          "title": "APP-V717I replicate 1 [ATAC-seq]"
+        },
+        {
+          "accession": "GSM6257307",
+          "title": "PSEN2-N141I replicate 3 [ATAC-seq]"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "39754192"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE206nnn/GSE206588/",
+      "geo2r": "no",
+      "bioproject": "PRJNA851435"
+    },
+    "200223572": {
+      "uid": "200223572",
+      "accession": "GSE223572",
+      "gds": "",
+      "title": "Presenilin deficiency results in cellular cholesterol accumulation by impairment of protein glycosylation and NPC1 function.",
+      "summary": "Presenilin (PS) proteins represent the catalytic subunits of \u03b3-secretase, and play a critical role in the generation of the Amyloid \u03b2 (A\u03b2) peptide and the pathogenesis of Alzheimer\u2019s disease (AD). Indeed, mutations in presenilin 1 (PS1) or PS2 are a major cause of early onset familial Alzheimer\u2019s disease (FAD). However, PS proteins also exert multiple functions beyond A\u03b2 generation. In this study, we examine the individual roles of PS1 and PS2 in cellular cholesterol metabolism. Deletion of PS1 or PS2 in mouse models led to cholesterol accumulation in cerebral neurons. Cholesterol accumulation was also observed in lysosomes of embryonic fibroblasts from PS1-KO and PS2-KO mice, and associated with decreased expression of the Niemann-Pick type C1 (NPC1) protein involved in intracellular cholesterol transport at late endosome/lysosome. Mass spectrometry and complementary biochemical methods also revealed abnormal N-glycosylation of NPC1 and several other membrane proteins in PS1-KO and PS2-KO cells. Interestingly, pharmacological inhibition of N-glycosylation resulted in intracellular cholesterol accumulation prominently in lysosomes as well as decrease of NPC1 expression in wild-type MEFs, thereby resembling the changes in PS1-KO and PS2-KO MEFs. In turn, treatment of PS1-KO and PS2-KO MEFs with a chaperone inducer, Arimoclomol, attenuated decrease of NPC1 and rescued the lysosomal cholesterol accumulation. Additionally, the intracellular cholesterol accumulation in PS1-KO and PS2-KO MEFs was prevented by NPC1 overexpression. Collectively, these data indicate that PS/\u03b3-secretase dysfunction results in an impairment of protein N-glycosylation, which eventually causes NPC1 decrease and intracellular cholesterol accumulation. 3'RNASeq of mouse embryonic fibroblasts with PS1- or PS2-deficiency compared with controls. Biological replicates",
+      "gpl": "17021",
+      "gse": "223572",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2024/05/26",
+      "suppfile": "TAB",
+      "samples": [
+        {
+          "accession": "GSM6964765",
+          "title": "PS1KO4"
+        },
+        {
+          "accession": "GSM6964762",
+          "title": "PS1KO1"
+        },
+        {
+          "accession": "GSM6964768",
+          "title": "PS2KO2"
+        },
+        {
+          "accession": "GSM6964771",
+          "title": "PS2KO5"
+        },
+        {
+          "accession": "GSM6964770",
+          "title": "PS2KO4"
+        },
+        {
+          "accession": "GSM6964767",
+          "title": "PS2KO1"
+        },
+        {
+          "accession": "GSM6964759",
+          "title": "WT5"
+        },
+        {
+          "accession": "GSM6964756",
+          "title": "WT2"
+        },
+        {
+          "accession": "GSM6964755",
+          "title": "WT1"
+        },
+        {
+          "accession": "GSM6964758",
+          "title": "WT4"
+        },
+        {
+          "accession": "GSM6964764",
+          "title": "PS1KO3"
+        },
+        {
+          "accession": "GSM6964761",
+          "title": "WT7"
+        },
+        {
+          "accession": "GSM6964763",
+          "title": "PS1KO2"
+        },
+        {
+          "accession": "GSM6964760",
+          "title": "WT6"
+        },
+        {
+          "accession": "GSM6964757",
+          "title": "WT3"
+        },
+        {
+          "accession": "GSM6964769",
+          "title": "PS2KO3"
+        },
+        {
+          "accession": "GSM6964766",
+          "title": "PS1KO5"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 17,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "38791456"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE223nnn/GSE223572/",
+      "geo2r": "no",
+      "bioproject": "PRJNA926897"
+    },
+    "200254570": {
+      "uid": "200254570",
+      "accession": "GSE254570",
+      "gds": "",
+      "title": "APP and its intracellular domain modulate Alzheimer\u2019s disease risk gene networks in transgenic APPsw and PSEN1M146I porcine models [fibroblasts]",
+      "summary": "Alzheimer's disease (AD) is a progressive neurodegenerative disorder and the most frequent cause of dementia. The disease has a substantial genetic component comprising both highly penetrant familial mutations (APP, PSEN1 and PSEN2) and sporadic cases with complex genetic etiology. Mutations in APP and PSEN1/2 alter the proteolytic processing of APP to its metabolites, including Ab and APP Intracellular Domain (AICD). In this study, we use transgenic porcine models carrying the human APPsw and PSEN1M146I transgenes to demonstrate the pathobiological relevance of transcriptional regulation facilitated by APP and its AICD domain. Through molecular characterization of hippocampal tissue, we describe the differential expression of gene sets that cluster in molecular pathways with translational relevance to AD. We further identify phosphorylated and unphosphorylated AICD in differential complexes with proteins implicated in signal transduction and transcriptional regulation. Integrative genomic analysis of transcriptional changes in somatic cell cultures derived from pigs treated with g-secretase inhibitor demonstrates the importance of g-secretase APP processing in transcriptional regulation. Collectively, our data supports a model in which APP, and in particular its AICD domain, modulates gene networks associated with AD pathobiology through interaction with signaling proteins.",
+      "gpl": "26285",
+      "gse": "254570",
+      "taxon": "Sus scrofa",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2024/02/04",
+      "suppfile": "XLSX",
+      "samples": [
+        {
+          "accession": "GSM8046336",
+          "title": "Minipigno.607APP/PS1 so2603P5-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046356",
+          "title": "Minipigno.512(A)RMCE F1 P9-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046333",
+          "title": "Minipigno.557APP/PS1 so2709P5-No inhibition"
+        },
+        {
+          "accession": "GSM8046353",
+          "title": "Minipigno.512(A)RMCE F1 P9-No inhibition"
+        },
+        {
+          "accession": "GSM8046359",
+          "title": "Minipigno.606APP/PS1 so2603P5-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046342",
+          "title": "Minipigno.499Master F2P5-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046339",
+          "title": "Minipigno.558APP/PS1 so2709P5-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046345",
+          "title": "Minipigno.498Master F2P5-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046341",
+          "title": "Minipigno.499Master F2P5-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046338",
+          "title": "Minipigno.558APP/PS1 so2709P5-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046358",
+          "title": "Minipigno.606APP/PS1 so2603P5-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046361",
+          "title": "Minipigno.550APP/PS1 so2683P5-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046350",
+          "title": "Minipigno.522(A)RMCE F1 far 3400P9-No inhibition"
+        },
+        {
+          "accession": "GSM8046347",
+          "title": "Minipigno.500Master F2P5-No inhibition"
+        },
+        {
+          "accession": "GSM8046344",
+          "title": "Minipigno.557APP/PS1 so2709P5-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046346",
+          "title": "Minipigno.498Master F2P5-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046343",
+          "title": "Minipigno.498Master F2P5-No inhibition"
+        },
+        {
+          "accession": "GSM8046349",
+          "title": "Minipigno.500Master F2P5-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046355",
+          "title": "Minipigno.557APP/PS1 so2709P5-\u03b3 inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046352",
+          "title": "Minipigno.522(A)RMCE F1 far 3400P9-\u03b3inhibition (2uM)"
+        },
+        {
+          "accession": "GSM8046335",
+          "title": "Minipigno.607APP/PS1 so2603P5-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046351",
+          "title": "Minipigno.522(A)RMCE F1 far 3400P9-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046348",
+          "title": "Minipigno.500Master F2P5-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046340",
+          "title": "Minipigno.499Master F2 P5-No inhibition"
+        },
+        {
+          "accession": "GSM8046360",
+          "title": "Minipigno.550APP/PS1 so2683P5-No inhibition"
+        },
+        {
+          "accession": "GSM8046357",
+          "title": "Minipigno.606APP/PS1 so2603P5-No inhibition"
+        },
+        {
+          "accession": "GSM8046354",
+          "title": "Minipigno.512(A)RMCE F1 P9-binhibition (15uM)"
+        },
+        {
+          "accession": "GSM8046337",
+          "title": "Minipigno.558APP/PS1 so2709P5-No inhibition"
+        },
+        {
+          "accession": "GSM8046334",
+          "title": "Minipigno.607APP/PS1 so2603P5-No inhibition"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 29,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE254nnn/GSE254570/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1071072"
+    },
+    "200254548": {
+      "uid": "200254548",
+      "accession": "GSE254548",
+      "gds": "",
+      "title": "APP and its intracellular domain modulate Alzheimer\u2019s disease risk gene networks in transgenic APPsw and PSEN1M146I porcine models [hippocampus]",
+      "summary": "Alzheimer's disease (AD) is a progressive neurodegenerative disorder and the most frequent cause of dementia. The disease has a substantial genetic component comprising both highly penetrant familial mutations (APP, PSEN1 and PSEN2) and sporadic cases with complex genetic etiology. Mutations in APP and PSEN1/2 alter the proteolytic processing of APP to its metabolites, including Ab and APP Intracellular Domain (AICD). In this study, we use transgenic porcine models carrying the human APPsw and PSEN1M146I transgenes to demonstrate the pathobiological relevance of transcriptional regulation facilitated by APP and its AICD domain. Through molecular characterization of hippocampal tissue, we describe the differential expression of gene sets that cluster in molecular pathways with translational relevance to AD. We further identify phosphorylated and unphosphorylated AICD in differential complexes with proteins implicated in signal transduction and transcriptional regulation. Integrative genomic analysis of transcriptional changes in somatic cell cultures derived from pigs treated with g-secretase inhibitor demonstrates the importance of g-secretase APP processing in transcriptional regulation. Collectively, our data supports a model in which APP, and in particular its AICD domain, modulates gene networks associated with AD pathobiology through interaction with signaling proteins.",
+      "gpl": "26285",
+      "gse": "254548",
+      "taxon": "Sus scrofa",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2024/02/04",
+      "suppfile": "XLSX",
+      "samples": [
+        {
+          "accession": "GSM8045754",
+          "title": "PS1_540"
+        },
+        {
+          "accession": "GSM8045757",
+          "title": "APP-PS1_6170"
+        },
+        {
+          "accession": "GSM8045759",
+          "title": "APP-PS1_6171"
+        },
+        {
+          "accession": "GSM8045748",
+          "title": "WT_1E"
+        },
+        {
+          "accession": "GSM8045751",
+          "title": "WT_852"
+        },
+        {
+          "accession": "GSM8045753",
+          "title": "PS1_538"
+        },
+        {
+          "accession": "GSM8045756",
+          "title": "APP-PS1_6027"
+        },
+        {
+          "accession": "GSM8045750",
+          "title": "WT_317245"
+        },
+        {
+          "accession": "GSM8045749",
+          "title": "WT_2E"
+        },
+        {
+          "accession": "GSM8045752",
+          "title": "PS1_508"
+        },
+        {
+          "accession": "GSM8045755",
+          "title": "PS1_495"
+        },
+        {
+          "accession": "GSM8045758",
+          "title": "APP-PS1_6172"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE254nnn/GSE254548/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1071019"
+    },
+    "200243177": {
+      "uid": "200243177",
+      "accession": "GSE243177",
+      "gds": "",
+      "title": "iPSC-Derived PSEN2 (N141I) astrocytes and microglia exhibit a primed inflammatory phenotype",
+      "summary": "Background: Widescale evidence points to the involvement of glia and immune pathways in the progression of Alzheimer\u2019s disease (AD). AD-associated iPSC-derived glial cells show a diverse range of AD-related phenotypic states encompassing cytokine/chemokine release, phagocytosis and morphological profiles, but to date studies are limited to cells derived from PSEN1, APOE and APP mutations or sporadic patients. The aim of the current study was to successfully differentiate iPSC-derived microglia and astrocytes from patients harbouring an AD-causative PSEN2 (N141I) mutation and characterise the inflammatory and morphological profile of these cells. Methods: iPSCs from three healthy control individuals and three familial AD patients harbouring a heterozygous PSEN2 (N141I) mutation were used to derive astrocytes and microglia-like cells and cell identity and morphology were characterised through immunofluorescent microscopy. Cellular characterisation involved the stimulation of these cells by LPS and A\u03b242 and analysis of cytokine/chemokine release was conducted through ELISAs and multi-cytokine arrays. The phagocytic capacity of these cells was then indexed by the uptake of fluorescently labelled fibrillar A\u03b242. Results: AD-derived astrocytes and microglia-like cells exhibited an atrophied and less complex morphological appearance than healthy controls. AD-derived astrocytes showed increased basal expression of GFAP, S100\u03b2 and increased secretion and phagocytosis of A\u03b242 while AD-derived microglia-like cells showed decreased IL-8 secretion compared to healthy controls. Upon immunological challenge AD-derived astrocytes and microglia-like cells show exaggerated secretion of the pro-inflammatory IL-6, CXCL1, ICAM-1 and IL-8 from astrocytes and IL-18 and MIF from microglia.Conclusion: Our study showed, for the first time, the differentiation and characterisation of iPSC-derived astrocytes and microglia-like cells harbouring a PSEN2 (N141I) mutation. PSEN2 (N141I)-mutant astrocytes and microglia-like cells presented with a \u2018primed\u2019 phenotype characterised by reduced morphological complexity, exaggerated pro-inflammatory cytokine secretion and altered A\u03b242 production and phagocytosis.",
+      "gpl": "24676",
+      "gse": "243177",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2024/01/07",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM7780277",
+          "title": "Human Fetal Astrocyte (Lonza:CC-2565)"
+        },
+        {
+          "accession": "GSM7780272",
+          "title": "06 Ctrl iPSC-derived astrocyte"
+        },
+        {
+          "accession": "GSM7780275",
+          "title": "88 Ctrl iPSC-derived neural precursor cell"
+        },
+        {
+          "accession": "GSM7780276",
+          "title": "88 Ctrl iPSC-derived astrocyte"
+        },
+        {
+          "accession": "GSM7780273",
+          "title": "71 Ctrl iPSC-derived neural precursor cell"
+        },
+        {
+          "accession": "GSM7780274",
+          "title": "71 Ctrl iPSC-derived astrocyte"
+        },
+        {
+          "accession": "GSM7780271",
+          "title": "06 Ctrl iPSC-derived neural precursor cell"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 7,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "38178159"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243177/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA1016483"
+    }
+  }
+}

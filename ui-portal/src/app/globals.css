@@ -79,6 +79,26 @@
     background: rgba(50, 53, 60, 0.8);
     backdrop-filter: blur(12px);
   }
+  .panel-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(129, 207, 255, 0.55) rgba(25, 28, 34, 0.75);
+  }
+  .panel-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .panel-scrollbar::-webkit-scrollbar-track {
+    background: rgba(25, 28, 34, 0.75);
+    border-radius: 999px;
+  }
+  .panel-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(129, 207, 255, 0.88), rgba(0, 102, 142, 0.92));
+    border-radius: 999px;
+    border: 1px solid rgba(16, 19, 26, 0.9);
+  }
+  .panel-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(198, 231, 255, 0.95), rgba(0, 102, 142, 1));
+  }
   .font-headline {
     font-family: var(--font-headline);
   }

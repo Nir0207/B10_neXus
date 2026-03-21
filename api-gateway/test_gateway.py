@@ -33,7 +33,7 @@ class FakeNeo4jResult:
 
 
 class FakeNeo4jSession:
-    async def run(self, _query: str) -> FakeNeo4jResult:
+    async def run(self, _query: str, **_params: Any) -> FakeNeo4jResult:
         return FakeNeo4jResult()
 
 

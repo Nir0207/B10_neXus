@@ -2,9 +2,12 @@
 
 import { arc, pie, type PieArcDatum } from "d3-shape";
 import { useMemo } from "react";
+import { getOrganOption } from "@/lib/organs";
+import type { TripletData } from "@/services/bioService";
 
 interface GenomicMapProps {
   selectedOrgan: string;
+  data?: TripletData;
   isLoading?: boolean;
   isError?: boolean;
 }
@@ -25,7 +28,18 @@ function StitchMapSkeleton() {
   );
 }
 
-export default function GenomicMap({ selectedOrgan, isLoading, isError }: GenomicMapProps) {
+export default function GenomicMap({
+  selectedOrgan,
+  data,
+  isLoading,
+  isError,
+}: GenomicMapProps): React.JSX.Element {
+  const organ = getOrganOption(selectedOrgan);
+  const geneNode = data?.nodes.find((node) => node.type === "Gene");
+  const diseaseNode = data?.nodes.find((node) => node.type === "Disease");
+  const medicineNode = data?.nodes.find((node) => node.type === "Medicine");
+  const centerTarget = geneNode?.label ?? organ.primaryTarget;
+
   const segments = useMemo(() => pie<number>().sort(null).value((value) => value)([...RING_WEIGHTS]), []);
   const outerArc = useMemo(
     () => arc<PieArcDatum<number>>().innerRadius(165).outerRadius(212).padAngle(0.03),
@@ -73,30 +87,46 @@ export default function GenomicMap({ selectedOrgan, isLoading, isError }: Genomi
               <path
                 key={`inner-${index}`}
                 d={d}
-                fill={index % 2 === 0 ? "var(--color-primary)" : "var(--color-tertiary)"}
+                fill={index % 2 === 0 ? organ.accentColor : organ.tertiaryColor}
                 opacity={0.18}
               />
             );
           })}
-          <path d="M-185 -10 Q 0 -190 185 15" fill="none" stroke="var(--color-primary)" strokeDasharray="3 5" strokeLinecap="round" strokeWidth="2" />
-          <path d="M-200 80 Q 5 165 198 40" fill="none" stroke="var(--color-tertiary)" strokeLinecap="round" strokeOpacity="0.75" strokeWidth="1.5" />
+          <path d="M-185 -10 Q 0 -190 185 15" fill="none" stroke={organ.accentColor} strokeDasharray="3 5" strokeLinecap="round" strokeWidth="2" />
+          <path d="M-200 80 Q 5 165 198 40" fill="none" stroke={organ.tertiaryColor} strokeLinecap="round" strokeOpacity="0.75" strokeWidth="1.5" />
         </g>
       </svg>
 
       <div className="z-10 bg-surface-container-highest w-44 h-44 rounded-full flex flex-col items-center justify-center border border-outline-variant/30 shadow-2xl">
-        <span className="text-primary font-headline font-extrabold text-3xl tracking-widest">CYP3A4</span>
+        <span className="font-headline font-extrabold text-3xl tracking-widest" style={{ color: organ.accentColor }}>
+          {centerTarget}
+        </span>
         <span className="text-on-surface-variant text-[10px] uppercase tracking-[0.22em]">
-          {selectedOrgan} target
+          {organ.label} {organ.focus}
         </span>
       </div>
 
       <div className="absolute top-10 left-12 glass-panel border border-outline-variant/20 px-3 py-1.5 rounded-full flex items-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-        <span className="text-xs font-semibold text-primary">p-value: 1.2e-9</span>
+        <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: organ.accentColor }} />
+        <span className="text-xs font-semibold" style={{ color: organ.accentColor }}>
+          p-value: {organ.pValue}
+        </span>
       </div>
       <div className="absolute bottom-20 right-8 glass-panel border border-outline-variant/20 px-3 py-1.5 rounded-full flex items-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-tertiary" />
-        <span className="text-xs font-semibold text-tertiary">Expression: High</span>
+        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: organ.tertiaryColor }} />
+        <span className="text-xs font-semibold" style={{ color: organ.tertiaryColor }}>
+          Expression: {organ.expression}
+        </span>
+      </div>
+      <div className="absolute top-24 right-10 glass-panel border border-outline-variant/20 px-3 py-1.5 rounded-full">
+        <span className="text-[11px] font-semibold text-on-surface">
+          {diseaseNode?.label ?? organ.keyRisk}
+        </span>
+      </div>
+      <div className="absolute bottom-10 left-8 glass-panel border border-outline-variant/20 px-3 py-1.5 rounded-full">
+        <span className="text-[11px] font-semibold text-on-surface">
+          {medicineNode?.label ?? "No active therapeutic node"}
+        </span>
       </div>
 
       {isError ? (

@@ -1,0 +1,1464 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200305481",
+      "200309259",
+      "200300433",
+      "200320199",
+      "200321762",
+      "200316666",
+      "200317586",
+      "200319246",
+      "200319035",
+      "200307866"
+    ],
+    "200305481": {
+      "uid": "200305481",
+      "accession": "GSE305481",
+      "gds": "",
+      "title": "Genome-scale metabolic modelling uncovers cell-type specific signatures associated with APOE variants",
+      "summary": "Metabolic dysregulation is a key feature of Alzheimer\u2019s disease (AD) pathogenesis. The \u03b54 variant of APOE gene (APOE4), coding for the lipid-transporter apolipoprotein E, is the strongest genetic risk factor for late-onset AD. Previous studies have investigated how APOE4 disrupts specific metabolic pathways within different cell types. In this study, we followed a broad, metabolite-centric approach to investigate how APOE4 reshapes cellular metabolism in a cell type-specific manner based on transcriptome and metabolome data. We integrated transcriptomics data from an isogenic set of iPSC-derived neurons, astrocytes, and microglia harboring APOE3 or APOE4 genotypes into a human genome-scale metabolic model. From this model, we identified metabolic pathways that differed between APOE3 and APOE4 cells. We then used metabolomics data from the same iPSC-derived cell types to validate pathways identified by the transcriptomic analysis. In addition to confirming previous reports of disrupted cholesterol and fatty acid metabolism, we also identified bile acid biosynthesis, folate metabolism, and thyroid hormone metabolism as novel pathways dysregulated in APOE4 cells. Moreover, we were able to detect similar metabolic dysregulation in human post-mortem transcriptomic data. By integrating transcriptomic and metabolomic data, our approach can enhance understanding of biological mechanisms associated with APOE4-associated metabolic dysregulation in AD.",
+      "gpl": "24676",
+      "gse": "305481",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/17",
+      "suppfile": "XLSX",
+      "samples": [
+        {
+          "accession": "GSM9177847",
+          "title": "Microglia cells, APOE3_3"
+        },
+        {
+          "accession": "GSM9177850",
+          "title": "Microglia cells, APOE4_3"
+        },
+        {
+          "accession": "GSM9177845",
+          "title": "Microglia cells, APOE3_1"
+        },
+        {
+          "accession": "GSM9177848",
+          "title": "Microglia cells, APOE4_1"
+        },
+        {
+          "accession": "GSM9177846",
+          "title": "Microglia cells, APOE3_2"
+        },
+        {
+          "accession": "GSM9177849",
+          "title": "Microglia cells, APOE4_2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE305nnn/GSE305481/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1306066"
+    },
+    "200309259": {
+      "uid": "200309259",
+      "accession": "GSE309259",
+      "gds": "",
+      "title": "SLC1A5 prevents aortic aneurysm and dissection by glutaminolytic-epigenetic orchestration of vascular smooth muscle cell homeostasis [RNA-seq]",
+      "summary": "Glutamine is carried into and out of cells by glutamine transporters such as SLC1, SLC7 and SLC38 families, and cytoplasmic glutamine subsequently catabolized to glutamate that provides biosynthetic precursors. To identify the candidate glutamine transporters or glutamate metabolism regulators that contributed to the pathogenesis of Aortic aneurysm and dissection (AAD), we used RNA sequencing analysis in Ang II perfusion-induced AAD in Apoe-/- mice and discovered that several key genes associated with glutamine transports and metabolism were considerably reduced in AAD, particularly Slc1a5.",
+      "gpl": "24247",
+      "gse": "309259",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/15",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9264065",
+          "title": "Ang II 5"
+        },
+        {
+          "accession": "GSM9264062",
+          "title": "Ang II 2"
+        },
+        {
+          "accession": "GSM9264059",
+          "title": "Saline 7"
+        },
+        {
+          "accession": "GSM9264056",
+          "title": "Saline 4"
+        },
+        {
+          "accession": "GSM9264053",
+          "title": "Saline 1"
+        },
+        {
+          "accession": "GSM9264057",
+          "title": "Saline 5"
+        },
+        {
+          "accession": "GSM9264054",
+          "title": "Saline 2"
+        },
+        {
+          "accession": "GSM9264068",
+          "title": "Ang II 8"
+        },
+        {
+          "accession": "GSM9264066",
+          "title": "Ang II 6"
+        },
+        {
+          "accession": "GSM9264063",
+          "title": "Ang II 3"
+        },
+        {
+          "accession": "GSM9264060",
+          "title": "Saline 8"
+        },
+        {
+          "accession": "GSM9264067",
+          "title": "Ang II 7"
+        },
+        {
+          "accession": "GSM9264064",
+          "title": "Ang II 4"
+        },
+        {
+          "accession": "GSM9264058",
+          "title": "Saline 6"
+        },
+        {
+          "accession": "GSM9264055",
+          "title": "Saline 3"
+        },
+        {
+          "accession": "GSM9264061",
+          "title": "Ang II 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 16,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE309nnn/GSE309259/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1334836"
+    },
+    "200300433": {
+      "uid": "200300433",
+      "accession": "GSE300433",
+      "gds": "",
+      "title": "Connecting HTT intermediate alleles and microRNA dysregulation to enhanced tauopathy in Late-Onset Alzheimer's Disease",
+      "summary": "Background: Late-onset Alzheimer\u00b4s disease (LOAD) is a heterogeneous disorder influenced by complex genetic factors. We previously described intermediate alleles (IAs; 27-35 CAG repeats) in the huntingtin (HTT) gene as potential modifiers in around 6% of AD population. The caudate nucleus, the most affected region in Huntington's disease, is highly sensitive to these HTT CAG repeats. We hypothesized that HTT IAs induce gene expression deregulation, including altered microRNA (miRNA) profiles, leading to altered disease progression. Methods: We investigated the impact of HTT IAs on LOAD progression by genotyping HTT CAG repeats in a cohort of 323 LOAD patients and 335 healthy controls. Comprehensive histopathological and molecular analyses were performed on caudate nucleus samples from a matched subcohort (6 healthy controls, 14 LOAD non-HTT IA carriers, and 13 LOAD HTT IA carriers).  Results: HTT IAs carriers patients exhibited decreased survival after disease onset compared to non-carriers. Histopathologically, while LOAD patients showed increased soluble HTT levels and altered tau pathology compared to controls, these changes were consistently and markedly exacerbated in HTT IA carriers. This phenotype was characterized by heightened diffuse HTT immunoreactivity and an advanced maturation of tau pathology, specifically a pronounced increase in neuronal tau 3R burden and 3R tau-enriched ghost tangles. Interestingly, this pathological state was associated with alterations in key splicing factors, including decreased SRSF6 levels and increased nuclear FUS-SFPQ complex assembly. Analysis of microRNA (miRNA) profiling in the caudate nucleus revealed that the LOAD-associated miRNA dysregulation was significantly amplified in HTT IA carriers, identifying a signature of five miRNAs (miR-100-5p, miR-218-5p, miR-27b-3p, miR-487-3p, and miR-9-3p). In silico modeling and target validation demonstrated that these miRNAs target components of the nuclear spliceosome machinery, such as SRSF family, along with MAPT and HTT genes, suggesting a direct link to the observed tauopathy.  Conclusions: Our findings underscore that HTT IAs as critical modifiers in LOAD progression through an miRNA-mediated dysregulation of splicing and proteostasis. Thus, identifying HTT IAs through routine blood genetic screening offers a practical, non-invasive biomarker for patient stratification, taking a step forward to personalized therapeutic strategies in LOAD.",
+      "gpl": "34281",
+      "gse": "300433",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Non-coding RNA profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/07",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9060583",
+          "title": "A12, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060580",
+          "title": "A9, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060586",
+          "title": "B1, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060603",
+          "title": "C5, Control, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060592",
+          "title": "B7, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060572",
+          "title": "A1, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060589",
+          "title": "B4, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060601",
+          "title": "C3, Control, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060581",
+          "title": "A10, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060598",
+          "title": "B13, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060578",
+          "title": "A7, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060595",
+          "title": "B10, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060575",
+          "title": "A4, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060587",
+          "title": "B2, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060604",
+          "title": "C6, Control, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060584",
+          "title": "A13, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060573",
+          "title": "A2, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060590",
+          "title": "B5, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060596",
+          "title": "B11, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060576",
+          "title": "A5, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060593",
+          "title": "B8, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060582",
+          "title": "A11, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060599",
+          "title": "C1, Control, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060579",
+          "title": "A8, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060602",
+          "title": "C4, Control, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060591",
+          "title": "B6, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060588",
+          "title": "B3, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060585",
+          "title": "A14, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060574",
+          "title": "A3, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060600",
+          "title": "C2, Control, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060577",
+          "title": "A6, LOAD, Normal_HTT"
+        },
+        {
+          "accession": "GSM9060597",
+          "title": "B12, LOAD, Intermediate_allele_HTT"
+        },
+        {
+          "accession": "GSM9060594",
+          "title": "B9, LOAD, Intermediate_allele_HTT"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 33,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE300nnn/GSE300433/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1280944"
+    },
+    "200320199": {
+      "uid": "200320199",
+      "accession": "GSE320199",
+      "gds": "",
+      "title": "Transcriptomic analyses of mortality in HIV-associated Pneumocystis pneumonia",
+      "summary": "Pneumocystis jirovecii pneumonia (PCP) remains a leading cause of respiratory failure and mortality in individuals with advanced HIV. While severe disease is classically attributed to hyperinflammation, the specific biological determinants driving fatal outcomes in patients remain poorly understood. To address this, we employed an integrated systems biology approach, performing transcriptomics, proteomics, and metabolomics on bronchoalveolar lavage fluid from a prospective cohort of 42 patients with HIV-associated PCP. We demonstrate that mortality is not primarily driven by uncontrolled fungal burden or isolated hyperinflammation, but by profound immunometabolic failure. Non-survivors exhibited marked suppression of local humoral immunity, characterised by depletion of immunoglobulins and complement components, together with significant impairment of apolipoprotein E (ApoE)-mediated alveolar repair and dysregulation of arginine-nitric oxide metabolism. A predictive model combining ApoE and arginine achieved high prognostic accuracy. Crucially, using an ex vivo immunodeficient precision-cut lung slice model, we functionally reversed this opsonic deficit with intravenous immunoglobulin, which restored macrophage-mediated fungal clearance. These findings redefine fatal HIV-associated PCP as a syndrome of immunometabolic failure and provide a mechanistic rationale for evaluating immunoglobulin replacement as a host-directed adjunctive therapy.",
+      "gpl": "18573",
+      "gse": "320199",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/02",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9537154",
+          "title": "PCP Patient_027"
+        },
+        {
+          "accession": "GSM9537157",
+          "title": "PCP Patient_031"
+        },
+        {
+          "accession": "GSM9537151",
+          "title": "PCP Patient_020"
+        },
+        {
+          "accession": "GSM9537163",
+          "title": "PCP Patient_037"
+        },
+        {
+          "accession": "GSM9537160",
+          "title": "PCP Patient_034"
+        },
+        {
+          "accession": "GSM9537140",
+          "title": "PCP Patient_008"
+        },
+        {
+          "accession": "GSM9537143",
+          "title": "PCP Patient_012"
+        },
+        {
+          "accession": "GSM9537156",
+          "title": "PCP Patient_029"
+        },
+        {
+          "accession": "GSM9537159",
+          "title": "PCP Patient_033"
+        },
+        {
+          "accession": "GSM9537162",
+          "title": "PCP Patient_036"
+        },
+        {
+          "accession": "GSM9537142",
+          "title": "PCP Patient_011"
+        },
+        {
+          "accession": "GSM9537145",
+          "title": "PCP Patient_014"
+        },
+        {
+          "accession": "GSM9537148",
+          "title": "PCP Patient_017"
+        },
+        {
+          "accession": "GSM9537147",
+          "title": "PCP Patient_016"
+        },
+        {
+          "accession": "GSM9537141",
+          "title": "PCP Patient_009"
+        },
+        {
+          "accession": "GSM9537144",
+          "title": "PCP Patient_013"
+        },
+        {
+          "accession": "GSM9537150",
+          "title": "PCP Patient_019"
+        },
+        {
+          "accession": "GSM9537153",
+          "title": "PCP Patient_026"
+        },
+        {
+          "accession": "GSM9537146",
+          "title": "PCP Patient_015"
+        },
+        {
+          "accession": "GSM9537149",
+          "title": "PCP Patient_018"
+        },
+        {
+          "accession": "GSM9537152",
+          "title": "PCP Patient_021"
+        },
+        {
+          "accession": "GSM9537155",
+          "title": "PCP Patient_028"
+        },
+        {
+          "accession": "GSM9537158",
+          "title": "PCP Patient_032"
+        },
+        {
+          "accession": "GSM9537161",
+          "title": "PCP Patient_035"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 24,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE320nnn/GSE320199/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1427134"
+    },
+    "200321762": {
+      "uid": "200321762",
+      "accession": "GSE321762",
+      "gds": "",
+      "title": "Vascular smooth muscle cell state trajectories mediate molecular mechanisms of coronary disease risk [scRNA-seq and scATAC-seq]",
+      "summary": "Vascular smooth muscle cells contribute to heritable coronary artery disease risk and undergo complex transitions to multiple disease-related phenotypes. To investigate the genetic basis of these trajectories, we develop a dense timecourse single cell transcriptomic and epigenetic map of atherosclerosis in a murine disease model accompanied by high-plex in situ spatial data. Using temporal data and probabilistic fate modeling, we identify key transcription factors that drive cell state changes through a combination of network-based prioritization and in silico transcription factor perturbation. Parallel knockout studies of validated coronary artery disease gene Tcf21 uncover its molecular mechanisms in smooth muscle cell transition, due in part to a role regulating the transition of smooth muscle cells in the secondary heart field. Integrating the murine atlas with human coronary artery disease genetics pinpoint smooth muscle cell phenotypes that mediate disease risk, highlighting causal disease mechanisms. Together, these studies resolve atherosclerosis trajectories at single cell resolution and identify genetic causal transcriptomic and epigenomic mechanisms of coronary artery disease risk.",
+      "gpl": "24247",
+      "gse": "321762",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing; Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/27",
+      "suppfile": "RDS",
+      "samples": [
+        {
+          "accession": "GSM9550122",
+          "title": "Tcf21KO 5wk 1 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550076",
+          "title": "Control 5wk 2 mixed RNA"
+        },
+        {
+          "accession": "GSM9550096",
+          "title": "Tcf21KO 5wk 1 tdt RNA"
+        },
+        {
+          "accession": "GSM9550099",
+          "title": "Tcf21KO 12wk 1 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550079",
+          "title": "Control 7wk 1 mixed RNA"
+        },
+        {
+          "accession": "GSM9550119",
+          "title": "Control 16wk 2 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550102",
+          "title": "Tcf21KO 16wk 3 tdt RNA"
+        },
+        {
+          "accession": "GSM9550085",
+          "title": "Control 16wk 1 tdt RNA"
+        },
+        {
+          "accession": "GSM9550105",
+          "title": "Control 0wk nontdt ATAC"
+        },
+        {
+          "accession": "GSM9550125",
+          "title": "Tcf21KO 5wk 2 nontdt ATAC"
+        },
+        {
+          "accession": "GSM9550088",
+          "title": "Control 16wk 4 tdt RNA"
+        },
+        {
+          "accession": "GSM9550108",
+          "title": "Control 5wk 1 nontdt ATAC"
+        },
+        {
+          "accession": "GSM9550128",
+          "title": "Tcf21KO 16wk 2 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550082",
+          "title": "Control 9wk 2 mixed RNA"
+        },
+        {
+          "accession": "GSM9550084",
+          "title": "Control 12wk 1 non-tdt RNA"
+        },
+        {
+          "accession": "GSM9550121",
+          "title": "Control 16wk 2 nontdt ATAC"
+        },
+        {
+          "accession": "GSM9550104",
+          "title": "Control 0wk tdt ATAC"
+        },
+        {
+          "accession": "GSM9550124",
+          "title": "Tcf21KO 5wk 1 nontdt ATAC"
+        },
+        {
+          "accession": "GSM9550127",
+          "title": "Tcf21KO 16wk 1 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550081",
+          "title": "Control 9wk 1 mixed RNA"
+        },
+        {
+          "accession": "GSM9550101",
+          "title": "Tcf21KO 16wk 2 tdt RNA"
+        },
+        {
+          "accession": "GSM9550113",
+          "title": "Control 9wk 2 mixed ATAC"
+        },
+        {
+          "accession": "GSM9550087",
+          "title": "Control 16wk 3 tdt RNA"
+        },
+        {
+          "accession": "GSM9550107",
+          "title": "Control 5wk 2 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550090",
+          "title": "Control 16wk 1 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550073",
+          "title": "Control 3wk 1 mixed RNA"
+        },
+        {
+          "accession": "GSM9550110",
+          "title": "Control 7wk 1 mixed ATAC"
+        },
+        {
+          "accession": "GSM9550086",
+          "title": "Control 16wk 2 tdt RNA"
+        },
+        {
+          "accession": "GSM9550106",
+          "title": "Control 5wk 1 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550089",
+          "title": "Control 16wk 5 tdt RNA"
+        },
+        {
+          "accession": "GSM9550126",
+          "title": "Tcf21KO 12wk 1 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550129",
+          "title": "RNA"
+        },
+        {
+          "accession": "GSM9550075",
+          "title": "Control 5wk 1 mixed RNA"
+        },
+        {
+          "accession": "GSM9550095",
+          "title": "Control 16wk 5 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550078",
+          "title": "Control 5wk 3 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550115",
+          "title": "Control 12wk 1 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550098",
+          "title": "Tcf21KO 12wk 1 tdt RNA"
+        },
+        {
+          "accession": "GSM9550118",
+          "title": "Control 16wk 1 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550072",
+          "title": "Control 0wk 2 mixed RNA"
+        },
+        {
+          "accession": "GSM9550092",
+          "title": "Control 16wk 3 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550074",
+          "title": "Control 3wk 2 mixed RNA"
+        },
+        {
+          "accession": "GSM9550094",
+          "title": "Control 16wk 4 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550111",
+          "title": "Control 9wk 1 mixed ATAC"
+        },
+        {
+          "accession": "GSM9550071",
+          "title": "Control 0wk 1 mixed RNA"
+        },
+        {
+          "accession": "GSM9550117",
+          "title": "Control 12wk 1 nontdt ATAC"
+        },
+        {
+          "accession": "GSM9550091",
+          "title": "Control 16wk 2 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550103",
+          "title": "Tcf21KO 16wk 1 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550077",
+          "title": "Control 5wk 3 tdt RNA"
+        },
+        {
+          "accession": "GSM9550123",
+          "title": "Tcf21KO 5wk 2 tdt ATAC"
+        },
+        {
+          "accession": "GSM9550097",
+          "title": "Tcf21KO 5wk 1 nontdt RNA"
+        },
+        {
+          "accession": "GSM9550100",
+          "title": "Tcf21KO 16wk 1 tdt RNA"
+        },
+        {
+          "accession": "GSM9550120",
+          "title": "Control 16wk 1 nontdt ATAC"
+        },
+        {
+          "accession": "GSM9550080",
+          "title": "Control 7wk 2 mixed RNA"
+        },
+        {
+          "accession": "GSM9550083",
+          "title": "Control 12wk 1 tdt RNA"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 54,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE321nnn/GSE321762/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1429340"
+    },
+    "200316666": {
+      "uid": "200316666",
+      "accession": "GSE316666",
+      "gds": "",
+      "title": "Vascular smooth muscle cell state trajectories mediate molecular mechanisms of coronary disease risk",
+      "summary": "To investigate the genetic basis of SMC cell state trajectories that underlie the SMC component of CAD causality, we developed a dense timecourse single cell transcriptomic and epigenomic mapping of atherosclerosis in a murine disease model and here present complementary  high throughput spatial RNA in situ hybridization data to map transition cell states within the vascular wall.",
+      "gpl": "33896",
+      "gse": "316666",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/25",
+      "suppfile": "H5, PARQUET, TIFF",
+      "samples": [
+        {
+          "accession": "GSM9457959",
+          "title": "Mouse_aorta_sections"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 1,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE316nnn/GSE316666/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1403556"
+    },
+    "200317586": {
+      "uid": "200317586",
+      "accession": "GSE317586",
+      "gds": "",
+      "title": "3-Hydroxystearic acid promotes cholesterol efflux and attenuates atherosclerosis via the ALKBH5/PAX-8/ABCA1 pathway",
+      "summary": "Introduction: Atherosclerosis can trigger various cardiovascular and cerebrovascular diseases with complex pathogenesis. Macrophage proliferation, inflammatory responses, and lipid phagocytosis, which induce foam cell formation and accumulation, are critical in the development of early atherosclerotic lesions. The role of 3-Hydroxystearic acid (C18-3OH), a recently identified gut microbiota-derived metabolite, in atherosclerosis has not yet been clarified. This study aimed to investigate the role of the ALKBH5/PAX-8/ABCA1 pathway in C18-3OH-mediated regulation of macrophage cholesterol efflux and atherosclerosis and explore novel mechanisms of ABCA1 regulation from the perspective of m6A modification. Methods: RT-qPCR and Western blotting were used to detect gene and protein expression, respectively. ChIP-Seq was used to screen PAX-8 target genes, and ChIP-qPCR was used to validate PAX-8 binding to ABCA1. The SRAMP platform was used to predict m6A modification sites in PAX-8 mRNA sequences. Methylated RNA immunoprecipitation-qPCR (MeRIP-qPCR) was used to measure m6A modification levels of PAX-8 mRNA in foam cells. UHPLC-OEMS untargeted metabolomics were used to analyze differential fatty acid metabolites in an atherosclerotic mouse model. Specific kits were used to detect serum liver function markers (aspartate transaminase, AST; alanine aminotransferase, ALT), renal function markers (serum creatinine, Scr; blood urea nitrogen, BUN), and lipid profiles (HDL-C, TG, LDL-C, TC). Aortic sinus sections were prepared, and H&E, Oil Red O, and Masson staining were used to evaluate atherosclerotic plaques. Results: The results demonstrated that C18-3OH promoted cholesterol efflux in foam cells and alleviated lipid accumulation by upregulating ABCA1 expression. C18-3OH inhibited ALKBH5, increased PAX-8 mRNA m6A modification and PAX-8 expression, and upregulated ABCA1 to enhance cholesterol efflux. Serum metabolomics revealed reduced C18-3OH levels in high-fat diet-fed apoE-/- atherosclerotic mice. C18-3OH suppressed aortic ALKBH5 expression, elevated m6A modification of PAX-8 mRNA, and increased PAX-8 and ABCA1 expression. Furthermore, C18-3OH improved lipid metabolism and reduced the atherosclerotic plaque area in apoE-/- mice. Discussion: This study clarifies the impact and mechanisms of gut microbiota-derived C18-3OH on atherosclerosis progression, providing novel strategies for the precise prevention and treatment of atherosclerosis.",
+      "gpl": "24676",
+      "gse": "317586",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/18",
+      "suppfile": "XLSX",
+      "samples": [
+        {
+          "accession": "GSM9474753",
+          "title": "THP-1 cells,  (Input)"
+        },
+        {
+          "accession": "GSM9474752",
+          "title": "THP-1 cells, PAX-8 target genes (ChIP)"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41694370"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE317nnn/GSE317586/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1414503"
+    },
+    "200319246": {
+      "uid": "200319246",
+      "accession": "GSE319246",
+      "gds": "",
+      "title": "ApoE4 Drives Microglial Lipid Dysregulation in Alzheimer\u2019s Disease via Epigenetic Reprogramming of the AsxL1/LXR\u03b1\u2013H3K4me3 Axis",
+      "summary": "Background The \u03b5 4 allele of apolipoprotein E gene (ApoE) stands as the greatest genetic risk factor for late-onset Alzheimer\u2019s disease (AD). Although microglia accumulating lipid droplets (LDAM) have been implicated in AD pathogenesis, the mechanistic link between ApoE4 and microglial lipid dysregulation remains elusive. Methods We employed a multi-omics approach, combining snRNA-seq and locus-specific epigenetic analysis, alongside microglia-specific gene manipulation in ApoE-targeted replacement (TR) mice. Primary microglia were challenged with cholesterol to simulate lipid overload conditions. Results In mid-life ApoE4-TR mice, microglia within the dentate gyrus developed pronounced lipid droplet accumulation, concurrent with impaired A\u03b2 clearance and a pro-inflammatory shift. snRNA-seq unveiled a unique microglial cluster in ApoE4 mice, enriched for lipid-metabolism genes and marked by the pronounced downregulation of the hub gene AsxL1. Mechanistically, ApoE4 attenuated the AsxL1\u2013LXR\u03b1 interaction, leading to reduced H3K4me3 occupancy at promoters of lipid-efflux genes such as Abca1. Crucially, CRISPR-mediated, microglia-specific overexpression of AsxL1 restored H3K4me3 levels, normalized cholesterol efflux, and rescued A\u03b2 phagocytic deficits in vivo. Conclusions Our findings define an epigenetic pathway whereby ApoE4 drives microglial dysfunction via the AsxL1\u2013LXR\u03b1\u2013H3K4me3 axis, fostering the LDAM phenotype. Enhancing AsxL1 function presents a promising therapeutic avenue for countering ApoE4-mediated pathogenesis in AD.",
+      "gpl": "24247",
+      "gse": "319246",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/16",
+      "suppfile": "TSV",
+      "samples": [
+        {
+          "accession": "GSM9514239",
+          "title": "RNA-seq of mus brain in January, biol repl4"
+        },
+        {
+          "accession": "GSM9514256",
+          "title": "RNA-seq of mus brain in June, biol repl1"
+        },
+        {
+          "accession": "GSM9514236",
+          "title": "RNA-seq of mus brain in January, biol repl1"
+        },
+        {
+          "accession": "GSM9514242",
+          "title": "RNA-seq of mus brain in February, biol repl3"
+        },
+        {
+          "accession": "GSM9514259",
+          "title": "RNA-seq of mus brain in June, biol repl4"
+        },
+        {
+          "accession": "GSM9514248",
+          "title": "RNA-seq of mus brain in April, biol repl1"
+        },
+        {
+          "accession": "GSM9514245",
+          "title": "RNA-seq of mus brain in March, biol repl2"
+        },
+        {
+          "accession": "GSM9514247",
+          "title": "RNA-seq of mus brain in March, biol repl4"
+        },
+        {
+          "accession": "GSM9514244",
+          "title": "RNA-seq of mus brain in March, biol repl1"
+        },
+        {
+          "accession": "GSM9514241",
+          "title": "RNA-seq of mus brain in February, biol repl2"
+        },
+        {
+          "accession": "GSM9514253",
+          "title": "RNA-seq of mus brain in May, biol repl2"
+        },
+        {
+          "accession": "GSM9514250",
+          "title": "RNA-seq of mus brain in April, biol repl3"
+        },
+        {
+          "accession": "GSM9514249",
+          "title": "RNA-seq of mus brain in April, biol repl2"
+        },
+        {
+          "accession": "GSM9514246",
+          "title": "RNA-seq of mus brain in March, biol repl3"
+        },
+        {
+          "accession": "GSM9514252",
+          "title": "RNA-seq of mus brain in May, biol repl1"
+        },
+        {
+          "accession": "GSM9514258",
+          "title": "RNA-seq of mus brain in June, biol repl3"
+        },
+        {
+          "accession": "GSM9514238",
+          "title": "RNA-seq of mus brain in January, biol repl3"
+        },
+        {
+          "accession": "GSM9514255",
+          "title": "RNA-seq of mus brain in May, biol repl4"
+        },
+        {
+          "accession": "GSM9514237",
+          "title": "RNA-seq of mus brain in January, biol repl2"
+        },
+        {
+          "accession": "GSM9514257",
+          "title": "RNA-seq of mus brain in June, biol repl2"
+        },
+        {
+          "accession": "GSM9514254",
+          "title": "RNA-seq of mus brain in May, biol repl3"
+        },
+        {
+          "accession": "GSM9514251",
+          "title": "RNA-seq of mus brain in April, biol repl4"
+        },
+        {
+          "accession": "GSM9514240",
+          "title": "RNA-seq of mus brain in February, biol repl1"
+        },
+        {
+          "accession": "GSM9514243",
+          "title": "RNA-seq of mus brain in February, biol repl4"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 24,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE319nnn/GSE319246/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1422681"
+    },
+    "200319035": {
+      "uid": "200319035",
+      "accession": "GSE319035",
+      "gds": "",
+      "title": "P21+TREM2+-Senescent Macrophages Fuel Inflammaging and Metabolic Dysfunction-Associated Steatotic Liver Disease [NAFLD_time_course]",
+      "summary": "Cellular senescence drives chronic sterile inflammation during aging via the senescence-associated secretory phenotype (SASP); however, the cell types responsible for this pathology remain poorly defined. Here, we identify p21\u207aTrem2\u207a senescent macrophages as a major source of inflammaging. Using primary mouse and human macrophages, we developed a model of DNA damage and cholesterol-induced senescence and applied multi-omic profiling to fully characterize senescent macrophages. We found that senescent macrophages exhibit a distinctive p21-TREM2 expression profile and SASP, driven in part by type-I interferon signaling via secreted mitochondrial DNA. We also found that senescent macrophage accumulation occurs in aged and MASLD mouse livers and is enriched in human cirrhotic liver tissue. Finally, senolytic treatment targeting senescent macrophages reduced liver inflammation and steatosis in both aged and MASLD mice. Together, these findings establish macrophage senescence as a central driver of chronic inflammation in aging and metabolic liver disease, highlighting a promising, tractable therapeutic target.",
+      "gpl": "34290",
+      "gse": "319035",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/16",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM9508420",
+          "title": "SH24_BXD19_0week_chow"
+        },
+        {
+          "accession": "GSM9508400",
+          "title": "SH4_C57BL6J_2week_ath"
+        },
+        {
+          "accession": "GSM9508437",
+          "title": "SH41_BXD19_12week_ath"
+        },
+        {
+          "accession": "GSM9508463",
+          "title": "SH67_129X1_12week_ath"
+        },
+        {
+          "accession": "GSM9508417",
+          "title": "SH21_C57BL6J_16week_chow"
+        },
+        {
+          "accession": "GSM9508397",
+          "title": "SH1_C57BL6J_0week_chow"
+        },
+        {
+          "accession": "GSM9508423",
+          "title": "SH27_BXD19_2week_ath"
+        },
+        {
+          "accession": "GSM9508443",
+          "title": "SH47_BXD19_16week_ath"
+        },
+        {
+          "accession": "GSM9508460",
+          "title": "SH64_129X1_8week_ath"
+        },
+        {
+          "accession": "GSM9508440",
+          "title": "SH44_BXD19_16week_chow"
+        },
+        {
+          "accession": "GSM9508466",
+          "title": "SH70_129X1_16week_chow"
+        },
+        {
+          "accession": "GSM9508429",
+          "title": "SH33_BXD19_4week_ath"
+        },
+        {
+          "accession": "GSM9508446",
+          "title": "SH50_129X1_0week_chow"
+        },
+        {
+          "accession": "GSM9508409",
+          "title": "SH13_C57BL6J_12week_ath"
+        },
+        {
+          "accession": "GSM9508426",
+          "title": "SH30_BXD19_4week_ath"
+        },
+        {
+          "accession": "GSM9508472",
+          "title": "SH76_129X1_16week_ath"
+        },
+        {
+          "accession": "GSM9508406",
+          "title": "SH10_C57BL6J_8week_ath"
+        },
+        {
+          "accession": "GSM9508469",
+          "title": "SH73_129X1_16week_chow"
+        },
+        {
+          "accession": "GSM9508449",
+          "title": "SH53_129X1_0week_chow"
+        },
+        {
+          "accession": "GSM9508403",
+          "title": "SH7_C57BL6J_4week_ath"
+        },
+        {
+          "accession": "GSM9508428",
+          "title": "SH32_BXD19_4week_ath"
+        },
+        {
+          "accession": "GSM9508465",
+          "title": "SH69_129X1_12week_ath"
+        },
+        {
+          "accession": "GSM9508445",
+          "title": "SH49_BXD19_16week_ath"
+        },
+        {
+          "accession": "GSM9508425",
+          "title": "SH29_BXD19_2week_ath"
+        },
+        {
+          "accession": "GSM9508442",
+          "title": "SH46_BXD19_16week_ath"
+        },
+        {
+          "accession": "GSM9508405",
+          "title": "SH9_C57BL6J_4week_ath"
+        },
+        {
+          "accession": "GSM9508468",
+          "title": "SH72_129X1_16week_chow"
+        },
+        {
+          "accession": "GSM9508422",
+          "title": "SH26_BXD19_2week_ath"
+        },
+        {
+          "accession": "GSM9508448",
+          "title": "SH52_129X1_0week_chow"
+        },
+        {
+          "accession": "GSM9508402",
+          "title": "SH6_C57BL6J_2week_ath"
+        },
+        {
+          "accession": "GSM9508457",
+          "title": "SH61_129X1_4week_ath"
+        },
+        {
+          "accession": "GSM9508471",
+          "title": "SH75_129X1_16week_ath"
+        },
+        {
+          "accession": "GSM9508408",
+          "title": "SH12_C57BL6J_8week_ath"
+        },
+        {
+          "accession": "GSM9508454",
+          "title": "SH58_129X1_4week_ath"
+        },
+        {
+          "accession": "GSM9508434",
+          "title": "SH38_BXD19_12week_ath"
+        },
+        {
+          "accession": "GSM9508414",
+          "title": "SH18_C57BL6J_16week_ath"
+        },
+        {
+          "accession": "GSM9508451",
+          "title": "SH55_129X1_2week_ath"
+        },
+        {
+          "accession": "GSM9508431",
+          "title": "SH35_BXD19_8week_ath"
+        },
+        {
+          "accession": "GSM9508411",
+          "title": "SH15_C57BL6J_12week_ath"
+        },
+        {
+          "accession": "GSM9508410",
+          "title": "SH14_C57BL6J_12week_ath"
+        },
+        {
+          "accession": "GSM9508447",
+          "title": "SH51_129X1_0week_chow"
+        },
+        {
+          "accession": "GSM9508473",
+          "title": "SH77_129X1_16week_ath"
+        },
+        {
+          "accession": "GSM9508427",
+          "title": "SH31_BXD19_4week_ath"
+        },
+        {
+          "accession": "GSM9508407",
+          "title": "SH11_C57BL6J_8week_ath"
+        },
+        {
+          "accession": "GSM9508453",
+          "title": "SH57_129X1_2week_ath"
+        },
+        {
+          "accession": "GSM9508433",
+          "title": "SH37_BXD19_8week_ath"
+        },
+        {
+          "accession": "GSM9508470",
+          "title": "SH74_129X1_16week_ath"
+        },
+        {
+          "accession": "GSM9508450",
+          "title": "SH54_129X1_2week_ath"
+        },
+        {
+          "accession": "GSM9508430",
+          "title": "SH34_BXD19_8week_ath"
+        },
+        {
+          "accession": "GSM9508456",
+          "title": "SH60_129X1_4week_ath"
+        },
+        {
+          "accession": "GSM9508419",
+          "title": "SH23_BXD19_0week_chow"
+        },
+        {
+          "accession": "GSM9508399",
+          "title": "SH3_C57BL6J_0week_chow"
+        },
+        {
+          "accession": "GSM9508436",
+          "title": "SH40_BXD19_12week_ath"
+        },
+        {
+          "accession": "GSM9508462",
+          "title": "SH66_129X1_12week_ath"
+        },
+        {
+          "accession": "GSM9508416",
+          "title": "SH20_C57BL6J_16week_chow"
+        },
+        {
+          "accession": "GSM9508459",
+          "title": "SH63_129X1_8week_ath"
+        },
+        {
+          "accession": "GSM9508413",
+          "title": "SH17_C57BL6J_16week_ath"
+        },
+        {
+          "accession": "GSM9508439",
+          "title": "SH43_BXD19_16week_chow"
+        },
+        {
+          "accession": "GSM9508455",
+          "title": "SH59_129X1_4week_ath"
+        },
+        {
+          "accession": "GSM9508418",
+          "title": "SH22_BXD19_0week_chow"
+        },
+        {
+          "accession": "GSM9508438",
+          "title": "SH42_BXD19_16week_chow"
+        },
+        {
+          "accession": "GSM9508415",
+          "title": "SH19_C57BL6J_16week_chow"
+        },
+        {
+          "accession": "GSM9508452",
+          "title": "SH56_129X1_2week_ath"
+        },
+        {
+          "accession": "GSM9508435",
+          "title": "SH39_BXD19_12week_ath"
+        },
+        {
+          "accession": "GSM9508432",
+          "title": "SH36_BXD19_8week_ath"
+        },
+        {
+          "accession": "GSM9508458",
+          "title": "SH62_129X1_8week_ath"
+        },
+        {
+          "accession": "GSM9508412",
+          "title": "SH16_C57BL6J_16week_ath"
+        },
+        {
+          "accession": "GSM9508401",
+          "title": "SH5_C57BL6J_2week_ath"
+        },
+        {
+          "accession": "GSM9508464",
+          "title": "SH68_129X1_12week_ath"
+        },
+        {
+          "accession": "GSM9508398",
+          "title": "SH2_C57BL6J_0week_chow"
+        },
+        {
+          "accession": "GSM9508444",
+          "title": "SH48_BXD19_16week_ath"
+        },
+        {
+          "accession": "GSM9508424",
+          "title": "SH28_BXD19_2week_ath"
+        },
+        {
+          "accession": "GSM9508441",
+          "title": "SH45_BXD19_16week_chow"
+        },
+        {
+          "accession": "GSM9508404",
+          "title": "SH8_C57BL6J_4week_ath"
+        },
+        {
+          "accession": "GSM9508461",
+          "title": "SH65_129X1_8week_ath"
+        },
+        {
+          "accession": "GSM9508421",
+          "title": "SH25_BXD19_0week_chow"
+        },
+        {
+          "accession": "GSM9508467",
+          "title": "SH71_129X1_16week_chow"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 77,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE319nnn/GSE319035/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1422001"
+    },
+    "200307866": {
+      "uid": "200307866",
+      "accession": "GSE307866",
+      "gds": "",
+      "title": "Impact of Alzheimer\u2019s disease risk factors and local neuromelanin content on the transcriptomic landscape of the human locus coeruleus",
+      "summary": "The locus coeruleus (LC) is a small noradrenergic nucleus in the dorsal pons that sends projections widely across the brain to regulate multiple functions including  sleep, memory, arousal, and cognition. The LC has several unique cellular features including the presence of neuromelanin (NM) and its accumulation of a precursor to Alzheimer\u2019s Disease (AD) pathology, soluble phospho-tau (pTau), in virtually all individuals by adulthood. NM increases in LC during early life, plateauing in middle age, and eventually dissipating, coinciding with LC neuron degeneration, a process which is observed in healthy aging but accelerated in AD. NM-sensitive neuroimaging predicts clinical severity and future progression of AD. While these findings suggest an etiologic role for the LC in AD, data describing the molecular landscape of the LC in middle age,  preceding the clinical manifestation of sporadic AD, is lacking. Understanding the molecular state of the LC during this time period is critical to developing interventions that preserve this brain region and the cognitive functions it supports. Here, we performed Visium spatial transcriptomics on 85 tissue sections of human postmortem LC from a cohort of 33 middle-aged, neurotypical donors, balanced for epidemiologic AD risk factors including sex, African or European ancestry, and APOE genotypes (carriers of the E4/risk or E2/protective alleles). We find an unexpected male-bias in LC expression of cholesterol synthesis pathway genes, suggesting that intrinsic neuronal cholesterol synthesis may be protective against AD. Comparing across APOE genotypes, astrocytic gene expression differs in the immediate vicinity of LC neurons. Finally, we leverage histological images captured from the profiled tissue to associate gene expression to NM abundance, finding that APOE expression is associated with reduced NM content, and that NM-associated genes are enriched for aging-related pathways. These findings provide important information about how AD risk factors and NM content impact molecular correlates of resilience/susceptibility of the aging LC to degeneration. Data are freely available, including through visualization browsers to enable wide utilization of these tools for understanding LC biology in AD and other LC-related neurodegenerative disorders, including Parkinson\u2019s disease.",
+      "gpl": "24676",
+      "gse": "307866",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Other",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/16",
+      "suppfile": "CSV, JPG, JSON, MTX, PNG, TSV",
+      "samples": [
+        {
+          "accession": "GSM9232991",
+          "title": "V13B23-284_A1"
+        },
+        {
+          "accession": "GSM9233028",
+          "title": "V13M06-403_C1"
+        },
+        {
+          "accession": "GSM9233008",
+          "title": "V13M06-332_C1"
+        },
+        {
+          "accession": "GSM9233005",
+          "title": "V13M06-331_D1"
+        },
+        {
+          "accession": "GSM9233031",
+          "title": "V13M06-404_B1"
+        },
+        {
+          "accession": "GSM9233011",
+          "title": "V13M06-333_B1"
+        },
+        {
+          "accession": "GSM9233019",
+          "title": "V13M06-401_B1"
+        },
+        {
+          "accession": "GSM9232999",
+          "title": "V13F27-339_B1"
+        },
+        {
+          "accession": "GSM9233025",
+          "title": "V13M06-402_D1"
+        },
+        {
+          "accession": "GSM9233022",
+          "title": "V13M06-402_A1"
+        },
+        {
+          "accession": "GSM9233002",
+          "title": "V13M06-331_A1"
+        },
+        {
+          "accession": "GSM9233000",
+          "title": "V13F27-339_C1"
+        },
+        {
+          "accession": "GSM9233026",
+          "title": "V13M06-403_A1"
+        },
+        {
+          "accession": "GSM9233006",
+          "title": "V13M06-332_A1"
+        },
+        {
+          "accession": "GSM9233023",
+          "title": "V13M06-402_B1"
+        },
+        {
+          "accession": "GSM9233003",
+          "title": "V13M06-331_B1"
+        },
+        {
+          "accession": "GSM9233017",
+          "title": "V13M06-386_D1"
+        },
+        {
+          "accession": "GSM9232997",
+          "title": "V13B23-366_A1"
+        },
+        {
+          "accession": "GSM9233014",
+          "title": "V13M06-386_A1"
+        },
+        {
+          "accession": "GSM9232994",
+          "title": "V13B23-284_D1"
+        },
+        {
+          "accession": "GSM9233020",
+          "title": "V13M06-401_C1"
+        },
+        {
+          "accession": "GSM9233001",
+          "title": "V13F27-339_D1"
+        },
+        {
+          "accession": "GSM9233018",
+          "title": "V13M06-401_A1"
+        },
+        {
+          "accession": "GSM9232998",
+          "title": "V13F27-339_A1"
+        },
+        {
+          "accession": "GSM9232995",
+          "title": "V13B23-286_A1"
+        },
+        {
+          "accession": "GSM9233021",
+          "title": "V13M06-401_D1"
+        },
+        {
+          "accession": "GSM9233029",
+          "title": "V13M06-403_D1"
+        },
+        {
+          "accession": "GSM9232992",
+          "title": "V13B23-284_B1"
+        },
+        {
+          "accession": "GSM9233009",
+          "title": "V13M06-332_D1"
+        },
+        {
+          "accession": "GSM9233015",
+          "title": "V13M06-386_B1"
+        },
+        {
+          "accession": "GSM9233032",
+          "title": "V13M06-404_C1"
+        },
+        {
+          "accession": "GSM9233010",
+          "title": "V13M06-333_A1"
+        },
+        {
+          "accession": "GSM9233012",
+          "title": "V13M06-333_C1"
+        },
+        {
+          "accession": "GSM9233016",
+          "title": "V13M06-386_C1"
+        },
+        {
+          "accession": "GSM9233033",
+          "title": "V13M06-404_D1"
+        },
+        {
+          "accession": "GSM9233013",
+          "title": "V13M06-333_D1"
+        },
+        {
+          "accession": "GSM9232996",
+          "title": "V13B23-286_B1"
+        },
+        {
+          "accession": "GSM9232993",
+          "title": "V13B23-284_C1"
+        },
+        {
+          "accession": "GSM9233027",
+          "title": "V13M06-403_B1"
+        },
+        {
+          "accession": "GSM9233007",
+          "title": "V13M06-332_B1"
+        },
+        {
+          "accession": "GSM9233024",
+          "title": "V13M06-402_C1"
+        },
+        {
+          "accession": "GSM9233004",
+          "title": "V13M06-331_C1"
+        },
+        {
+          "accession": "GSM9233030",
+          "title": "V13M06-404_A1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 43,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41278831"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE307nnn/GSE307866/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1327429"
+    }
+  }
+}

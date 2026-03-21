@@ -10,4 +10,4 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY bionexus_intelligence /app/bionexus_intelligence
 
-CMD ["python", "-m", "bionexus_intelligence.server"]
+CMD ["python", "-m", "bionexus_intelligence.rest_api"]

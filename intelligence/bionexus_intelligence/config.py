@@ -71,5 +71,15 @@ def _env_float(key: str, default: float) -> float:
 def _resolve_path(raw_path: str) -> Path:
     path = Path(raw_path)
     if path.is_absolute():
+        return _resolve_existing_path(path)
+    return _resolve_existing_path((_REPO_ROOT / path).resolve())
+
+
+def _resolve_existing_path(path: Path) -> Path:
+    if path.exists():
         return path
-    return (_REPO_ROOT / path).resolve()
+    if path.name == "EFO_0000572_evidence.json":
+        candidates = sorted(path.parent.rglob(path.name))
+        if candidates:
+            return candidates[-1]
+    return path

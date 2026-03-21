@@ -3,7 +3,14 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Protocol
 
-from .models import GeneRecord, OpenTargetsEvidence, PathwayRecord, StudyPathwayContext, StudySnippet
+from .models import (
+    DiseaseTrendSnapshot,
+    GeneRecord,
+    OpenTargetsEvidence,
+    PathwayRecord,
+    StudyPathwayContext,
+    StudySnippet,
+)
 
 
 class LLMClient(Protocol):
@@ -34,6 +41,9 @@ class StudyRepository(Protocol):
         ...
 
     def fetch_study_pathway_context(self, study_id: str, *, limit: int) -> StudyPathwayContext | None:
+        ...
+
+    def fetch_disease_trend_snapshot(self, disease_query: str) -> DiseaseTrendSnapshot | None:
         ...
 
 

@@ -2,5 +2,9 @@
   "/data_lake/raw/uniprot/BRCA1.json": "b73280151621d95673d0a6977297f333",
   "/data_lake/raw/uniprot/EGFR.json": "e551452dc2a5f106fb45bef4f57db297",
   "/data_lake/raw/ncbi/BRCA1_studies.json": "2f62f761d4aa6d7f144a5d0b559b104b",
-  "/data_lake/raw/ncbi/EGFR_studies.json": "4bc66fea5a7e7920bb65c6c1d057e0c9"
+  "/data_lake/raw/ncbi/EGFR_studies.json": "4bc66fea5a7e7920bb65c6c1d057e0c9",
+  "/data_lake/raw/uniprot/date=2026-03-21/organ=liver/BRCA1.json": "b73280151621d95673d0a6977297f333",
+  "/data_lake/raw/uniprot/date=2026-03-21/organ=liver/EGFR.json": "e551452dc2a5f106fb45bef4f57db297",
+  "/data_lake/raw/ncbi/date=2026-03-21/organ=liver/BRCA1_studies.json": "2f62f761d4aa6d7f144a5d0b559b104b",
+  "/data_lake/raw/ncbi/date=2026-03-21/organ=liver/EGFR_studies.json": "4bc66fea5a7e7920bb65c6c1d057e0c9"
 }

@@ -26,13 +26,23 @@ class FakeStudyRepo:
         return 3
 
     def resolve_gene(self, gene_or_uniprot: str) -> GeneRecord | None:
-        if gene_or_uniprot.upper() in {"BRCA1", "P38398"}:
+        if gene_or_uniprot.upper() in {"BRCA1", "P38398", "GRIN2B"}:
+            if gene_or_uniprot.upper() == "GRIN2B":
+                return GeneRecord(gene_symbol="GRIN2B", uniprot_id="Q13224")
             return GeneRecord(gene_symbol="BRCA1", uniprot_id="P38398")
         return None
 
     def fetch_pathways_for_uniprot(self, uniprot_id: str, *, limit: int) -> list[PathwayRecord]:
-        assert uniprot_id == "P38398"
+        assert uniprot_id in {"P38398", "Q13224"}
         assert limit > 0
+        if uniprot_id == "Q13224":
+            return [
+                PathwayRecord(
+                    uniprot_id="Q13224",
+                    reactome_id="R-HSA-112316",
+                    pathway_name="Neuronal System",
+                )
+            ]
         return [
             PathwayRecord(
                 uniprot_id="P38398",
@@ -42,8 +52,10 @@ class FakeStudyRepo:
         ]
 
     def fetch_study_snippets(self, query: str, *, limit: int) -> list[StudySnippet]:
-        assert query == "BRCA1"
+        assert query in {"BRCA1", "GRIN2B"}
         assert limit > 0
+        if query == "GRIN2B":
+            return []
         return [
             StudySnippet(
                 accession="GSE267911",
@@ -75,15 +87,21 @@ class FakeStudyRepo:
 
 class FakeOpenTargetsRepo:
     def find_evidence_for_gene(self, gene_symbol: str, *, limit: int) -> list[OpenTargetsEvidence]:
-        assert gene_symbol == "BRCA1"
-        assert limit == 5
+        assert gene_symbol in {"BRCA1", "GRIN2B"}
         return [
             OpenTargetsEvidence(
-                target_symbol="BRCA1",
-                disease_name="Breast carcinoma",
-                evidence_score=0.81,
+                target_symbol=gene_symbol,
+                disease_name="Breast carcinoma" if gene_symbol == "BRCA1" else "Neurodevelopmental disorder",
+                evidence_score=0.81 if gene_symbol == "BRCA1" else 0.62,
             )
         ]
+
+
+class SparseStudyRepo(FakeStudyRepo):
+    def resolve_gene(self, gene_or_uniprot: str) -> GeneRecord | None:
+        if gene_or_uniprot.upper() == "GRIN2B":
+            return None
+        return super().resolve_gene(gene_or_uniprot)
 
 
 class GoodLLM:
@@ -102,6 +120,16 @@ class FailingLLM:
 def _build_service(llm: GoodLLM | FailingLLM) -> IntelligenceService:
     return IntelligenceService(
         study_repository=FakeStudyRepo(),
+        open_targets_repository=FakeOpenTargetsRepo(),
+        llm_client=llm,
+        rag_snippet_limit=4,
+        pathway_limit=3,
+    )
+
+
+def _build_sparse_service(llm: GoodLLM | FailingLLM) -> IntelligenceService:
+    return IntelligenceService(
+        study_repository=SparseStudyRepo(),
         open_targets_repository=FakeOpenTargetsRepo(),
         llm_client=llm,
         rag_snippet_limit=4,
@@ -160,3 +188,53 @@ def test_explain_pathway_handles_missing_study() -> None:
 
     assert "was not found" in result
     assert "Data Source Attribution:" in result
+
+
+def test_explain_gene_includes_data_source_attribution() -> None:
+    result = _build_service(GoodLLM()).explain_gene("GRIN2B")
+
+    assert "Ranked lead output" in result
+    assert "Data Source Attribution:" in result
+    assert "Source: UniProt/Postgres silver.proteins" in result
+
+
+def test_explain_gene_falls_back_when_ollama_fails() -> None:
+    result = _build_service(FailingLLM()).explain_gene("GRIN2B")
+
+    assert "Deterministic fallback" in result
+    assert "Q13224" in result
+
+
+def test_explain_gene_uses_featured_profile_when_staging_mapping_missing() -> None:
+    result = _build_sparse_service(FailingLLM()).explain_gene("GRIN2B")
+
+    assert "Glutamate Ionotropic Receptor NMDA Type Subunit 2B" in result
+    assert "featured-target profile" in result
+    assert "Source: BioNexus featured gene profiles" in result
+
+
+def test_summarize_organ_context_uses_featured_profiles() -> None:
+    result = _build_sparse_service(FailingLLM()).summarize_organ_context(
+        organ="brain",
+        question="What is the focus of this organ atlas?",
+    )
+
+    assert "brain atlas" in result.lower()
+    assert "blood-brain barrier" in result
+    assert "Source: BioNexus organ atlas profiles" in result
+
+
+def test_summarize_discovery_context_uses_current_graph_state() -> None:
+    result = _build_sparse_service(FailingLLM()).summarize_discovery_context(
+        question="What should we test next?",
+        organ="liver",
+        gene="GRIN2B",
+        disease="Liver Neoplasms",
+        medicine="Gefitinib",
+        history=["user: What is GRIN2B?"],
+    )
+
+    assert "Liver" in result
+    assert "Liver Neoplasms" in result
+    assert "Gefitinib" in result
+    assert "Recommended next step" in result

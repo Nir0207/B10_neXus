@@ -1,5 +1,10 @@
 import { expect, test } from "@playwright/test";
 
+const MOCK_TOKEN_RESPONSE = {
+  access_token: "mock-jwt",
+  token_type: "bearer",
+};
+
 const MOCK_GRAPH_RESPONSE = {
   nodes: [
     { id: "gene-cyp3a4", label: "CYP3A4", type: "Gene" },
@@ -14,11 +19,19 @@ const MOCK_GRAPH_RESPONSE = {
   ],
 };
 
-test("dashboard keeps Stitch branding and liver click hits the gateway", async ({ page }) => {
+test("dashboard login, route navigation, and liver click hit the gateway", async ({ page }) => {
   let liverRequestCount = 0;
   let latestLiverRequestUrl = "";
 
-  await page.route("**/api/triplets**", async (route) => {
+  await page.route("**/token", async (route) => {
+    await route.fulfill({
+      body: JSON.stringify(MOCK_TOKEN_RESPONSE),
+      contentType: "application/json",
+      status: 200,
+    });
+  });
+
+  await page.route("**/api/v1/discovery/triplets**", async (route) => {
     const requestUrl = new URL(route.request().url());
 
     if (requestUrl.searchParams.get("organ") === "liver") {
@@ -33,7 +46,24 @@ test("dashboard keeps Stitch branding and liver click hits the gateway", async (
     });
   });
 
-  await page.goto("/");
+  await page.route("**/api/v1/genes/**", async (route) => {
+    await route.fulfill({
+      body: JSON.stringify({
+        uniprot_id: "P00533",
+        gene_symbol: "EGFR",
+        name: "Epidermal growth factor receptor",
+        description: null,
+        data_source: "BioNexus",
+      }),
+      contentType: "application/json",
+      status: 200,
+    });
+  });
+
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("heading", { name: "Authenticate to BioNexus" })).toBeVisible();
+  await page.getByRole("button", { name: "Sign In" }).click();
+
   await expect(page.getByTestId("dashboard-root")).toBeVisible();
 
   const designPrimaryHex = await page.evaluate(() =>
@@ -58,5 +88,14 @@ test("dashboard keeps Stitch branding and liver click hits the gateway", async (
 
   const gatewayUrl = new URL(latestLiverRequestUrl);
   expect(gatewayUrl.origin).toBe("http://localhost:8000");
-  expect(gatewayUrl.pathname).toBe("/api/triplets");
+  expect(gatewayUrl.pathname).toBe("/api/v1/discovery/triplets");
+
+  await page.getByRole("link", { name: "Pathways" }).click();
+  await expect(page.getByRole("heading", { name: /Mechanistic review/i })).toBeVisible();
+
+  await page.getByRole("link", { name: "Clinical Trials" }).click();
+  await expect(page.getByRole("heading", { name: /Gene-Disease-Medicine candidates/i })).toBeVisible();
+
+  await page.getByRole("button", { name: "Logout" }).click();
+  await expect(page.getByRole("heading", { name: "Authenticate to BioNexus" })).toBeVisible();
 });

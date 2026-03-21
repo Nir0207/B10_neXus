@@ -1,14 +1,17 @@
 // Nodes
-// :Gene (properties: uniprot_id, symbol)
-// :Disease (properties: mesh_id, name)
-// :Medicine (properties: chembl_id, name)
+// :Gene (properties: uniprot_id, symbol, name, data_source)
+// :Disease (properties: mesh_id, name, organ)
+// :Medicine (properties: chembl_id, name, source)
+// :Pathway (properties: reactome_id, name)
 
 CREATE CONSTRAINT gene_uniprot_id IF NOT EXISTS FOR (g:Gene) REQUIRE g.uniprot_id IS UNIQUE;
 CREATE CONSTRAINT disease_mesh_id IF NOT EXISTS FOR (d:Disease) REQUIRE d.mesh_id IS UNIQUE;
 CREATE CONSTRAINT medicine_chembl_id IF NOT EXISTS FOR (m:Medicine) REQUIRE m.chembl_id IS UNIQUE;
+CREATE CONSTRAINT pathway_reactome_id IF NOT EXISTS FOR (p:Pathway) REQUIRE p.reactome_id IS UNIQUE;
 CREATE FULLTEXT INDEX disease_name_fulltext IF NOT EXISTS FOR (d:Disease) ON EACH [d.name];
 
 // Relationships:
 // (:Gene)-[:ASSOCIATED_WITH {score: float}]->(:Disease) (Data from Open Targets)
 // (:Medicine)-[:TREATS {phase: int}]->(:Disease) (Data from ChEMBL/ClinicalTrials)
 // (:Medicine)-[:BINDS_TO {affinity: float}]->(:Gene) (Data from BioGRID/UniProt)
+// (:Gene)-[:INVOLVED_IN]->(:Pathway) (Data from UniProt/Reactome)
