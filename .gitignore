@@ -1,2 +1,6 @@
 .vscode
 .env
+.DS_Store
+QUICKSTART.md
+Mission Briefing.md
+DOCKER_SETUP.md
