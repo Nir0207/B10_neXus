@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.6, pytest-9.0.2, pluggy-1.6.0 -- /Users/nir_002/Dev/BioNexus/api-gateway/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/nir_002/Dev/BioNexus/api-gateway
+plugins: anyio-4.12.1, asyncio-1.3.0
+asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 7 items
+
+tests/test_api.py::test_health_check PASSED                              [ 14%]
+tests/test_api.py::test_login_for_access_token PASSED                    [ 28%]
+tests/test_api.py::test_login_failure PASSED                             [ 42%]
+tests/test_api.py::test_get_gene_unauthorized PASSED                     [ 57%]
+tests/test_api.py::test_get_gene_authorized PASSED                       [ 71%]
+tests/test_api.py::test_get_discovery_graph_authorized PASSED            [ 85%]
+tests/test_api.py::test_audit_log_created PASSED                         [100%]
+
+=============================== warnings summary ===============================
+main.py:58
+  /Users/nir_002/Dev/BioNexus/api-gateway/main.py:58: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("startup")
+
+venv/lib/python3.10/site-packages/fastapi/applications.py:4599
+venv/lib/python3.10/site-packages/fastapi/applications.py:4599
+  /Users/nir_002/Dev/BioNexus/api-gateway/venv/lib/python3.10/site-packages/fastapi/applications.py:4599: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    return self.router.on_event(event_type)
+
+main.py:62
+  /Users/nir_002/Dev/BioNexus/api-gateway/main.py:62: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("shutdown")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 7 passed, 4 warnings in 2.30s =========================
