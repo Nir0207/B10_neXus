@@ -7,3 +7,9 @@ DOCKER_SETUP.md
 .venv
 venv
 __pycache__
+AGENTS.md
+BIONEXUS.md
+.pytext_cache
+.env.example
+Master_BioNexus.md
+ReadMe.md
