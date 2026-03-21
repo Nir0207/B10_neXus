@@ -19,7 +19,7 @@ from unittest.mock import patch
 import polars as pl
 import pytest
 
-from tests.stubs import BRCA1_RECORD, BRCA1_STUB, EGFR_RECORD, EGFR_STUB
+from stubs import BRCA1_RECORD, BRCA1_STUB, EGFR_RECORD, EGFR_STUB
 from refine_uniprot import (
     _extract_reactome_mappings,
     _extract_record,

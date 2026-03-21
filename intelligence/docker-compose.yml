@@ -1,0 +1,108 @@
+name: bionexus-intelligence
+
+services:
+  intelligence:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: bionexus/intelligence:latest
+    container_name: bionexus-intelligence-mcp
+    restart: unless-stopped
+    environment:
+      PG_DSN: "postgresql://${POSTGRES_USER:-bionexus_user}:${POSTGRES_PASSWORD:-bionexus_dev_password}@postgres:5432/${POSTGRES_DB:-bionexus}"
+      OLLAMA_HOST: "http://ollama:11434"
+      OLLAMA_MODEL: "${OLLAMA_MODEL:-qwen2.5:3b}"
+      OLLAMA_TIMEOUT_SECONDS: "${OLLAMA_TIMEOUT_SECONDS:-120}"
+      MCP_HOST: "0.0.0.0"
+      MCP_PORT: "8080"
+      MCP_TRANSPORT: "sse"
+      RAG_SNIPPET_LIMIT: "${RAG_SNIPPET_LIMIT:-5}"
+      PATHWAY_LIMIT: "${PATHWAY_LIMIT:-5}"
+      OT_EVIDENCE_PATH: "/data_lake/raw/opentargets/EFO_0000572_evidence.json"
+      STUDY_CSV_PATH: "/data_lake/silver/silver_ncbi_studies.csv"
+    volumes:
+      - ../Lake/data_lake:/data_lake:ro
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres-probe:
+        condition: service_completed_successfully
+      ollama-model-pull:
+        condition: service_completed_successfully
+    networks:
+      - bionexus-data-plane
+      - bionexus-network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: bionexus-ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 20s
+      timeout: 10s
+      retries: 12
+    networks:
+      - bionexus-network
+
+  ollama-model-pull:
+    image: curlimages/curl:8.7.1
+    container_name: bionexus-ollama-model-pull
+    restart: "no"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    entrypoint:
+      - sh
+      - -c
+      - |
+        set -e
+        model="${OLLAMA_MODEL:-qwen2.5:3b}"
+        echo "Ensuring Ollama model is available: $${model}"
+        curl -sS -X POST http://ollama:11434/api/pull \
+          -H "Content-Type: application/json" \
+          -d "{\"name\":\"$${model}\"}"
+    networks:
+      - bionexus-network
+
+  postgres-probe:
+    image: postgres:16-alpine
+    container_name: bionexus-intelligence-pg-probe
+    restart: "no"
+    entrypoint: >
+      sh -c "
+        until pg_isready -h postgres -U ${POSTGRES_USER:-bionexus_user} -d ${POSTGRES_DB:-bionexus}; do
+          echo 'Waiting for Postgres...'; sleep 2;
+        done;
+        echo 'Postgres ready.';
+      "
+    environment:
+      PGPASSWORD: "${POSTGRES_PASSWORD:-bionexus_dev_password}"
+    networks:
+      - bionexus-data-plane
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    image: bionexus/intelligence-test:latest
+    container_name: bionexus-intelligence-test
+    restart: "no"
+    network_mode: "none"
+
+volumes:
+  ollama_data:
+    driver: local
+
+networks:
+  bionexus-data-plane:
+    external: true
+    name: lake_bionexus-data-plane
+  bionexus-network:
+    external: true
+    name: lake_bionexus-network
