@@ -4,3 +4,6 @@
 QUICKSTART.md
 Mission Briefing.md
 DOCKER_SETUP.md
+.venv
+venv
+__pycache__

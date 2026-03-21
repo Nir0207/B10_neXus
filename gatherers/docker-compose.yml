@@ -1,0 +1,8 @@
+services:
+  gatherers:
+    build: .
+    container_name: bionexus-gatherers
+    network_mode: "bridge"
+    volumes:
+      # Map the host's Lake directory so the raw JSON outputs persist
+      - ../Lake:/app/Lake
