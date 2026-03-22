@@ -50,9 +50,9 @@ export default function LoginForm(): React.JSX.Element {
 
           <div className="grid gap-4 sm:grid-cols-3">
             {[
-              ["Gateway", "JWT-backed token exchange on port 8000"],
-              ["Graph", "Neo4j triplets scoped by organ"],
-              ["Audit", "Local session persistence with logout control"],
+              ["Telemetry API", "GraphQL login and session enrichment on port 4100"],
+              ["Graph", "Neo4j triplets scoped by organ through the existing gateway"],
+              ["Audit", "Mongo-backed user roles and client telemetry capture"],
             ].map(([label, copy]) => (
               <div
                 className="rounded-2xl border border-outline-variant/15 bg-surface-container-low/80 p-5 shadow-xl"
@@ -70,7 +70,7 @@ export default function LoginForm(): React.JSX.Element {
             <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">Secure Login</p>
             <h2 className="text-3xl font-headline font-bold mb-3">Authenticate to BioNexus</h2>
             <p className="text-sm text-on-surface-variant leading-relaxed">
-              Use the API gateway credentials to mint a JWT and unlock the explorer routes.
+              Use the telemetry GraphQL credentials to mint a JWT and unlock the explorer routes.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export default function LoginForm(): React.JSX.Element {
                 setErrorMessage(
                   error instanceof Error
                     ? error.message
-                    : "Authentication failed. Verify the API gateway credentials."
+                    : "Authentication failed. Verify the telemetry service credentials."
                 );
               }
             }}

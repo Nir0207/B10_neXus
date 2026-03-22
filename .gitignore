@@ -57,7 +57,8 @@ next-env.d.ts
 
 AGENTS.md
 DESIGN.md
-README.md
 CLAUDE.md
 BIONEXUS_AUDIT_REPORT.md
 TRENDS_READY.log
+
+node_modules

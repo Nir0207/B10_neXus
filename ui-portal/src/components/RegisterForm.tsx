@@ -44,16 +44,16 @@ export default function RegisterForm(): React.JSX.Element {
               Provision a workspace identity for graph exploration and evidence review.
             </h1>
             <p className="max-w-2xl text-base leading-relaxed text-on-surface-variant">
-              Create a user backed by the gateway database, receive a live JWT, and move
+              Create a user backed by MongoDB, receive a live GraphQL-issued JWT, and move
               directly into the explorer without relying on the shared dev admin account.
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
             {[
-              ["Users", "Persisted in Postgres with PBKDF2 password hashes"],
-              ["Access", "JWT issued immediately after successful registration"],
-              ["Traceability", "Individual usernames appear in the UI session state"],
+              ["Users", "Persisted in MongoDB with PBKDF2 password hashes"],
+              ["Access", "JWT issued immediately by the telemetry GraphQL service"],
+              ["Roles", "Each account carries an explicit admin flag for route access"],
             ].map(([label, copy]) => (
               <div
                 className="rounded-2xl border border-outline-variant/15 bg-surface-container-low/80 p-5 shadow-xl"

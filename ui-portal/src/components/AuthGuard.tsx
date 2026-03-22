@@ -4,6 +4,10 @@ import { useEffect, type PropsWithChildren } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/components/AuthProvider";
 
+interface AuthGuardProps extends PropsWithChildren {
+  requireAdmin?: boolean;
+}
+
 function AccessState({
   message,
 }: {
@@ -20,10 +24,13 @@ function AccessState({
   );
 }
 
-export default function AuthGuard({ children }: PropsWithChildren): React.JSX.Element {
+export default function AuthGuard({
+  children,
+  requireAdmin = false,
+}: AuthGuardProps): React.JSX.Element {
   const pathname = usePathname();
   const router = useRouter();
-  const { isAuthenticated, isReady } = useAuth();
+  const { isAuthenticated, isReady, session } = useAuth();
 
   useEffect(() => {
     if (!isReady || isAuthenticated) {
@@ -39,6 +46,10 @@ export default function AuthGuard({ children }: PropsWithChildren): React.JSX.El
 
   if (!isAuthenticated) {
     return <AccessState message="Authentication required. Redirecting to the secure sign-in route." />;
+  }
+
+  if (requireAdmin && !session?.isAdmin) {
+    return <AccessState message="Admin access required. This telemetry route is hidden for non-admin users." />;
   }
 
   return <>{children}</>;

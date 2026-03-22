@@ -26,6 +26,7 @@ BioNexus operates as a **Med-Data Lakehouse**, moving data through four distinct
 | **Orchestration** | **Docker / Antigravity** | Containerized microservices & Agentic management. |
 | **Data Lake** | **DuckDB / Parquet** | High-speed local analytical storage. |
 | **Databases** | **Postgres & Neo4j** | Relational metadata + Biological Knowledge Graph. |
+| **Telemetry/Auth** | **MongoDB + GraphQL** | User accounts, admin flags, and client telemetry analytics. |
 | **Processing** | **Python (Polars / FastAPI)** | Heavy-duty bio-informatic refining. |
 | **AI Brain** | **Ollama / MCP / SLMs** | Local LLMs (BioMistral/Phi-4) via Model Context Protocol. |
 | **UI/UX** | **Next.js / D3.js** | Dense, lab-grade scientific visualizations. |
@@ -49,9 +50,9 @@ BioNexus synthesizes data from the world's leading open biological repositories:
 ### 1. Environment Setup
 Clone the repository and spin up the core infrastructure:
 ```bash
-docker-compose up -d
+cd Lake && docker compose up -d
 ```
-*This initializes Postgres, Neo4j, MongoDB, and the Ollama instance.*
+*This initializes Postgres, Neo4j, and MongoDB for the local platform.*
 
 ### 2. Run the Gatherers
 Trigger the ingestion agents to populate the Lake:
@@ -74,8 +75,15 @@ mcp install ./intelligence/bionexus_mcp.py
 ollama run biomistral
 ```
 
-### 5. Access the UI
-Open your browser to `http://localhost:3000` to explore the **Organ-to-Medicine** visualizer.
+### 5. Launch the APIs and UI
+```bash
+cd telemetry && docker compose up -d --build
+cd api-gateway && docker compose up -d --build
+cd ui-portal && docker compose up -d --build
+```
+
+### 6. Access the UI
+Open your browser to `http://localhost:3000` to explore the portal. The `/telemetry` route is available only to users with `isAdmin=true`.
 
 ---
 

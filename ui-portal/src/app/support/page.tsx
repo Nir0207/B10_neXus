@@ -1,6 +1,6 @@
 const SUPPORT_ITEMS: readonly [string, string][] = [
   ["API Gateway", "Verify http://localhost:8000/ returns {\"status\":\"ok\"} before signing in."],
-  ["Credentials", "The default local development account is admin/password unless overridden by gateway env vars."],
+  ["Credentials", "The default local development account is admin/password unless overridden by telemetry env vars."],
   ["Neo4j", "If graph views are empty, confirm the Lake Neo4j container is healthy and the refinery pipeline has completed."],
   ["Logout", "Logout clears the browser session and forces a fresh JWT mint on the next sign-in."],
 ];

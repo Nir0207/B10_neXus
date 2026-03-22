@@ -7,10 +7,12 @@ services:
       dockerfile: Dockerfile
       args:
         NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+        NEXT_PUBLIC_TELEMETRY_API_URL: ${NEXT_PUBLIC_TELEMETRY_API_URL:-http://localhost:4100/graphql}
         NEXT_PUBLIC_BIONEXUS_API_TOKEN: ${NEXT_PUBLIC_BIONEXUS_API_TOKEN:-}
     ports:
       - "3000:3000"
     environment:
       - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_TELEMETRY_API_URL=${NEXT_PUBLIC_TELEMETRY_API_URL:-http://localhost:4100/graphql}
       - NEXT_PUBLIC_BIONEXUS_API_TOKEN=${NEXT_PUBLIC_BIONEXUS_API_TOKEN:-}
     restart: unless-stopped

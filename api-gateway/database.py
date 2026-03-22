@@ -22,38 +22,11 @@ pg_pool: Any | None = None
 neo4j_driver: AsyncDriver | None = None
 logger = logging.getLogger(__name__)
 
-USER_TABLE_STATEMENTS: tuple[str, ...] = (
-    """
-    CREATE TABLE IF NOT EXISTS app_users (
-        username VARCHAR(32) PRIMARY KEY,
-        email VARCHAR(255) NOT NULL UNIQUE,
-        full_name VARCHAR(120),
-        hashed_password TEXT NOT NULL,
-        created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
-    )
-    """,
-    """
-    CREATE UNIQUE INDEX IF NOT EXISTS idx_app_users_email_lower
-        ON app_users (LOWER(email))
-    """,
-)
-
-
-async def _ensure_user_table() -> None:
-    if pg_pool is None:
-        return
-
-    async with pg_pool.acquire() as connection:
-        for statement in USER_TABLE_STATEMENTS:
-            await connection.execute(statement)
-
-
 async def init_db() -> None:
     global pg_pool, neo4j_driver
     try:
         if asyncpg is not None:
             pg_pool = await asyncpg.create_pool(dsn=POSTGRES_URL, min_size=1, max_size=10)
-            await _ensure_user_table()
         neo4j_driver = AsyncGraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
     except Exception as exc:
         logger.warning("Database initialization failed. API will return upstream errors until recovered: %s", exc)

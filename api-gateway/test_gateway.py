@@ -8,6 +8,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 import main
+from auth import create_access_token
 from database import get_neo4j_session
 
 
@@ -44,6 +45,20 @@ def client(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> TestClient:
 
     monkeypatch.setattr(main, "init_db", _noop)
     monkeypatch.setattr(main, "close_db", _noop)
+    async def _fake_authenticate(_username: str, _password: str) -> dict[str, str]:
+        return {
+            "access_token": create_access_token(
+                {
+                    "sub": "admin",
+                    "email": "admin@bionexus.com",
+                    "is_admin": True,
+                }
+            ),
+            "token_type": "bearer",
+            "username": "admin",
+        }
+
+    monkeypatch.setattr(main, "authenticate_user", _fake_authenticate)
     main.app.state.audit_log_file = str(tmp_path / "audit.log")
     main.app.dependency_overrides.clear()
 

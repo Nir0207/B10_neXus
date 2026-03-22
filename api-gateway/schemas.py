@@ -20,6 +20,7 @@ class User(BaseModel):
     username: str
     email: str | None = None
     full_name: str | None = None
+    is_admin: bool = False
     disabled: bool | None = None
 
 
