@@ -43,7 +43,9 @@ export function AuthProvider({ children }: PropsWithChildren): React.JSX.Element
     let isMounted = true;
 
     async function restoreSession(): Promise<void> {
-      const baseSession = loadAuthSession() ?? buildBootstrapSession();
+      // Do not attempt to restore an AuthSession (and token) from localStorage.
+      // Only use a bootstrap session based on a public environment token, if available.
+      const baseSession = buildBootstrapSession();
       if (!baseSession) {
         if (isMounted) {
           setIsReady(true);
@@ -65,7 +67,7 @@ export function AuthProvider({ children }: PropsWithChildren): React.JSX.Element
           return;
         }
 
-        saveAuthSession(hydratedSession);
+        // Keep the hydrated session in memory only; do not persist it.
         setSession(hydratedSession);
       } catch {
         if (!isMounted) {
@@ -99,7 +101,7 @@ export function AuthProvider({ children }: PropsWithChildren): React.JSX.Element
       setIsSubmitting(true);
       try {
         const nextSession = await loginWithPassword(username, password);
-        saveAuthSession(nextSession);
+        // Do not persist the session to localStorage; keep it in memory only.
         setSession(nextSession);
       } finally {
         setIsSubmitting(false);
@@ -109,7 +111,7 @@ export function AuthProvider({ children }: PropsWithChildren): React.JSX.Element
       setIsSubmitting(true);
       try {
         const nextSession = await registerWithPassword(payload);
-        saveAuthSession(nextSession);
+        // Do not persist the session to localStorage; keep it in memory only.
         setSession(nextSession);
       } finally {
         setIsSubmitting(false);
