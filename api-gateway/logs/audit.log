@@ -504,3 +504,4 @@
 {"Timestamp": "2026-03-22T04:53:02.589409+00:00", "User_ID": "admin", "Endpoint": "/api/v1/analytics/trends/Breast cancer", "Request_Hash": "3bcfb68beca9cb9780b5654dbe64778bc38a7dd0a545d2ad57c9c9b680d9c6eb", "Status_Code": 200}
 {"Timestamp": "2026-03-22T04:53:06.723981+00:00", "User_ID": "admin", "Endpoint": "/api/v1/analytics/trends/Alzheimer's disease", "Request_Hash": "0aa48301f40795a24ccaa14dee59739bdd0d2ad36c38fd4413755d5488aec3f5", "Status_Code": 404}
 {"Timestamp": "2026-03-22T04:53:07.869871+00:00", "User_ID": "admin", "Endpoint": "/api/v1/analytics/trends/Ovarian cancer", "Request_Hash": "55a12058daac87e413ed191b4fd869b45d056e5e5cb6b8f9bb2ca0d17bfd98a8", "Status_Code": 200}
+{"Timestamp": "2026-03-22T05:01:16.221433+00:00", "User_ID": "admin", "Endpoint": "/api/v1/analytics/trends/Lung cancer", "Request_Hash": "285156c87831182d23000494ff75cd67c7512de87964e227a91e807131535bd6", "Status_Code": 200}
