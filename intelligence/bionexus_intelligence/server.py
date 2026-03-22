@@ -2,7 +2,16 @@ from __future__ import annotations
 
 import json
 import logging
+import sys
+from pathlib import Path
 from typing import Any
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from ops.openobserve_client import OpenObserveClient, OpenObserveSettings
+from ops.ops_logger import configure_logging
 
 from .config import Settings
 from .llm import OllamaClient
@@ -17,14 +26,21 @@ except ImportError as exc:  # pragma: no cover - guarded for environments withou
 else:
     _FASTMCP_IMPORT_ERROR = None
 
+configure_logging(service_name="intelligence")
 logger = logging.getLogger(__name__)
 
 
 class MCPToolAdapter:
     """Thin adapter to keep FastMCP wiring separate from business logic."""
 
-    def __init__(self, service: IntelligenceService):
+    def __init__(
+        self,
+        service: IntelligenceService,
+        *,
+        openobserve_client: OpenObserveClient | None = None,
+    ) -> None:
         self._service = service
+        self._openobserve_client = openobserve_client or OpenObserveClient()
 
     def get_drug_leads(self, gene: str) -> str:
         return self._service.get_drug_leads(gene)
@@ -55,6 +71,10 @@ class MCPToolAdapter:
                 ],
             }
         )
+
+    def query_ops_logs(self, query_string: str) -> str:
+        result = self._openobserve_client.query_logs(query_string=query_string)
+        return json.dumps(result)
 
 
 def create_intelligence_service(settings: Settings) -> IntelligenceService:
@@ -87,7 +107,19 @@ def create_mcp_server(settings: Settings | None = None) -> FastMCP:
     except Exception as exc:  # pragma: no cover - runtime resilience path
         logger.warning("Staging initialization skipped: %s", exc)
 
-    adapter = MCPToolAdapter(service)
+    adapter = MCPToolAdapter(
+        service,
+        openobserve_client=OpenObserveClient(
+            OpenObserveSettings(
+                base_url=resolved_settings.openobserve_base_url,
+                organization=resolved_settings.openobserve_organization,
+                username=resolved_settings.openobserve_username,
+                password=resolved_settings.openobserve_password,
+                log_stream=resolved_settings.openobserve_log_stream,
+                timeout_seconds=10.0,
+            )
+        ),
+    )
     mcp = FastMCP(name="BioNexus Intelligence MCP")
 
     @mcp.tool(
@@ -111,14 +143,17 @@ def create_mcp_server(settings: Settings | None = None) -> FastMCP:
     def render_visual_report(prompt: str, disease: str = "") -> str:
         return adapter.render_visual_report(prompt, disease)
 
+    @mcp.tool(
+        name="query_ops_logs",
+        description="Run a SQL-like query against recent OpenObserve log data for incident debugging.",
+    )
+    def query_ops_logs(query_string: str) -> str:
+        return adapter.query_ops_logs(query_string)
+
     return mcp
 
 
 def main() -> None:
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    )
     settings = Settings.from_env()
     server = create_mcp_server(settings)
     server.run(

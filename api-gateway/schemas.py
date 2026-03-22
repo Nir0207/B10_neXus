@@ -165,3 +165,20 @@ class ExportChartRequest(BaseModel):
 class ExportHtmlResponse(BaseModel):
     filename: str
     html: str
+
+
+class RumMetricRequest(BaseModel):
+    metric_name: str = Field(..., min_length=1, max_length=64, pattern=r"^[a-z0-9_.-]+$")
+    route: str = Field(..., min_length=1, max_length=256)
+    session_id: str = Field(..., min_length=1, max_length=128)
+    value_ms: float | None = Field(default=None, ge=0, le=300000)
+    rating: Literal["good", "needs-improvement", "poor", "info"] | None = None
+    navigation_type: str | None = Field(default=None, max_length=64)
+    browser_name: str | None = Field(default=None, max_length=64)
+    os_name: str | None = Field(default=None, max_length=64)
+    device_type: str | None = Field(default=None, max_length=32)
+    language: str | None = Field(default=None, max_length=32)
+    timezone: str | None = Field(default=None, max_length=64)
+    screen_width: int | None = Field(default=None, ge=0, le=20000)
+    screen_height: int | None = Field(default=None, ge=0, le=20000)
+    metadata: dict[str, Any] = Field(default_factory=dict)

@@ -4,11 +4,14 @@ FROM python:3.12-slim
 WORKDIR /app/gatherers
 
 # Copy the requirements file and install dependencies
-COPY requirements.txt .
+COPY gatherers/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
-COPY . .
+COPY gatherers/ .
+COPY ops /app/ops
+
+ENV PYTHONPATH=/app:/app/gatherers
 
 # Run the main script
 CMD ["python", "main.py"]

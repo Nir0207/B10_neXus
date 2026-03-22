@@ -3,8 +3,8 @@ name: bionexus-intelligence
 services:
   intelligence:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: intelligence/Dockerfile
       target: runtime
     image: bionexus/intelligence:latest
     container_name: bionexus-intelligence-mcp
@@ -21,6 +21,13 @@ services:
       PATHWAY_LIMIT: "${PATHWAY_LIMIT:-5}"
       OT_EVIDENCE_PATH: "/data_lake/raw/opentargets/EFO_0000572_evidence.json"
       STUDY_CSV_PATH: "/data_lake/silver/silver_ncbi_studies.csv"
+      OTEL_EXPORTER_OTLP_LOGS_ENDPOINT: "http://host.docker.internal:4318/v1/logs"
+      OPENOBSERVE_BASE_URL: "http://host.docker.internal:5080"
+      OPENOBSERVE_USERNAME: "root@bionexus.local"
+      OPENOBSERVE_PASSWORD: "${OPENOBSERVE_PASSWORD:-BioNexusOps123!}"
+      OPENOBSERVE_LOG_STREAM: "bionexus_app"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ../Lake/data_lake:/data_lake:ro
     ports:
@@ -88,8 +95,8 @@ services:
 
   test:
     build:
-      context: .
-      dockerfile: Dockerfile.test
+      context: ..
+      dockerfile: intelligence/Dockerfile.test
     image: bionexus/intelligence-test:latest
     container_name: bionexus-intelligence-test
     restart: "no"

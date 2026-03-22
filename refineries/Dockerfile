@@ -4,7 +4,7 @@ FROM python:3.12-slim AS builder
 WORKDIR /build
 
 # Install build deps only in this layer so the final image stays lean
-COPY requirements.txt .
+COPY refineries/requirements.txt .
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 
@@ -22,8 +22,10 @@ WORKDIR /app
 COPY --from=builder /install /usr/local
 
 # Copy source (no venv, no tests, no .processed_manifest)
-COPY config.py idempotency.py refine_uniprot.py refine_ncbi.py \
-     load_postgres.py load_neo4j.py run_pipeline.py ./
+COPY refineries/config.py refineries/idempotency.py refineries/refine_uniprot.py refineries/refine_ncbi.py \
+     refineries/load_postgres.py refineries/load_neo4j.py refineries/run_pipeline.py ./
+COPY refineries/trend_engine.py /app/trend_engine.py
+COPY ops /app/ops
 
 # Data lake mounts (host volumes at runtime)
 RUN mkdir -p /data_lake/raw/uniprot /data_lake/raw/ncbi /data_lake/silver \
@@ -35,6 +37,7 @@ USER refinery
 ENV RAW_ROOT_DIR=/data_lake/raw \
     SILVER_DIR=/data_lake/silver \
     MANIFEST_PATH=/data_lake/silver/.processed_manifest.json \
+    PYTHONPATH=/app \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 

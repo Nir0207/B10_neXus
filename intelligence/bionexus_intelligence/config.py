@@ -23,6 +23,11 @@ class Settings:
     pathway_limit: int
     opentargets_evidence_path: Path
     seed_study_csv_path: Path
+    openobserve_base_url: str
+    openobserve_organization: str
+    openobserve_username: str
+    openobserve_password: str
+    openobserve_log_stream: str
 
     @classmethod
     def from_env(cls) -> Settings:
@@ -51,6 +56,11 @@ class Settings:
                     str(_REPO_ROOT / "Lake" / "data_lake" / "silver" / "silver_ncbi_studies.csv"),
                 )
             ),
+            openobserve_base_url=os.getenv("OPENOBSERVE_BASE_URL", "http://localhost:5080").rstrip("/"),
+            openobserve_organization=os.getenv("OPENOBSERVE_ORG", "default"),
+            openobserve_username=os.getenv("OPENOBSERVE_USERNAME", "root@bionexus.local"),
+            openobserve_password=os.getenv("OPENOBSERVE_PASSWORD", "BioNexusOps123!"),
+            openobserve_log_stream=os.getenv("OPENOBSERVE_LOG_STREAM", "bionexus_app"),
         )
 
 

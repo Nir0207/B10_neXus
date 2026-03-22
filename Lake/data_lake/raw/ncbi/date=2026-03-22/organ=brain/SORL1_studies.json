@@ -1,0 +1,2714 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200289806",
+      "200288054",
+      "200244653",
+      "200240153",
+      "200233567",
+      "200238013",
+      "200180793",
+      "200156167",
+      "200151999",
+      "200153658",
+      "200153657",
+      "200153655",
+      "200153654",
+      "200077539",
+      "200077537",
+      "200077536",
+      "200074038",
+      "200074037",
+      "200031163",
+      "200065074"
+    ],
+    "200289806": {
+      "uid": "200289806",
+      "accession": "GSE289806",
+      "gds": "",
+      "title": "Effect of interferon gamma on wild type and SORL1 knockout iPSC-derived microglia",
+      "summary": "This study investigates the transcriptomic response of wild-type (WT) and SORL1 knockout (KO) iPSC-derived microglia following treatment. For microglia differentiation protocol please see PMID: 38600587.  Bulk RNA sequencing was performed to assess gene expression changes induced by a 48-hour treatment with 10 ng/ml of IFN-\u03b3. The study aims to explore the role of SORL1 in microglial function and its potential impact on neuroinflammatory or neurodegenerative pathways. Differential gene expression analysis will help identify pathways regulated by SORL1 deficiency in response to external stimuli.",
+      "gpl": "34295",
+      "gse": "289806",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/02/17",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM8799063",
+          "title": "SORL1-KO_IFN-\u03b3_R2"
+        },
+        {
+          "accession": "GSM8799062",
+          "title": "SORL1-KO_IFN-\u03b3_R1"
+        },
+        {
+          "accession": "GSM8799065",
+          "title": "WT_IFN-\u03b3_R1"
+        },
+        {
+          "accession": "GSM8799067",
+          "title": "WT_IFN-\u03b3_R3"
+        },
+        {
+          "accession": "GSM8799064",
+          "title": "SORL1-KO_IFN-\u03b3_R3"
+        },
+        {
+          "accession": "GSM8799066",
+          "title": "WT_IFN-\u03b3_R2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE289nnn/GSE289806/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1224834"
+    },
+    "200288054": {
+      "uid": "200288054",
+      "accession": "GSE288054",
+      "gds": "",
+      "title": "Protective effects of two different chaperones demonstrated in a mouse model of sporadic AD",
+      "summary": "Previously, using various animal models of AD, we demonstrated the protective effect of intranasal administration of chaperones of such different structure as HSP70 and YB-1 at the level of animal\u2019s behavior and functional state and morphology of different brain regions. We also described transcriptional changes in the brain of mice after bulbectomy (OBX mice) representing a model of sporadic AD with elements of major depression. Herein, we investigated the effects of recombinant HSP70 and YB1 sub-chronic administration on transcription in the hippocampus and cortex of the OBX mice. Both chaperones introduction caused significant changes in the transcription of the studied brain regions, partially reverting it to a pattern of the control sham operated mice. More than 60% of genes with altered transcription levels due to bulbectomy exhibited complete restoration of their normal expression levels after both chaperones treatment. Importantly, the number of genes with altered expression after chaperones treatment was twice as high in the hippocampus as in the cortex. The administration of the chaperones led to complete or partial normalization of the expression of many genes related to the metabolism of beta-amyloid and tau protein in the brain of OBX mice. Thus, both proteins reduced the expression of genes such as Kmt2d, Apba, Casp9, Sorl1, Ywhag, Ywhaz and others, that increased expression as a result of bulbectomy and in parallel compensatory increased the expression of such genes as Prepl, Pfdn2, Fbxl16, Nsf etc. Both chaperones normalized the expression of many genes involved in rRNA processing and ribosome biogenesis, as well as genes involved in the processes of neurotransmitter transport and secretion, cognition, apoptosis, ferroptosis and mitochondrial regulation. Thus, both chaperones normalized the expression of 47 genes involved in mitochondria function, including the expression of the Pet117 gene, responsible for the rate of oxygen consumption by mitochondria and the expression of Mgst1  gene which affects the protection of mitochondria from oxidative stress. Importantly, administration of YB-1 and Hsp70 normalized the expression of a number of genes involved in the formation of the cytoskeleton. A significant compensatory effect of both chaperones was demonstrated in all six cell types studied in the brain of OBX mice with the most pronounced effect observed in the astrocytes. Notably, besides genes specific for AD, administration of both proteins normalized the expression of a few genes specific for major depression altered in OBX mice and several genes implicated in the development of other neurodegenerative diseases.",
+      "gpl": "13112",
+      "gse": "288054",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/01/29",
+      "suppfile": "COUNTS",
+      "samples": [
+        {
+          "accession": "GSM8758184",
+          "title": "Hippocampus_HSP70_2"
+        },
+        {
+          "accession": "GSM8758190",
+          "title": "Hippocampus_YB1_3"
+        },
+        {
+          "accession": "GSM8758187",
+          "title": "Hippocampus_HSP70_5"
+        },
+        {
+          "accession": "GSM8758193",
+          "title": "Cortex_HSP70_1"
+        },
+        {
+          "accession": "GSM8758196",
+          "title": "Cortex_HSP70_4"
+        },
+        {
+          "accession": "GSM8758192",
+          "title": "Hippocampus_YB1_5"
+        },
+        {
+          "accession": "GSM8758195",
+          "title": "Cortex_HSP70_3"
+        },
+        {
+          "accession": "GSM8758201",
+          "title": "Cortex_YB1_4"
+        },
+        {
+          "accession": "GSM8758189",
+          "title": "Hippocampus_YB1_2"
+        },
+        {
+          "accession": "GSM8758198",
+          "title": "Cortex_YB1_1"
+        },
+        {
+          "accession": "GSM8758183",
+          "title": "Hippocampus_HSP70_1"
+        },
+        {
+          "accession": "GSM8758194",
+          "title": "Cortex_HSP70_2"
+        },
+        {
+          "accession": "GSM8758197",
+          "title": "Cortex_HSP70_5"
+        },
+        {
+          "accession": "GSM8758200",
+          "title": "Cortex_YB1_3"
+        },
+        {
+          "accession": "GSM8758186",
+          "title": "Hippocampus_HSP70_4"
+        },
+        {
+          "accession": "GSM8758185",
+          "title": "Hippocampus_HSP70_3"
+        },
+        {
+          "accession": "GSM8758202",
+          "title": "Cortex_YB1_5"
+        },
+        {
+          "accession": "GSM8758188",
+          "title": "Hippocampus_YB1_1"
+        },
+        {
+          "accession": "GSM8758199",
+          "title": "Cortex_YB1_2"
+        },
+        {
+          "accession": "GSM8758191",
+          "title": "Hippocampus_YB1_4"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 20,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE288nnn/GSE288054/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1215950"
+    },
+    "200244653": {
+      "uid": "200244653",
+      "accession": "GSE244653",
+      "gds": "",
+      "title": "An integrated toolkit for human microglia functional genomics",
+      "summary": "Microglia, the brain\u2019s resident immune cells, play vital roles in brain development, and disorders like Alzheimer\u2019s disease (AD). Human iPSC-derived microglia (iMG) provide a promising model to study these processes. However, existing iMG generation protocols face challenges, such as prolonged differentiation time, lack of detailed characterization, and limited gene function investigation via CRISPR-Cas9. In this study will generated iMG from human iPSCs using our newly developed protocol. We used single cell RNA-Seq to study the transcriptomic profiles of our newly formed iMG. The single cell RNA-Seq data under this accession is from wild type iMG (Hashtag 7) and OTHER KO iMG (Hashtag 8)",
+      "gpl": "24676",
+      "gse": "244653",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2024/04/17",
+      "suppfile": "MTX, TSV, TXT",
+      "samples": [
+        {
+          "accession": "GSM7823339",
+          "title": "SH005-GEX"
+        },
+        {
+          "accession": "GSM7823340",
+          "title": "SH005-HTO"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "38600587"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE244nnn/GSE244653/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1023967"
+    },
+    "200240153": {
+      "uid": "200240153",
+      "accession": "GSE240153",
+      "gds": "",
+      "title": "Spatially and temporally distinct patterns of expression for VPS10P domain receptors in human cerebral organoids",
+      "summary": "Vacuolar protein sorting 10 protein (VPS10P) domain receptors are a unique class of intracellular sorting receptors that emerge as major risk factors associated with psychiatric and neurodegenerative diseases, including bipolar disorders, autism, schizophrenia, as well as Alzheimer\u2019 disease and frontotemporal dementia. Yet, the lack of suitable experimental models to study receptor functions in the human brain have hampered elucidation of receptor actions in brain disease. Here, we have adapted protocols to the study of VPS10P domain receptors in human cerebral organoids and applied these to the detailed characterization of receptor expression during development and in mature tissue, including single-cell RNA sequencing. These studies uncovered spatial and temporal patterns of expression unique to individual receptor species in the human brain. While SORL1 expression is abundant in stem cells and SORCS1 peaks at onset of neurogenesis, SORT1 and SORCS2 show increasing expression coinciding with maturation of neuronal and non-neuronal cell types, arguing for distinct functions in development versus the adult brain. In neurons, subcellular localization also distinguishes between two types of receptors, either mainly localized to the cell soma (SORL1 and SORT1) or also to neuronal projections (SORCS1 and SORCS2), suggesting divergent functions in protein sorting between Golgi and the endo-lysosomal system or along axonal and dendritic tracks. Taken together, our findings provide an important resource concerning temporal, spatial, and subcellular patterns of VPS10P domain receptor expression in cerebral organoids for further elucidation of receptor (dys)functions causative of behavioral and cognitive defects of the human brain.",
+      "gpl": "24676",
+      "gse": "240153",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2023/09/27",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM7683312",
+          "title": "XMOOl WT DAY 21, scRNAseq"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 1,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "37842085"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE240nnn/GSE240153/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1002375"
+    },
+    "200233567": {
+      "uid": "200233567",
+      "accession": "GSE233567",
+      "gds": "",
+      "title": "Spatially and temporally distinct patterns of expression for VPS10P domain receptors in human cerebral organoids.",
+      "summary": "Vacuolar protein sorting 10 protein (VPS10P) domain receptors are a unique class of intracellular sorting receptors that emerge as major risk factors associated with psychiatric and neurodegenerative diseases, including bipolar disorders, autism, schizophrenia, as well as Alzheimer\u2019 disease and frontotemporal dementia. Yet, the lack of suitable experimental models to study receptor functions in the human brain have hampered elucidation of receptor actions in brain disease. Here, we have adapted protocols to the study of VPS10P domain receptors in human cerebral organoids and applied these to the detailed characterization of receptor expression during development and in mature tissue, including single-cell RNA sequencing. These studies uncovered spatial and temporal patterns of expression unique to individual receptor species in the human brain. While SORL1 expression is abundant in stem cells and SORCS1 peaks at onset of neurogenesis, SORT1 and SORCS2 show increasing expression coinciding with maturation of neuronal and non-neuronal cell types, arguing for distinct functions in development versus the adult brain. In neurons, subcellular localization also distinguishes between two types of receptors, either mainly localized to the cell soma (SORL1 and SORT1) or also to neuronal projections (SORCS1 and SORCS2), suggesting divergent functions in protein sorting between Golgi and the endo-lysosomal system or along axonal and dendritic tracks. Taken together, our findings provide an important resource concerning temporal, spatial, and subcellular patterns of VPS10P domain receptor expression in cerebral organoids for further elucidation of receptor (dys)functions causative of behavioral and cognitive defects of the human brain.",
+      "gpl": "24676",
+      "gse": "233567",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2023/09/27",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM7430627",
+          "title": "XMOOl WT DAY 100, scRNAseq"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 1,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "37842085"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE233nnn/GSE233567/",
+      "geo2r": "no",
+      "bioproject": "PRJNA976668"
+    },
+    "200238013": {
+      "uid": "200238013",
+      "accession": "GSE238013",
+      "gds": "",
+      "title": "Cell-type-specific regulation of APOE and CLU levels in human neurons by the Alzheimer\u2019s disease risk gene SORL1",
+      "summary": "SORL1 is strongly implicated in the pathogenesis of Alzheimer\u2019s disease (AD) through human genetic studies that point to an association of reduced SORL1 levels with higher risk for AD. To interrogate the role(s) of SORL1 in human brain cells, SORL1 null iPSCs were generated, followed by differentiation to neuron, astrocyte, microglial, and endothelial cell fates. Loss of SORL1 led to alterations in both overlapping and distinct pathways across cell types, with the greatest effects in neurons and astrocytes. Intriguingly, SORL1 loss led to a dramatic neuron-specific reduction in APOE and CLU levels, an increase in the accumulation of lipid droplets and altered lipid profiles. Pathway analysis implicated intracellular transport pathways and TGF-\u03b2/SMAD signaling in the function of SORL1 in neurons. Enhancement of retromer-mediated trafficking and autophagy rescued tau phenotypes observed in SORL1 null neurons but did not rescue APOE levels. However, stimulation and inhibition of SMAD signaling in neurons modulated APOE RNA levels in a SORL1-dependent manner. Further, analyses of iPSCs derived from a human aging cohort revealed a neuron-specific linear correlation between SORL1 and APOE RNA and protein levels, a finding validated in human post-mortem brain. These studies provide a mechanistic link between two of the strongest genetic risk factors for AD.",
+      "gpl": "24676",
+      "gse": "238013",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2023/07/24",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM7657833",
+          "title": "CVB_iEC_SORL1_KO_Rep1"
+        },
+        {
+          "accession": "GSM7657819",
+          "title": "CVB_iAst_SORL1_KO_Rep2"
+        },
+        {
+          "accession": "GSM7657827",
+          "title": "CVB_iMGL_SORL1_KO_Rep2"
+        },
+        {
+          "accession": "GSM7657816",
+          "title": "CVB_iAst_SORL1_WT_Rep3"
+        },
+        {
+          "accession": "GSM7657807",
+          "title": "CVB_iN_SORL1_WT_Rep2"
+        },
+        {
+          "accession": "GSM7657813",
+          "title": "CVB_iN_SORL1_KO_Rep4"
+        },
+        {
+          "accession": "GSM7657810",
+          "title": "CVB_iN_SORL1_KO_Rep1"
+        },
+        {
+          "accession": "GSM7657811",
+          "title": "CVB_iN_SORL1_KO_Rep2"
+        },
+        {
+          "accession": "GSM7657830",
+          "title": "CVB_iEC_SORL1_WT_Rep1"
+        },
+        {
+          "accession": "GSM7657808",
+          "title": "CVB_iN_SORL1_WT_Rep3"
+        },
+        {
+          "accession": "GSM7657828",
+          "title": "CVB_iMGL_SORL1_KO_Rep3"
+        },
+        {
+          "accession": "GSM7657834",
+          "title": "CVB_iEC_SORL1_KO_Rep2"
+        },
+        {
+          "accession": "GSM7657831",
+          "title": "CVB_iEC_SORL1_WT_Rep2"
+        },
+        {
+          "accession": "GSM7657814",
+          "title": "CVB_iAst_SORL1_WT_Rep1"
+        },
+        {
+          "accession": "GSM7657825",
+          "title": "CVB_iMGL_SORL1_WT_Rep4"
+        },
+        {
+          "accession": "GSM7657829",
+          "title": "CVB_iMGL_SORL1_KO_Rep4"
+        },
+        {
+          "accession": "GSM7657822",
+          "title": "CVB_iMGL_SORL1_WT_Rep1"
+        },
+        {
+          "accession": "GSM7657805",
+          "title": "CVB_IPSC_SORL1_KO_Rep3"
+        },
+        {
+          "accession": "GSM7657826",
+          "title": "CVB_iMGL_SORL1_KO_Rep1"
+        },
+        {
+          "accession": "GSM7657802",
+          "title": "CVB_IPSC_SORL1_WT_Rep3"
+        },
+        {
+          "accession": "GSM7657803",
+          "title": "CVB_IPSC_SORL1_KO_Rep1"
+        },
+        {
+          "accession": "GSM7657800",
+          "title": "CVB_IPSC_SORL1_WT_Rep1"
+        },
+        {
+          "accession": "GSM7657823",
+          "title": "CVB_iMGL_SORL1_WT_Rep2"
+        },
+        {
+          "accession": "GSM7657809",
+          "title": "CVB_iN_SORL1_WT_Rep4"
+        },
+        {
+          "accession": "GSM7657806",
+          "title": "CVB_iN_SORL1_WT_Rep1"
+        },
+        {
+          "accession": "GSM7657820",
+          "title": "CVB_iAst_SORL1_KO_Rep3"
+        },
+        {
+          "accession": "GSM7657817",
+          "title": "CVB_iAst_SORL1_WT_Rep4"
+        },
+        {
+          "accession": "GSM7657801",
+          "title": "CVB_IPSC_SORL1_WT_Rep2"
+        },
+        {
+          "accession": "GSM7657818",
+          "title": "CVB_iAst_SORL1_KO_Rep1"
+        },
+        {
+          "accession": "GSM7657832",
+          "title": "CVB_iEC_SORL1_WT_Rep3"
+        },
+        {
+          "accession": "GSM7657824",
+          "title": "CVB_iMGL_SORL1_WT_Rep3"
+        },
+        {
+          "accession": "GSM7657804",
+          "title": "CVB_IPSC_SORL1_KO_Rep2"
+        },
+        {
+          "accession": "GSM7657821",
+          "title": "CVB_iAst_SORL1_KO_Rep4"
+        },
+        {
+          "accession": "GSM7657835",
+          "title": "CVB_iEC_SORL1_KO_Rep3"
+        },
+        {
+          "accession": "GSM7657815",
+          "title": "CVB_iAst_SORL1_WT_Rep2"
+        },
+        {
+          "accession": "GSM7657812",
+          "title": "CVB_iN_SORL1_KO_Rep3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 36,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "37611586"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE238nnn/GSE238013/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA997371"
+    },
+    "200180793": {
+      "uid": "200180793",
+      "accession": "GSE180793",
+      "gds": "",
+      "title": "The Alzheimer\u2019s gene SORL1 is a key regulator of endosomal recycling in human neurons",
+      "summary": "Loss of the Sortilin-related receptor 1 (SORL1) gene seems to act as a causal event for Alzheimer\u2019s disease (AD). Recent studies have established that loss of SORL1, as well as mutations in autosomal dominant AD genes APP and PSEN1/2, pathogenically converge by swelling early endosomes, AD\u2019s cytopathological hallmark. Acting together with the retromer trafficking complex, SORL1 has been shown to regulate the recycling of the amyloid precursor protein (APP) out of the endosome, contributing to endosomal swelling and to APP misprocessing. We hypothesized that SORL1 plays a broader role in neuronal endosomal recycling and used human induced pluripotent stem cell derived neurons (hiPSC-Ns) to test this hypothesis. In SORL1 deficient (SORL1KO) cell lines, we map the trafficking of the glutamate receptor and the BDNF neurotrophic receptor, two kinds of transmembrane proteins that depend on endosomal recycling and that are linked to AD pathophysiology. We find that as with APP, SORL1 is required for efficient endosomal recycling of the glutamate receptor AMPA1 (GLUA1) and the BDNF receptor Tropomyosin-related kinase B (TRKB). Next, we used cell lines engineered to overexpress SORL1 and find that increased SORL1 expression enhances recycling for APP and GLUA1. Finally, we performed an unbiased transcriptomic screen of SORL1KO neurons and the data further support SORL1\u2019s role in endosomal recycling.  We observed altered expression networks that regulate cell surface trafficking and neurotrophic signaling. Collectively, and together with other recent observations, these findings suggest that SORL1 is a key and broad regulator of retromer-dependent endosomal recycling in neurons, a conclusion that has both pathogenic and therapeutic implications.",
+      "gpl": "24676",
+      "gse": "180793",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/01",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM5471072",
+          "title": "WT iPSC-derived neurons A6 differentiation3 rep2"
+        },
+        {
+          "accession": "GSM5471075",
+          "title": "KO iPSC-derived neurons E4 differentiation3 rep2"
+        },
+        {
+          "accession": "GSM5471066",
+          "title": "KO iPSC-derived neurons E4 differentiation1 rep2"
+        },
+        {
+          "accession": "GSM5471069",
+          "title": "KO iPSC-derived neurons E1 differentiation2 rep1"
+        },
+        {
+          "accession": "GSM5471063",
+          "title": "WT iPSC-derived neurons A6 differentiation1 rep1"
+        },
+        {
+          "accession": "GSM5471067",
+          "title": "WT iPSC-derived neurons A7 differentiation2 rep1"
+        },
+        {
+          "accession": "GSM5471070",
+          "title": "KO iPSC-derived neurons E1 differentiation2 rep2"
+        },
+        {
+          "accession": "GSM5471073",
+          "title": "WT iPSC-derived neurons A6 differentiation3 rep3"
+        },
+        {
+          "accession": "GSM5471064",
+          "title": "WT iPSC-derived neurons A6 differentiation1 rep2"
+        },
+        {
+          "accession": "GSM5471068",
+          "title": "WT iPSC-derived neurons A7 differentiation2 rep2"
+        },
+        {
+          "accession": "GSM5471076",
+          "title": "KO iPSC-derived neurons E4 differentiation3 rep3"
+        },
+        {
+          "accession": "GSM5471065",
+          "title": "KO iPSC-derived neurons E4 differentiation1 rep1"
+        },
+        {
+          "accession": "GSM5471071",
+          "title": "WT iPSC-derived neurons A6 differentiation3 rep1"
+        },
+        {
+          "accession": "GSM5471074",
+          "title": "KO iPSC-derived neurons E4 differentiation3 rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP329789",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP329/SRP329789/"
+        }
+      ],
+      "n_samples": 14,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "35226190"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE180nnn/GSE180793/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA749578"
+    },
+    "200156167": {
+      "uid": "200156167",
+      "accession": "GSE156167",
+      "gds": "",
+      "title": "Transcriptome analysis of a protein-truncating mutation in sortilin-related receptor 1 (sorl1) associated with early-onset familial Alzheimer's disease indicates effects on mitochondrial and ribosome function in young-adult zebrafish brains",
+      "summary": "The early cellular stresses which eventually lead to Alzheimer\u2019s disease (AD) remain poorly understood. This is because we cannot access living, asymptomatic human AD brains for detailed molecular analyses. Sortilin-related receptor 1 (SORL1) encodes a multi-domain receptor protein genetically associated with both rare, early-onset familial AD (EOfAD) and common, sporadic late-onset AD (LOAD). SORL1 has been shown to play a role in the trafficking of the amyloid \u03b2 A4 precursor protein (APP) which is cleaved proteolytically to form one of the pathological hallmarks of AD, amyloid \u03b2 (A\u03b2) peptide. However, the other functions of SORL1 are less well understood. Here, we employed a reverse genetics approach to characterise the effect of an EOfAD mutation in SORL1 using zebrafish as a model organism. We performed targeted mutagenesis to generate an EOfAD-like mutation in the zebrafish orthologue of SORL1, and performed RNA-sequencing on mRNA isolated from a family of fish either heterozygous for the EOfAD-like mutation or their wild type siblings and identified subtle effects on the expression of genes likely indicating changes in mitochondrial and ribosomal function.",
+      "gpl": "24995",
+      "gse": "156167",
+      "taxon": "Danio rerio",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2021/01/11",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM4725885",
+          "title": "samp_11_5mut"
+        },
+        {
+          "accession": "GSM4725888",
+          "title": "samp_3_13W"
+        },
+        {
+          "accession": "GSM4725894",
+          "title": "samp_9_1W"
+        },
+        {
+          "accession": "GSM4725891",
+          "title": "samp_6_16W"
+        },
+        {
+          "accession": "GSM4725893",
+          "title": "samp_8_19W"
+        },
+        {
+          "accession": "GSM4725887",
+          "title": "samp_2_12mut"
+        },
+        {
+          "accession": "GSM4725890",
+          "title": "samp_5_15mut"
+        },
+        {
+          "accession": "GSM4725892",
+          "title": "samp_7_17mut"
+        },
+        {
+          "accession": "GSM4725883",
+          "title": "samp_10_4mut"
+        },
+        {
+          "accession": "GSM4725884",
+          "title": "samp_1_11mut"
+        },
+        {
+          "accession": "GSM4725886",
+          "title": "samp_12_9W"
+        },
+        {
+          "accession": "GSM4725889",
+          "title": "samp_4_14W"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP277345",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP277/SRP277345/"
+        }
+      ],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "33386808",
+        "34842276"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE156nnn/GSE156167/",
+      "geo2r": "no",
+      "bioproject": "PRJNA656952"
+    },
+    "200151999": {
+      "uid": "200151999",
+      "accession": "GSE151999",
+      "gds": "",
+      "title": "Brain transcriptome analysis reveals subtle effects on mitochondrial function and iron homeostasis of mutations in the SORL1 gene implicated in early onset familial Alzheimer\u2019s disease",
+      "summary": "To prevent or delay the onset of Alzheimer\u2019s disease (AD), we must understand its molecular basis. The great majority of AD cases arise sporadically with a late onset after 65 years of age (LOAD). However, rare familial cases of AD can occur due to dominant mutations in a small number of genes that cause an early onset prior to 65 years of age (EOfAD). As EOfAD and LOAD share similar pathologies and disease progression, analysis of EOfAD genetic models may give insight into both subtypes of AD. Sortilin-related receptor 1 (SORL1) is genetically associated with both EOfAD and LOAD and provides a unique opportunity to investigate the relationships between both forms of AD. Currently, the role of SORL1 mutations in AD pathogenesis is unclear. To understand the molecular consequences of SORL1 mutation, we performed targeted mutagenesis of the orthologous gene in zebrafish. We generated an EOfAD-like mutation, V1482Afs, and a putatively null mutation, to investigate whether EOfAD-like mutations in sorl1 display haploinsufficiency by acting through loss-of-function mechanisms. We performed mRNA-sequencing on whole brains, comparing wild type fish with their siblings heterozygous for EOfAD-like or putatively loss-of-function mutations in sorl1, or transheterozygous for these mutations. Differential gene expression analysis identified a small number of differentially expressed genes due to the sorl1 genotypes. We also performed enrichment analysis on all detectable genes to obtain a more complete view on changes to gene expression by performing three methods of gene set enrichment analysis, then calculated an overall significance value using the harmonic mean p-value. This identified subtle effects on expression of genes involved in energy production, mRNA translation and mTORC1 signalling in both the EOfAD-like and null mutant brains, implying that these effects are due to sorl1 haploinsufficiency. Surprisingly, we also observed changes to expression of genes occurring only in the EOfAD-mutation carrier brains, suggesting gain-of-function effects. Transheterozygosity for the EOfAD-like and null mutations (i.e. lacking wild type sorl1), caused apparent effects on iron homeostasis and other transcriptome changes distinct from the single-mutation heterozygous fish. Our results provide insight into the possible early brain molecular effects of an EOfAD mutation in human SORL1. Differential effects of heterozygosity and complete loss of normal SORL1 expression are revealed.",
+      "gpl": "20828",
+      "gse": "151999",
+      "taxon": "Danio rerio",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2020/10/22",
+      "suppfile": "CSV",
+      "samples": [
+        {
+          "accession": "GSM4594677",
+          "title": "R122Pfs-3"
+        },
+        {
+          "accession": "GSM4594694",
+          "title": "transhet-6"
+        },
+        {
+          "accession": "GSM4594688",
+          "title": "R122Pfs-4"
+        },
+        {
+          "accession": "GSM4594674",
+          "title": "WT-5"
+        },
+        {
+          "accession": "GSM4594685",
+          "title": "R122Pfs-1"
+        },
+        {
+          "accession": "GSM4594671",
+          "title": "WT-1"
+        },
+        {
+          "accession": "GSM4594691",
+          "title": "transhet-3"
+        },
+        {
+          "accession": "GSM4594689",
+          "title": "transhet-1"
+        },
+        {
+          "accession": "GSM4594680",
+          "title": "V1482Afs-2"
+        },
+        {
+          "accession": "GSM4594692",
+          "title": "transhet-4"
+        },
+        {
+          "accession": "GSM4594672",
+          "title": "WT-3"
+        },
+        {
+          "accession": "GSM4594686",
+          "title": "R122Pfs-2"
+        },
+        {
+          "accession": "GSM4594687",
+          "title": "R122Pfs-6"
+        },
+        {
+          "accession": "GSM4594684",
+          "title": "V1482Afs-6"
+        },
+        {
+          "accession": "GSM4594683",
+          "title": "V1482Afs-5"
+        },
+        {
+          "accession": "GSM4594681",
+          "title": "V1482Afs-3"
+        },
+        {
+          "accession": "GSM4594678",
+          "title": "R122Pfs-5"
+        },
+        {
+          "accession": "GSM4594675",
+          "title": "WT-6"
+        },
+        {
+          "accession": "GSM4594679",
+          "title": "V1482Afs-1"
+        },
+        {
+          "accession": "GSM4594690",
+          "title": "transhet-2"
+        },
+        {
+          "accession": "GSM4594682",
+          "title": "V1482Afs-4"
+        },
+        {
+          "accession": "GSM4594676",
+          "title": "WT-9"
+        },
+        {
+          "accession": "GSM4594673",
+          "title": "WT-4"
+        },
+        {
+          "accession": "GSM4594693",
+          "title": "transhet-5"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP266427",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP266/SRP266427/"
+        }
+      ],
+      "n_samples": 24,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "33076949",
+        "34842276"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE151nnn/GSE151999/",
+      "geo2r": "no",
+      "bioproject": "PRJNA638037"
+    },
+    "200153658": {
+      "uid": "200153658",
+      "accession": "GSE153658",
+      "gds": "",
+      "title": "Multi-omic comparison of Alzheimer\u2019s variants in human ESC-derived microglia reveals convergence at APOE",
+      "summary": "This SuperSeries is composed of the SubSeries listed below.",
+      "gpl": "18573",
+      "gse": "153658",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing; Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2020/09/01",
+      "suppfile": "BED, BW",
+      "samples": [
+        {
+          "accession": "GSM4648834",
+          "title": "hMGL SORL1-A528T H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648860",
+          "title": "hMGL SORL1-KO Input Rep1"
+        },
+        {
+          "accession": "GSM4648900",
+          "title": "RNA-seq_hMGL WT Rep4"
+        },
+        {
+          "accession": "GSM4648857",
+          "title": "hMGL INPP5D SNP Input Rep2"
+        },
+        {
+          "accession": "GSM4648897",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep3"
+        },
+        {
+          "accession": "GSM4648837",
+          "title": "hMGL WT H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648903",
+          "title": "RNA-seq_hMGL INPP5D Rep1"
+        },
+        {
+          "accession": "GSM4648820",
+          "title": "hMGL WT Rep2"
+        },
+        {
+          "accession": "GSM4648909",
+          "title": "RNA-seq_hMGL TREM2-KO Rep5"
+        },
+        {
+          "accession": "GSM4648817",
+          "title": "hMGL TREM2-KO Rep2"
+        },
+        {
+          "accession": "GSM4648814",
+          "title": "hMGL SORL1-KO Rep2"
+        },
+        {
+          "accession": "GSM4648806",
+          "title": "hMGL CD33 Rep3"
+        },
+        {
+          "accession": "GSM4648863",
+          "title": "hMGL SORL1-A528T Input Rep2"
+        },
+        {
+          "accession": "GSM4648886",
+          "title": "RNA-seq_hMGL TREM2-KO Rep1"
+        },
+        {
+          "accession": "GSM4648803",
+          "title": "hMGL SORL1-A528T Rep3"
+        },
+        {
+          "accession": "GSM4648889",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep1"
+        },
+        {
+          "accession": "GSM4648923",
+          "title": "RNA-seq_hMGL SORL1-KO Rep7"
+        },
+        {
+          "accession": "GSM4648840",
+          "title": "hMGL TREM2-KO H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648920",
+          "title": "RNA-seq_hMGL TREM2-KO Rep7"
+        },
+        {
+          "accession": "GSM4648826",
+          "title": "hMGL TREM2-KO H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648906",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep4"
+        },
+        {
+          "accession": "GSM4648823",
+          "title": "hMGL WT H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648843",
+          "title": "hMGL INPP5D SNP H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648825",
+          "title": "hMGL CD33 SNP H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648849",
+          "title": "hMGL SORL1-A528T H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648846",
+          "title": "hMGL SORL1-KO H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648862",
+          "title": "hMGL SORL1-A528T Input Rep1"
+        },
+        {
+          "accession": "GSM4648908",
+          "title": "RNA-seq_hMGL CD33 Rep2"
+        },
+        {
+          "accession": "GSM4648888",
+          "title": "RNA-seq_hMGL SORL1-KO Rep1"
+        },
+        {
+          "accession": "GSM4648845",
+          "title": "hMGL TREM2-R47H H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648885",
+          "title": "RNA-seq_hMGL WT Rep1"
+        },
+        {
+          "accession": "GSM4648822",
+          "title": "hMGL WT H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648842",
+          "title": "hMGL INPP5D SNP H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648805",
+          "title": "hMGL CD33 Rep2"
+        },
+        {
+          "accession": "GSM4648917",
+          "title": "RNA-seq_hMGL SORL1-KO Rep6"
+        },
+        {
+          "accession": "GSM4648891",
+          "title": "RNA-seq_hMGL TREM2-KO Rep2"
+        },
+        {
+          "accession": "GSM4648802",
+          "title": "hMGL SORL1-A528T Rep2"
+        },
+        {
+          "accession": "GSM4648905",
+          "title": "RNA-seq_hMGL SORL1-KO Rep4"
+        },
+        {
+          "accession": "GSM4648902",
+          "title": "RNA-seq_hMGL TREM2-KO Rep4"
+        },
+        {
+          "accession": "GSM4648819",
+          "title": "hMGL WT Rep1"
+        },
+        {
+          "accession": "GSM4648811",
+          "title": "hMGL TREM2-R47H Rep2"
+        },
+        {
+          "accession": "GSM4648854",
+          "title": "hMGL TREM2-KO Input Rep1"
+        },
+        {
+          "accession": "GSM4648894",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep2"
+        },
+        {
+          "accession": "GSM4648851",
+          "title": "hMGL WT Input Rep2"
+        },
+        {
+          "accession": "GSM4648808",
+          "title": "hMGL INPP5D Rep2"
+        },
+        {
+          "accession": "GSM4648848",
+          "title": "hMGL SORL1-A528T H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648804",
+          "title": "hMGL CD33 Rep1"
+        },
+        {
+          "accession": "GSM4648907",
+          "title": "RNA-seq_hMGL WT Rep5"
+        },
+        {
+          "accession": "GSM4648824",
+          "title": "hMGL CD33 SNP H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648830",
+          "title": "hMGL TREM2-R47H H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648914",
+          "title": "RNA-seq_hMGL WT Rep6"
+        },
+        {
+          "accession": "GSM4648831",
+          "title": "hMGL TREM2-R47H H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648911",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep5"
+        },
+        {
+          "accession": "GSM4648910",
+          "title": "RNA-seq_hMGL INPP5D Rep2"
+        },
+        {
+          "accession": "GSM4648827",
+          "title": "hMGL TREM2-KO H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648828",
+          "title": "hMGL INPP5D SNP H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648890",
+          "title": "RNA-seq_hMGL WT Rep2"
+        },
+        {
+          "accession": "GSM4648807",
+          "title": "hMGL INPP5D Rep1"
+        },
+        {
+          "accession": "GSM4648850",
+          "title": "hMGL WT Input Rep1"
+        },
+        {
+          "accession": "GSM4648833",
+          "title": "hMGL SORL1-KO H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648859",
+          "title": "hMGL TREM2-R47H Input Rep2"
+        },
+        {
+          "accession": "GSM4648847",
+          "title": "hMGL SORL1-KO H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648893",
+          "title": "RNA-seq_hMGL SORL1-KO Rep2"
+        },
+        {
+          "accession": "GSM4648899",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep3"
+        },
+        {
+          "accession": "GSM4648887",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep1"
+        },
+        {
+          "accession": "GSM4648856",
+          "title": "hMGL INPP5D SNP Input Rep1"
+        },
+        {
+          "accession": "GSM4648853",
+          "title": "hMGL CD33 SNP Input Rep2"
+        },
+        {
+          "accession": "GSM4648913",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep5"
+        },
+        {
+          "accession": "GSM4648810",
+          "title": "hMGL TREM2-R47H Rep1"
+        },
+        {
+          "accession": "GSM4648816",
+          "title": "hMGL TREM2-KO Rep1"
+        },
+        {
+          "accession": "GSM4648919",
+          "title": "RNA-seq_hMGL WT Rep7"
+        },
+        {
+          "accession": "GSM4648836",
+          "title": "hMGL WT H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648922",
+          "title": "RNA-seq_hMGL TREM2-KO Rep8"
+        },
+        {
+          "accession": "GSM4648896",
+          "title": "RNA-seq_hMGL TREM2-KO Rep3"
+        },
+        {
+          "accession": "GSM4648813",
+          "title": "hMGL SORL1-KO Rep1"
+        },
+        {
+          "accession": "GSM4648916",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep6"
+        },
+        {
+          "accession": "GSM4648839",
+          "title": "hMGL CD33 SNP H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648904",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep4"
+        },
+        {
+          "accession": "GSM4648918",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep6"
+        },
+        {
+          "accession": "GSM4648835",
+          "title": "hMGL SORL1-A528T H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648915",
+          "title": "RNA-seq_hMGL TREM2-KO Rep6"
+        },
+        {
+          "accession": "GSM4648832",
+          "title": "hMGL SORL1-KO H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648815",
+          "title": "hMGL SORL1-KO Rep3"
+        },
+        {
+          "accession": "GSM4648898",
+          "title": "RNA-seq_hMGL SORL1-KO Rep3"
+        },
+        {
+          "accession": "GSM4648901",
+          "title": "RNA-seq_hMGL CD33 Rep1"
+        },
+        {
+          "accession": "GSM4648801",
+          "title": "hMGL SORL1-A528T Rep1"
+        },
+        {
+          "accession": "GSM4648895",
+          "title": "RNA-seq_hMGL WT Rep3"
+        },
+        {
+          "accession": "GSM4648812",
+          "title": "hMGL TREM2-R47H Rep3"
+        },
+        {
+          "accession": "GSM4648852",
+          "title": "hMGL CD33 SNP Input Rep1"
+        },
+        {
+          "accession": "GSM4648809",
+          "title": "hMGL INPP5D Rep3"
+        },
+        {
+          "accession": "GSM4648892",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep2"
+        },
+        {
+          "accession": "GSM4648912",
+          "title": "RNA-seq_hMGL SORL1-KO Rep5"
+        },
+        {
+          "accession": "GSM4648844",
+          "title": "hMGL TREM2-R47H H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648855",
+          "title": "hMGL TREM2-KO Input Rep2"
+        },
+        {
+          "accession": "GSM4648829",
+          "title": "hMGL INPP5D SNP H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648924",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep7"
+        },
+        {
+          "accession": "GSM4648821",
+          "title": "hMGL WT Rep3"
+        },
+        {
+          "accession": "GSM4648841",
+          "title": "hMGL TREM2-KO H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648818",
+          "title": "hMGL TREM2-KO Rep3"
+        },
+        {
+          "accession": "GSM4648861",
+          "title": "hMGL SORL1-KO Input Rep2"
+        },
+        {
+          "accession": "GSM4648921",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep7"
+        },
+        {
+          "accession": "GSM4648838",
+          "title": "hMGL CD33 SNP H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648858",
+          "title": "hMGL TREM2-R47H Input Rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 103,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "32941599"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE153nnn/GSE153658/",
+      "geo2r": "no",
+      "bioproject": "PRJNA643555"
+    },
+    "200153657": {
+      "uid": "200153657",
+      "accession": "GSE153657",
+      "gds": "",
+      "title": "Multi-omic comparison of Alzheimer\u2019s variants in human ESC-derived microglia reveals convergence at APOE [RNA-seq]",
+      "summary": "Variations in many genes linked to sporadic Alzheimer\u2019s disease (AD), show abundant expression in microglia, however, relationships between these genes remain largely elusive. Here, we establish isogenic human ES-derived microglia-like cell lines (hMGLs) harboring AD variants in CD33, INPP5D, SORL1 and TREM2 loci, and curate a comprehensive atlas comprising ATACseq, ChIPseq, RNAseq and proteomics datasets. AD-like expression signatures are observed in AD mutant SORL1 and TREM2 hMGLs, while integrative multi-omic analysis of combined epigenetic and expression datasets indicates upregulation of APOE as a convergent pathogenic node. We also observe cross-regulatory relationships between SORL1 and TREM2, where SORL1R744X hMGLs induce TREM2 expression to enhance APOE expression. AD-associated SORL1 and TREM2 mutations also impaired hMGL A\u03b2 uptake in an APOE-dependent manner in vitro, and attenuated A\u03b2 uptake/clearance in mouse AD brain xenotransplants. Utilizing this modeling and analysis platform for human microglia, we provide new insight into epistatic interactions in AD genes and demonstrate convergence of microglial AD genes at the APOE locus.",
+      "gpl": "18573",
+      "gse": "153657",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2020/09/01",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM4648913",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep5"
+        },
+        {
+          "accession": "GSM4648893",
+          "title": "RNA-seq_hMGL SORL1-KO Rep2"
+        },
+        {
+          "accession": "GSM4648919",
+          "title": "RNA-seq_hMGL WT Rep7"
+        },
+        {
+          "accession": "GSM4648896",
+          "title": "RNA-seq_hMGL TREM2-KO Rep3"
+        },
+        {
+          "accession": "GSM4648916",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep6"
+        },
+        {
+          "accession": "GSM4648922",
+          "title": "RNA-seq_hMGL TREM2-KO Rep8"
+        },
+        {
+          "accession": "GSM4648899",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep3"
+        },
+        {
+          "accession": "GSM4648902",
+          "title": "RNA-seq_hMGL TREM2-KO Rep4"
+        },
+        {
+          "accession": "GSM4648885",
+          "title": "RNA-seq_hMGL WT Rep1"
+        },
+        {
+          "accession": "GSM4648905",
+          "title": "RNA-seq_hMGL SORL1-KO Rep4"
+        },
+        {
+          "accession": "GSM4648901",
+          "title": "RNA-seq_hMGL CD33 Rep1"
+        },
+        {
+          "accession": "GSM4648921",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep7"
+        },
+        {
+          "accession": "GSM4648898",
+          "title": "RNA-seq_hMGL SORL1-KO Rep3"
+        },
+        {
+          "accession": "GSM4648918",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep6"
+        },
+        {
+          "accession": "GSM4648904",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep4"
+        },
+        {
+          "accession": "GSM4648924",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep7"
+        },
+        {
+          "accession": "GSM4648907",
+          "title": "RNA-seq_hMGL WT Rep5"
+        },
+        {
+          "accession": "GSM4648890",
+          "title": "RNA-seq_hMGL WT Rep2"
+        },
+        {
+          "accession": "GSM4648910",
+          "title": "RNA-seq_hMGL INPP5D Rep2"
+        },
+        {
+          "accession": "GSM4648887",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep1"
+        },
+        {
+          "accession": "GSM4648923",
+          "title": "RNA-seq_hMGL SORL1-KO Rep7"
+        },
+        {
+          "accession": "GSM4648903",
+          "title": "RNA-seq_hMGL INPP5D Rep1"
+        },
+        {
+          "accession": "GSM4648909",
+          "title": "RNA-seq_hMGL TREM2-KO Rep5"
+        },
+        {
+          "accession": "GSM4648906",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep4"
+        },
+        {
+          "accession": "GSM4648886",
+          "title": "RNA-seq_hMGL TREM2-KO Rep1"
+        },
+        {
+          "accession": "GSM4648912",
+          "title": "RNA-seq_hMGL SORL1-KO Rep5"
+        },
+        {
+          "accession": "GSM4648895",
+          "title": "RNA-seq_hMGL WT Rep3"
+        },
+        {
+          "accession": "GSM4648891",
+          "title": "RNA-seq_hMGL TREM2-KO Rep2"
+        },
+        {
+          "accession": "GSM4648892",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep2"
+        },
+        {
+          "accession": "GSM4648915",
+          "title": "RNA-seq_hMGL TREM2-KO Rep6"
+        },
+        {
+          "accession": "GSM4648889",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep1"
+        },
+        {
+          "accession": "GSM4648888",
+          "title": "RNA-seq_hMGL SORL1-KO Rep1"
+        },
+        {
+          "accession": "GSM4648914",
+          "title": "RNA-seq_hMGL WT Rep6"
+        },
+        {
+          "accession": "GSM4648920",
+          "title": "RNA-seq_hMGL TREM2-KO Rep7"
+        },
+        {
+          "accession": "GSM4648917",
+          "title": "RNA-seq_hMGL SORL1-KO Rep6"
+        },
+        {
+          "accession": "GSM4648911",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep5"
+        },
+        {
+          "accession": "GSM4648908",
+          "title": "RNA-seq_hMGL CD33 Rep2"
+        },
+        {
+          "accession": "GSM4648894",
+          "title": "RNA-seq_hMGL SORL1-A528T Rep2"
+        },
+        {
+          "accession": "GSM4648900",
+          "title": "RNA-seq_hMGL WT Rep4"
+        },
+        {
+          "accession": "GSM4648897",
+          "title": "RNA-seq_hMGL TREM2-R47H Rep3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP269599",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP269/SRP269599/"
+        }
+      ],
+      "n_samples": 40,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "32941599"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE153nnn/GSE153657/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA643561"
+    },
+    "200153655": {
+      "uid": "200153655",
+      "accession": "GSE153655",
+      "gds": "",
+      "title": "Multi-omic comparison of Alzheimer\u2019s variants in human ESC-derived microglia reveals convergence at APOE [ChIP-seq]",
+      "summary": "Variations in many genes linked to sporadic Alzheimer\u2019s disease (AD), show abundant expression in microglia, however, relationships between these genes remain largely elusive. Here, we establish isogenic human ES-derived microglia-like cell lines (hMGLs) harboring AD variants in CD33, INPP5D, SORL1 and TREM2 loci, and curate a comprehensive atlas comprising ATACseq, ChIPseq, RNAseq and proteomics datasets. AD-like expression signatures are observed in AD mutant SORL1 and TREM2 hMGLs, while integrative multi-omic analysis of combined epigenetic and expression datasets indicates upregulation of APOE as a convergent pathogenic node. We also observe cross-regulatory relationships between SORL1 and TREM2, where SORL1R744X hMGLs induce TREM2 expression to enhance APOE expression. AD-associated SORL1 and TREM2 mutations also impaired hMGL A\u03b2 uptake in an APOE-dependent manner in vitro, and attenuated A\u03b2 uptake/clearance in mouse AD brain xenotransplants. Utilizing this modeling and analysis platform for human microglia, we provide new insight into epistatic interactions in AD genes and demonstrate convergence of microglial AD genes at the APOE locus.",
+      "gpl": "18573",
+      "gse": "153655",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2020/09/01",
+      "suppfile": "BED, BW",
+      "samples": [
+        {
+          "accession": "GSM4648839",
+          "title": "hMGL CD33 SNP H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648842",
+          "title": "hMGL INPP5D SNP H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648862",
+          "title": "hMGL SORL1-A528T Input Rep1"
+        },
+        {
+          "accession": "GSM4648822",
+          "title": "hMGL WT H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648845",
+          "title": "hMGL TREM2-R47H H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648825",
+          "title": "hMGL CD33 SNP H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648848",
+          "title": "hMGL SORL1-A528T H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648851",
+          "title": "hMGL WT Input Rep2"
+        },
+        {
+          "accession": "GSM4648831",
+          "title": "hMGL TREM2-R47H H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648828",
+          "title": "hMGL INPP5D SNP H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648850",
+          "title": "hMGL WT Input Rep1"
+        },
+        {
+          "accession": "GSM4648830",
+          "title": "hMGL TREM2-R47H H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648824",
+          "title": "hMGL CD33 SNP H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648844",
+          "title": "hMGL TREM2-R47H H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648847",
+          "title": "hMGL SORL1-KO H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648827",
+          "title": "hMGL TREM2-KO H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648853",
+          "title": "hMGL CD33 SNP Input Rep2"
+        },
+        {
+          "accession": "GSM4648856",
+          "title": "hMGL INPP5D SNP Input Rep1"
+        },
+        {
+          "accession": "GSM4648859",
+          "title": "hMGL TREM2-R47H Input Rep2"
+        },
+        {
+          "accession": "GSM4648833",
+          "title": "hMGL SORL1-KO H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648836",
+          "title": "hMGL WT H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648832",
+          "title": "hMGL SORL1-KO H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648849",
+          "title": "hMGL SORL1-A528T H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648852",
+          "title": "hMGL CD33 SNP Input Rep1"
+        },
+        {
+          "accession": "GSM4648855",
+          "title": "hMGL TREM2-KO Input Rep2"
+        },
+        {
+          "accession": "GSM4648829",
+          "title": "hMGL INPP5D SNP H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648858",
+          "title": "hMGL TREM2-R47H Input Rep1"
+        },
+        {
+          "accession": "GSM4648835",
+          "title": "hMGL SORL1-A528T H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648840",
+          "title": "hMGL TREM2-KO H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648861",
+          "title": "hMGL SORL1-KO Input Rep2"
+        },
+        {
+          "accession": "GSM4648834",
+          "title": "hMGL SORL1-A528T H3K4me3 Rep1"
+        },
+        {
+          "accession": "GSM4648841",
+          "title": "hMGL TREM2-KO H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648837",
+          "title": "hMGL WT H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648863",
+          "title": "hMGL SORL1-A528T Input Rep2"
+        },
+        {
+          "accession": "GSM4648838",
+          "title": "hMGL CD33 SNP H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648860",
+          "title": "hMGL SORL1-KO Input Rep1"
+        },
+        {
+          "accession": "GSM4648854",
+          "title": "hMGL TREM2-KO Input Rep1"
+        },
+        {
+          "accession": "GSM4648857",
+          "title": "hMGL INPP5D SNP Input Rep2"
+        },
+        {
+          "accession": "GSM4648843",
+          "title": "hMGL INPP5D SNP H3K27ac Rep2"
+        },
+        {
+          "accession": "GSM4648823",
+          "title": "hMGL WT H3K4me3 Rep2"
+        },
+        {
+          "accession": "GSM4648846",
+          "title": "hMGL SORL1-KO H3K27ac Rep1"
+        },
+        {
+          "accession": "GSM4648826",
+          "title": "hMGL TREM2-KO H3K4me3 Rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP269598",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP269/SRP269598/"
+        }
+      ],
+      "n_samples": 42,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "32941599"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE153nnn/GSE153655/",
+      "geo2r": "no",
+      "bioproject": "PRJNA643558"
+    },
+    "200153654": {
+      "uid": "200153654",
+      "accession": "GSE153654",
+      "gds": "",
+      "title": "Multi-omic comparison of Alzheimer\u2019s variants in human ESC-derived microglia reveals convergence at APOE [ATAC-seq]",
+      "summary": "Variations in many genes linked to sporadic Alzheimer\u2019s disease (AD), show abundant expression in microglia, however, relationships between these genes remain largely elusive. Here, we establish isogenic human ES-derived microglia-like cell lines (hMGLs) harboring AD variants in CD33, INPP5D, SORL1 and TREM2 loci, and curate a comprehensive atlas comprising ATACseq, ChIPseq, RNAseq and proteomics datasets. AD-like expression signatures are observed in AD mutant SORL1 and TREM2 hMGLs, while integrative multi-omic analysis of combined epigenetic and expression datasets indicates upregulation of APOE as a convergent pathogenic node. We also observe cross-regulatory relationships between SORL1 and TREM2, where SORL1R744X hMGLs induce TREM2 expression to enhance APOE expression. AD-associated SORL1 and TREM2 mutations also impaired hMGL A\u03b2 uptake in an APOE-dependent manner in vitro, and attenuated A\u03b2 uptake/clearance in mouse AD brain xenotransplants. Utilizing this modeling and analysis platform for human microglia, we provide new insight into epistatic interactions in AD genes and demonstrate convergence of microglial AD genes at the APOE locus.",
+      "gpl": "18573",
+      "gse": "153654",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Genome binding/occupancy profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2020/09/01",
+      "suppfile": "BED, BW",
+      "samples": [
+        {
+          "accession": "GSM4648812",
+          "title": "hMGL TREM2-R47H Rep3"
+        },
+        {
+          "accession": "GSM4648818",
+          "title": "hMGL TREM2-KO Rep3"
+        },
+        {
+          "accession": "GSM4648815",
+          "title": "hMGL SORL1-KO Rep3"
+        },
+        {
+          "accession": "GSM4648801",
+          "title": "hMGL SORL1-A528T Rep1"
+        },
+        {
+          "accession": "GSM4648821",
+          "title": "hMGL WT Rep3"
+        },
+        {
+          "accession": "GSM4648804",
+          "title": "hMGL CD33 Rep1"
+        },
+        {
+          "accession": "GSM4648820",
+          "title": "hMGL WT Rep2"
+        },
+        {
+          "accession": "GSM4648803",
+          "title": "hMGL SORL1-A528T Rep3"
+        },
+        {
+          "accession": "GSM4648808",
+          "title": "hMGL INPP5D Rep2"
+        },
+        {
+          "accession": "GSM4648809",
+          "title": "hMGL INPP5D Rep3"
+        },
+        {
+          "accession": "GSM4648802",
+          "title": "hMGL SORL1-A528T Rep2"
+        },
+        {
+          "accession": "GSM4648805",
+          "title": "hMGL CD33 Rep2"
+        },
+        {
+          "accession": "GSM4648806",
+          "title": "hMGL CD33 Rep3"
+        },
+        {
+          "accession": "GSM4648817",
+          "title": "hMGL TREM2-KO Rep2"
+        },
+        {
+          "accession": "GSM4648811",
+          "title": "hMGL TREM2-R47H Rep2"
+        },
+        {
+          "accession": "GSM4648807",
+          "title": "hMGL INPP5D Rep1"
+        },
+        {
+          "accession": "GSM4648810",
+          "title": "hMGL TREM2-R47H Rep1"
+        },
+        {
+          "accession": "GSM4648814",
+          "title": "hMGL SORL1-KO Rep2"
+        },
+        {
+          "accession": "GSM4648813",
+          "title": "hMGL SORL1-KO Rep1"
+        },
+        {
+          "accession": "GSM4648819",
+          "title": "hMGL WT Rep1"
+        },
+        {
+          "accession": "GSM4648816",
+          "title": "hMGL TREM2-KO Rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP269595",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP269/SRP269595/"
+        }
+      ],
+      "n_samples": 21,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "32941599"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE153nnn/GSE153654/",
+      "geo2r": "no",
+      "bioproject": "PRJNA643557"
+    },
+    "200077539": {
+      "uid": "200077539",
+      "accession": "GSE77539",
+      "gds": "",
+      "title": "Integrative analysis of DNA copy number, DNA methylation and gene expression in multiple myeloma reveals alterations related to relapse [gene expression]",
+      "summary": "Multiple myeloma (MM) remains incurable despite the introduction of novel agents and a relapsing course is observed in the majority of patients. Although the development of genomic technologies has greatly improved our understanding of MM pathogenesis, the mechanisms underlying relapse have been less investigated. In this study, an integrative analysis of DNA copy number, DNA methylation and gene expression was conducted in matched diagnosis and relapse samples from 17 MM patients. Overall, the acquisition of abnormalities at relapse was much more frequent than the lost of lesions present at diagnosis, and DNA losses were significantly more frequent at relapse than in diagnosis samples. Interestingly, copy number abnormalities involving more than 100 Mb of DNA at relapse significantly impact the gene expression of these samples, provoking a particular deregulation of IL-8 pathway. On the contrary, no relevant modifications of gene expression were observed in those samples with less than 100 Mb affected by chromosomal changes. Although different statistical approaches were used to uncover genes whose abnormal expression at relapse was regulated by DNA methylation, only two genes significantly deregulated in relapse samples (SORL1 and GLT1D1) showed a negative methylation-expression correlation. A deeper analysis demonstrated that DNA methylation was involved in regulation of SORL1 expression in MM. Finally, relevant changes in gene expression observed in relapse samples, such us downregulation of CD27 and P2RY8, were not apparently preceded by alterations in corresponding DNA. Taken together, these results showed that genomic heterogeneity, both at the DNA and RNA level, is a hallmark of MM transition from diagnosis to relapse. Please note that an a first step all analyses were carried out independently in each series, being the number of samples of 40 in methylation, 38 in SNP and 34 in expression series. In the next step, association studies were performed only in the overlapping samples, being 34 matching samples between expression and methylation and 32 samples between expression and SNP data.",
+      "gpl": "6244",
+      "gse": "77539",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2017/01/31",
+      "suppfile": "CEL",
+      "samples": [
+        {
+          "accession": "GSM2054159",
+          "title": "Multiple myeloma. Pair 4. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054176",
+          "title": "Multiple myeloma. Pair 12. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054156",
+          "title": "Multiple myeloma. Pair 2. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054153",
+          "title": "Multiple myeloma. Pair 1. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054179",
+          "title": "Multiple myeloma. Pair 14. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054167",
+          "title": "Multiple myeloma. Pair 8. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054173",
+          "title": "Multiple myeloma. Pair 11. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054170",
+          "title": "Multiple myeloma. Pair 9. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054168",
+          "title": "Multiple myeloma. Pair 8. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054174",
+          "title": "Multiple myeloma. Pair 11. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054171",
+          "title": "Multiple myeloma. Pair 10. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054154",
+          "title": "Multiple myeloma. Pair 1. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054185",
+          "title": "Multiple myeloma. Pair 20. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054165",
+          "title": "Multiple myeloma. Pair 7. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054182",
+          "title": "Multiple myeloma. Pair 15. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054162",
+          "title": "Multiple myeloma. Pair 5. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054166",
+          "title": "Multiple myeloma. Pair 7. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054177",
+          "title": "Multiple myeloma. Pair 13. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054163",
+          "title": "Multiple myeloma. Pair 6. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054186",
+          "title": "Multiple myeloma. Pair 20. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054169",
+          "title": "Multiple myeloma. Pair 9. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054158",
+          "title": "Multiple myeloma. Pair 3. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054184",
+          "title": "Multiple myeloma. Pair 18. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054157",
+          "title": "Multiple myeloma. Pair 3. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054183",
+          "title": "Multiple myeloma. Pair 18. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054160",
+          "title": "Multiple myeloma. Pair 4. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054161",
+          "title": "Multiple myeloma. Pair 5. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054155",
+          "title": "Multiple myeloma. Pair 2. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054180",
+          "title": "Multiple myeloma. Pair 14. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054181",
+          "title": "Multiple myeloma. Pair 15. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054164",
+          "title": "Multiple myeloma. Pair 6. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054175",
+          "title": "Multiple myeloma. Pair 12. Diagnosis. [gene expression]"
+        },
+        {
+          "accession": "GSM2054172",
+          "title": "Multiple myeloma. Pair 10. Relapse. [gene expression]"
+        },
+        {
+          "accession": "GSM2054178",
+          "title": "Multiple myeloma. Pair 13. Relapse. [gene expression]"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 34,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "27811368"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE77nnn/GSE77539/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA310752"
+    },
+    "200077537": {
+      "uid": "200077537",
+      "accession": "GSE77537",
+      "gds": "",
+      "title": "Integrative analysis of DNA copy number, DNA methylation and gene expression in multiple myeloma reveals alterations related to relapse [DNA methylation]",
+      "summary": "Multiple myeloma (MM) remains incurable despite the introduction of novel agents and a relapsing course is observed in the majority of patients. Although the development of genomic technologies has greatly improved our understanding of MM pathogenesis, the mechanisms underlying relapse have been less investigated. In this study, an integrative analysis of DNA copy number, DNA methylation and gene expression was conducted in matched diagnosis and relapse samples from 17 MM patients. Overall, the acquisition of abnormalities at relapse was much more frequent than the lost of lesions present at diagnosis, and DNA losses were significantly more frequent at relapse than in diagnosis samples. Interestingly, copy number abnormalities involving more than 100 Mb of DNA at relapse significantly impact the gene expression of these samples, provoking a particular deregulation of IL-8 pathway. On the contrary, no relevant modifications of gene expression were observed in those samples with less than 100 Mb affected by chromosomal changes. Although different statistical approaches were used to uncover genes whose abnormal expression at relapse was regulated by DNA methylation, only two genes significantly deregulated in relapse samples (SORL1 and GLT1D1) showed a negative methylation-expression correlation. A deeper analysis demonstrated that DNA methylation was involved in regulation of SORL1 expression in MM. Finally, relevant changes in gene expression observed in relapse samples, such us downregulation of CD27 and P2RY8, were not apparently preceded by alterations in corresponding DNA. Taken together, these results showed that genomic heterogeneity, both at the DNA and RNA level, is a hallmark of MM transition from diagnosis to relapse. Please note that an a first step all analyses were carried out independently in each series, being the number of samples of 40 in methylation, 38 in SNP and 34 in expression series. In the next step, association studies were performed only in the overlapping samples, being 34 matching samples between expression and methylation and 32 samples between expression and SNP data.",
+      "gpl": "17148",
+      "gse": "77537",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Methylation profiling by genome tiling array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2017/01/31",
+      "suppfile": "XYS",
+      "samples": [
+        {
+          "accession": "GSM2054105",
+          "title": "Multiple myeloma. Pair 10. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054122",
+          "title": "Multiple myeloma. Pair 19. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054125",
+          "title": "Multiple myeloma. Pair 20. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054102",
+          "title": "Multiple myeloma. Pair 9. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054096",
+          "title": "Multiple myeloma. Pair 6. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054113",
+          "title": "Multiple myeloma. Pair 14. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054099",
+          "title": "Multiple myeloma. Pair 7. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054116",
+          "title": "Multiple myeloma. Pair 16. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054119",
+          "title": "Multiple myeloma. Pair 17. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054093",
+          "title": "Multiple myeloma. Pair 4. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054123",
+          "title": "Multiple myeloma. Pair 19. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054117",
+          "title": "Multiple myeloma. Pair 16. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054097",
+          "title": "Multiple myeloma. Pair 6. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054120",
+          "title": "Multiple myeloma. Pair 18. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054100",
+          "title": "Multiple myeloma. Pair 8. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054094",
+          "title": "Multiple myeloma. Pair 5. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054088",
+          "title": "Multiple myeloma. Pair 2. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054091",
+          "title": "Multiple myeloma. Pair 3. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054114",
+          "title": "Multiple myeloma. Pair 15. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054108",
+          "title": "Multiple myeloma. Pair 12. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054115",
+          "title": "Multiple myeloma. Pair 15. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054111",
+          "title": "Multiple myeloma. Pair 13. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054095",
+          "title": "Multiple myeloma. Pair 5. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054092",
+          "title": "Multiple myeloma. Pair 4. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054112",
+          "title": "Multiple myeloma. Pair 14. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054086",
+          "title": "Multiple myeloma. Pair 1. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054103",
+          "title": "Multiple myeloma. Pair 9. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054107",
+          "title": "Multiple myeloma. Pair 11. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054089",
+          "title": "Multiple myeloma. Pair 2. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054106",
+          "title": "Multiple myeloma. Pair 11. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054109",
+          "title": "Multiple myeloma. Pair 12. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054110",
+          "title": "Multiple myeloma. Pair 13. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054104",
+          "title": "Multiple myeloma. Pair 10. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054101",
+          "title": "Multiple myeloma. Pair 8. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054087",
+          "title": "Multiple myeloma. Pair 1. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054090",
+          "title": "Multiple myeloma. Pair 3. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054124",
+          "title": "Multiple myeloma. Pair 20. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054098",
+          "title": "Multiple myeloma. Pair 7. Diagnosis. [methylation]"
+        },
+        {
+          "accession": "GSM2054121",
+          "title": "Multiple myeloma. Pair 18. Relapse. [methylation]"
+        },
+        {
+          "accession": "GSM2054118",
+          "title": "Multiple myeloma. Pair 17. Diagnosis. [methylation]"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 40,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "27811368"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE77nnn/GSE77537/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA310753"
+    },
+    "200077536": {
+      "uid": "200077536",
+      "accession": "GSE77536",
+      "gds": "",
+      "title": "Integrative analysis of DNA copy number, DNA methylation and gene expression in multiple myeloma reveals alterations related to relapse [DNA copy number]",
+      "summary": "Multiple myeloma (MM) remains incurable despite the introduction of novel agents and a relapsing course is observed in the majority of patients. Although the development of genomic technologies has greatly improved our understanding of MM pathogenesis, the mechanisms underlying relapse have been less investigated. In this study, an integrative analysis of DNA copy number, DNA methylation and gene expression was conducted in matched diagnosis and relapse samples from 17 MM patients. Overall, the acquisition of abnormalities at relapse was much more frequent than the lost of lesions present at diagnosis, and DNA losses were significantly more frequent at relapse than in diagnosis samples. Interestingly, copy number abnormalities involving more than 100 Mb of DNA at relapse significantly impact the gene expression of these samples, provoking a particular deregulation of IL-8 pathway. On the contrary, no relevant modifications of gene expression were observed in those samples with less than 100 Mb affected by chromosomal changes. Although different statistical approaches were used to uncover genes whose abnormal expression at relapse was regulated by DNA methylation, only two genes significantly deregulated in relapse samples (SORL1 and GLT1D1) showed a negative methylation-expression correlation. A deeper analysis demonstrated that DNA methylation was involved in regulation of SORL1 expression in MM. Finally, relevant changes in gene expression observed in relapse samples, such us downregulation of CD27 and P2RY8, were not apparently preceded by alterations in corresponding DNA. Taken together, these results showed that genomic heterogeneity, both at the DNA and RNA level, is a hallmark of MM transition from diagnosis to relapse. Please note that an a first step all analyses were carried out independently in each series, being the number of samples of 40 in methylation, 38 in SNP and 34 in expression series. In the next step, association studies were performed only in the overlapping samples, being 34 matching samples between expression and methylation and 32 samples between expression and SNP data.",
+      "gpl": "18637",
+      "gse": "77536",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Genome variation profiling by SNP array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2017/01/31",
+      "suppfile": "CEL, CYCHP, TXT",
+      "samples": [
+        {
+          "accession": "GSM2054081",
+          "title": "Multiple myeloma. Pair 17. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054055",
+          "title": "Multiple myeloma. Pair 4. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054058",
+          "title": "Multiple myeloma. Pair 6. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054052",
+          "title": "Multiple myeloma. Pair 3. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054075",
+          "title": "Multiple myeloma. Pair 14. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054049",
+          "title": "Multiple myeloma. Pair 1. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054078",
+          "title": "Multiple myeloma. Pair 16. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054072",
+          "title": "Multiple myeloma. Pair 13. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054066",
+          "title": "Multiple myeloma. Pair 10. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054070",
+          "title": "Multiple myeloma. Pair 12. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054069",
+          "title": "Multiple myeloma. Pair 11. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054053",
+          "title": "Multiple myeloma. Pair 3. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054073",
+          "title": "Multiple myeloma. Pair 13. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054050",
+          "title": "Multiple myeloma. Pair 2. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054061",
+          "title": "Multiple myeloma. Pair 7. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054064",
+          "title": "Multiple myeloma. Pair 9. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054067",
+          "title": "Multiple myeloma. Pair 10. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054085",
+          "title": "Multiple myeloma. Pair 20. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054084",
+          "title": "Multiple myeloma. Pair 20. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054062",
+          "title": "Multiple myeloma. Pair 8. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054065",
+          "title": "Multiple myeloma. Pair 9. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054056",
+          "title": "Multiple myeloma. Pair 5. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054048",
+          "title": "Multiple myeloma. Pair 1. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054059",
+          "title": "Multiple myeloma. Pair 6. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054068",
+          "title": "Multiple myeloma. Pair 11. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054082",
+          "title": "Multiple myeloma. Pair 19. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054076",
+          "title": "Multiple myeloma. Pair 15. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054080",
+          "title": "Multiple myeloma. Pair 17. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054079",
+          "title": "Multiple myeloma. Pair 16. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054083",
+          "title": "Multiple myeloma. Pair 19. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054063",
+          "title": "Multiple myeloma. Pair 8. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054071",
+          "title": "Multiple myeloma. Pair 12. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054074",
+          "title": "Multiple myeloma. Pair 14. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054060",
+          "title": "Multiple myeloma. Pair 7. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054054",
+          "title": "Multiple myeloma. Pair 4. Diagnosis. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054051",
+          "title": "Multiple myeloma. Pair 2. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054077",
+          "title": "Multiple myeloma. Pair 15. Relapse. [DNA copy number]"
+        },
+        {
+          "accession": "GSM2054057",
+          "title": "Multiple myeloma. Pair 5. Relapse. [DNA copy number]"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 38,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "27811368"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE77nnn/GSE77536/",
+      "geo2r": "no",
+      "bioproject": "PRJNA310754"
+    },
+    "200074038": {
+      "uid": "200074038",
+      "accession": "GSE74038",
+      "gds": "",
+      "title": "Embryonic exposure to 10 \u00b5g/L lead results in male-specific expression changes in genes associated with nervous system development and function and Alzheimer\u2019s disease in aged adult zebrafish brain",
+      "summary": "A developmental lead (Pb) exposure has been proposed as an environmental risk factor for adult neurodegenerative diseases including Alzheimer\u2019s disease (AD). Recent animal studies showed pathological characteristics of AD in adults with a developmental Pb exposure, but additional studies are needed to investigate this phenomenon. To further assess the relationship between an embryonic Pb exposure and latent neurological alterations, the brain of adult female and male zebrafish aged 12 months that were exposed to a control treatment or 10 \u00b5g/L Pb only during embryogenesis (1- 72 hours after fertilization) were analyzed on a zebrafish-specific microarray platform. Gene ontology and pathway analysis revealed similarities in the top diseases and functional categories in both sexes, but females had 4.3 times more genes altered than males. In addition, alterations in genes associated with nervous system development and function were more pronounced with a set of 89 genes associated with AD including amyloid precursor protein (APP), apolipoprotein (APOE), and sortlin-related receptor precursor (SORL1) observed to be changed in adult females. Our observations suggest that an  embryonic exposure to Pb at levels as low as 10 \u03bcg/L disturb global gene expression patterns in a sex-specific manner that could lead to neurological alterations in later life. With these findings, future studies investigating the adverse neurological outcomes of these changes in gene expression will facilitate our understanding of the impact of an embryonic 10 \u03bcg/L Pb exposure on neurological disease pathogenesis and the inclusion of additional concentrations will broaden our knowledge of dose-dependent changes.",
+      "gpl": "20834",
+      "gse": "74038",
+      "taxon": "Danio rerio",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2016/02/08",
+      "suppfile": "TXT, XLS",
+      "samples": [
+        {
+          "accession": "GSM1908590",
+          "title": "Brain_12months_male_0ppb_rep1"
+        },
+        {
+          "accession": "GSM1908593",
+          "title": "Brain_12months_male_0ppb_rep4"
+        },
+        {
+          "accession": "GSM1908596",
+          "title": "Brain_12months_male_10ppb_rep3"
+        },
+        {
+          "accession": "GSM1908591",
+          "title": "Brain_12months_male_0ppb_rep2"
+        },
+        {
+          "accession": "GSM1908594",
+          "title": "Brain_12months_male_10ppb_rep1"
+        },
+        {
+          "accession": "GSM1908592",
+          "title": "Brain_12months_male_0ppb_rep3"
+        },
+        {
+          "accession": "GSM1908595",
+          "title": "Brain_12months_male_10ppb_rep2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 7,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "26776728"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE74nnn/GSE74038/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA298831"
+    },
+    "200074037": {
+      "uid": "200074037",
+      "accession": "GSE74037",
+      "gds": "",
+      "title": "Embryonic exposure to 10 \u00b5g/L lead results in female-specific expression changes in genes associated with nervous system development and function and Alzheimer\u2019s disease in aged adult zebrafish brain",
+      "summary": "A developmental lead (Pb) exposure has been proposed as an environmental risk factor for adult neurodegenerative diseases including Alzheimer\u2019s disease (AD). Recent animal studies showed pathological characteristics of AD in adults with a developmental Pb exposure, but additional studies are needed to investigate this phenomenon. To further assess the relationship between an embryonic Pb exposure and latent neurological alterations, the brain of adult female and male zebrafish aged 12 months that were exposed to a control treatment or 10 \u00b5g/L Pb only during embryogenesis (1- 72 hours after fertilization) were analyzed on a zebrafish-specific microarray platform. Gene ontology and pathway analysis revealed similarities in the top diseases and functional categories in both sexes, but females had 4.3 times more genes altered than males. In addition, alterations in genes associated with nervous system development and function were more pronounced with a set of 89 genes associated with AD including amyloid precursor protein (APP), apolipoprotein (APOE), and sortlin-related receptor precursor (SORL1) observed to be changed in adult females. Our observations suggest that an  embryonic exposure to Pb at levels as low as 10 \u03bcg/L disturb global gene expression patterns in a sex-specific manner that could lead to neurological alterations in later life. With these findings, future studies investigating the adverse neurological outcomes of these changes in gene expression will facilitate our understanding of the impact of an embryonic 10 \u03bcg/L Pb exposure on neurological disease pathogenesis and the inclusion of additional concentrations will broaden our knowledge of dose-dependent changes.",
+      "gpl": "20834",
+      "gse": "74037",
+      "taxon": "Danio rerio",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2016/02/08",
+      "suppfile": "TXT, XLS",
+      "samples": [
+        {
+          "accession": "GSM1908586",
+          "title": "Brain_12months_female_0ppb_rep3"
+        },
+        {
+          "accession": "GSM1908589",
+          "title": "Brain_12months_female_10ppb_rep3"
+        },
+        {
+          "accession": "GSM1908584",
+          "title": "Brain_12months_female_0ppb_rep1"
+        },
+        {
+          "accession": "GSM1908587",
+          "title": "Brain_12months_female_10ppb_rep1"
+        },
+        {
+          "accession": "GSM1908585",
+          "title": "Brain_12months_female_0ppb_rep2"
+        },
+        {
+          "accession": "GSM1908588",
+          "title": "Brain_12months_female_10ppb_rep2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 6,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "26776728"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE74nnn/GSE74037/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA298830"
+    },
+    "200031163": {
+      "uid": "200031163",
+      "accession": "GSE31163",
+      "gds": "",
+      "title": "Human induced pluripotent stem cells derived from a sporadic Alzheimer's disease patient",
+      "summary": "Induced pluripotent stem cell (iPSC) disease models have been generated for a number of diseases, and some have shown their potential utilization for pathological and drug toxicological evaluations. We have generated two hiPSC clones from a non-familial Alzheimer\u2019s patient (AD-iPSCs), which expressed typical undifferentiated markers and fulfilled standard pluripotency assays. Genome-wide microarray analysis revealed that AD-iPSCs are highly similar to control hiPSCs and hESCs, albeit with some noticeable differences in several genes: DNAJC15, GRPR, NAIP and SNORD116-18. Several other biomarkers were differentially expressed in AD-iPSC clones, which were implicated in memory impairment and AD. Furthermore, well characterized familial AD-associated genes (APP, PSEN1, PSEN2) and non-familial (A2M, APOE, GAP43, MAOA, MPO, PLAT, PLAU, SORL1, SNCA) exhibited different expression patterns but were largely reset upon reprogramming into a pluripotent state. Overall, hiPSCs can be good candidates for AD modeling and may represent an in vitro alternative to studying disease mechanisms and drug discovery/toxicology studies.",
+      "gpl": "6244",
+      "gse": "31163",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2015/12/31",
+      "suppfile": "CEL",
+      "samples": [
+        {
+          "accession": "GSM772475",
+          "title": "AD-specific iPSC7-3"
+        },
+        {
+          "accession": "GSM772472",
+          "title": "AD-specific iPSC1-2"
+        },
+        {
+          "accession": "GSM772469",
+          "title": "AD-specific fibroblast-2"
+        },
+        {
+          "accession": "GSM772471",
+          "title": "AD-specific iPSC1-1"
+        },
+        {
+          "accession": "GSM772468",
+          "title": "AD-specific fibroblast-1"
+        },
+        {
+          "accession": "GSM772473",
+          "title": "AD-specific iPSC7-1"
+        },
+        {
+          "accession": "GSM772474",
+          "title": "AD-specific iPSC7-2"
+        },
+        {
+          "accession": "GSM772470",
+          "title": "AD-specific fibroblast-3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 8,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE31nnn/GSE31163/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA144799"
+    },
+    "200065074": {
+      "uid": "200065074",
+      "accession": "GSE65074",
+      "gds": "",
+      "title": "Gene expression classifier in papillary thyroid carcinoma: validation and application of a classifier for prognostication",
+      "summary": "Background: With the incidence of papillary thyroid carcinoma rising worldwide, the decision about lobectomy versus total thyroidectomy will become relevant for an increasing number of patients. There exists no reliable biomarker for metastatic potential or tendency of recurrence that could assist in the risk stratification of patients.  Objective: To develop a gene expression classifier for metastatic potential by measuring RNA expression in the primary tumor at the time of cancer surgery. Further, to investigate the ability of the gene expression classifier to identify metastatic and recurrent cases.  Method: Genome-wide expression analyses. The development cohort consisted of freshly frozen tissues from 38 patients collected between the years 1986 and 2009. Validation was performed on a consecutive cohort of formalin fixated paraffin embedded surgical tissue specimens from 183 patients treated at Odense and Aarhus University Hospitals.  Results: A 17 gene classifier (ADAMTS1, ANTXR1, C7, CXCL12, EBF1, FBLN2, FOSL2, GGT5, GPR124, JAM3, LRIG1, NDRG1, PRRX1, ROBO1, SORL1, TCF4, and ZEB1) was identified based on the expression values of these genes in the groups with and without metastasis in the development cohort. The 17 gene classifier for regional and/or distant metastasis identified was tested against the clinical status in the validation cohort. Sensitivity was 51.6% (95% CI 41.2%-61.8) and specificity 61.6 % (95% CI 50.5%-71.9%). Further, the Kaplan-Meyer method was used to estimate whether the classifier was useful as a prognostic marker for recurrences. Log-rank testing failed to identify any significance (p=0.32).  Conclusion: A 17 gene classifier for metastatic potential was developed, and the results showed a clear biological difference between groups. However, through validation, the prognostic significance of this classifier could not be shown in identifying metastatic cases or in the ability of dichotomizing patients according to risk of recurrence after primary treatment.",
+      "gpl": "13667",
+      "gse": "65074",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2015/01/20",
+      "suppfile": "CEL",
+      "samples": [
+        {
+          "accession": "GSM1586818",
+          "title": "TC006"
+        },
+        {
+          "accession": "GSM1586821",
+          "title": "TC009"
+        },
+        {
+          "accession": "GSM1586815",
+          "title": "TC003"
+        },
+        {
+          "accession": "GSM1586827",
+          "title": "TC015"
+        },
+        {
+          "accession": "GSM1586830",
+          "title": "TC018"
+        },
+        {
+          "accession": "GSM1586838",
+          "title": "TC026"
+        },
+        {
+          "accession": "GSM1586841",
+          "title": "TC029"
+        },
+        {
+          "accession": "GSM1586847",
+          "title": "TC035"
+        },
+        {
+          "accession": "GSM1586850",
+          "title": "TC038"
+        },
+        {
+          "accession": "GSM1586844",
+          "title": "TC032"
+        },
+        {
+          "accession": "GSM1586824",
+          "title": "TC012"
+        },
+        {
+          "accession": "GSM1586836",
+          "title": "TC024"
+        },
+        {
+          "accession": "GSM1586816",
+          "title": "TC004"
+        },
+        {
+          "accession": "GSM1586833",
+          "title": "TC021"
+        },
+        {
+          "accession": "GSM1586819",
+          "title": "TC007"
+        },
+        {
+          "accession": "GSM1586845",
+          "title": "TC033"
+        },
+        {
+          "accession": "GSM1586839",
+          "title": "TC027"
+        },
+        {
+          "accession": "GSM1586822",
+          "title": "TC010"
+        },
+        {
+          "accession": "GSM1586825",
+          "title": "TC013"
+        },
+        {
+          "accession": "GSM1586828",
+          "title": "TC016"
+        },
+        {
+          "accession": "GSM1586848",
+          "title": "TC036"
+        },
+        {
+          "accession": "GSM1586851",
+          "title": "TC039"
+        },
+        {
+          "accession": "GSM1586842",
+          "title": "TC030"
+        },
+        {
+          "accession": "GSM1586831",
+          "title": "TC019"
+        },
+        {
+          "accession": "GSM1586817",
+          "title": "TC005"
+        },
+        {
+          "accession": "GSM1586837",
+          "title": "TC025"
+        },
+        {
+          "accession": "GSM1586820",
+          "title": "TC008"
+        },
+        {
+          "accession": "GSM1586814",
+          "title": "TC002"
+        },
+        {
+          "accession": "GSM1586840",
+          "title": "TC028"
+        },
+        {
+          "accession": "GSM1586834",
+          "title": "TC022"
+        },
+        {
+          "accession": "GSM1586846",
+          "title": "TC034"
+        },
+        {
+          "accession": "GSM1586832",
+          "title": "TC020"
+        },
+        {
+          "accession": "GSM1586835",
+          "title": "TC023"
+        },
+        {
+          "accession": "GSM1586826",
+          "title": "TC014"
+        },
+        {
+          "accession": "GSM1586843",
+          "title": "TC031"
+        },
+        {
+          "accession": "GSM1586823",
+          "title": "TC011"
+        },
+        {
+          "accession": "GSM1586829",
+          "title": "TC017"
+        },
+        {
+          "accession": "GSM1586849",
+          "title": "TC037"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 38,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "26851034"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE65nnn/GSE65074/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA272877"
+    }
+  }
+}

@@ -4,6 +4,7 @@ from typing import Any
 
 import main
 from fastapi.testclient import TestClient
+from fastapi import HTTPException
 from auth import create_access_token
 from main import app, LOG_FILE
 from database import get_postgres_connection, get_neo4j_session
@@ -260,6 +261,75 @@ def test_audit_log_created():
         assert "Request_Hash" in last_log
         assert "Status_Code" in last_log
         assert last_log["Endpoint"] == "/"
+
+
+def test_http_exception_is_logged_as_error_event(monkeypatch):
+    logged_events: list[tuple[tuple[Any, ...], dict[str, Any]]] = []
+
+    def _capture_error(*args: Any, **kwargs: Any) -> None:
+        logged_events.append((args, kwargs))
+
+    monkeypatch.setattr("ops_observability.logger.error", _capture_error)
+
+    @app.get("/__ops-http-exception")
+    async def _ops_http_exception() -> None:
+        raise HTTPException(status_code=418, detail="teapot")
+
+    response = client.get("/__ops-http-exception")
+
+    assert response.status_code == 418
+    assert logged_events
+    assert "Gateway error event status=%s method=%s path=%s detail=%s stacktrace=%s" == logged_events[0][0][0]
+
+
+def test_unhandled_exception_is_logged_as_error_event(monkeypatch):
+    logged_events: list[tuple[tuple[Any, ...], dict[str, Any]]] = []
+
+    def _capture_exception(*args: Any, **kwargs: Any) -> None:
+        logged_events.append((args, kwargs))
+
+    monkeypatch.setattr("ops_observability.logger.exception", _capture_exception)
+
+    @app.get("/__ops-unhandled-exception")
+    async def _ops_unhandled_exception() -> None:
+        raise RuntimeError("boom")
+
+    local_client = TestClient(app, raise_server_exceptions=False)
+    response = local_client.get("/__ops-unhandled-exception")
+
+    assert response.status_code == 500
+    assert logged_events
+    assert "Gateway error event status=500 method=%s path=%s" == logged_events[0][0][0]
+
+
+def test_rum_metric_endpoint_accepts_browser_metrics(monkeypatch):
+    logged_events: list[tuple[tuple[Any, ...], dict[str, Any]]] = []
+
+    def _capture_info(*args: Any, **kwargs: Any) -> None:
+        logged_events.append((args, kwargs))
+
+    monkeypatch.setattr("router.logger.info", _capture_info)
+
+    response = client.post(
+        "/api/v1/ops/rum",
+        json={
+            "metric_name": "page_load",
+            "route": "/explorer",
+            "session_id": "session-123",
+            "value_ms": 812.4,
+            "rating": "info",
+            "navigation_type": "navigate",
+            "browser_name": "Chrome",
+            "os_name": "macOS",
+            "device_type": "desktop",
+            "metadata": {"metric_source": "navigation"},
+        },
+    )
+
+    assert response.status_code == 202
+    assert response.json() == {"status": "accepted"}
+    assert logged_events
+    assert logged_events[0][1]["extra"]["rum_metric_name"] == "page_load"
 
 
 def test_query_intelligence_authorized(monkeypatch):

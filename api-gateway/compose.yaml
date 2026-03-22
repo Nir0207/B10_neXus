@@ -1,11 +1,14 @@
 services:
   api-gateway:
-    build: .
+    build:
+      context: ..
+      dockerfile: api-gateway/Dockerfile
     container_name: bionexus-api-gateway
     ports:
       - "8000:8000"
     volumes:
       - .:/app
+      - ../ops:/app/ops:ro
     environment:
       - SECRET_KEY=super-secret-local-dev-key
       - GATEWAY_ADMIN_USERNAME=admin
@@ -17,6 +20,13 @@ services:
       - NEO4J_PASSWORD=bionexus_dev_password
       - TELEMETRY_GRAPHQL_URL=http://telemetry-api:4100/graphql
       - INTELLIGENCE_API_URL=http://bionexus-intelligence-mcp:8080
+      - OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://host.docker.internal:4318/v1/logs
+      - OPENOBSERVE_BASE_URL=http://host.docker.internal:5080
+      - OPENOBSERVE_USERNAME=root@bionexus.local
+      - OPENOBSERVE_PASSWORD=BioNexusOps123!
+      - OPENOBSERVE_LOG_STREAM=bionexus_app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - lake-network
       - lake-data-plane

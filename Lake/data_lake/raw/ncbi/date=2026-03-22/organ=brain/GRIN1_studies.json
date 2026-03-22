@@ -1,0 +1,1399 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "200298781",
+      "200271334",
+      "200230180",
+      "200213026",
+      "200183044",
+      "200156201",
+      "200066806",
+      "200098729",
+      "200136983",
+      "200058687",
+      "200043294",
+      "200022024",
+      "200012312",
+      "305550080",
+      "305550079",
+      "305550078",
+      "305550077",
+      "305550076",
+      "305550075",
+      "305550074"
+    ],
+    "200298781": {
+      "uid": "200298781",
+      "accession": "GSE298781",
+      "gds": "",
+      "title": "Cellular Reprogramming of H3K27M Pediatric High-Grade Glioma to Neuron-like State",
+      "summary": "This study explores the cell fate reprogrammability of H3K27M-mutant pediatric high-grade gliomas (pHGG) using neuronal transdifferentiation as a potential targeted therapy. We treated the BT245 patient-derived glioma cell line with pharmacological combinations targeting neuronal differentiation pathways and performed bulk RNA sequencing to characterize gene expression patterns driving cell fate transitions. Our findings reveal that the drug combinations induce transcriptomic changes consistent with differentiation towards mature neuronal phenotypes, including the upregulation of synaptic and dendritic signaling genes and the downregulation of malignant signatures. In comparison, astrocytic differentiation media (DM) and H3K27M knockout (KO) promote residual astrocytic or stem-like phenotypes, suggesting neuronal transdifferentiation as a more effective strategy for mitigating tumor aggressiveness and progression. Differentially expressed genes such as GRIK1, GRIN1, NRXN3, NRXN1, CALB2, SCGN, SLC32A1, SLC1A2, KCNC3, and neurodevelopmental regulators including WNT7A, DLX6, ERBB4, ARX, BCL11B, SEMA3C, and FGFBP3 were identified as key markers regulating the neuron-like lineage transition. This study demonstrates that pHGGs can be phenotypically redirected toward stable, less invasive neuronal identities through modulating cell fate differentiation programs. These findings advance the concept of 'transition therapy' as a promising intervention to reduce phenotypic plasticity and malignancy in pHGG ecosystems. While these are early in vitro findings, the ability to steer and control glioma cells toward stable, less malignant fates offers promising translational potential for patient-centered targeted therapies.",
+      "gpl": "34281",
+      "gse": "298781",
+      "taxon": "Homo sapiens",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2026/03/05",
+      "suppfile": "CSV, TXT",
+      "samples": [
+        {
+          "accession": "GSM9023180",
+          "title": "BT245 FID treatment day 6, biol rep 6"
+        },
+        {
+          "accession": "GSM9023177",
+          "title": "BT245 control Neurocult+DMSO, biol rep 3"
+        },
+        {
+          "accession": "GSM9023175",
+          "title": "BT245 control BrainPhys+DMSO, biol rep 1"
+        },
+        {
+          "accession": "GSM9023178",
+          "title": "BT245 FID treatment day 10, biol rep 4"
+        },
+        {
+          "accession": "GSM9023181",
+          "title": "BT245 FTT treatment day 5, biol rep 7"
+        },
+        {
+          "accession": "GSM9023179",
+          "title": "BT245 FID treatment day 10, biol rep 5"
+        },
+        {
+          "accession": "GSM9023176",
+          "title": "BT245 control BrainPhys+DMSO, biol rep 2"
+        },
+        {
+          "accession": "GSM9023182",
+          "title": "BT245 FTT treatment day 10 Neurocult, biol rep 8"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 8,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "41469740"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE298nnn/GSE298781/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1271096"
+    },
+    "200271334": {
+      "uid": "200271334",
+      "accession": "GSE271334",
+      "gds": "",
+      "title": "Adult zymosan re-exposure exacerbates the molecular alterations in the brainstem rostral ventromedial medulla of rats with early life zymosan-induced cystitis.",
+      "summary": "Recent evidence suggests that the descending modulatory pathways from the brainstem rostral ventromedial medulla (RVM) are important for bladder inflammatory pain.  This study aimed to identify the long-term molecular changes in RVM neurons due to early life cystitis during neuronal development and the effect of reexposure later in adulthood.  RVM tissues from two treatment protocols were used: (1) neonatal zymosan exposures with acute adult rechallenge (RC) and (2) only neonatal zymosan exposures (NRC).  RNAseq analysis showed upregulation of several genes associated with synaptic plasticity (Grin1, Grip2, Notch1, Arc, and Scn2b) in the cystitis groups compared to controls in both protocols.  The RC protocol exhibited a stronger treatment effect with significantly higher fold differences between the groups compared to the NRC protocol (p<0.001, fold differences RC vs NRC).  In microarrays, miR-34a-5p showed cystitis-induced downregulation in both protocols.  Bioinformatics analysis identified multiple 3\u2019UTRs complementary binding sites for miR-34a-5p on Grin2b, Notch1, Grip2, Scn2b, and Arc genes. The enhanced response in the RC protocol indicates a possible priming effect of early life cystitis on rechallenge in adulthood.  These long-term molecular alterations may play a critical role in the development of chronic bladder pain conditions as seen in patients with Interstitial Cystitis/Bladder pain syndrome",
+      "gpl": "25947",
+      "gse": "271334",
+      "taxon": "Rattus norvegicus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2025/01/22",
+      "suppfile": "XLS",
+      "samples": [
+        {
+          "accession": "GSM8374955",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16, S5"
+        },
+        {
+          "accession": "GSM8374952",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16, S2"
+        },
+        {
+          "accession": "GSM8374958",
+          "title": "RVM SYNs, Neonatal saline exposures postnatal days P12-P16, S8"
+        },
+        {
+          "accession": "GSM8374966",
+          "title": "RVM SYNs, Neonatal saline exposures postnatal days P12-P16 and reexposure on P29, S16"
+        },
+        {
+          "accession": "GSM8374953",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16, S3"
+        },
+        {
+          "accession": "GSM8374964",
+          "title": "RVM SYNs, Neonatal saline exposures postnatal days P12-P16 and reexposure on P29, S14"
+        },
+        {
+          "accession": "GSM8374961",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16 and reexposure on P29, S11"
+        },
+        {
+          "accession": "GSM8374962",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16 and reexposure on P29, S12"
+        },
+        {
+          "accession": "GSM8374965",
+          "title": "RVM SYNs, Neonatal saline exposures postnatal days P12-P16 and reexposure on P29, S15"
+        },
+        {
+          "accession": "GSM8374959",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16 and reexposure on P29, S9"
+        },
+        {
+          "accession": "GSM8374956",
+          "title": "RVM SYNs, Neonatal saline exposures postnatal days P12-P16, S6"
+        },
+        {
+          "accession": "GSM8374954",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16, S4"
+        },
+        {
+          "accession": "GSM8374951",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16, S1"
+        },
+        {
+          "accession": "GSM8374963",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16 and reexposure on P29, S13"
+        },
+        {
+          "accession": "GSM8374960",
+          "title": "RVM SYNs, Neonatal zymosan exposures postnatal days P12-P16 and reexposure on P29, S10"
+        },
+        {
+          "accession": "GSM8374957",
+          "title": "RVM SYNs, Neonatal saline exposures postnatal days P12-P16, S7"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 16,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "39252992"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE271nnn/GSE271334/",
+      "geo2r": "no",
+      "bioproject": "PRJNA1130951"
+    },
+    "200230180": {
+      "uid": "200230180",
+      "accession": "GSE230180",
+      "gds": "",
+      "title": "Transient galanin expression shapes peripheral\u2011to\u2011central connectivity in the somatosensory thalamus during whisker development",
+      "summary": "Purpose: We aimed to resolve if there is a matched expression of neuropeptide receptor(s) and their ligand(s) between the sensory trunk of the trigeminal nerve (Pr5) and the ventrobasal hypothalamus on postnatal day 7 (P7) in mice. We hypothesized that a coincidence of neuropeptide expression and release from the ventrobasal thalamus and the cognate receptor(s) for the specific neuropeptide(s) in trigeminal neurons could allow for novel hypotheses be built on intercellular communication between peripheral axons and their postsynaptic targets in the thalamus. Thereby, this work can be informative of the developmental integration of the whisker pathway, one of the major sensory modalities in laboratory rodents. To this end, we used single-cell RNA-seq on cells dissociated from the ventrobasal thalamus and Pr5 on P7. Results: We tested this hypothesis by single-nucleus RNA-seq performed in parallel on the ventrobasal thalamus and Pr5 at P7. At this developmental stage, the ventrobasal thalamus contained two subtypes of Slc17a6+(glutamatergic) neurons, one subtype of Gad1/Gad2+ (GABA) neurons, astroglia, oligodendrocytes, and vascular components (n = 923 nuclei isolated from n = 3 pups of mixed sex). Slc17a6+ neurons, which we recognize as cortically projecting glutamate neurons, co-expressed molecular components underpinning barrel map formation (e.g., Grin1, Adcy1, Prkaca,99 Ache, Slc6a4) and a significant amount of the thalamocortical neuronal marker Cck, while other neuropeptides/hormones were absent or barely present (e.g., Npy, Sst). At the same time, we harvested n = 731 nuclei from the Pr5 by micro-excision at P7, of which \u223c98% expressed Slc17a6, thus qualifying, in total or in part, as centrally-projecting sensory neurons. This neuronal cohort harbored axon guidance molecules, and neuropeptide receptors. Conclusions: We suggest that neuropeptides, particularly galanin, could participate in guidance decisions of Pr5 axons given the complementarity of ligand-receptor expression patterns, and that Galr1 expression could be a time locked feature for those neurons that actively undergo neuritogenesis at a given time.",
+      "gpl": "21103",
+      "gse": "230180",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2024/04/01",
+      "suppfile": "H5SEURAT",
+      "samples": [
+        {
+          "accession": "GSM7191279",
+          "title": "Pr5P7"
+        },
+        {
+          "accession": "GSM7191280",
+          "title": "THP7"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 2,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "38553447"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE230nnn/GSE230180/",
+      "geo2r": "no",
+      "bioproject": "PRJNA957789"
+    },
+    "200213026": {
+      "uid": "200213026",
+      "accession": "GSE213026",
+      "gds": "",
+      "title": "Synaptic-like transmission between neural axons and arterial smooth muscle cells drives cerebral neurovascular coupling",
+      "summary": "Normally functioning brains depend on neurovascular coupling (NVC) and its dysfunction underlies many neuropathologies. Although cell-type specificity has been implicated in NVC, how active neural information is specifically conveyed to the targeted arterioles in the brain remains poorly understood. Here, using two-photon focal optogenetics in the mouse cerebral cortex, we demonstrated that single glutamatergic axons dilate their innervating arterioles via synaptic-like transmission between neural-arteriolar smooth muscle cells junction (NsMJ). The presynaptic parental-daughter bouton makes dual innervations on postsynaptic dendrites and on arteriolar smooth muscles cells (aSMCs), which expressed many types of neuromediator receptors, including glutamate NMDA receptor subunit 1 (Grin1). Disruption of NsMJ transmission, by aSMC specific knockout of GluN1, diminished the optogenetic and whisker stimulation-caused functional hyperemia. Notably, the absence of GluN1 subunit in aSMCs protected the brain atrophy from cerebral ischemia by preventing Ca2+ overload in aSMCs during arteriolar constriction caused by the ischemia-induced spreading depolarization. Our findings reveal that NsMJ transmission drives neurovascular coupling and also open up a new avenue for studying stroke.",
+      "gpl": "19057",
+      "gse": "213026",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2023/10/05",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM6568825",
+          "title": "arteriolar smooth muscle cell, sorting, rep8"
+        },
+        {
+          "accession": "GSM7493523",
+          "title": "arteriolar smooth muscle cell, sorting, rep4"
+        },
+        {
+          "accession": "GSM7493520",
+          "title": "arteriolar smooth muscle cell, sorting, rep1"
+        },
+        {
+          "accession": "GSM6568833",
+          "title": "astrocyte, sorting, rep2"
+        },
+        {
+          "accession": "GSM7493521",
+          "title": "arteriolar smooth muscle cell, sorting, rep2"
+        },
+        {
+          "accession": "GSM6568828",
+          "title": "cortex, homogenate, rep3"
+        },
+        {
+          "accession": "GSM6568834",
+          "title": "astrocyte, sorting, rep3"
+        },
+        {
+          "accession": "GSM6568831",
+          "title": "cortex, homogenate, rep6"
+        },
+        {
+          "accession": "GSM6568832",
+          "title": "astrocyte, sorting, rep1"
+        },
+        {
+          "accession": "GSM7493524",
+          "title": "arteriolar smooth muscle cell, sorting, rep5"
+        },
+        {
+          "accession": "GSM6568829",
+          "title": "cortex, homogenate, rep4"
+        },
+        {
+          "accession": "GSM6568826",
+          "title": "cortex, homogenate, rep1"
+        },
+        {
+          "accession": "GSM6568830",
+          "title": "cortex, homogenate, rep5"
+        },
+        {
+          "accession": "GSM6568827",
+          "title": "cortex, homogenate, rep2"
+        },
+        {
+          "accession": "GSM7493525",
+          "title": "arteriolar smooth muscle cell, sorting, rep6"
+        },
+        {
+          "accession": "GSM7493522",
+          "title": "arteriolar smooth muscle cell, sorting, rep3"
+        },
+        {
+          "accession": "GSM6568824",
+          "title": "arteriolar smooth muscle cell, sorting, rep7"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 17,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "38168932"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE213nnn/GSE213026/",
+      "geo2r": "no",
+      "bioproject": "PRJNA878800"
+    },
+    "200183044": {
+      "uid": "200183044",
+      "accession": "GSE183044",
+      "gds": "",
+      "title": "Gene expression data from wildtype and Grin1 deleted bone marrow megakaryocytes",
+      "summary": "N-methyl-D-aspartate receptors (NMDARs) are glutamate-gated cation channels with high calcium permeability. Their activity supports megakaryocytes proliferation and maturation, however their downstream effects on the megakaryocyte transcriptome remain poorly elucidated. We used Clariom S Pico Arrays to profile the transcriptome changes caused by loss of Grin1 in mouse bone marrow megakaryocytes.",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [
+        {
+          "accession": "GSM5550079",
+          "title": "Pf4-Grin1-/- MKs, biological rep 5"
+        },
+        {
+          "accession": "GSM5550076",
+          "title": "Pf4-Grin1-/- MKs, biological rep 2"
+        },
+        {
+          "accession": "GSM5550070",
+          "title": "Wildtype MKs, biological rep 2"
+        },
+        {
+          "accession": "GSM5550073",
+          "title": "Wildtype MKs, biological rep 5"
+        },
+        {
+          "accession": "GSM5550071",
+          "title": "Wildtype MKs, biological rep 3"
+        },
+        {
+          "accession": "GSM5550074",
+          "title": "Wildtype MKs, biological rep 6"
+        },
+        {
+          "accession": "GSM5550069",
+          "title": "Wildtype MKs, biological rep 1"
+        },
+        {
+          "accession": "GSM5550077",
+          "title": "Pf4-Grin1-/- MKs, biological rep 3"
+        },
+        {
+          "accession": "GSM5550080",
+          "title": "Pf4-Grin1-/- MKs, biological rep 6"
+        },
+        {
+          "accession": "GSM5550078",
+          "title": "Pf4-Grin1-/- MKs, biological rep 4"
+        },
+        {
+          "accession": "GSM5550072",
+          "title": "Wildtype MKs, biological rep 4"
+        },
+        {
+          "accession": "GSM5550075",
+          "title": "Pf4-Grin1-/- MKs, biological rep 1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "35245376"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183044/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA758931"
+    },
+    "200156201": {
+      "uid": "200156201",
+      "accession": "GSE156201",
+      "gds": "",
+      "title": "Single cell transcriptomic data from MGE-derived interneurons purified from postnatal day 18-21 frontal cortex and hippocampus of wild type and MGE-specific GRIN1-knockout mice.",
+      "summary": "Medial ganglionic eminence (MGE)-derived parvalbumin (PV)+, somatostatin (SST)+ and Neurogliaform (NGFC)-type cortical and hippocampal interneurons, have distinct molecular, anatomical and physiological properties. However, the molecular mechanisms regulating their diversity remain poorly understood. Here, via single-cell transcriptomics, we show that the obligate NMDA-type glutamate receptor (NMDAR) subunit gene Grin1 mediates subtype-specific transcriptional regulation of gene expression in MGE-derived interneurons, leading to altered subtype identities. Notably, MGE-specific conditional Grin1 loss results in a systemic downregulation of diverse transcriptional, synaptogenic and membrane excitability regulatory programs. These widespread gene expression abnormalities mirror aberrations that are typically associated with neurodevelopmental disorders, particularly schizophrenia. Our study hence provides a roadmap for the systematic examination of NMDAR signaling in interneuron subtypes, revealing potential MGE-specific genetic targets that could instruct future therapies of psychiatric disorders.",
+      "gpl": "17021",
+      "gse": "156201",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2021/01/25",
+      "suppfile": "MTX, TSV",
+      "samples": [
+        {
+          "accession": "GSM4726599",
+          "title": "Frontal cortex cells in WT background"
+        },
+        {
+          "accession": "GSM4726598",
+          "title": "Frontal cortex cells in MGE-derived interneuron-specific GRIN1-KO background"
+        },
+        {
+          "accession": "GSM4726601",
+          "title": "Hippocampus cells in WT background"
+        },
+        {
+          "accession": "GSM4726600",
+          "title": "Hippocampus cells in MGE-derived interneuron-specific GRIN1-KO background"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP277409",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP277/SRP277409/"
+        }
+      ],
+      "n_samples": 4,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "34630033"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE156nnn/GSE156201/",
+      "geo2r": "no",
+      "bioproject": "PRJNA657037"
+    },
+    "200066806": {
+      "uid": "200066806",
+      "accession": "GSE66806",
+      "gds": "",
+      "title": "Gene expression of mouse gonadotropin-releasing hormone neurons from male and female mice",
+      "summary": "Background: Gonadotropin-releasing hormone (GnRH) neurons play a pivotal role in regulation of the hypothalamic-pituitary gonadal axis in a sex-specific manner. We hypothesized that the differences seen in reproductive functions of males and females are associated with a sexually dimorphic gene expression profile of GnRH neurons.  Methods and Results: We compared the transcriptome of GnRH neurons obtained from intact, metestrous female and male GnRH-GFP transgenic mice. About 1500 individual GnRH neurons from each sex were sampled with laser capture microdissection followed by whole transcriptome amplification for gene expression profiling. Under stringent selection criteria (fold change > 1.6, adjusted p-value 0.01), Affymetrix Mouse Genome 430 PM array analysis identified 543 differentially expressed genes. Sexual dimorphism was most apparent in gene clusters associated with synaptic communication, signal transduction, cell adhesion, vesicular transport and cell metabolism. To validate microarray results, 57 genes were selected and 91% of their differential expression was confirmed by real-time PCR. Similarly, 88% of microarray results were confirmed with PCR from independent samples obtained by patch pipette harvesting and pooling of 30 GnRH neurons from each sex. We found significant differences in expression of genes involved in vesicle priming and docking (Syt1, Cplx1), GABAergic (Gabra3, Gabrb3, Gabrg2) and glutamatergic (Gria1, Grin1, Slc17a6) neurotransmission, peptide signaling (Sstr3, Npr2, Cxcr4) and the regulation of intracellular ion homeostasis (Cacna1, Cacnb1, Cacng5, Kcnq2, Kcnc1). Conclusion: The striking sexual dimorphism of the GnRH neuron transcriptome we report here contributes to the better understanding the differences in cellular mechanisms of GnRH neurons in the two sexes.",
+      "gpl": "11180",
+      "gse": "66806",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2021/01/18",
+      "suppfile": "CEL",
+      "samples": [
+        {
+          "accession": "GSM1632569",
+          "title": "GnRH_male_biological rep4"
+        },
+        {
+          "accession": "GSM1632572",
+          "title": "GnRH_female_biological rep1"
+        },
+        {
+          "accession": "GSM1632575",
+          "title": "GnRH_female_biological rep4"
+        },
+        {
+          "accession": "GSM1632567",
+          "title": "GnRH_male_biological rep2"
+        },
+        {
+          "accession": "GSM1632576",
+          "title": "GnRH_female_biological rep5"
+        },
+        {
+          "accession": "GSM1632573",
+          "title": "GnRH_female_biological rep2"
+        },
+        {
+          "accession": "GSM1632570",
+          "title": "GnRH_male_biological rep5"
+        },
+        {
+          "accession": "GSM1632568",
+          "title": "GnRH_male_biological rep3"
+        },
+        {
+          "accession": "GSM1632571",
+          "title": "GnRH_male_biological rep6"
+        },
+        {
+          "accession": "GSM1632577",
+          "title": "GnRH_female_biological rep6"
+        },
+        {
+          "accession": "GSM1632574",
+          "title": "GnRH_female_biological rep3"
+        },
+        {
+          "accession": "GSM1632566",
+          "title": "GnRH_male_biological rep1"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "33551743"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE66nnn/GSE66806/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA278003"
+    },
+    "200098729": {
+      "uid": "200098729",
+      "accession": "GSE98729",
+      "gds": "",
+      "title": "Cortical gene expression of WT, Grin1 knockdown, and Grin1 Cre rescue mice",
+      "summary": "The purpose of the study was to compare cortical transcript abundance between WT mice and Grin1 knockdown mice, and to determine whether transcript levels could be normalized in Grin1 Cre rescue mice (hemizygous for tamoxifen-inducible Rosa26 ERT2 Cre). All mice were treated with tamoxifen at 10 weeks of age until 12 weeks of age, and were euthanized at 15 weeks of age.",
+      "gpl": "17021",
+      "gse": "98729",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2020/05/02",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM2610724",
+          "title": "WT_4"
+        },
+        {
+          "accession": "GSM2610713",
+          "title": "GluN1_1"
+        },
+        {
+          "accession": "GSM2610716",
+          "title": "GluN1_4"
+        },
+        {
+          "accession": "GSM2610722",
+          "title": "WT_2"
+        },
+        {
+          "accession": "GSM2610719",
+          "title": "GluN1Cre_3"
+        },
+        {
+          "accession": "GSM2610720",
+          "title": "GluN1Cre_4"
+        },
+        {
+          "accession": "GSM2610714",
+          "title": "GluN1_2"
+        },
+        {
+          "accession": "GSM2610723",
+          "title": "WT_3"
+        },
+        {
+          "accession": "GSM2610717",
+          "title": "GluN1Cre_1"
+        },
+        {
+          "accession": "GSM2610721",
+          "title": "WT_1"
+        },
+        {
+          "accession": "GSM2610718",
+          "title": "GluN1Cre_2"
+        },
+        {
+          "accession": "GSM2610715",
+          "title": "GluN1_3"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP106749",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP106/SRP106749/"
+        }
+      ],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE98nnn/GSE98729/",
+      "geo2r": "no",
+      "bioproject": "PRJNA386039"
+    },
+    "200136983": {
+      "uid": "200136983",
+      "accession": "GSE136983",
+      "gds": "",
+      "title": "RNA-seq of cortical brain from Grin1-exon5 constitutive vs. Grin1-exon5 knockout mice",
+      "summary": "Here we report bulk RNA transcriptomes of cortical brains from transgenic mice from Grin1-exon5 constitutive vs. Grin1-exon5 knockout mice. Physiologically, Grin1-exon5 positive mice have reduced hippocampal LTP (vs. WT) and are learning and memory (vs. WT) impaired compared to Grin1-exon5 negative mice that have heightened LTP (compared to WT) and better learning and memory (compared to WT).",
+      "gpl": "17021",
+      "gse": "136983",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2019/10/31",
+      "suppfile": "TSV",
+      "samples": [
+        {
+          "accession": "GSM4064443",
+          "title": "KO368"
+        },
+        {
+          "accession": "GSM4064440",
+          "title": "KIWT358"
+        },
+        {
+          "accession": "GSM4064437",
+          "title": "KI347"
+        },
+        {
+          "accession": "GSM4064446",
+          "title": "KOWT95"
+        },
+        {
+          "accession": "GSM4064435",
+          "title": "KI341"
+        },
+        {
+          "accession": "GSM4064438",
+          "title": "KIWT345"
+        },
+        {
+          "accession": "GSM4064444",
+          "title": "KOWT366"
+        },
+        {
+          "accession": "GSM4064441",
+          "title": "KO101"
+        },
+        {
+          "accession": "GSM4064445",
+          "title": "KOWT93"
+        },
+        {
+          "accession": "GSM4064442",
+          "title": "KO360"
+        },
+        {
+          "accession": "GSM4064436",
+          "title": "KI346"
+        },
+        {
+          "accession": "GSM4064439",
+          "title": "KIWT350"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP220543",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP220/SRP220543/"
+        }
+      ],
+      "n_samples": 12,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "31875540"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE136nnn/GSE136983/",
+      "geo2r": "no",
+      "bioproject": "PRJNA564150"
+    },
+    "200058687": {
+      "uid": "200058687",
+      "accession": "GSE58687",
+      "gds": "",
+      "title": "Genome-wide analyses reveal DNA methylation in the central nucleus of the amygdala is linked to anxious temperament in young primates",
+      "summary": "We used reduced representation bisulfite sequencing to profiled 5-methylcytosine in the Ce of rhesus monkeys (N = 23) fully phenotyped for anxious temperament (AT) and identified 5,489 CpG sites (1,363 genes) with methylation levels predictive of individual differences in AT (FDR p-value < 0.05), including genes previously implicated in psychiatric-related disorders (e.g. GRIN1, GRM5, HTT, ADCYAP1, and SHANK3).",
+      "gpl": "14954",
+      "gse": "58687",
+      "taxon": "Macaca mulatta",
+      "entrytype": "GSE",
+      "gdstype": "Methylation profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2014/12/02",
+      "suppfile": "TXT",
+      "samples": [
+        {
+          "accession": "GSM1416949",
+          "title": "r09060"
+        },
+        {
+          "accession": "GSM1416946",
+          "title": "BF10"
+        },
+        {
+          "accession": "GSM1416952",
+          "title": "BE99"
+        },
+        {
+          "accession": "GSM1416932",
+          "title": "BD60"
+        },
+        {
+          "accession": "GSM1416938",
+          "title": "BE50"
+        },
+        {
+          "accession": "GSM1416935",
+          "title": "BD94"
+        },
+        {
+          "accession": "GSM1416937",
+          "title": "BE60"
+        },
+        {
+          "accession": "GSM1416934",
+          "title": "r09012"
+        },
+        {
+          "accession": "GSM1416954",
+          "title": "r09076"
+        },
+        {
+          "accession": "GSM1416951",
+          "title": "r09081"
+        },
+        {
+          "accession": "GSM1416940",
+          "title": "BF36"
+        },
+        {
+          "accession": "GSM1416943",
+          "title": "BE97"
+        },
+        {
+          "accession": "GSM1416939",
+          "title": "r09019"
+        },
+        {
+          "accession": "GSM1416936",
+          "title": "r09006"
+        },
+        {
+          "accession": "GSM1416942",
+          "title": "r09024"
+        },
+        {
+          "accession": "GSM1416947",
+          "title": "BE75"
+        },
+        {
+          "accession": "GSM1416948",
+          "title": "r09069"
+        },
+        {
+          "accession": "GSM1416945",
+          "title": "r09078"
+        },
+        {
+          "accession": "GSM1416953",
+          "title": "BF39"
+        },
+        {
+          "accession": "GSM1416950",
+          "title": "BE85"
+        },
+        {
+          "accession": "GSM1416944",
+          "title": "r09061"
+        },
+        {
+          "accession": "GSM1416941",
+          "title": "r09051"
+        },
+        {
+          "accession": "GSM1416933",
+          "title": "r09020"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP043459",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP043/SRP043459/"
+        }
+      ],
+      "n_samples": 23,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "25411484"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE58nnn/GSE58687/",
+      "geo2r": "no",
+      "bioproject": "PRJNA253174"
+    },
+    "200043294": {
+      "uid": "200043294",
+      "accession": "GSE43294",
+      "gds": "",
+      "title": "Identification of in vivo, conserved, TAF15 RNA binding sites and the impact of TAF15 on the neuronal transcriptome",
+      "summary": "TAF15, an RNA binding protein was recently implicated in Amyotrophic Lateral Sclerosis (ALS). ALS is a fatal neurodegenerative disease. We report the identification of  the conserved neuronal RNA targets of TAF15 and the assessment of the impact of TAF15 depletion on the neuronal transcriptome. Our study uncovers regulation of splicing of sets of neuronal RNAs encoding proteins with essential roles in synaptic activities including glutamergic receptors such as zeta-1 subunit of the glutamate N-methyl-D-aspartate (NMDA) receptor (Grin1).",
+      "gpl": "9115;11002",
+      "gse": "43294",
+      "taxon": "Homo sapiens; Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2013/01/24",
+      "suppfile": "BED",
+      "samples": [
+        {
+          "accession": "GSM1060217",
+          "title": "TAF15-mmu_3_KD"
+        },
+        {
+          "accession": "GSM1060214",
+          "title": "TAF15-mmu_2_CTRL"
+        },
+        {
+          "accession": "GSM1060206",
+          "title": "TAF15_2_H"
+        },
+        {
+          "accession": "GSM1060215",
+          "title": "TAF15-mmu_2_KD"
+        },
+        {
+          "accession": "GSM1060209",
+          "title": "TAF15_3_L"
+        },
+        {
+          "accession": "GSM1060212",
+          "title": "TAF15-mmu_1_CTRL"
+        },
+        {
+          "accession": "GSM1060216",
+          "title": "TAF15-mmu_3_CTRL"
+        },
+        {
+          "accession": "GSM1060207",
+          "title": "TAF15_2_L"
+        },
+        {
+          "accession": "GSM1060213",
+          "title": "TAF15-mmu_1_KD"
+        },
+        {
+          "accession": "GSM1060210",
+          "title": "TAF15-mmu_1"
+        },
+        {
+          "accession": "GSM1060205",
+          "title": "TAF15_1_L"
+        },
+        {
+          "accession": "GSM1060208",
+          "title": "TAF15_3_H"
+        },
+        {
+          "accession": "GSM1060211",
+          "title": "TAF15-mmu_2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP017777",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP017/SRP017777/"
+        }
+      ],
+      "n_samples": 13,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "23416048"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE43nnn/GSE43294/",
+      "geo2r": "no",
+      "bioproject": "PRJNA185286"
+    },
+    "200022024": {
+      "uid": "200022024",
+      "accession": "GSE22024",
+      "gds": "",
+      "title": "Next Gen(etics): targeted genome enrichment and next-generation sequencing enhances phenotype-driven forward genetics and gene-driven reverse genetics",
+      "summary": "Targeted genomic enrichment followed by next-generation sequencing dramatically increased the efficiency of mutation discovery in human genomes. Here we demonstrate that these techniques also revolutionize traditional genetic approaches in model systems. We developed a two-step protocol utilizing a traditional bulk-segregant analysis (BSA) approach for positional cloning mutants in phenotype-driven forward genetic screens. First, BSA pools are 'light' sequenced for rough mapping, followed by targeted enrichment and deep-sequencing of the mutant BSA pool for the linked genomic region to fine-map and discover candidate mutations. We applied this method successfully to three Arabidopsis mutants and show that it can be scaled by multiplexing. Similarly, we applied these techniques to a gene-driven reverse genetics method (chemical driven target-selected mutagenesis or TILLING) that is used for generating gene knockouts in a wide range of organisms, including plants, invertebrates and vertebrates. We developed an efficient multiplexed genomic enrichment protocol for pre-barcoded samples. As a proof-of-principle, 770 genes were screened for induced mutations in 30 rats, which identified all but one known variants (30) as well as a large series of novel knockout and missense alleles. Mutations were retrieved at the expected frequency with a the false-positive rate of less than 1 in 6 million basepairs, which is much lower as compared to traditional mutation discovery approaches. Both methods are largely independent of the genome size due to the targeted enrichment and can thus be applied to any genetic model system of interest.",
+      "gpl": "10462",
+      "gse": "22024",
+      "taxon": "Rattus norvegicus",
+      "entrytype": "GSE",
+      "gdstype": "Genome variation profiling by high throughput sequencing",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2010/09/13",
+      "suppfile": "BEDGRAPH, SAM, TXT",
+      "samples": [
+        {
+          "accession": "GSM557690",
+          "title": "p136_39_7"
+        },
+        {
+          "accession": "GSM557673",
+          "title": "br53"
+        },
+        {
+          "accession": "GSM557687",
+          "title": "elfd1"
+        },
+        {
+          "accession": "GSM557681",
+          "title": "mr6r_d"
+        },
+        {
+          "accession": "GSM557670",
+          "title": "Rn_enrich_11120"
+        },
+        {
+          "accession": "GSM557661",
+          "title": "Rn_enrich_00313"
+        },
+        {
+          "accession": "GSM557667",
+          "title": "Rn_enrich_21011"
+        },
+        {
+          "accession": "GSM557684",
+          "title": "trpm"
+        },
+        {
+          "accession": "GSM557664",
+          "title": "Rn_enrich_13330"
+        },
+        {
+          "accession": "GSM557662",
+          "title": "Rn_enrich_32031"
+        },
+        {
+          "accession": "GSM557665",
+          "title": "Rn_enrich_02103"
+        },
+        {
+          "accession": "GSM557685",
+          "title": "ppargama"
+        },
+        {
+          "accession": "GSM557682",
+          "title": "pkr2_1"
+        },
+        {
+          "accession": "GSM557688",
+          "title": "grn_3"
+        },
+        {
+          "accession": "GSM557679",
+          "title": "vip"
+        },
+        {
+          "accession": "GSM557676",
+          "title": "qsnul"
+        },
+        {
+          "accession": "GSM557680",
+          "title": "grin1"
+        },
+        {
+          "accession": "GSM557683",
+          "title": "bkr_b2"
+        },
+        {
+          "accession": "GSM557677",
+          "title": "par1"
+        },
+        {
+          "accession": "GSM557671",
+          "title": "orrk_1"
+        },
+        {
+          "accession": "GSM557674",
+          "title": "cyp2d1"
+        },
+        {
+          "accession": "GSM557668",
+          "title": "Rn_enrich_01112"
+        },
+        {
+          "accession": "GSM557672",
+          "title": "piwi_l2"
+        },
+        {
+          "accession": "GSM557686",
+          "title": "gp146"
+        },
+        {
+          "accession": "GSM557675",
+          "title": "gabr"
+        },
+        {
+          "accession": "GSM557678",
+          "title": "orrk_2"
+        },
+        {
+          "accession": "GSM557689",
+          "title": "disc"
+        },
+        {
+          "accession": "GSM557663",
+          "title": "Rn_enrich_23202"
+        },
+        {
+          "accession": "GSM557669",
+          "title": "Rn_enrich_01233"
+        },
+        {
+          "accession": "GSM557666",
+          "title": "Rn_enrich_30222"
+        }
+      ],
+      "relations": [],
+      "extrelations": [
+        {
+          "relationtype": "SRA",
+          "targetobject": "SRP003188",
+          "targetftplink": "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP003/SRP003188/"
+        }
+      ],
+      "n_samples": 30,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "20953175"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE22nnn/GSE22024/",
+      "geo2r": "no",
+      "bioproject": "PRJNA127447"
+    },
+    "200012312": {
+      "uid": "200012312",
+      "accession": "GSE12312",
+      "gds": "",
+      "title": "Effect of microgravity on brain gene expression in mice",
+      "summary": "Changes in gravitational force such as that experienced by astronauts during space flight induce a redistribution of fluids from the caudad to the cephalad portion of the body together with an elimination of normal head-to-foot hydrostatic pressure gradients. To assess brain gene profile changes associated with microgravity and fluid shift, a large-scale analysis of mRNA expression levels was performed in the brains of 2 weeks control and hindlimb-unloaded (HU) mice using cDNA microarrays. Although to different extent, all functional categories displayed significantly regulated genes indicating that considerable transcriptomic alterations are induced by HU. Interestingly, the TIC class (transport of small molecules and ions into the cells) had the highest percentage of up-regulated genes, while the most down-regulated genes were those of the JAE class (Cell junction, Adhesion, Extracellular Matrix). TIC genes comprised 16% of those whose expression was altered, including sodium channel, nonvoltage-gated 1 beta (Scnn1b), glutamate receptor (Grin1), voltage-dependent anion channel 1 (Vdac1), calcium channel beta 3 subunit (Cacnb3) and others. The analysis performed by GeneMAPP revealed several altered protein classes and functional pathways such as blood coagulation and immune response, learning and memory, ion channels and cell junction. In particular, data indicate that HU causes an alteration in hemostasis which resolves in a shift toward a more hyper-coagulative state with an increased risk of venous thrombosis. Furthermore, HU treatment seems to impact on key steps of synaptic plasticity and learning processes.",
+      "gpl": "1698",
+      "gse": "12312",
+      "taxon": "Mus musculus",
+      "entrytype": "GSE",
+      "gdstype": "Expression profiling by array",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2008/08/08",
+      "suppfile": "TIFF, XLS",
+      "samples": [
+        {
+          "accession": "GSM309522",
+          "title": "Brain of adult C57Bl6j mouse_tail-suspended hindlimb-unloaded_rep4"
+        },
+        {
+          "accession": "GSM309519",
+          "title": "Brain of adult C57Bl6j mouse_tail-suspended hindlimb-unloaded_rep1"
+        },
+        {
+          "accession": "GSM309520",
+          "title": "Brain of adult C57Bl6j mouse_tail-suspended hindlimb-unloaded_rep2"
+        },
+        {
+          "accession": "GSM309517",
+          "title": "Brain of adult C57Bl6j mouse_control_rep3"
+        },
+        {
+          "accession": "GSM309515",
+          "title": "Brain of adult C57Bl6j mouse_control_rep1"
+        },
+        {
+          "accession": "GSM309521",
+          "title": "Brain of adult C57Bl6j mouse_tail-suspended hindlimb-unloaded_rep3"
+        },
+        {
+          "accession": "GSM309518",
+          "title": "Brain of adult C57Bl6j mouse_control_rep4"
+        },
+        {
+          "accession": "GSM309516",
+          "title": "Brain of adult C57Bl6j mouse_control_rep2"
+        }
+      ],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": 8,
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [
+        "18704384"
+      ],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE12nnn/GSE12312/",
+      "geo2r": "yes",
+      "bioproject": "PRJNA113619"
+    },
+    "305550080": {
+      "uid": "305550080",
+      "accession": "GSM5550080",
+      "gds": "",
+      "title": "Pf4-Grin1-/- MKs, biological rep 6",
+      "summary": "Pf4-Grin1-/- megakaryocytes",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSM",
+      "gdstype": "",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": "",
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5550nnn/GSM5550080/",
+      "geo2r": "",
+      "bioproject": ""
+    },
+    "305550079": {
+      "uid": "305550079",
+      "accession": "GSM5550079",
+      "gds": "",
+      "title": "Pf4-Grin1-/- MKs, biological rep 5",
+      "summary": "Pf4-Grin1-/- megakaryocytes",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSM",
+      "gdstype": "",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": "",
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5550nnn/GSM5550079/",
+      "geo2r": "",
+      "bioproject": ""
+    },
+    "305550078": {
+      "uid": "305550078",
+      "accession": "GSM5550078",
+      "gds": "",
+      "title": "Pf4-Grin1-/- MKs, biological rep 4",
+      "summary": "Pf4-Grin1-/- megakaryocytes",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSM",
+      "gdstype": "",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": "",
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5550nnn/GSM5550078/",
+      "geo2r": "",
+      "bioproject": ""
+    },
+    "305550077": {
+      "uid": "305550077",
+      "accession": "GSM5550077",
+      "gds": "",
+      "title": "Pf4-Grin1-/- MKs, biological rep 3",
+      "summary": "Pf4-Grin1-/- megakaryocytes",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSM",
+      "gdstype": "",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": "",
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5550nnn/GSM5550077/",
+      "geo2r": "",
+      "bioproject": ""
+    },
+    "305550076": {
+      "uid": "305550076",
+      "accession": "GSM5550076",
+      "gds": "",
+      "title": "Pf4-Grin1-/- MKs, biological rep 2",
+      "summary": "Pf4-Grin1-/- megakaryocytes",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSM",
+      "gdstype": "",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": "",
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5550nnn/GSM5550076/",
+      "geo2r": "",
+      "bioproject": ""
+    },
+    "305550075": {
+      "uid": "305550075",
+      "accession": "GSM5550075",
+      "gds": "",
+      "title": "Pf4-Grin1-/- MKs, biological rep 1",
+      "summary": "Pf4-Grin1-/- megakaryocytes",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSM",
+      "gdstype": "",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": "",
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5550nnn/GSM5550075/",
+      "geo2r": "",
+      "bioproject": ""
+    },
+    "305550074": {
+      "uid": "305550074",
+      "accession": "GSM5550074",
+      "gds": "",
+      "title": "Wildtype MKs, biological rep 6",
+      "summary": "Wild-type megakaryocytes",
+      "gpl": "23038",
+      "gse": "183044",
+      "taxon": "Mus musculus",
+      "entrytype": "GSM",
+      "gdstype": "",
+      "ptechtype": "",
+      "valtype": "",
+      "ssinfo": "",
+      "subsetinfo": "",
+      "pdat": "2022/03/06",
+      "suppfile": "CEL",
+      "samples": [],
+      "relations": [],
+      "extrelations": [],
+      "n_samples": "",
+      "seriestitle": "",
+      "platformtitle": "",
+      "platformtaxa": "",
+      "samplestaxa": "",
+      "pubmedids": [],
+      "projects": [],
+      "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5550nnn/GSM5550074/",
+      "geo2r": "",
+      "bioproject": ""
+    }
+  }
+}
