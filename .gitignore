@@ -1,18 +1,13 @@
 .vscode
 .env
 .DS_Store
-QUICKSTART.md
 Mission Briefing.md
-DOCKER_SETUP.md
 .venv
 venv
 __pycache__
 AGENTS.md
 BIONEXUS.md
 .pytext_cache
-.env.example
-Master_BioNexus.md
-ReadMe.md
 
 
 # dependencies
@@ -62,3 +57,4 @@ BIONEXUS_AUDIT_REPORT.md
 TRENDS_READY.log
 
 node_modules
+Master_BIONEXUS.md

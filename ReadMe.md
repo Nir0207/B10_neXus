@@ -229,48 +229,215 @@ For the detailed ops runbook, see [`ops/README.md`](ops/README.md).
 
 ## Container Runtime Guide
 
-### First-time startup order
+### First-Time Startup for a Fresh Clone
 
-Run these once after a fresh clone, after Docker volume cleanup, or after infrastructure changes:
+Run these in order for a new developer machine or after wiping Docker volumes:
 
-1. `Lake/docker-compose.yml`
-   Starts the shared data-plane containers:
-   `bionexus-postgres`, `bionexus-neo4j`, `bionexus-mongodb`, `bionexus-refinery`
-2. `ops/docker-compose.ops.yml`
-   Starts the local observability stack:
-   `bionexus-openobserve`, `bionexus-otel-collector`
-3. `telemetry/docker-compose.yml`
-   Starts `bionexus-telemetry-api`
-4. `api-gateway/compose.yaml`
-   Starts `bionexus-api-gateway`
-5. `ui-portal/docker-compose.yml`
-   Starts `ui-portal-ui-portal-1`
+1. Core data services
+   ```bash
+   cd Lake
+   docker compose up -d
+   ```
+   Starts:
+   - `bionexus-postgres`
+   - `bionexus-neo4j`
+   - `bionexus-mongodb`
+   - `bionexus-refinery`
 
-### Containers that must be running all the time
+2. Observability stack
+   ```bash
+   cd ..
+   ./START_OPS.sh
+   ```
+   Starts:
+   - `bionexus-openobserve`
+   - `bionexus-otel-collector`
 
-For the application to be functional in normal portal usage, these containers should stay up:
+3. Auth and telemetry backend
+   ```bash
+   cd telemetry
+   docker compose up -d --build
+   ```
+   Starts:
+   - `bionexus-telemetry-api`
 
-- `bionexus-mongodb`
-  Required for Mongo-backed auth, user records, admin flags, and telemetry events.
-- `bionexus-telemetry-api`
-  Required for login, registration, session hydration, admin checks, and telemetry dashboard data.
-- `bionexus-api-gateway`
-  Required for the explorer, pathways, trials, and analytics REST APIs.
-- `ui-portal-ui-portal-1`
-  Required for the web UI itself.
-- `bionexus-openobserve`
-  Required for the local observability portal and storage.
-- `bionexus-otel-collector`
-  Required for receiving OTLP logs and traces from the services.
+4. Main API
+   ```bash
+   cd ../api-gateway
+   docker compose -f compose.yaml up -d --build api-gateway
+   ```
+   Starts:
+   - `bionexus-api-gateway`
+
+5. Web UI
+   ```bash
+   cd ../ui-portal
+   docker compose up -d --build
+   ```
+   Starts:
+   - `ui-portal-ui-portal-1`
+
+6. Optional AI stack
+   Run this only if you need MCP or AI-driven features:
+   ```bash
+   cd ../intelligence
+   docker compose up -d --build intelligence
+   ```
+   Starts:
+   - `bionexus-intelligence-mcp`
+   - `bionexus-ollama`
+   - one-shot helper containers such as the model puller and DB probe
+
+### Containers to Keep Running All the Time
+
+For normal portal usage after startup, keep these running:
+
 - `bionexus-postgres`
-  Required for gateway-backed analytics and structured data reads.
+  Required for structured reads and gateway-backed analytics.
 - `bionexus-neo4j`
-  Required for discovery graph and pathway/relationship views.
+  Required for discovery graph and pathway views.
+- `bionexus-mongodb`
+  Required for login, user records, admin flags, and telemetry metadata.
+- `bionexus-telemetry-api`
+  Required for auth, registration, session hydration, and the admin telemetry page.
+- `bionexus-api-gateway`
+  Required for the main REST APIs consumed by the UI.
+- `ui-portal-ui-portal-1`
+  Required for the web app itself.
 
-### Containers that are helpful but not required all the time
+Recommended to keep running during development:
 
+- `bionexus-openobserve`
+  Required if you want the ops portal, logs, traces, and RUM.
+- `bionexus-otel-collector`
+  Required for collecting OTLP logs and traces into OpenObserve.
+
+Keep these running only when you need AI features:
+
+- `bionexus-intelligence-mcp`
+  Required for MCP tools and intelligence routes.
+- `bionexus-ollama`
+  Required for local model inference used by the intelligence service.
+
+### Containers to Run On Demand
+
+These are not required just to browse the product:
+
+- `bionexus-gatherers`
+  Run when you want to ingest fresh source data into `Lake/data_lake/raw`.
+  ```bash
+  docker compose -f gatherers/docker-compose.yml up -d --build gatherers
+  ```
+- `bionexus-refinery-pipeline`
+  Run when you want to process raw data into silver/staging outputs.
+  ```bash
+  docker compose -f refineries/docker-compose.yml up --build pipeline
+  ```
 - `bionexus-refinery`
-  Keep this up when you are running ETL/refinery jobs; it is not required just to browse the UI.
+  This is the long-lived helper container from the Lake stack. It is useful for ETL work, but not required for day-to-day portal usage.
+
+### Short Version for New Users
+
+If the goal is simply "clone the repo and use the BioNexus portal locally", the minimum startup sequence is:
+
+1. `cd Lake && docker compose up -d`
+2. `cd .. && ./START_OPS.sh`
+3. `cd telemetry && docker compose up -d --build`
+4. `cd ../api-gateway && docker compose -f compose.yaml up -d --build api-gateway`
+5. `cd ../ui-portal && docker compose up -d --build`
+
+After that:
+
+- BioNexus UI: `http://localhost:3000`
+- OpenObserve: `http://localhost:5080`
+- API Gateway: `http://localhost:8000`
+- Telemetry API: `http://localhost:4100`
+
+### Environment Files New Users Must Create
+
+Create these files before the first full startup:
+
+1. Root env file
+   Copy [`/.env.example`](/BioNexus/.env.example) to `.env`
+2. Refinery env file
+   Copy [`refineries/.env.example`](/BioNexus/refineries/.env.example) to `refineries/.env`
+
+### Root `.env` Keys
+
+Minimum keys a new user should set in `.env`:
+
+- `POSTGRES_USER`
+- `POSTGRES_PASSWORD`
+- `POSTGRES_DB`
+- `NEO4J_USER`
+- `NEO4J_PASSWORD`
+- `MONGODB_USER`
+- `MONGODB_PASSWORD`
+- `MONGODB_DATABASE`
+- `TELEMETRY_ADMIN_USERNAME`
+- `TELEMETRY_ADMIN_PASSWORD`
+- `TELEMETRY_ADMIN_EMAIL`
+- `TELEMETRY_ADMIN_FULL_NAME`
+- `SECRET_KEY`
+- `JWT_ISSUER`
+- `JWT_AUDIENCE`
+
+Useful non-secret root `.env` keys:
+
+- `POSTGRES_HOST`
+- `POSTGRES_PORT`
+- `NEO4J_HOST`
+- `NEO4J_BOLT_PORT`
+- `NEO4J_HTTP_PORT`
+- `MONGODB_HOST`
+- `MONGODB_PORT`
+- `TELEMETRY_PORT`
+- `TELEMETRY_GRAPHQL_URL`
+- `NEXT_PUBLIC_TELEMETRY_API_URL`
+- `DUCKDB_PATH`
+- `LAKE_DIRECTORY`
+- `SILVER_DIRECTORY`
+- `DEBUG`
+- `LOG_LEVEL`
+- `ENV`
+
+### `refineries/.env` Keys
+
+Required keys:
+
+- `POSTGRES_USER`
+- `POSTGRES_PASSWORD`
+- `POSTGRES_DB`
+- `NEO4J_PASSWORD`
+
+Optional keys:
+
+- `FORCE`
+- `SKIP_POSTGRES`
+- `SKIP_NEO4J`
+
+### Environment Variables Already Bootstrapped by Compose
+
+New users do not need to create separate env files for these unless they want to override defaults:
+
+- OpenObserve / ops:
+  - `OPENOBSERVE_BASE_URL`
+  - `OPENOBSERVE_ORG`
+  - `OPENOBSERVE_USERNAME`
+  - `OPENOBSERVE_PASSWORD`
+  - `OPENOBSERVE_LOG_STREAM`
+  - `OPENOBSERVE_DASHBOARD_TITLE`
+  - `OTEL_EXPORTER_OTLP_LOGS_ENDPOINT`
+- UI:
+  - `NEXT_PUBLIC_API_URL`
+  - `NEXT_PUBLIC_BIONEXUS_API_TOKEN`
+- Intelligence:
+  - `PG_DSN`
+  - `OLLAMA_HOST`
+  - `OLLAMA_MODEL`
+  - `MCP_HOST`
+  - `MCP_PORT`
+  - `MCP_TRANSPORT`
 
 ---
 
