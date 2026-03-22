@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from contextlib import asynccontextmanager
 import os
+import sys
+from pathlib import Path
 from typing import Any
 
 from fastapi import Depends, FastAPI, HTTPException, status
@@ -18,12 +20,20 @@ from auth import (
     register_user,
 )
 from database import close_db, init_db
+from ops_observability import ErrorEventMiddleware, register_error_handlers
 from router import router as api_router
 from schemas import Token, UserRegistrationRequest
 from settings import get_cors_origins
 
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from ops.ops_logger import configure_logging
+
 LOG_FILE = os.path.join(os.path.dirname(__file__), "logs", "audit.log")
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+configure_logging(service_name="api-gateway")
 
 
 @asynccontextmanager
@@ -50,7 +60,9 @@ app.add_middleware(
     allow_headers=["Authorization", "Content-Type"],
 )
 app.add_middleware(AuditLogMiddleware, log_file_path=LOG_FILE)
+app.add_middleware(ErrorEventMiddleware)
 app.include_router(api_router)
+register_error_handlers(app)
 
 
 @app.post("/token", response_model=Token)

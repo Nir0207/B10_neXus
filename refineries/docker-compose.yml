@@ -19,8 +19,8 @@ services:
   # ── Main ETL pipeline ───────────────────────────────────────────────────────
   pipeline:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: refineries/Dockerfile
       target: runtime   # uses the lean runtime stage
     image: bionexus/refinery:latest
     container_name: bionexus-refinery-pipeline
@@ -37,6 +37,13 @@ services:
       RAW_ROOT_DIR: "/data_lake/raw"
       SILVER_DIR: "/data_lake/silver"
       MANIFEST_PATH: "/data_lake/silver/.processed_manifest.json"
+      OTEL_EXPORTER_OTLP_LOGS_ENDPOINT: "http://host.docker.internal:4318/v1/logs"
+      OPENOBSERVE_BASE_URL: "http://host.docker.internal:5080"
+      OPENOBSERVE_USERNAME: "root@bionexus.local"
+      OPENOBSERVE_PASSWORD: "${OPENOBSERVE_PASSWORD:-BioNexusOps123!}"
+      OPENOBSERVE_LOG_STREAM: "bionexus_app"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       # Raw Bronze-layer JSON (read-only inside the container)
       - ../Lake/data_lake/raw:/data_lake/raw:ro
@@ -55,8 +62,8 @@ services:
   # ── Test runner (pytest, no DB required) ────────────────────────────────────
   test:
     build:
-      context: .
-      dockerfile: Dockerfile.test
+      context: ..
+      dockerfile: refineries/Dockerfile.test
     image: bionexus/refinery-test:latest
     container_name: bionexus-refinery-test
     restart: "no"
@@ -64,6 +71,7 @@ services:
       RAW_ROOT_DIR: "/data_lake/raw"
       SILVER_DIR: "/data_lake/silver"
       MANIFEST_PATH: "/tmp/.processed_manifest.json"
+      OTEL_EXPORTER_OTLP_LOGS_ENDPOINT: "http://host.docker.internal:4318/v1/logs"
     network_mode: "none"
     volumes:
       - ../Lake/data_lake/raw:/data_lake/raw:ro

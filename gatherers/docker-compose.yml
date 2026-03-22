@@ -1,8 +1,18 @@
 services:
   gatherers:
-    build: .
+    build:
+      context: ..
+      dockerfile: gatherers/Dockerfile
     container_name: bionexus-gatherers
     network_mode: "bridge"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      OTEL_EXPORTER_OTLP_LOGS_ENDPOINT: "http://host.docker.internal:4318/v1/logs"
+      OPENOBSERVE_BASE_URL: "http://host.docker.internal:5080"
+      OPENOBSERVE_USERNAME: "root@bionexus.local"
+      OPENOBSERVE_PASSWORD: "BioNexusOps123!"
+      OPENOBSERVE_LOG_STREAM: "bionexus_app"
     volumes:
       # Map the host's Lake directory so the raw JSON outputs persist
       - ../Lake:/app/Lake

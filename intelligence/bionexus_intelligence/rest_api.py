@@ -2,7 +2,15 @@ from __future__ import annotations
 
 import logging
 import re
+import sys
+from pathlib import Path
 from typing import Literal
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from ops.ops_logger import configure_logging
 
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
@@ -11,6 +19,7 @@ from .config import Settings
 from .server import create_intelligence_service
 from .service import IntelligenceService
 
+configure_logging(service_name="intelligence")
 logger = logging.getLogger(__name__)
 
 _GEO_ACCESSION_PATTERN = re.compile(r"\b(GSE\d{2,})\b", re.IGNORECASE)
@@ -365,10 +374,6 @@ app = create_app()
 def main() -> None:
     import uvicorn
 
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    )
     settings = Settings.from_env()
     uvicorn.run(
         "bionexus_intelligence.rest_api:app",

@@ -25,8 +25,13 @@ class _FakeService:
 
 
 def test_mcp_tool_adapter_delegates_to_service() -> None:
-    adapter = MCPToolAdapter(_FakeService())
+    class _FakeOpsClient:
+        def query_logs(self, query_string: str) -> dict[str, object]:
+            return {"query": query_string, "hits": [{"level": "error"}]}
+
+    adapter = MCPToolAdapter(_FakeService(), openobserve_client=_FakeOpsClient())
 
     assert adapter.get_drug_leads("BRCA1") == "drug:BRCA1"
     assert adapter.explain_pathway("GSE123") == "pathway:GSE123"
     assert '"chart_type": "bar"' in adapter.render_visual_report("Show gene trends", "Alzheimer's disease")
+    assert '"query": "SELECT * FROM \\"bionexus_app\\""' in adapter.query_ops_logs('SELECT * FROM "bionexus_app"')

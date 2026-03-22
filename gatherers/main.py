@@ -3,13 +3,21 @@ from __future__ import annotations
 import asyncio
 import argparse
 import logging
+import sys
+from pathlib import Path
+
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from ops.ops_logger import configure_logging
 
 from disease_programs import DEFAULT_DISEASE_PROGRAMS, DiseaseProgram
 from ncbi import NCBIGatherer
 from opentargets import OpenTargetsGatherer
 from uniprot import UniProtGatherer
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+configure_logging(service_name="gatherers")
 logger = logging.getLogger(__name__)
 
 

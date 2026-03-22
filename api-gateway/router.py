@@ -1,14 +1,15 @@
 from __future__ import annotations
 
 import json
+import logging
 import re
 from typing import Any
 
-from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Path, Query, Request, status
 import httpx
 from neo4j import AsyncSession
 
-from auth import get_current_user
+from auth import decode_token_user, get_current_user
 from database import get_postgres_connection, get_neo4j_session
 from html_export import build_export_html
 from schemas import (
@@ -23,6 +24,7 @@ from schemas import (
     IntelligenceQueryRequest,
     IntelligenceQueryResponse,
     OrganAffinityPoint,
+    RumMetricRequest,
     TherapeuticLandscapePoint,
     TrendAnalyticsResponse,
     TripletEdge,
@@ -39,6 +41,7 @@ except ImportError:  # pragma: no cover - environment-dependent fallback
 
 router = APIRouter(prefix="/api/v1")
 _NON_ALNUM_PATTERN = re.compile(r"[^a-z0-9]+")
+logger = logging.getLogger(__name__)
 
 
 def _to_properties(value: Any) -> dict[str, Any]:
@@ -214,6 +217,64 @@ async def _query_intelligence_service(payload: IntelligenceQueryRequest) -> Inte
 
 def _canonical_disease_id(value: str) -> str:
     return _NON_ALNUM_PATTERN.sub("-", value.strip().lower()).strip("-")
+
+
+def _sanitize_rum_metadata(metadata: dict[str, Any]) -> dict[str, str | int | float | bool | None]:
+    sanitized: dict[str, str | int | float | bool | None] = {}
+    for key, value in metadata.items():
+        safe_key = _NON_ALNUM_PATTERN.sub("_", key.strip().lower()).strip("_")
+        if not safe_key:
+            continue
+        if isinstance(value, (str, int, float, bool)) or value is None:
+            sanitized[safe_key[:48]] = value
+        else:
+            sanitized[safe_key[:48]] = json.dumps(value, sort_keys=True, default=str)[:512]
+        if len(sanitized) >= 16:
+            break
+    return sanitized
+
+
+def _authenticated_user_from_request(request: Request) -> User | None:
+    authorization = request.headers.get("Authorization")
+    if authorization is None or not authorization.startswith("Bearer "):
+        return None
+    return decode_token_user(authorization.removeprefix("Bearer ").strip())
+
+
+@router.post("/ops/rum", status_code=status.HTTP_202_ACCEPTED)
+async def record_rum_metric(
+    payload: RumMetricRequest,
+    request: Request,
+) -> dict[str, str]:
+    current_user = _authenticated_user_from_request(request)
+    logger.info(
+        "RUM metric received name=%s route=%s value_ms=%s rating=%s nav=%s",
+        payload.metric_name,
+        payload.route,
+        payload.value_ms,
+        payload.rating,
+        payload.navigation_type,
+        extra={
+            "rum_metric_name": payload.metric_name,
+            "rum_route": payload.route,
+            "rum_session_id": payload.session_id,
+            "rum_value_ms": payload.value_ms,
+            "rum_rating": payload.rating,
+            "rum_navigation_type": payload.navigation_type,
+            "rum_browser_name": payload.browser_name,
+            "rum_os_name": payload.os_name,
+            "rum_device_type": payload.device_type,
+            "rum_language": payload.language,
+            "rum_timezone": payload.timezone,
+            "rum_screen_width": payload.screen_width,
+            "rum_screen_height": payload.screen_height,
+            "rum_user": current_user.username if current_user is not None else "anonymous",
+            "rum_is_admin": current_user.is_admin if current_user is not None else False,
+            "rum_client_ip": request.client.host if request.client is not None else "unknown",
+            **_sanitize_rum_metadata(payload.metadata),
+        },
+    )
+    return {"status": "accepted"}
 
 
 @router.get("/genes/{id}", response_model=GeneResponse)
