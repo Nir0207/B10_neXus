@@ -18,47 +18,20 @@ function canUseStorage(): boolean {
 }
 
 export function loadAuthSession(): AuthSession | null {
-  if (!canUseStorage()) {
-    return null;
-  }
-
-  const rawValue = window.localStorage.getItem(AUTH_SESSION_KEY);
-  if (!rawValue) {
-    return null;
-  }
-
-  try {
-    const parsed = JSON.parse(rawValue) as Partial<AuthSession>;
-    if (
-      typeof parsed.token !== "string" ||
-      typeof parsed.username !== "string" ||
-      typeof parsed.issuedAt !== "string" ||
-      typeof parsed.isAdmin !== "boolean"
-    ) {
-      window.localStorage.removeItem(AUTH_SESSION_KEY);
-      return null;
-    }
-
-    return {
-      token: parsed.token,
-      username: parsed.username,
-      email: typeof parsed.email === "string" ? parsed.email : null,
-      fullName: typeof parsed.fullName === "string" ? parsed.fullName : null,
-      isAdmin: parsed.isAdmin,
-      issuedAt: parsed.issuedAt,
-    };
-  } catch {
-    window.localStorage.removeItem(AUTH_SESSION_KEY);
-    return null;
-  }
+  // Do not restore authentication tokens or sessions from localStorage.
+  // Tokens are kept in memory only to avoid clear text storage of sensitive data.
+  return null;
 }
 
 export function saveAuthSession(session: AuthSession): void {
+  // Intentionally do not persist the AuthSession (and especially the token)
+  // to localStorage to avoid clear text storage of sensitive authentication data.
   if (!canUseStorage()) {
     return;
   }
 
-  window.localStorage.setItem(AUTH_SESSION_KEY, JSON.stringify(session));
+  // Previously, the full session including the token was stored under AUTH_SESSION_KEY.
+  // This has been disabled for security reasons.
   window.localStorage.removeItem(AUTH_ENV_DISMISSED_KEY);
 }
 
@@ -67,6 +40,8 @@ export function clearAuthSession(): void {
     return;
   }
 
+  // Ensure any legacy stored session is removed and record that the env token
+  // has been dismissed for this browser.
   window.localStorage.removeItem(AUTH_SESSION_KEY);
   window.localStorage.setItem(AUTH_ENV_DISMISSED_KEY, "1");
 }
@@ -92,5 +67,7 @@ export function buildBootstrapSession(): AuthSession | null {
 }
 
 export function getStoredToken(): string | null {
-  return loadAuthSession()?.token ?? buildBootstrapSession()?.token ?? null;
+  // Since AuthSession is no longer persisted, only the bootstrap token
+  // (derived from NEXT_PUBLIC_BIONEXUS_API_TOKEN) can be returned here.
+  return buildBootstrapSession()?.token ?? null;
 }
