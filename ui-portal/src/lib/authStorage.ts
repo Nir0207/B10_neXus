@@ -3,6 +3,9 @@
 export interface AuthSession {
   token: string;
   username: string;
+  email: string | null;
+  fullName: string | null;
+  isAdmin: boolean;
   issuedAt: string;
 }
 
@@ -29,7 +32,8 @@ export function loadAuthSession(): AuthSession | null {
     if (
       typeof parsed.token !== "string" ||
       typeof parsed.username !== "string" ||
-      typeof parsed.issuedAt !== "string"
+      typeof parsed.issuedAt !== "string" ||
+      typeof parsed.isAdmin !== "boolean"
     ) {
       window.localStorage.removeItem(AUTH_SESSION_KEY);
       return null;
@@ -38,6 +42,9 @@ export function loadAuthSession(): AuthSession | null {
     return {
       token: parsed.token,
       username: parsed.username,
+      email: typeof parsed.email === "string" ? parsed.email : null,
+      fullName: typeof parsed.fullName === "string" ? parsed.fullName : null,
+      isAdmin: parsed.isAdmin,
       issuedAt: parsed.issuedAt,
     };
   } catch {
@@ -77,6 +84,9 @@ export function buildBootstrapSession(): AuthSession | null {
   return {
     token: bootstrapToken,
     username: ENV_BOOTSTRAP_USERNAME,
+    email: null,
+    fullName: ENV_BOOTSTRAP_USERNAME,
+    isAdmin: false,
     issuedAt: new Date().toISOString(),
   };
 }

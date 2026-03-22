@@ -1,0 +1,30 @@
+services:
+  telemetry-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bionexus-telemetry-api
+    env_file:
+      - ../.env
+    environment:
+      PORT: ${TELEMETRY_PORT:-4100}
+      SECRET_KEY: ${SECRET_KEY:-super-secret-local-dev-key}
+      JWT_ISSUER: ${JWT_ISSUER:-bionexus-api-gateway}
+      JWT_AUDIENCE: ${JWT_AUDIENCE:-bionexus-ui}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-30}
+      TELEMETRY_ADMIN_USERNAME: ${TELEMETRY_ADMIN_USERNAME:-admin}
+      TELEMETRY_ADMIN_PASSWORD: ${TELEMETRY_ADMIN_PASSWORD:-password}
+      TELEMETRY_ADMIN_EMAIL: ${TELEMETRY_ADMIN_EMAIL:-admin@bionexus.dev}
+      TELEMETRY_ADMIN_FULL_NAME: ${TELEMETRY_ADMIN_FULL_NAME:-BioNexus Admin}
+      MONGODB_URI: ${TELEMETRY_MONGODB_URI:-mongodb://bionexus_admin:${MONGODB_PASSWORD:-bionexus_dev_password}@mongodb:27017/bionexus?authSource=admin}
+      CORS_ALLOW_ORIGINS: ${CORS_ALLOW_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+    ports:
+      - "${TELEMETRY_PORT:-4100}:4100"
+    restart: unless-stopped
+    networks:
+      - lake-network
+
+networks:
+  lake-network:
+    external: true
+    name: lake_bionexus-network

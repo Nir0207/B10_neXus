@@ -15,6 +15,7 @@ import {
   type AuthSession,
 } from "@/lib/authStorage";
 import { loginWithPassword, registerWithPassword, type RegisterPayload } from "@/services/authService";
+import { fetchCurrentUser } from "@/services/telemetryService";
 
 interface LoginPayload {
   username: string;
@@ -39,20 +40,55 @@ export function AuthProvider({ children }: PropsWithChildren): React.JSX.Element
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   useEffect(() => {
-    const storedSession = loadAuthSession();
-    if (storedSession) {
-      setSession(storedSession);
-      setIsReady(true);
-      return;
+    let isMounted = true;
+
+    async function restoreSession(): Promise<void> {
+      const baseSession = loadAuthSession() ?? buildBootstrapSession();
+      if (!baseSession) {
+        if (isMounted) {
+          setIsReady(true);
+        }
+        return;
+      }
+
+      try {
+        const user = await fetchCurrentUser(baseSession.token);
+        const hydratedSession: AuthSession = {
+          ...baseSession,
+          username: user.username,
+          email: user.email,
+          fullName: user.fullName ?? null,
+          isAdmin: user.isAdmin,
+        };
+
+        if (!isMounted) {
+          return;
+        }
+
+        saveAuthSession(hydratedSession);
+        setSession(hydratedSession);
+      } catch {
+        if (!isMounted) {
+          return;
+        }
+
+        if (baseSession.token) {
+          clearAuthSession();
+          setSession(null);
+        } else {
+          setSession(baseSession);
+        }
+      } finally {
+        if (isMounted) {
+          setIsReady(true);
+        }
+      }
     }
 
-    const bootstrapSession = buildBootstrapSession();
-    if (bootstrapSession) {
-      saveAuthSession(bootstrapSession);
-      setSession(bootstrapSession);
-    }
-
-    setIsReady(true);
+    void restoreSession();
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const value: AuthContextValue = {

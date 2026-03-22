@@ -9,11 +9,12 @@ import secrets
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
+import httpx
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from pydantic import ValidationError
 
-from schemas import TokenData, User, UserInDB, UserRegistrationRequest
+from schemas import Token, TokenData, User, UserRegistrationRequest
 
 ALGORITHM: str = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
@@ -24,6 +25,7 @@ JWT_AUDIENCE: str = os.getenv("JWT_AUDIENCE", "bionexus-ui")
 # This avoids a predictable hardcoded secret in source code.
 SECRET_KEY: str = os.getenv("SECRET_KEY", secrets.token_urlsafe(64))
 ADMIN_USERNAME: str = os.getenv("GATEWAY_ADMIN_USERNAME", "admin")
+TELEMETRY_GRAPHQL_URL: str = os.getenv("TELEMETRY_GRAPHQL_URL", "http://localhost:4100/graphql")
 ADMIN_PASSWORD_HASH: str
 
 oauth2_scheme: OAuth2PasswordBearer = OAuth2PasswordBearer(tokenUrl="token")
@@ -44,6 +46,10 @@ class DuplicateUserError(Exception):
 
 class ReservedUsernameError(Exception):
     """Raised when a reserved username is used during registration."""
+
+
+class InvalidAuthRequestError(Exception):
+    """Raised when the upstream auth service rejects the request payload."""
 
 
 def normalize_username(username: str) -> str:
@@ -91,88 +97,115 @@ ADMIN_PASSWORD_HASH = _ADMIN_PASSWORD_HASH_ENV or get_password_hash(
 )
 
 
-async def get_user_by_username(username: str, pg_conn: Any | None) -> UserInDB | None:
-    if pg_conn is None:
-        raise UserStoreUnavailableError("User database unavailable")
+async def _execute_telemetry_graphql(
+    query: str,
+    variables: dict[str, Any],
+) -> dict[str, Any]:
+    try:
+        async with httpx.AsyncClient(timeout=httpx.Timeout(15.0, connect=5.0)) as client:
+            response = await client.post(
+                TELEMETRY_GRAPHQL_URL,
+                json={"query": query, "variables": variables},
+                headers={"Content-Type": "application/json"},
+            )
+            response.raise_for_status()
+    except httpx.HTTPError as exc:
+        raise UserStoreUnavailableError("Authentication service unavailable") from exc
 
-    row: Any | None = await pg_conn.fetchrow(
-        """
-        SELECT username, email, full_name, hashed_password
-        FROM app_users
-        WHERE username = $1
-        """,
-        normalize_username(username),
-    )
-    if row is None:
-        return None
+    payload = response.json()
+    error_messages = payload.get("errors")
+    if isinstance(error_messages, list) and error_messages:
+        first_error = error_messages[0]
+        if isinstance(first_error, dict) and isinstance(first_error.get("message"), str):
+            raise InvalidAuthRequestError(first_error["message"])
+        raise InvalidAuthRequestError("Authentication service rejected the request")
 
-    return UserInDB(**dict(row))
+    data = payload.get("data")
+    if not isinstance(data, dict):
+        raise UserStoreUnavailableError("Authentication service returned invalid data")
+
+    return data
 
 
-async def authenticate_user(username: str, password: str, pg_conn: Any | None) -> User | None:
-    normalized_username = normalize_username(username)
-    admin_username = normalize_username(ADMIN_USERNAME)
+def _normalize_upstream_token(data: dict[str, Any], key: str) -> Token:
+    token_payload = data.get(key)
+    if not isinstance(token_payload, dict):
+        raise UserStoreUnavailableError("Authentication service returned an invalid token payload")
 
-    if normalized_username == admin_username and verify_password(password, ADMIN_PASSWORD_HASH):
-        return User(username=admin_username, email=f"{admin_username}@bionexus.com")
+    user_payload = token_payload.get("user")
+    username = ""
+    if isinstance(user_payload, dict) and isinstance(user_payload.get("username"), str):
+        username = user_payload["username"]
 
-    if pg_conn is None:
-        if normalized_username == admin_username:
-            return None
-        raise UserStoreUnavailableError("User database unavailable")
+    access_token = token_payload.get("accessToken")
+    token_type = token_payload.get("tokenType")
+    if not isinstance(access_token, str) or not isinstance(token_type, str) or not username:
+        raise UserStoreUnavailableError("Authentication service returned an incomplete token payload")
 
-    user_in_db = await get_user_by_username(normalized_username, pg_conn)
-    if user_in_db is not None and verify_password(password, user_in_db.hashed_password):
-        return User(
-            username=user_in_db.username,
-            email=user_in_db.email,
-            full_name=user_in_db.full_name,
+    return Token(access_token=access_token, token_type=token_type, username=username)
+
+
+async def authenticate_user(username: str, password: str, _pg_conn: Any | None = None) -> Token | None:
+    try:
+        data = await _execute_telemetry_graphql(
+            """
+            mutation Login($input: LoginInput!) {
+              login(input: $input) {
+                accessToken
+                tokenType
+                user {
+                  username
+                }
+              }
+            }
+            """,
+            {
+                "input": {
+                    "username": username,
+                    "password": password,
+                }
+            },
         )
+    except InvalidAuthRequestError as exc:
+        if str(exc) == "Incorrect username or password":
+            return None
+        raise UserStoreUnavailableError(str(exc)) from exc
 
-    return None
+    return _normalize_upstream_token(data, "login")
 
 
-async def register_user(payload: UserRegistrationRequest, pg_conn: Any | None) -> User:
-    if pg_conn is None:
-        raise UserStoreUnavailableError("User database unavailable")
+async def register_user(payload: UserRegistrationRequest, _pg_conn: Any | None = None) -> Token:
+    try:
+        data = await _execute_telemetry_graphql(
+            """
+            mutation Register($input: RegisterInput!) {
+              register(input: $input) {
+                accessToken
+                tokenType
+                user {
+                  username
+                }
+              }
+            }
+            """,
+            {
+                "input": {
+                    "username": payload.username,
+                    "email": payload.email,
+                    "password": payload.password,
+                    "fullName": payload.full_name,
+                }
+            },
+        )
+    except InvalidAuthRequestError as exc:
+        message = str(exc)
+        if message in {"Username already exists", "Email already exists"}:
+            raise DuplicateUserError(message) from exc
+        if "reserved" in message.lower():
+            raise ReservedUsernameError(message) from exc
+        raise InvalidAuthRequestError(message) from exc
 
-    username = normalize_username(payload.username)
-    email = normalize_email(payload.email)
-    full_name = payload.full_name.strip() if payload.full_name and payload.full_name.strip() else None
-
-    if username == normalize_username(ADMIN_USERNAME):
-        raise ReservedUsernameError("That username is reserved")
-
-    existing_user: Any | None = await pg_conn.fetchrow(
-        """
-        SELECT username, email
-        FROM app_users
-        WHERE username = $1 OR LOWER(email) = LOWER($2)
-        """,
-        username,
-        email,
-    )
-    if existing_user is not None:
-        existing_user_dict = dict(existing_user)
-        if existing_user_dict.get("username") == username:
-            raise DuplicateUserError("Username already exists")
-        raise DuplicateUserError("Email already exists")
-
-    created_user: Any | None = await pg_conn.fetchrow(
-        """
-        INSERT INTO app_users (username, email, full_name, hashed_password)
-        VALUES ($1, $2, $3, $4)
-        RETURNING username, email, full_name
-        """,
-        username,
-        email,
-        full_name,
-        get_password_hash(payload.password),
-    )
-    if created_user is None:
-        raise UserStoreUnavailableError("Failed to create user")
-
-    return User(**dict(created_user))
+    return _normalize_upstream_token(data, "register")
 
 
 def create_access_token(data: dict[str, Any], expires_delta: timedelta | None = None) -> str:
@@ -207,15 +240,36 @@ def decode_token_subject(token: str) -> str | None:
         return None
 
 
+def decode_token_user(token: str) -> User | None:
+    try:
+        payload = _decode_jwt(token)
+        username = decode_token_subject(token)
+        if username is None:
+            return None
+
+        email = payload.get("email")
+        full_name = payload.get("full_name")
+        is_admin = payload.get("is_admin")
+
+        return User(
+            username=username,
+            email=email if isinstance(email, str) and email else f"{username}@bionexus.com",
+            full_name=full_name if isinstance(full_name, str) and full_name else None,
+            is_admin=bool(is_admin),
+        )
+    except (JWTError, ValidationError):
+        return None
+
+
 async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
-    username: str | None = decode_token_subject(token)
-    if username is None:
+    user = decode_token_user(token)
+    if user is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Could not validate credentials",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    return User(username=username, email=f"{username}@bionexus.com")
+    return user
 
 
 def _decode_jwt(token: str) -> dict[str, Any]:

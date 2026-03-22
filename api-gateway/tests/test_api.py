@@ -1,167 +1,124 @@
-import pytest
-import os
 import json
+import os
 from typing import Any
+
+import main
 from fastapi.testclient import TestClient
-from auth import get_password_hash
+from auth import create_access_token
 from main import app, LOG_FILE
 from database import get_postgres_connection, get_neo4j_session
 from schemas import IntelligenceQueryResponse
 
 client = TestClient(app)
 
-
-class FakeUserPgConnection:
-    def __init__(self) -> None:
-        self.users: dict[str, dict[str, str | None]] = {}
-
-    async def fetchrow(self, query: str, *args: object) -> dict[str, str | None] | None:
-        normalized_query = " ".join(query.split())
-
-        if "FROM app_users WHERE username = $1" in normalized_query:
-            username = str(args[0]).lower()
-            user = self.users.get(username)
-            if user is None:
-                return None
-            return {
-                "username": user["username"],
-                "email": user["email"],
-                "full_name": user["full_name"],
-                "hashed_password": user["hashed_password"],
-            }
-
-        if "FROM app_users WHERE username = $1 OR LOWER(email) = LOWER($2)" in normalized_query:
-            username = str(args[0]).lower()
-            email = str(args[1]).lower()
-            for user in self.users.values():
-                if user["username"] == username or user["email"] == email:
-                    return {
-                        "username": user["username"],
-                        "email": user["email"],
-                    }
-            return None
-
-        if "INSERT INTO app_users" in normalized_query:
-            username = str(args[0]).lower()
-            email = str(args[1]).lower()
-            full_name = str(args[2]) if args[2] is not None else None
-            hashed_password = str(args[3])
-            self.users[username] = {
-                "username": username,
-                "email": email,
-                "full_name": full_name,
-                "hashed_password": hashed_password,
-            }
-            return {
-                "username": username,
-                "email": email,
-                "full_name": full_name,
-            }
-
-        raise AssertionError(f"Unexpected query: {normalized_query}")
+def _mint_test_token(username: str = "admin", *, is_admin: bool = True) -> str:
+    return create_access_token(
+        {
+            "sub": username,
+            "email": f"{username}@bionexus.com",
+            "is_admin": is_admin,
+        }
+    )
 
 def test_health_check():
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
 
-def test_login_for_access_token():
+def test_login_for_access_token(monkeypatch):
+    async def _fake_authenticate(_username: str, _password: str) -> dict[str, str]:
+        return {
+            "access_token": _mint_test_token("admin"),
+            "token_type": "bearer",
+            "username": "admin",
+        }
+
+    monkeypatch.setattr(main, "authenticate_user", _fake_authenticate)
     response = client.post("/token", data={"username": "admin", "password": "password"})
     assert response.status_code == 200
     assert "access_token" in response.json()
     assert response.json()["token_type"] == "bearer"
     assert response.json()["username"] == "admin"
 
-def test_login_failure():
+def test_login_failure(monkeypatch):
+    async def _fake_authenticate(_username: str, _password: str) -> None:
+        return None
+
+    monkeypatch.setattr(main, "authenticate_user", _fake_authenticate)
     response = client.post("/token", data={"username": "admin", "password": "wrong"})
     assert response.status_code == 401
 
 
-def test_register_user_returns_token_and_logs_them_in():
-    fake_connection = FakeUserPgConnection()
+def test_register_user_returns_token_and_logs_them_in(monkeypatch):
+    async def _fake_register(_payload: Any) -> dict[str, str]:
+        return {
+            "access_token": _mint_test_token("scientist.one", is_admin=False),
+            "token_type": "bearer",
+            "username": "scientist.one",
+        }
 
-    async def _override_postgres_connection() -> Any:
-        yield fake_connection
+    async def _fake_authenticate(_username: str, _password: str) -> dict[str, str]:
+        return {
+            "access_token": _mint_test_token("scientist.one", is_admin=False),
+            "token_type": "bearer",
+            "username": "scientist.one",
+        }
 
-    app.dependency_overrides[get_postgres_connection] = _override_postgres_connection
+    monkeypatch.setattr(main, "register_user", _fake_register)
+    monkeypatch.setattr(main, "authenticate_user", _fake_authenticate)
 
-    try:
-        response = client.post(
-            "/register",
-            json={
-                "username": "Scientist.One",
-                "email": "Scientist.One@BioNexus.dev",
-                "password": "strongpassword",
-                "full_name": "Scientist One",
-            },
-        )
-        assert response.status_code == 201
-        body = response.json()
-        assert body["username"] == "scientist.one"
-        assert body["token_type"] == "bearer"
-        assert "access_token" in body
+    response = client.post(
+        "/register",
+        json={
+            "username": "Scientist.One",
+            "email": "Scientist.One@BioNexus.dev",
+            "password": "strongpassword",
+            "full_name": "Scientist One",
+        },
+    )
+    assert response.status_code == 201
+    body = response.json()
+    assert body["username"] == "scientist.one"
+    assert body["token_type"] == "bearer"
+    assert "access_token" in body
 
-        login_response = client.post(
-            "/token",
-            data={"username": "scientist.one", "password": "strongpassword"},
-        )
-        assert login_response.status_code == 200
-        assert login_response.json()["username"] == "scientist.one"
-    finally:
-        app.dependency_overrides.pop(get_postgres_connection, None)
-
-
-def test_register_user_rejects_duplicates():
-    fake_connection = FakeUserPgConnection()
-    fake_connection.users["scientist.one"] = {
-        "username": "scientist.one",
-        "email": "scientist.one@bionexus.dev",
-        "full_name": "Scientist One",
-        "hashed_password": get_password_hash("strongpassword"),
-    }
-
-    async def _override_postgres_connection() -> Any:
-        yield fake_connection
-
-    app.dependency_overrides[get_postgres_connection] = _override_postgres_connection
-
-    try:
-        response = client.post(
-            "/register",
-            json={
-                "username": "scientist.one",
-                "email": "fresh@bionexus.dev",
-                "password": "strongpassword",
-            },
-        )
-        assert response.status_code == 409
-        assert response.json()["detail"] == "Username already exists"
-    finally:
-        app.dependency_overrides.pop(get_postgres_connection, None)
+    login_response = client.post(
+        "/token",
+        data={"username": "scientist.one", "password": "strongpassword"},
+    )
+    assert login_response.status_code == 200
+    assert login_response.json()["username"] == "scientist.one"
 
 
-def test_login_for_registered_user_rejects_wrong_password():
-    fake_connection = FakeUserPgConnection()
-    fake_connection.users["scientist.one"] = {
-        "username": "scientist.one",
-        "email": "scientist.one@bionexus.dev",
-        "full_name": "Scientist One",
-        "hashed_password": get_password_hash("strongpassword"),
-    }
+def test_register_user_rejects_duplicates(monkeypatch):
+    async def _fake_register(_payload: Any) -> dict[str, str]:
+        raise main.DuplicateUserError("Username already exists")
 
-    async def _override_postgres_connection() -> Any:
-        yield fake_connection
+    monkeypatch.setattr(main, "register_user", _fake_register)
 
-    app.dependency_overrides[get_postgres_connection] = _override_postgres_connection
+    response = client.post(
+        "/register",
+        json={
+            "username": "scientist.one",
+            "email": "fresh@bionexus.dev",
+            "password": "strongpassword",
+        },
+    )
+    assert response.status_code == 409
+    assert response.json()["detail"] == "Username already exists"
 
-    try:
-        response = client.post(
-            "/token",
-            data={"username": "scientist.one", "password": "incorrect-password"},
-        )
-        assert response.status_code == 401
-    finally:
-        app.dependency_overrides.pop(get_postgres_connection, None)
+
+def test_login_for_registered_user_rejects_wrong_password(monkeypatch):
+    async def _fake_authenticate(_username: str, _password: str) -> None:
+        return None
+
+    monkeypatch.setattr(main, "authenticate_user", _fake_authenticate)
+
+    response = client.post(
+        "/token",
+        data={"username": "scientist.one", "password": "incorrect-password"},
+    )
+    assert response.status_code == 401
 
 def test_get_gene_unauthorized():
     response = client.get("/api/v1/genes/P12345")
@@ -182,8 +139,7 @@ def test_get_gene_authorized():
         yield FakePgConnection()
 
     app.dependency_overrides[get_postgres_connection] = _override_postgres_connection
-    login_resp = client.post("/token", data={"username": "admin", "password": "password"})
-    token = login_resp.json()["access_token"]
+    token = _mint_test_token("admin")
     
     try:
         response = client.get("/api/v1/genes/P12345", headers={"Authorization": f"Bearer {token}"})
@@ -238,8 +194,7 @@ def test_get_discovery_graph_authorized():
         yield FakeNeo4jSession()
 
     app.dependency_overrides[get_neo4j_session] = _override_neo4j_session
-    login_resp = client.post("/token", data={"username": "admin", "password": "password"})
-    token = login_resp.json()["access_token"]
+    token = _mint_test_token("admin")
     
     try:
         response = client.get("/api/v1/discovery/graph", headers={"Authorization": f"Bearer {token}"})
@@ -275,7 +230,7 @@ def test_get_discovery_triplets_authorized():
         yield FakeNeo4jSession()
 
     app.dependency_overrides[get_neo4j_session] = _override_neo4j_session
-    token = client.post("/token", data={"username": "admin", "password": "password"}).json()["access_token"]
+    token = _mint_test_token("admin")
 
     try:
         response = client.get(
@@ -317,7 +272,7 @@ def test_query_intelligence_authorized(monkeypatch):
         )
 
     monkeypatch.setattr("router._query_intelligence_service", _fake_query)
-    token = client.post("/token", data={"username": "admin", "password": "password"}).json()["access_token"]
+    token = _mint_test_token("admin")
 
     response = client.post(
         "/api/v1/intelligence/query",
@@ -359,7 +314,7 @@ def test_get_disease_trends_authorized():
         yield FakePgConnection()
 
     app.dependency_overrides[get_postgres_connection] = _override_postgres_connection
-    token = client.post("/token", data={"username": "admin", "password": "password"}).json()["access_token"]
+    token = _mint_test_token("admin")
 
     try:
         response = client.get(
@@ -375,7 +330,7 @@ def test_get_disease_trends_authorized():
 
 
 def test_export_analytics_chart_authorized():
-    token = client.post("/token", data={"username": "admin", "password": "password"}).json()["access_token"]
+    token = _mint_test_token("admin")
 
     response = client.post(
         "/api/v1/analytics/export",

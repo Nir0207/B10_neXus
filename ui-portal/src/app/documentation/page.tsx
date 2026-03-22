@@ -34,7 +34,7 @@ export default function DocumentationPage(): React.JSX.Element {
         <section className="rounded-3xl border border-outline-variant/15 bg-surface-container-low p-8 shadow-xl">
           <p className="text-[10px] uppercase tracking-[0.28em] text-primary mb-3">Manual Validation</p>
           <div className="grid gap-4 text-sm text-on-surface-variant md:grid-cols-2">
-            <p>1. Sign in on the login route with the gateway admin credentials.</p>
+            <p>1. Sign in on the login route with the telemetry admin credentials.</p>
             <p>2. Open Explorer and switch organs to confirm graph refresh behavior.</p>
             <p>3. Open Pathways and verify the UniProt-backed gene detail panel populates.</p>
             <p>4. Open Clinical Trials and confirm therapeutic candidate rows are present.</p>

@@ -7,6 +7,7 @@ import { useAuth } from "@/components/AuthProvider";
 interface NavigationItem {
   href: string;
   label: string;
+  requiresAdmin?: boolean;
 }
 
 const PRIMARY_NAV: readonly NavigationItem[] = [
@@ -14,6 +15,7 @@ const PRIMARY_NAV: readonly NavigationItem[] = [
   { href: "/pathways", label: "Pathways" },
   { href: "/clinical-trials", label: "Clinical Trials" },
   { href: "/historical-trends", label: "Historical Trends" },
+  { href: "/telemetry", label: "Telemetry", requiresAdmin: true },
 ];
 
 function isActivePath(currentPathname: string, href: string): boolean {
@@ -57,7 +59,7 @@ export default function AppShell({
             Genomic Portal
           </Link>
           <nav className="hidden md:flex items-center gap-6">
-            {PRIMARY_NAV.map((item) => {
+            {PRIMARY_NAV.filter((item) => !item.requiresAdmin || session?.isAdmin).map((item) => {
               const active = isActivePath(pathname, item.href);
               return (
                 <Link
@@ -86,6 +88,11 @@ export default function AppShell({
               <span className="text-xs font-semibold text-on-surface">
                 {isReady && isAuthenticated ? session?.username ?? "Scientist" : "Guest"}
               </span>
+              {session?.isAdmin ? (
+                <span className="text-[10px] uppercase tracking-[0.24em] text-primary">
+                  Admin
+                </span>
+              ) : null}
             </div>
           </div>
 

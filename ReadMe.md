@@ -26,6 +26,7 @@ BioNexus operates as a **Med-Data Lakehouse**, moving data through four distinct
 | **Orchestration** | **Docker / Antigravity** | Containerized microservices & Agentic management. |
 | **Data Lake** | **DuckDB / Parquet** | High-speed local analytical storage. |
 | **Databases** | **Postgres & Neo4j** | Relational metadata + Biological Knowledge Graph. |
+| **Telemetry/Auth** | **MongoDB + GraphQL** | User accounts, admin flags, and client telemetry analytics. |
 | **Processing** | **Python (Polars / FastAPI)** | Heavy-duty bio-informatic refining. |
 | **AI Brain** | **Ollama / MCP / SLMs** | Local LLMs (BioMistral/Phi-4) via Model Context Protocol. |
 | **UI/UX** | **Next.js / D3.js** | Dense, lab-grade scientific visualizations. |
@@ -49,9 +50,9 @@ BioNexus synthesizes data from the world's leading open biological repositories:
 ### 1. Environment Setup
 Clone the repository and spin up the core infrastructure:
 ```bash
-docker-compose up -d
+cd Lake && docker compose up -d
 ```
-*This initializes Postgres, Neo4j, MongoDB, and the Ollama instance.*
+*This initializes Postgres, Neo4j, and MongoDB for the local platform.*
 
 ### 2. Run the Gatherers
 Trigger the ingestion agents to populate the Lake:
@@ -74,8 +75,53 @@ mcp install ./intelligence/bionexus_mcp.py
 ollama run biomistral
 ```
 
-### 5. Access the UI
-Open your browser to `http://localhost:3000` to explore the **Organ-to-Medicine** visualizer.
+### 5. Launch the APIs and UI
+```bash
+cd telemetry && docker compose up -d --build
+cd api-gateway && docker compose up -d --build
+cd ui-portal && docker compose up -d --build
+```
+
+### 6. Access the UI
+Open your browser to `http://localhost:3000` to explore the portal. The `/telemetry` route is available only to users with `isAdmin=true`.
+
+## Container Runtime Guide
+
+### First-time startup order
+
+Run these once after a fresh clone, after Docker volume cleanup, or after infrastructure changes:
+
+1. `Lake/docker-compose.yml`
+   Starts the shared data-plane containers:
+   `bionexus-postgres`, `bionexus-neo4j`, `bionexus-mongodb`, `bionexus-refinery`
+2. `telemetry/docker-compose.yml`
+   Starts `bionexus-telemetry-api`
+3. `api-gateway/compose.yaml`
+   Starts `bionexus-api-gateway`
+4. `ui-portal/docker-compose.yml`
+   Starts `ui-portal-ui-portal-1`
+
+### Containers that must be running all the time
+
+For the application to be functional in normal portal usage, these containers should stay up:
+
+- `bionexus-mongodb`
+  Required for Mongo-backed auth, user records, admin flags, and telemetry events.
+- `bionexus-telemetry-api`
+  Required for login, registration, session hydration, admin checks, and telemetry dashboard data.
+- `bionexus-api-gateway`
+  Required for the explorer, pathways, trials, and analytics REST APIs.
+- `ui-portal-ui-portal-1`
+  Required for the web UI itself.
+- `bionexus-postgres`
+  Required for gateway-backed analytics and structured data reads.
+- `bionexus-neo4j`
+  Required for discovery graph and pathway/relationship views.
+
+### Containers that are helpful but not required all the time
+
+- `bionexus-refinery`
+  Keep this up when you are running ETL/refinery jobs; it is not required just to browse the UI.
 
 ---
 

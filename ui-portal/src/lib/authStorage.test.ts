@@ -19,12 +19,18 @@ describe("authStorage", () => {
     saveAuthSession({
       token: "jwt-token",
       username: "auditor",
+      email: "auditor@bionexus.dev",
+      fullName: "Telemetry Auditor",
+      isAdmin: true,
       issuedAt: "2026-03-21T10:00:00.000Z",
     });
 
     expect(loadAuthSession()).toEqual({
       token: "jwt-token",
       username: "auditor",
+      email: "auditor@bionexus.dev",
+      fullName: "Telemetry Auditor",
+      isAdmin: true,
       issuedAt: "2026-03-21T10:00:00.000Z",
     });
   });
